@@ -1,5 +1,5 @@
 
-#### [GNU ARM Eclipse Home]({{ site.baseurl }}/)
+#### [GNU MCU Eclipse Home]({{ site.baseurl }}/)
 
 #### [Features]({{ site.baseurl }}/plugins/features/)
 
@@ -114,10 +114,10 @@
 
 #### Latest Articles
 
-* [GNU ARM Eclipse now available from Eclipse Marketplace]({{ site.baseurl }}/articles/arm-com-2015-12-09/)
-* [GNU ARM Eclipse: Cortex-M7 support added]({{ site.baseurl }}/articles/arm-com-2015-11/)
-* [GNU ARM Eclipse has a new look and a new home]({{ site.baseurl }}/articles/arm-com-2015-09/)
-* [GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support]({{ site.baseurl }}/articles/arm-com-2014-07/)
+* [GNU MCU Eclipse now available from Eclipse Marketplace]({{ site.baseurl }}/articles/arm-com-2015-12-09/)
+* [GNU MCU Eclipse: Cortex-M7 support added]({{ site.baseurl }}/articles/arm-com-2015-11/)
+* [GNU MCU Eclipse has a new look and a new home]({{ site.baseurl }}/articles/arm-com-2015-09/)
+* [GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support]({{ site.baseurl }}/articles/arm-com-2014-07/)
 
 #### Licenses
 

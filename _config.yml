@@ -1,9 +1,9 @@
 # Site Jekyll settings.
 
 # Without a clear rule enforced, both title and name are used.
-title: GNU ARM Eclipse
-name: GNU ARM Eclipse
-description: A family of Eclipse CDT extensions and tools for GNU ARM development
+title: GNU MCU Eclipse
+name: GNU MCU Eclipse
+description: A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development
 
 email: il@livius.net
 
@@ -22,7 +22,7 @@ exclude:
 baseurl: ""
 
 # Used in sitemap.xml
-url: "http://gnuarmeclipse.github.io" # the base hostname & protocol for your site
+url: "http://gnu-mcu-eclipse.github.io" # the base hostname & protocol for your site
 
 # This timezone is used to display post dates and last modified messages.
 timezone: UTC
@@ -63,8 +63,8 @@ latest-news-pages: 5
 # Custom defs.
 github-username:  ilg-ul
 
-github-project-name: gnuarmeclipse
-github-project-url: http://github.com/gnuarmeclipse
+github-project-name: gnu-mcu-eclipse
+github-project-url: http://github.com/gnu-mcu-eclipse
 sourceforge-project-url: http://sourceforge.net/projects/gnuarmeclipse
 
 facebook-page: https://facebook.com/gnuarmeclipse/

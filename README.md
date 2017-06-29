@@ -1,14 +1,14 @@
-[![Build Status](https://travis-ci.org/gnuarmeclipse/gnuarmeclipse.github.io-source.svg?branch=master)](https://travis-ci.org/gnuarmeclipse/gnuarmeclipse.github.io-source)
+[![Build Status](https://travis-ci.org/gnu-mcu-eclipse/gnu-mcu-eclipse.github.io-source.svg?branch=master)](https://travis-ci.org/gnu-mcu-eclipse/gnu-mcu-eclipse.github.io-source)
 
-# The GNU ARM Eclipse Web Site source
+# The GNU MCU Eclipse Web Site source
 
 ## Overview
 
-This GitHub project, available from [gnuarmeclipse/gnuarmeclipse.github.io-source](https://github.com/gnuarmeclipse/gnuarmeclipse.github.io-source), contains the source files used to generate the **GNU ARM Eclipse Web Site**.
+This GitHub project, available from [gnu-mcu-eclipse/gnu-mcu-eclipse.github.io-source](https://github.com/gnu-mcu-eclipse/gnu-mcu-eclipse.github.io-source), contains the source files used to generate the **GNU MCU Eclipse Web Site**.
 
 ## Destination URL
 
-The **GNU ARM Eclipse Web Site** is an organisation [GitHub Pages](https://pages.github.com) site, stored in the [gnuarmeclipse/gnuarmeclipse.github.io](https://github.com/gnuarmeclipse/gnuarmeclipse.github.io) Git and publicly available from [http://gnuarmeclipse.github.io](http://gnuarmeclipse.github.io).
+The **GNU MCU Eclipse Web Site** is an organisation [GitHub Pages](https://pages.github.com) site, stored in the [gnu-mcu-eclipse/gnu-mcu-eclipse.github.io](https://github.com/gnu-mcu-eclipse/gnu-mcu-eclipse.github.io) Git and publicly available from [http://gnu-mcu-eclipse.github.io](http://gnu-mcu-eclipse.github.io).
 
 
 ## Jekyll
@@ -39,7 +39,7 @@ In addition, the several specific gems are required:
 
 To manage the web site, a local copy of this repository is required.
 
-	$ git clone https://github.com/gnuarmeclipse/gnuarmeclipse.github.io-source.git gnuarmeclipse.github.io-source.git
+	$ git clone https://github.com/gnu-mcu-eclipse/gnu-mcu-eclipse.github.io-source.git gnu-mcu-eclipse.github.io-source.git
 
 ## Development
 
@@ -47,7 +47,7 @@ The current development cycle is edit-save-build-view.
 
 The build can be performed automatically by Jekyll when started in server mode.
 
-	$ cd gnuarmeclipse.github.io-source.git
+	$ cd gnu-mcu-eclipse.github.io-source.git
 	$ jekyll serve --baseurl "" --trace
 
 To view the result, point the browser to `localhost:4000`.
@@ -56,7 +56,7 @@ To view the result, point the browser to `localhost:4000`.
 
 The build result is in the `_site` folder.
 
-This folder is configured as a submodule, linked to the [gnuarmeclipse.github.io](https://github.com/gnuarmeclipse/gnuarmeclipse.github.io) project.
+This folder is configured as a submodule, linked to the [gnu-mcu-eclipse.github.io](https://github.com/gnu-mcu-eclipse/gnu-mcu-eclipse.github.io) project.
 
 To publish, commit this Git and the new site will be automatically updated.
 
