@@ -91,12 +91,12 @@ The Docker images are available from [Docker Hub](https://hub.docker.com/u/ilege
 
 ## Download the build scripts repo
 
-The build script is available from GitHub and can be [viewed online](https://github.com/gnuarmeclipse/build-scripts/blob/master/scripts/build-openocd.sh).
+The build script is available from GitHub and can be [viewed online](https://github.com/gnu-mcu-eclipse/build-scripts/blob/master/scripts/build-openocd.sh).
 
-To download it, clone the [gnuarmeclipse/build-scripts](https://github.com/gnuarmeclipse/build-scripts) Git repo. 
+To download it, clone the [gnuarmeclipse/build-scripts](https://github.com/gnu-mcu-eclipse/build-scripts) Git repo. 
 
 ```
-$ git clone https://github.com/gnuarmeclipse/build-scripts.git \
+$ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
   ~/Downloads/build-scripts.git
 ```
 
@@ -201,7 +201,7 @@ $ bash ~/Downloads/build-scripts.git/scripts/build-openocd.sh cleanall
 
 ## Install hierarchy
 
-The procedure to install GNU ARM Eclipse OpenOCD is platform specific, but relatively straight forward (a Windows setup, an macOS install or a TGZ archive on GNU/Linux). The setup/install asks no special questions, and the defaults are generally ok for most installations.
+The procedure to install GNU MCU Eclipse OpenOCD is platform specific, but relatively straight forward (a Windows setup, an macOS install or a TGZ archive on GNU/Linux). The setup/install asks no special questions, and the defaults are generally ok for most installations.
 
 After install, this package should create structure like this (only the first two depth levels are shown):
 
@@ -243,7 +243,7 @@ No other files are installed in any system folders or other locations.
 
 To uninstall OpenOCD from a Windows machine, use the `openocd-uninstall.exe` program.
 
-On macOS and GNU/Linux, the GNU ARM Eclipse OpenOCD install folder is self-contained and removing it is enough for completely removing the application.
+On macOS and GNU/Linux, the GNU MCU Eclipse OpenOCD install folder is self-contained and removing it is enough for completely removing the application.
 
 ## Test
 
@@ -253,7 +253,7 @@ For a true test you need to first install the package and then run the program f
 
 ```
 $ /Applications/GNU\ ARM\ Eclipse/OpenOCD/bin/openocd --version
-GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00022-g2628c74 (2015-01-15-20:44)
+GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00022-g2628c74 (2015-01-15-20:44)
 Licensed under GNU GPL v2
 For bug reports, read
     http://openocd.sourceforge.net/doc/doxygen/bugs.html
@@ -261,4 +261,4 @@ For bug reports, read
 
 ## More build details
 
-The script is quite complex, and an attempt to explain its functionality would require some effort. For the final authoritative details, please refer to the comments available in the [script](https://github.com/gnuarmeclipse/build-scripts/blob/master/scripts/build-openocd.sh).
+The script is quite complex, and an attempt to explain its functionality would require some effort. For the final authoritative details, please refer to the comments available in the [script](https://github.com/gnu-mcu-eclipse/build-scripts/blob/master/scripts/build-openocd.sh).

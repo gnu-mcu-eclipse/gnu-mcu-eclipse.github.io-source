@@ -11,8 +11,8 @@ date: 2015-09-08 15:38:00 +0300
 
 Your contribution was successfully received by PayPal.
 
-We promise it'll be used for the good cause of further developing the **GNU ARM Eclipse** project.
+We promise it'll be used for the good cause of further developing the **GNU MCU Eclipse** project.
 
 Thank you again for your support,
 
-The GNU ARM Eclipse team
+The GNU MCU Eclipse team

@@ -12,7 +12,7 @@ date: 2015-09-10 21:00:00 +0300
 
 [PAD](http://en.wikipedia.org/wiki/Portable_Application_Description) is the Portable Application Description, and it helps authors provide product descriptions and specifications to online sources in a standard way, using a standard data format that will allow webmasters and program librarians to automate program listings.
 
-The GNU ARM Eclipse Plug-ins PAD file is publically available in the [project Git](https://github.com/gnuarmeclipse/plug-ins/blob/develop/info/GNU_ARM_Eclipse_pad.xml).
+The GNU MCU Eclipse Plug-ins PAD file is publically available in the [project Git](https://github.com/gnu-mcu-eclipse/eclipse-plugins/blob/develop/info/GNU_ARM_Eclipse_pad.xml).
 
 ## How to edit
 

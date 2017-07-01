@@ -24,7 +24,7 @@ To fully understand the importance of this issue, imagine a team of programmers 
 
 ### Toolchain path
 
-The toolchain path is the classical example of detail that can ruin project portability. Starting with version 2.x, the GNU ARM Eclipse cross build plug-in does not store any toolchain path in .cproject, and does not use such a path; all details related to the toolchain path are stored in the Eclipse workspace, to each toolchain is associated one path, and eventually, for special configurations, for each project can be associated one path. For more details see the separate [Toolchain path management][1] page.
+The toolchain path is the classical example of detail that can ruin project portability. Starting with version 2.x, the GNU MCU Eclipse cross build plug-in does not store any toolchain path in .cproject, and does not use such a path; all details related to the toolchain path are stored in the Eclipse workspace, to each toolchain is associated one path, and eventually, for special configurations, for each project can be associated one path. For more details see the separate [Toolchain path management][1] page.
 
 ### Include paths
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /developer/change-log/
-title: The 2017 GNU ARM Eclipse Plug-ins Change Log
+title: The 2017 GNU MCU Eclipse Plug-ins Change Log
 author: Liviu Ionescu
 
 date: 2017-02-24 09:55:00 +0300
@@ -139,17 +139,17 @@ Entries in this file are in reverse chronological order.
 
 ### 2017-02-24
 
-* [[issue #177](https://github.com/gnuarmeclipse/plug-ins/issues/177)] gdbjtag.jlink: acceppt ':' in IP field
+* [[issue #177](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/177)] gdbjtag.jlink: acceppt ':' in IP field
 * version: jlink 4.1.3
-* [[issue #175](https://github.com/gnuarmeclipse/plug-ins/issues/175)] mbs.cross: always show Hex in Print Size tool
-* [[issue #174](https://github.com/gnuarmeclipse/plug-ins/issues/174)] log external command for debug
-* [[issue #173](https://github.com/gnuarmeclipse/plug-ins/issues/173)] gdbjtag.openocd: start without server; do not check the config field if starting without server
+* [[issue #175](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/175)] mbs.cross: always show Hex in Print Size tool
+* [[issue #174](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/174)] log external command for debug
+* [[issue #173](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/173)] gdbjtag.openocd: start without server; do not check the config field if starting without server
 * versions: pyocd 1.1.2, gdbjtag 3.1.2
-* [[issue #182](https://github.com/gnuarmeclipse/plug-ins/issues/182)] mbs.cross: default toolchain logic; use modified date
+* [[issue #182](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/182)] mbs.cross: default toolchain logic; use modified date
 
 ### 2017-02-22
 
-* [[issue #181](https://github.com/gnuarmeclipse/plug-ins/issues/181)] mbs.cross: avoid bug 512550
+* [[issue #181](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/181)] mbs.cross: avoid bug 512550
   - workaround for canFinish()
   - get the projectName even if the toolchain page was not entered
 
@@ -157,7 +157,7 @@ Entries in this file are in reverse chronological order.
 
 * .classpath & prefs: refer to 1.7
 * rename parent project as `gnuarmeclipse-parent`
-* [[issue #180](https://github.com/gnuarmeclipse/plug-ins/issues/180)] update march & mtune for GCC 6.2
+* [[issue #180](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/180)] update march & mtune for GCC 6.2
   - deprecate armv2, armv2a, armv3, armv3m
   - add arch armv8.1-a, armv8.1-a+crc
   - add mcpu cortex-a17/a32/a35/a72
@@ -168,12 +168,12 @@ Entries in this file are in reverse chronological order.
 ### 2017-02-16
 
 * add LICENSE file (EPL-1.0)
-* [[issue #179](https://github.com/gnuarmeclipse/plug-ins/issues/179)] add `${user.home}/opt` subfolders to the search path for toolchain, openocd and qemu. 
+* [[issue #179](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/179)] add `${user.home}/opt` subfolders to the search path for toolchain, openocd and qemu. 
 * versions: mbs.cross: 2.2.2, openocd 4.1.3
 
 ### 2017-02-04
 
-* [[PR #176](https://github.com/gnuarmeclipse/plug-ins/pull/176)] pyOCD: fix target override combo in Debugger pane
+* [[PR #176](https://github.com/gnu-mcu-eclipse/eclipse-plugins/pull/176)] pyOCD: fix target override combo in Debugger pane
 
 ### 2017-02-01
 
@@ -185,7 +185,7 @@ Entries in this file are in reverse chronological order.
 
 ### 2017-01-27
 
-* [[issue #170](https://github.com/gnuarmeclipse/plug-ins/issues/170)] gdbjtag.qemu: add  DeviceName callback in TabDebugger
+* [[issue #170](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/170)] gdbjtag.qemu: add  DeviceName callback in TabDebugger
 * versions: core v3.3.1, gdbjtag.qemu 3.1.3
 
 ### 2017-01-14

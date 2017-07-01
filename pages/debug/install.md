@@ -34,11 +34,11 @@ As for software, debugging is generally a complex operation, and in Eclipse it r
 * the GDB **server** application
 * the hardware **drivers** required by the JTAG/SWD probe
 
-The GNU ARM Eclipse project recommends three debugging solutions:
+The GNU MCU Eclipse project recommends three debugging solutions:
 
 * the **SEGGER J-Link** probe & GDB server, as **a highly professional solution**, supporting both JTAG and SWD, plus SWO trace output;
 * the **OpenOCD** application as **an universal tool**, supporting most cheap JTAG probes, but with limitations (currently it does not support SWD and implicitly no SWO, it is slower, configuration might be sometimes cryptical, there are many driver incompatibilities on Windows, etc);
-* the [GNU ARM Eclipse QEMU][4] emulator, supporting several Cortex-M boards.
+* the [GNU MCU Eclipse QEMU][4] emulator, supporting several Cortex-M boards.
 
 For an explanation why the SEGGER J-Link was selected, please go to the [J-Link Debugging][5] page and read the introduction section.
 
@@ -73,7 +73,7 @@ Similarly, if you do not have a J-Link (yet), there is no need to install the J-
 
 J-Link and OpenOCD are not the only existing solutions, but probably are the most portable ones. J-Link is a single piece of hardware that can be used with most ARM processors. At the other end of the spectrum is OpenOCD, a single piece of software that, within limits, can be used with most JTAG probes, especially on GNU/Linux.
 
-If portability is not your concern, and you prefer other GDB servers, please feel free to use them, but GNU ARM Eclipse plug-ins do not provide support from them.
+If portability is not your concern, and you prefer other GDB servers, please feel free to use them, but GNU MCU Eclipse plug-ins do not provide support from them.
 
 To save you time, we compiled a list of other GDB servers, with some of their features and  limitations:
 
@@ -88,7 +88,7 @@ Another interesting solution is Freescale's **OpenSDA** debug/programming interf
 
 ## Eclipse debugging plug-ins
 
-The debugging plug-ins come together with the other GNU ARM Eclipse plug-ins, and should be installed in the same step, detailed in the [plug-ins install][6] page.
+The debugging plug-ins come together with the other GNU MCU Eclipse plug-ins, and should be installed in the same step, detailed in the [plug-ins install][6] page.
 
 Be sure you enable the entries named **GNU ARM C/C++ J-Link Debugging**, **GNU ARM C/C++ OpenOCD Debugging** and **GNU ARM C/C++ QEMU Debugging**.
 
@@ -105,7 +105,7 @@ Specific plug-in usage documentation is available from separate pages:
  [1]: {{ site.baseurl }}/debug/jlink/install/ "SEGGER J-Link Install"
  [2]: {{ site.baseurl }}/openocd/install/ "OpenOCD install"
  [3]: {{ site.baseurl }}/qemu/install/ "QEMU Install"
- [4]: {{ site.baseurl }}/qemu/ "The GNU ARM Eclipse QEMU"
+ [4]: {{ site.baseurl }}/qemu/ "The GNU MCU Eclipse QEMU"
  [5]: {{ site.baseurl }}/debug/jlink/ "The J-Link hardware debugging Eclipse plug-in"
  [6]: {{ site.baseurl }}/plugins/install/ "Plug-ins install"
  [7]: {{ site.baseurl }}/debug/jlink/ "The J-Link hardware debugging Eclipse plug-in"

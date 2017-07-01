@@ -64,19 +64,19 @@ The plug-in will use this definition as default for **${qemu_executable}**.
 
 The plug-in will take a best effort approach to find a location to be used as default for **${qemu_path}**.
 
-    ilg.gnuarmeclipse.debug.gdbjtag.qemu/install.folder=/Applications/GNU ARM Eclipse/QEMU/2.2.92-201504041609-dev/bin
+    ilg.gnuarmeclipse.debug.gdbjtag.qemu/install.folder=/Applications/GNU MCU Eclipse/QEMU/2.2.92-201504041609-dev/bin
 
 If this preference is defined and the executable is there, the plug-in will use it.
 
-if not, the Windows Registry will be searched. If the **InstallFolder** key is found below the **\\GNU ARM Eclipse\\QEMU** subkey, and the executable is found there, the plug-in will use it.
+if not, the Windows Registry will be searched. If the **InstallFolder** key is found below the **\\GNU MCU Eclipse\\QEMU** subkey, and the executable is found there, the plug-in will use it.
 
 Otherwise the plug-in will try a folder search.
 
     search.path=\
-    ${user.home}/Applications/GNU ARM Eclipse/QEMU:\
-    ${user.home}/local/GNU ARM Eclipse/QEMU:\
+    ${user.home}/Applications/GNU MCU Eclipse/QEMU:\
+    ${user.home}/local/GNU MCU Eclipse/QEMU:\
     ${user.home}/local/gnuarmeclipse/QEMU:\
-    /Applications/GNU ARM Eclipse/QEMU:\
+    /Applications/GNU MCU Eclipse/QEMU:\
     /opt/local:\
     /usr/local
 

@@ -9,21 +9,21 @@ date: 2015-09-04 17:03:00 +0300
 
 ## Overview
 
-The **GNU ARM Eclipse QEMU** is a fork of the public open-source [QEMU](http://wiki.qemu.org/Main_Page) project, customised for more support of Cortex-M cores, and a better integration with the **GNU ARM QEMU Debugging** plug-in.
+The **GNU MCU Eclipse QEMU** is a fork of the public open-source [QEMU](http://wiki.qemu.org/Main_Page) project, customised for more support of Cortex-M cores, and a better integration with the **GNU ARM QEMU Debugging** plug-in.
 
 ## Download
 
-All **GNU ARM Eclipse QEMU** versions are available from the [GitHub Releases](https://github.com/gnuarmeclipse/qemu/releases) page.
+All **GNU MCU Eclipse QEMU** versions are available from the [GitHub Releases](https://github.com/gnu-mcu-eclipse/qemu/releases) page.
 
 ![The QEMU Releases page]({{ site.baseurl }}/assets/images/2015/github-gae-qemu-release-2-3.png)
 
 ## Install
 
-The details of installing the **GNU ARM Eclipse QEMU** on various platforms are presented below, for each platform.
+The details of installing the **GNU MCU Eclipse QEMU** on various platforms are presented below, for each platform.
 
 ### Windows
 
-For user convenience, the Windows versions of **GNU ARM Eclipse QEMU** are packed as Windows setup wizards. Go to the [GitHub Releases](https://github.com/gnuarmeclipse/qemu/releases) page and download the latest version named like:
+For user convenience, the Windows versions of **GNU MCU Eclipse QEMU** are packed as Windows setup wizards. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/qemu/releases) page and download the latest version named like:
 
 * `gnuarmeclipse-qemu-win32-2.2.92-201504041652-dev-setup.exe`
 * `gnuarmeclipse-qemu-win64-2.2.92-201504041652-dev-setup.exe`
@@ -40,7 +40,7 @@ It is recommended to keep the default install location:
 
 The default install location is:
 
-* `C:\Program Files\GNU ARM Eclipse\QEMU\${version}`
+* `C:\Program Files\GNU MCU Eclipse\QEMU\${version}`
 
 The result is a structure like:
 
@@ -49,8 +49,8 @@ The result is a structure like:
 To check if QEMU starts, use the following command:
 
 ```bash
-C:\>"\Program Files\GNU ARM Eclipse\QEMU\2.2.92-201504041652-dev\bin\qemu-system-gnuarmeclipse.exe" --version
-GNU ARM Eclipse 32-bits QEMU emulator version 2.2.92
+C:\>"\Program Files\GNU MCU Eclipse\QEMU\2.2.92-201504041652-dev\bin\qemu-system-gnuarmeclipse.exe" --version
+GNU MCU Eclipse 32-bits QEMU emulator version 2.2.92
 Copyright (c) 2003-2008 Fabrice Bellard
 ```
 
@@ -60,7 +60,7 @@ For usual Cortex-M emulation, there are no special drivers required.
 
 ### macOS
 
-For user convenience, the macOS version of GNU ARM Eclipse QEMU is packed in two variants: a simple .tgz archive and a macOS install package. Go to the [GitHub Releases](https://github.com/gnuarmeclipse/qemu/releases) page and download the latest version named like:
+For user convenience, the macOS version of GNU MCU Eclipse QEMU is packed in two variants: a simple .tgz archive and a macOS install package. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/qemu/releases) page and download the latest version named like:
 
 * `gnuarmeclipse-qemu-osx-2.8.0-201703012029.tgz`
 * `gnuarmeclipse-qemu-osx-2.8.0-201703012029.pkg`
@@ -78,7 +78,7 @@ To check if QEMU starts, use:
 
 ```bash
 $ ${HOME}/opt/gnuarmeclipse/qemu/2.8.0-201703012029-head/bin/qemu-system-gnuarmeclipse --version
-GNU ARM Eclipse 64-bits QEMU emulator version 2.8.0 (v2.8.0-644-ge45e0e1)
+GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0 (v2.8.0-644-ge45e0e1)
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 ```
 
@@ -90,7 +90,7 @@ After downloading the .pkg file, run the install as usual.
 
 The package is installed in:
 
-* `/Applications/GNU ARM Eclipse/QEMU/${version}`
+* `/Applications/GNU MCU Eclipse/QEMU/${version}`
 
 and the result is a folder structure similar to:
 
@@ -100,20 +100,20 @@ To check if QEMU starts, use:
 
 ```bash
 $ /Applications/GNU\ ARM\ Eclipse/QEMU/2.2.92-201504041609-dev/bin/qemu-system-gnuarmeclipse --version
-GNU ARM Eclipse 64-bits QEMU emulator version 2.2.92
+GNU MCU Eclipse 64-bits QEMU emulator version 2.2.92
 Copyright (c) 2003-2008 Fabrice Bellard
 ```
 
 ### GNU/Linux
 
-The GNU/Linux versions of GNU ARM Eclipse QEMU are packed as TGZ archives. Go to the [GitHub Releases](https://github.com/gnuarmeclipse/qemu/releases) page and download the latest version named like:
+The GNU/Linux versions of GNU MCU Eclipse QEMU are packed as TGZ archives. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/qemu/releases) page and download the latest version named like:
 
 * `gnuarmeclipse-qemu-debian64-2.2.92-201504041716-dev.tgz`
 * `gnuarmeclipse-qemu-debian32-2.2.92-201504041746-dev.tgz`
 
 As the name implies, these are Debian `tar.gz` archives, but can be executed on most recent GNU/Linux distributions (they were built on Debian 8 and were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-debian64-` file for 64-bits machines and the `-debian32-` file for 32-bits machines.
 
-Note: if your distribution already provides ready to run QEMU binaries, they currently cannot be used with the GNU ARM Eclipse plug-ins, because they lack the Cortex-M support; you need to install the **GNU ARM Eclipse QEMU**.
+Note: if your distribution already provides ready to run QEMU binaries, they currently cannot be used with the GNU MCU Eclipse plug-ins, because they lack the Cortex-M support; you need to install the **GNU MCU Eclipse QEMU**.
 
 To install this package, unpack the distribution archive and copy it to `/opt/gnuarmeclipse/qemu/${version}`
 
@@ -130,7 +130,7 @@ To check if QEMU starts and is recent, use:
 
 ```bash
 $ ${HOME}/opt/gnuarmeclipse/qemu/2.2.92-201504041716-dev/bin/qemu-system-gnuarmeclipse --version
-GNU ARM Eclipse 64-bits QEMU emulator version 2.2.92
+GNU MCU Eclipse 64-bits QEMU emulator version 2.2.92
 Copyright (c) 2003-2008 Fabrice Bellard
 ```
 

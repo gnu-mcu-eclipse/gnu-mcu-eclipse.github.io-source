@@ -10,7 +10,7 @@ date: 2015-09-11 22:27:00 +0300
 
 ## Overview
 
-STM provides a large range of Cortex-M micro-controllers, grouped in several families. The GNU ARM Eclipse plug-ins provide support for F0, F1, F2, F3 and F4. Since all templates share common characteristics, the examples shown here will refer only to the F4 family.
+STM provides a large range of Cortex-M micro-controllers, grouped in several families. The GNU MCU Eclipse plug-ins provide support for F0, F1, F2, F3 and F4. Since all templates share common characteristics, the examples shown here will refer only to the F4 family.
 
 ## Create a new project
 

@@ -63,7 +63,7 @@ On Windows, in addition to the toolchain path, the environment shall also be us
 
 Below are selections from an actual example of a headless build:
 
-	ilg-mbp:GNU ARM Eclipse ilg$ Eclipses/eclipse-4.4-cdt-test/eclipse --launcher.suppressErrors -nosplash -data "/Users/ilg/My Files/MacBookPro Projects/GNU ARM Eclipse/Eclipse Workspaces/runtime-EclipseGNUARMPlug-in-44" -application org.eclipse.cdt.managedbuilder.core.headlessbuild -cleanBuild "t8cpp"
+	ilg-mbp:GNU MCU Eclipse ilg$ Eclipses/eclipse-4.4-cdt-test/eclipse --launcher.suppressErrors -nosplash -data "/Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/Eclipse Workspaces/runtime-EclipseGNUARMPlug-in-44" -application org.eclipse.cdt.managedbuilder.core.headlessbuild -cleanBuild "t8cpp"
 	11:54:40 **** Clean-only build of configuration Debug for project t8cpp ****
 	make clean
 	rm -rf  t8cpp.siz  ./system/src/stm32f4-hal/stm32f4xx_hal.o ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o ./system/src/stm32f4-hal/stm32f4xx_hal_flash_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o ./system/src/stm32f4-hal/stm32f4xx_hal_pwr_ex.o ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.o ./system/src/stm32f4-hal/stm32f4xx_hal_rcc_ex.o  ./system/src/newlib/_cxx.o ./system/src/newlib/_exit.o ./system/src/newlib/_sbrk.o ./system/src/newlib/_startup.o ./system/src/newlib/_syscalls.o ./system/src/newlib/_write.o ./system/src/newlib/assert.o  ./system/src/diag/Trace.o ./system/src/diag/trace_impl.o  ./system/src/cortexm/_initialize_hardware.o ./system/src/cortexm/_reset_hardware.o ./system/src/cortexm/exception_handlers.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f4xx.o  ./src/BlinkLed.o ./src/Timer.o ./src/_initialize_hardware.o ./src/main.o  ./system/src/stm32f4-hal/stm32f4xx_hal.d ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.d ./system/src/stm32f4-hal/stm32f4xx_hal_flash.d ./system/src/stm32f4-hal/stm32f4xx_hal_flash_ex.d ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.d ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.d ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.d ./system/src/stm32f4-hal/stm32f4xx_hal_pwr_ex.d ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.d ./system/src/stm32f4-hal/stm32f4xx_hal_rcc_ex.d  ./system/src/newlib/_exit.d ./system/src/newlib/_sbrk.d ./system/src/newlib/_startup.d ./system/src/newlib/_syscalls.d ./system/src/newlib/_write.d ./system/src/newlib/assert.d  ./system/src/diag/Trace.d ./system/src/diag/trace_impl.d  ./system/src/cortexm/_initialize_hardware.d ./system/src/cortexm/_reset_hardware.d ./system/src/cortexm/exception_handlers.d  ./system/src/cmsis/system_stm32f4xx.d ./system/src/cmsis/vectors_stm32f4xx.d  ./src/_initialize_hardware.d  t8cpp.hex  ./system/src/newlib/_cxx.d  ./src/BlinkLed.d ./src/Timer.d ./src/main.d  t8cpp.elf
@@ -143,6 +143,6 @@ Below are selections from an actual example of a headless build:
 
 	11:54:49 Build Finished (took 4s.561ms)
 
-	ilg-mbp:GNU ARM Eclipse ilg$
+	ilg-mbp:GNU MCU Eclipse ilg$
 
 Note: the order of the builds and the rule dictating when to clean and when to build is not exactly obvious, and sometimes you may get different builds than you expect, but generally you can manage to build what you need.

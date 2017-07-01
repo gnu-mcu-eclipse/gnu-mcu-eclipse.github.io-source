@@ -63,19 +63,19 @@ The plug-in will use this definition as default for `${openocd_executable}`.
 
 The plug-in will take a best effort approach to find a location to be used as default for `${openocd_path}`.
 
-    ilg.gnumcueclipse.debug.gdbjtag.openocd/install.folder=/Applications/GNU ARM Eclipse/OpenOCD/bin
+    ilg.gnumcueclipse.debug.gdbjtag.openocd/install.folder=/Applications/GNU MCU Eclipse/OpenOCD/bin
 
 If this preference is defined and the executable is there, the plug-in will use it.
 
-if not, the Windows Registry will be searched. If the `InstallFolder` key is found below the `\\GNU ARM Eclipse\\OpenOCD` subkey, and the executable is found there, the plug-in will use it.
+if not, the Windows Registry will be searched. If the `InstallFolder` key is found below the `\\GNU MCU Eclipse\\OpenOCD` subkey, and the executable is found there, the plug-in will use it.
 
 Otherwise the plug-in will try a folder search.
 
     search.path=\
-    ${user.home}/Applications/GNU ARM Eclipse/OpenOCD:\
-    ${user.home}/local/GNU ARM Eclipse/OpenOCD:\
+    ${user.home}/Applications/GNU MCU Eclipse/OpenOCD:\
+    ${user.home}/local/GNU MCU Eclipse/OpenOCD:\
     ${user.home}/local/gnuarmeclipse/OpenOCD:\
-    /Applications/GNU ARM Eclipse/OpenOCD:\
+    /Applications/GNU MCU Eclipse/OpenOCD:\
     /opt/local:\
     /usr/local
 

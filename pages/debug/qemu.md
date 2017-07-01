@@ -21,11 +21,11 @@ The short answer is: because a debugging plug-in provides the best integration o
 
 ## Prerequisites
 
-Before being able to use QEMU with the GNU ARM Eclipse plug-ins, you must separately install:
+Before being able to use QEMU with the GNU MCU Eclipse plug-ins, you must separately install:
 
 * the QEMU debugging plug-in
 * the GDB debugger (client) application, as part of a GNU toolchain
-* the GNU ARM Eclipse QEMU.
+* the GNU MCU Eclipse QEMU.
 
 If you did not do it yet, please follow the instructions in the [QEMU install]({{ site.baseurl }}/qemu/install/) page and return when completed.
 
@@ -42,12 +42,12 @@ Before starting work with QEMU, it is required to define the path to the QEMU 
   ![The QEMU preferences page]({{ site.baseurl }}/assets/images/2015/04/QEMU_Preferences.png)
 
 * click the **Restore Defaults** button
-* the plug-in will suggest the default values computed when Eclipse started; if a new version of GNU ARM Eclipse QEMU was installed while Eclipse was active, restart Eclipse and click again the Restore Defaults button
+* the plug-in will suggest the default values computed when Eclipse started; if a new version of GNU MCU Eclipse QEMU was installed while Eclipse was active, restart Eclipse and click again the Restore Defaults button
 * check the *Executable:* field; it must define the name of the QEMU executable; in most cases it should be already set correctly; if not, edit it to match the correct name;
-* check the *Folder:* field; it must point to the actual folder where the GNU ARM Eclipse QEMU was installed on your system, for example `/Applications/GNU ARM Eclipse/QEMU` on macOS
+* check the *Folder:* field; it must point to the actual folder where the GNU MCU Eclipse QEMU was installed on your system, for example `/Applications/GNU MCU Eclipse/QEMU` on macOS
 * click the **OK** button
 
-By default, the GDB server is defined as `${qemu_path}/${qemu_executable}`; these two macros are automatically set by the above preference page; for portability reasons, it is recommended to keep this definition in all your debug configurations, and also to have a single place to update the path when a new version of the GNU ARM Eclipse QEMU is released.
+By default, the GDB server is defined as `${qemu_path}/${qemu_executable}`; these two macros are automatically set by the above preference page; for portability reasons, it is recommended to keep this definition in all your debug configurations, and also to have a single place to update the path when a new version of the GNU MCU Eclipse QEMU is released.
 
 ### Associate a device to the project
 

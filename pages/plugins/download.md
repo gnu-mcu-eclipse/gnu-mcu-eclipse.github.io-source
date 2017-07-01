@@ -12,7 +12,7 @@ date: 2015-09-11 20:07:00 +0300
 
 Installing Eclipse usually does not require to separately download any binary, since Eclipse provides a special mechanism to install and update plug-ins.
 
-The GNU ARM Eclipse plug-ins update site URL is still on SourceForge:
+The GNU MCU Eclipse plug-ins update site URL is still on SourceForge:
 
 `http://gnuarmeclipse.sourceforge.net/updates`
 
@@ -32,11 +32,11 @@ This site is not always updated; use it carefully, back up your workspace, and d
 
 If, for any reasons, you need to revert to a specific version, or the Eclipse mechanism to install new software fails,  you can always download the desired version and manually install the plug-ins from the local archive.
 
-All versions of the plug-ins are available via the [GitHub Releases](https://github.com/gnuarmeclipse/plug-ins/releases) page. For details how to reach it, see the [Downloads]({{ site.baseurl }}/downloads/) page.
+All versions of the plug-ins are available via the [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases) page. For details how to reach it, see the [Downloads]({{ site.baseurl }}/downloads/) page.
 
 ![Plug-ins Releases]({{ site.baseurl }}/assets/images/2015/github-gae-plugins-releases.png)
 
-Navigate to the [Latest release](https://github.com/gnuarmeclipse/plug-ins/releases/latest) page (or the desired version) and download the attached archive, it should be a **zip** file with a long name like:
+Navigate to the [Latest release](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/latest) page (or the desired version) and download the attached archive, it should be a **zip** file with a long name like:
 
 `ilg.gnuarmeclipse.repository-2.9.3-201508190739.zip`
 

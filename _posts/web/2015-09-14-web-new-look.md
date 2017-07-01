@@ -27,11 +27,11 @@ Migrating the repositories was the easiest part, each project was pushed into it
 
 The current project repositories are:
 
-* [plug-ins](https://github.com/gnuarmeclipse/plug-ins)
-* [windows-build-tools](https://github.com/gnuarmeclipse/windows-build-tools)
-* [openocd](https://github.com/gnuarmeclipse/openocd)
-* [qemu](https://github.com/gnuarmeclipse/qemu)
-* [build-scripts](https://github.com/gnuarmeclipse/build-scripts)
+* [plug-ins](https://github.com/gnu-mcu-eclipse/eclipse-plugins)
+* [windows-build-tools](https://github.com/gnu-mcu-eclipse/windows-build-tools)
+* [openocd](https://github.com/gnu-mcu-eclipse/openocd)
+* [qemu](https://github.com/gnu-mcu-eclipse/qemu)
+* [build-scripts](https://github.com/gnu-mcu-eclipse/build-scripts)
 
 ![GNU ARM Eclipse GitHub Projects]({{ site.baseurl }}/assets/images/2015/github-gae-projects.png)
 
@@ -75,12 +75,12 @@ Since GitHub solution for providing documentation sites is [GitHub Pages](https:
 
 GitHub Pages uses [Jekyll](http://jekyllrb.com) to generate static web sites, and the most convenient input format for Jekyll is [markdown](http://daringfireball.net/projects/markdown/syntax), so the migration involved conversion from WordPress internal representation, to markdown. Given the differences, this conversion was not easy, and was done partly with scripts, partly manually. Similarly for MediaWiki, although the conversion from the MediaWiki format to markdown was easier.
 
-Given the complexity of this migration, we are aware that it is very likely that lots of mistakes are still present in the pages; we would appreciate any help in fixing them (use the [Web Issues](https://github.com/gnuarmeclipse/gnuarmeclipse.github.io-source/issues) tracker for this).
+Given the complexity of this migration, we are aware that it is very likely that lots of mistakes are still present in the pages; we would appreciate any help in fixing them (use the [Web Issues](https://github.com/gnu-mcu-eclipse/gnuarmeclipse.github.io-source/issues) tracker for this).
 
 The web site has two dedicated projects:
 
-* [gnuarmeclipse.github.io](https://github.com/gnuarmeclipse/gnuarmeclipse.github.io)
-* [gnuarmeclipse.github.io-source](https://github.com/gnuarmeclipse/gnuarmeclipse.github.io-source)
+* [gnuarmeclipse.github.io](https://github.com/gnu-mcu-eclipse/gnuarmeclipse.github.io)
+* [gnuarmeclipse.github.io-source](https://github.com/gnu-mcu-eclipse/gnuarmeclipse.github.io-source)
 
 The first one stores the actual static pages of the Web site and the second stores the Jekyll source files for generating the Web site.
 

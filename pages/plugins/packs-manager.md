@@ -19,7 +19,7 @@ The current Keil/ARM packs are intended for Cortex-M cores only.
 
 ## Prerequisites
 
-To have access to the new packs features, you need to install the **GNU ARM Eclipse Packs Support** plug-in (currently with experimental status):
+To have access to the new packs features, you need to install the **GNU MCU Eclipse Packs Support** plug-in (currently with experimental status):
 
 ![Install packs support plug-in]({{ site.baseurl }}/assets/images/2014/07/InstallPacks.png)
 
@@ -27,7 +27,7 @@ To have access to the new packs features, you need to install the **GNU ARM Ecli
 
 ## The Packs Support plug-in
 
-The GNU ARM Eclipse Packs Support plug-in is intended to manage (list/install/inspect/remove) packs from multiple sources. It currently implements the specifications of **CMSIS Packs**, as defined by [ARM/Keil](http://www.keil.com/pack/doc/CMSIS/Pack/html/index.html), with some extensions.
+The GNU MCU Eclipse Packs Support plug-in is intended to manage (list/install/inspect/remove) packs from multiple sources. It currently implements the specifications of **CMSIS Packs**, as defined by [ARM/Keil](http://www.keil.com/pack/doc/CMSIS/Pack/html/index.html), with some extensions.
 
 ## Configuration
 

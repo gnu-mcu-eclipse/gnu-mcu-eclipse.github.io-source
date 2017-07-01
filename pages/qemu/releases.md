@@ -1,6 +1,6 @@
 ---
 layout: page
-title: GNU ARM Eclipse QEMU releases
+title: GNU MCU Eclipse QEMU releases
 permalink: /qemu/releases/
 
 author: Liviu Ionescu

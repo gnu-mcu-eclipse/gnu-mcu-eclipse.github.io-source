@@ -24,7 +24,7 @@ Entries in this file are in reverse chronological order.
 
 ### 2016-10-20
 
-- **[Issue:[#2](https://github.com/gnuarmeclipse/openocd/issues/2)]** nsi file: add InstallDir; silent install should honour /D
+- **[Issue:[#2](https://github.com/gnu-mcu-eclipse/openocd/issues/2)]** nsi file: add InstallDir; silent install should honour /D
 
 ### 2016-10-17
 
@@ -97,7 +97,7 @@ Entries in this file are in reverse chronological order.
 
 ### 2015-01-12
 
-- add "GNU ARM Eclipse" to greeting.
+- add "GNU MCU Eclipse" to greeting.
 - use argv[0] even on non windows
 
 ### 2015-01-10

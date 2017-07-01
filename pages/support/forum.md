@@ -16,7 +16,7 @@ A dedicated [user discussions forum](https://www.element14.com/community/groups/
 
 ## Goals
 
-The forum goal was to facilitate experience sharing between GNU ARM Eclipse users and as a place to post questions and support requests. In case a problem is identified as bug or feature request, please use the corresponding GitHub Issues [tracker](https://github.com/gnuarmeclipse/plug-ins/issues/).
+The forum goal was to facilitate experience sharing between GNU ARM Eclipse users and as a place to post questions and support requests. In case a problem is identified as bug or feature request, please use the corresponding GitHub Issues [tracker](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/).
 
 ## Access
 

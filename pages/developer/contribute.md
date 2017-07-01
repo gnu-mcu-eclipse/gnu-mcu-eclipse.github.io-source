@@ -10,11 +10,11 @@ date: 2015-09-11 19:38:00 +0300
 
 If these plug-ins were useful for you, and you want to help make them even better, your contributions will be highly appreciated.
 
-Here are some ideas on how you can contribute to GNU ARM Eclipse plug-ins:
+Here are some ideas on how you can contribute to GNU MCU Eclipse plug-ins:
 
 ## Bug reports
 
-If you notice something that does not behave as expected, please take the time to investigate the issue; it might be a wrong use case, but it might also be a bug, either in Eclipse CDT or in the GNU ARM Eclipse plug-ins.
+If you notice something that does not behave as expected, please take the time to investigate the issue; it might be a wrong use case, but it might also be a bug, either in Eclipse CDT or in the GNU MCU Eclipse plug-ins.
 
 Try to investigate as mush as possible and when you have a sequence of steps that can be used to reproduce the bug, please file a new report in the [Bugs](https://sourceforge.net/p/gnuarmeclipse/bugs/) tracker.
 
@@ -48,4 +48,4 @@ If you need project templates for new processors, it is highly probable that we 
 
 ## Pecuniary contributions
 
-Although we'll do our best to continue the development for the GNU ARM Eclipse plug-ins as free software, the world around us is governed by banks and financial institutions, and even mathematicians came up with a *[no free lunch theorem](https://en.wikipedia.org/wiki/No_free_lunch_theorem)*. So, as everywhere, if you are willing to contribute, we'll be grateful for any contribution. (Please contact us for details).
+Although we'll do our best to continue the development for the GNU MCU Eclipse plug-ins as free software, the world around us is governed by banks and financial institutions, and even mathematicians came up with a *[no free lunch theorem](https://en.wikipedia.org/wiki/No_free_lunch_theorem)*. So, as everywhere, if you are willing to contribute, we'll be grateful for any contribution. (Please contact us for details).

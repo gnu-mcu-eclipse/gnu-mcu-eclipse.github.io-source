@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /plugins/features/
-title: GNU ARM Eclipse Plug-ins Features
+title: GNU MCU Eclipse Plug-ins Features
 author: Liviu Ionescu
 
 date: 2015-09-10 19:59:00 +0300
@@ -10,7 +10,7 @@ date: 2015-09-10 19:59:00 +0300
 
 ## Main features
 
-The main features of the GNU ARM Eclipse family of plug-ins are:
+The main features of the GNU MCU Eclipse family of plug-ins are:
 
   * create/build/manage embedded ARM and AArch64 applications, using the managed project features of Eclipse CDT, i.e. without having to manually create and maintain makefiles
   * provide ready to run templates for some ARM Cortex-M processors
@@ -90,7 +90,7 @@ Toolchain definitions include most of the configurable details, not only the pre
 
 The traditional way of accessing the toolchain components was to add the toolchain path to the system PATH and later do nothing special inside Eclipse. Unfortunately this model does not scale; serious development often requires multiple toolchains (either different versions of the same toolchain, or even toolchains from different sources) on the same machine, and polluting the system PATH is a source of major headaches.
 
-The GNU ARM Eclipse cross build plug-in provides advanced toolchain path management; for more details, please read the separate [Toolchain path management][4] page
+The GNU MCU Eclipse cross build plug-in provides advanced toolchain path management; for more details, please read the separate [Toolchain path management][4] page
 
 ## Improved project portability
 
@@ -123,7 +123,7 @@ We also recommend the use of specific ARM debugging support, like tracing via th
 
 ## The packages manager perspective
 
-The GNU ARM Eclipse plug-ins were the first open source tools to benefit from the new CMSIS Packs technology promoted by ARM.
+The GNU MCU Eclipse plug-ins were the first open source tools to benefit from the new CMSIS Packs technology promoted by ARM.
 
 Packages are a convenient way to distribute software components, hardware descriptions and documentation, in a structured way.
 

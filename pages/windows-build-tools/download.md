@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How to download the GNU ARM Eclipse Windows Build Tools?
+title: How to download the GNU MCU Eclipse Windows Build Tools?
 permalink: /windows-build-tools/download/
 
 author: Liviu Ionescu
@@ -11,7 +11,7 @@ date: 2015-09-16 20:02:00 +0300
 
 ## GitHub Releases
 
-All versions of the GNU ARM Eclipse Windows Build Tools are available via the [GitHub Releases](https://github.com/gnuarmeclipse/windows-build-tools/releases) page. For details how to reach it, see the [Downloads]({{ site.baseurl }}/downloads/) page.
+All versions of the GNU MCU Eclipse Windows Build Tools are available via the [GitHub Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases) page. For details how to reach it, see the [Downloads]({{ site.baseurl }}/downloads/) page.
 
 ![Windows Build Tools Releases]({{ site.baseurl }}/assets/images/2015/github-gae-build-tools-releases.png)
 

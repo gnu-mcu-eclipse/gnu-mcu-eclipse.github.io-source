@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /install/
-title: How to install GNU ARM Eclipse?
+title: How to install GNU MCU Eclipse?
 author: Liviu Ionescu
 
 date: 2015-09-16 20:56:00 +0300
@@ -10,7 +10,7 @@ date: 2015-09-16 20:56:00 +0300
 
 ## Overview
 
-Although GNU ARM Eclipse is not yet a packed suite to be installed in a single step, the separate steps are relatively easy to perform, and installing the plug-ins and the tools can be successfully completed even by non-experienced users.
+Although GNU MCU Eclipse is not yet a packed suite to be installed in a single step, the separate steps are relatively easy to perform, and installing the plug-ins and the tools can be successfully completed even by non-experienced users.
 
 > Note for beginners: If performed for the first time, it is recommended to follow the steps **by the book** and avoid _poetic licenses_, since they might lead to tricky situations and subtle functional problems.
 
@@ -24,7 +24,7 @@ Please follow the steps in the [Toolchain install]({{ site.baseurl }}/toolchain/
 
 ## Windows Build Tools
 
-This step is Windows specific, and it is highly recommended to use the GNU ARM Eclipse Windows Build Tools, and avoid other `make.exe` programs, even if they apparently work, since subtle differences in path processing exists between different versions of `make`.
+This step is Windows specific, and it is highly recommended to use the GNU MCU Eclipse Windows Build Tools, and avoid other `make.exe` programs, even if they apparently work, since subtle differences in path processing exists between different versions of `make`.
 
 Please follow the steps in the [How to install the Windows Build Tools]({{ site.baseurl }}/windows-build-tools/install/) page.
 
@@ -52,21 +52,21 @@ As a prerequisite for Eclipse, Java is required.
 
 Java is no longer a very _hot_ technology, so it is generally not available by default on most platforms and requires separate installation.
 
-More details are available in the [How to install the GNU ARM Eclipse plug-ins]({{ site.baseurl }}/plugins/install/) page.
+More details are available in the [How to install the GNU MCU Eclipse plug-ins]({{ site.baseurl }}/plugins/install/) page.
 
 ## Eclipse & CDT
 
-Eclipse is the development platform where the GNU ARM Eclipse plug-ins run. Generally it is not available by default on most platforms and requires separate installation.
+Eclipse is the development platform where the GNU MCU Eclipse plug-ins run. Generally it is not available by default on most platforms and requires separate installation.
 
 Be sure you install the **Eclipse IDE for C/C++ Developers**, not other package, since otherwise you'll have to manually install CDT.
 
-More details are available in the [How to install the GNU ARM Eclipse plug-ins]({{ site.baseurl }}/plugins/install/) page.
+More details are available in the [How to install the GNU MCU Eclipse plug-ins]({{ site.baseurl }}/plugins/install/) page.
 
 > Note: on GNU/Linux be sure you manually install the Eclipse; **DO NOT** try to install it via the Synaptics package manager, or similar, since usually you get an older version and the CDT plug-ins are not included.
 
 ## Plug-ins
 
-Once the Java & Eclipse are functional, please proceed with plug-ins install, as explains in the  [How to install the GNU ARM Eclipse plug-ins]({{ site.baseurl }}/plugins/install/) page.
+Once the Java & Eclipse are functional, please proceed with plug-ins install, as explains in the  [How to install the GNU MCU Eclipse plug-ins]({{ site.baseurl }}/plugins/install/) page.
 
 ## Workspace preferences
 

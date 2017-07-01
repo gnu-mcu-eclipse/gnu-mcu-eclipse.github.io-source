@@ -66,7 +66,7 @@
 * [How to build]({{ site.baseurl }}/qemu/build-procedure/)
 * [How to publish]({{ site.baseurl }}/qemu/publish-procedure/)
 * [Releases]({{ site.baseurl }}/qemu/releases/)
-* [Support](https://github.com/gnuarmeclipse/qemu/issues/1/) (report issue)
+* [Support](https://github.com/gnu-mcu-eclipse/qemu/issues/1/) (report issue)
 
 #### [GNU ARM OpenOCD Home]({{ site.baseurl }}/openocd/)
 
@@ -76,7 +76,7 @@
 * [How to build]({{ site.baseurl }}/openocd/build-procedure/)
 * [How to publish]({{ site.baseurl }}/openocd/publish-procedure/)
 * [Releases]({{ site.baseurl }}/openocd/releases/)
-* [Support](https://github.com/gnuarmeclipse/openocd/issues/1/)  (report issue)
+* [Support](https://github.com/gnu-mcu-eclipse/openocd/issues/1/)  (report issue)
 
 #### [Windows Build Tools Home]({{ site.baseurl }}/windows-build-tools/)
 
@@ -85,7 +85,7 @@
 * [How to build]({{ site.baseurl }}/windows-build-tools/build-procedure/)
 * [How to publish]({{ site.baseurl }}/windows-build-tools/publish-procedure/)
 * [Releases]({{ site.baseurl }}/windows-build-tools/releases/)
-* [Support](https://github.com/gnuarmeclipse/windows-build-tools/issues/1/) (report issue)
+* [Support](https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/) (report issue)
 
 #### Advanced
 
@@ -98,7 +98,7 @@
 * [FAQ]({{ site.baseurl }}/support/faq/)
 * [SourceForge tickets]({{ site.baseurl }}/support/sourceforge/)
 * [Forum]({{ site.baseurl }}/support/forum/)
-* [Report plug-ins issue](https://github.com/gnuarmeclipse/plug-ins/issues/1/)
+* [Report plug-ins issue](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/)
 
 
 #### [Developer]({{ site.baseurl }}/developer/)

@@ -27,7 +27,7 @@ So, if you use the CodeBench Lite (not recommended anyway), although you already
 
 ## Download the Windows Build Tools setup
 
-Otherwise, if you use other toolchains, like the recommended [**GNU Tools for ARM Embedded Processors**](http://launchpad.net/gcc-arm-embedded), for your convenience we prepared a small package with the required build tools; download the most recent `gnuarmeclipse-build-tools-win[32|64]-*.*-*-setup.exe` file from the [Github Releases](https://github.com/gnuarmeclipse/windows-build-tools/releases) page and proceed with the setup.
+Otherwise, if you use other toolchains, like the recommended [**GNU Tools for ARM Embedded Processors**](http://launchpad.net/gcc-arm-embedded), for your convenience we prepared a small package with the required build tools; download the most recent `gnuarmeclipse-build-tools-win[32|64]-*.*-*-setup.exe` file from the [Github Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases) page and proceed with the setup.
 
 ## Run the setup
 
@@ -35,7 +35,7 @@ Run the setup with the default settings:
 
 ![Windows Build Tools Setup]({{ site.baseurl }}/assets/images/2015/win-build-tools-setup.png)
 
-By default this will install the programs in the `C:\Program Files\GNU ARM Eclipse\Build Tools` folder:
+By default this will install the programs in the `C:\Program Files\GNU MCU Eclipse\Build Tools` folder:
 
 ![Default install destination]({{ site.baseurl }}/assets/images/2015/win-build-tools-setup-destination.png)
 
@@ -44,7 +44,7 @@ By default this will install the programs in the `C:\Program Files\GNU ARM Ecli
 Check if the tool is functional; go to the folder where you installed the tools and run `make --version`.
 
 ```
-C:\Program Files\GNU ARM Eclipse\Build Tools\bin>make --version
+C:\Program Files\GNU MCU Eclipse\Build Tools\bin>make --version
 GNU Make 4.1
 Built for i686-w64-mingw32
 Copyright (C) 1988-2014 Free Software Foundation, Inc.

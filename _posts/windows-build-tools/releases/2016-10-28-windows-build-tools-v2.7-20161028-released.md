@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  GNU ARM Eclipse Windows Build Tools v2.7-20161028* released
-download_url: https://github.com/gnuarmeclipse/windows-build-tools/releases/tag/v2.7
+download_url: https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/tag/v2.7
 
 author: Liviu Ionescu
 

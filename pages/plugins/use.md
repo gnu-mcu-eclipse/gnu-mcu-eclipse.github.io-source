@@ -77,7 +77,7 @@ When selecting AArch64 processors in the toolchain setting page, the ARM configu
 
 ### Configure the toolchain path
 
-When the new projects are created with the GNU ARM Eclipse templates, the toolchain path is already configured. Only when importing projects into a fresh workspace, the toolchain path needs to be configured manually for the first build.
+When the new projects are created with the GNU MCU Eclipse templates, the toolchain path is already configured. Only when importing projects into a fresh workspace, the toolchain path needs to be configured manually for the first build.
 
 ![Toolchain properties]({{ site.baseurl }}/assets/images/2014/02/ToolchainsProperties.png)
 

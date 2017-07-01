@@ -193,7 +193,7 @@ Without this option, Maven might issue many warnings, like:
 [WARNING]   org.eclipse.cdt/9.2.0.201702180936
 [WARNING]   org.eclipse.cdt.core.native/5.10.0.201702180936
 [WARNING]   org.eclipse.cdt.managedbuilder.core/8.4.0.201702180936
-[INFO] Resolving class path of MavenProject: ilg.gnumcueclipse:ilg.gnumcueclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU ARM Eclipse/plug-ins.git/ilg.gnumcueclipse.core/pom.xml
+[INFO] Resolving class path of MavenProject: ilg.gnumcueclipse:ilg.gnumcueclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/plug-ins.git/ilg.gnumcueclipse.core/pom.xml
 ```
 
 Unfortunately I did not find a way to pass this option in the pom files, and it must be passed only on the command line.

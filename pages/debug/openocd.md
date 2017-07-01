@@ -14,7 +14,7 @@ By default, Eclipse supports OpenOCD via the GDB Hardware Debugging plug-in, whi
 
 Based on the experience with the J-Link plug-in, we decided to add a separate OpenOCD plug-in, with full configuration pages.
 
-In early 2015, a step further was performed, with the addition of the [GNU ARM Eclipse OpenOCD]({{ site.baseurl }}/openocd/) subproject, a new distribution of OpenOCD.
+In early 2015, a step further was performed, with the addition of the [GNU MCU Eclipse OpenOCD]({{ site.baseurl }}/openocd/) subproject, a new distribution of OpenOCD.
 
 Unfortunately SWD support in the current OpenOCD version (0.8.x) is not that great, and we could not yet figure out a way to get the SWO tracing info out of OpenOCD, so currently there is no special tracing window available.
 
@@ -22,7 +22,7 @@ Unfortunately SWD support in the current OpenOCD version (0.8.x) is not that gr
 
 Before being able to use any JTAG probe with OpenOCD, you must separately install:
 
-* the [GNU ARM Eclipse OpenOCD]({{ site.baseurl }}/openocd/) debugging plug-in
+* the [GNU MCU Eclipse OpenOCD]({{ site.baseurl }}/openocd/) debugging plug-in
 * the GDB debugger (client) application, as part of a GNU toolchain
 * the OpenOCD as a GDB server
 * any drivers required for the JTAG probe (for example FTDI drivers).
@@ -48,7 +48,7 @@ Before starting work with OpenOCD, it is recommended to define the path to the f
 * click the **Restore Defaults** button
 * the plug-in will suggest the default values computed when Eclipse started; if a new version of OpenOCD was installed while Eclipse was active, restart Eclipse and click again the Restore Defaults button
 * check the **Executable** field; it must define the name of the command line OpenOCD executable; in most cases it should be set correctly; if not, edit it to match the correct name;
-* check the **Folder** field; it must point to the actual folder where the OpenOCD tools were installed on your platform, for example `C:\Program Files\GNU ARM Eclipse\OpenOCD\bin` on Windows, `/Applications/GNU ARM Eclipse/OpenOCD/bin/` on macOS, or `/opt/gnuarmeclipse/openocd/bin/` on GNU/Linux
+* check the **Folder** field; it must point to the actual folder where the OpenOCD tools were installed on your platform, for example `C:\Program Files\GNU MCU Eclipse\OpenOCD\bin` on Windows, `/Applications/GNU MCU Eclipse/OpenOCD/bin/` on macOS, or `/opt/gnuarmeclipse/openocd/bin/` on GNU/Linux
 * click the **OK** button
 
 By default, the GDB server is defined as `${openocd_path}/${openocd_executable}`; these two macros are automatically set by the above preference page; for portability reasons, it is recommended to define the path to the OpenOCD relative to this variable in all your debug configurations, to have a single place to update the path when you want to use another version of the OpenOCD tools installed in a different location.
@@ -215,7 +215,7 @@ If you still fail to configure the plug-in to start OpenOCD automatically, proc
 The syntax required by the OpenOCD `echo` command is a single string, in other words both echo and the message must be in the same string. To achieve this in a shell, the string must be quoted:
 
 ```
--c 'echo "Started by GNU ARM Eclipse"'
+-c 'echo "Started by GNU MCU Eclipse"'
 ```
 
 Note: this command is used by the plug-in to detect when the GDB server is initialised and ready to receive commands. It is not necessary when starting OpenCOD manually.

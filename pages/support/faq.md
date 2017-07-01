@@ -180,7 +180,7 @@ As mentioned in the [Known issues][2], avoid changing settings for individual f
 
 ## I want to see the source code. How can I access the repository?
 
-Go to [GitHub](https://github.com/gnuarmeclipse/plug-ins).
+Go to [GitHub](https://github.com/gnu-mcu-eclipse/eclipse-plugins).
 
 ## The build generates a long console listing instead of creating the secondary targets
 

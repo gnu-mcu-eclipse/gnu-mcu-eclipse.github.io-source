@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The GNU ARM Eclipse QEMU command line options
+title: The GNU MCU Eclipse QEMU command line options
 permalink: /qemu/options/
 
 date: 2015-11-10 19:27:00 +0300
@@ -34,7 +34,7 @@ QEMU has lots, lots of options. The official QEMU documentation (available in th
 
 Unfortunately most of these options were designed for the larger versions of QEMU, intended to emulate Linux systems, and are of little use for Cortex-M emulation.
 
-GNU ARM Eclipse QEMU redefines some of these general options, or adds new ones, and generally uses only a small subset of the available options.
+GNU MCU Eclipse QEMU redefines some of these general options, or adds new ones, and generally uses only a small subset of the available options.
 
 The common ones are presented below.
 
@@ -92,7 +92,7 @@ When in GDB server mode, it is no longer required to specify the ELF image, sinc
 
 ### `nographic`
 
-By default, the GNU ARM Eclipse QEMU will try to start in graphical mode, by displaying an image of the emulated board and one or more animated LEDs.
+By default, the GNU MCU Eclipse QEMU will try to start in graphical mode, by displaying an image of the emulated board and one or more animated LEDs.
 
 For running unit tests this is generally not needed, and QEMU can be started with graphics support disabled:
 
@@ -108,7 +108,7 @@ By default, `qemu` is very quiet, it barely complains for errors.
 To make it minimally social, add one `--verbose`, and it'll tell what is going on:
 
 ```
-GNU ARM Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
+GNU MCU Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
 Board: 'STM32F4-Discovery' (ST Discovery kit for STM32F407/417 lines).
 Device: 'STM32F407VG' (Cortex-M4 r0p0, MPU), Flash: 1024 kB, RAM: 128 kB.
 Command line: 'blinky' (6 bytes).
@@ -126,7 +126,7 @@ Cortex-M4 r0p0 core reset.
 Adding one more `--verbose`  will make QEMU extra verbose and it'll display details about the board hardware configuration and the memory sections loaded by GDB:
 
 ```
-GNU ARM Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
+GNU MCU Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
 Board: 'STM32F4-Discovery' (ST Discovery kit for STM32F407/417 lines).
 Device: 'STM32F407VG' (Cortex-M4 r0p0, MPU), Flash: 1024 kB, RAM: 128 kB.
 Command line: 'blinky' (6 bytes).
@@ -198,4 +198,4 @@ This is not really a big limitation, since unit tests can be configured to write
 
 ## Fully semihosted applications
 
-When using QEMU for running unit tests, and expecting the exit code to reflect the test result, it is mandatory for the application to be compiled and linked as a **fully semihosted application**, in other words all system calls to be implemented using the semihosting interface. For the projects created by the GNU ARM Eclipse wizards, this is achieved by defining `OS_USE_SEMIHOSTING`; outside GNU ARM Eclipse it depends on the libraries used, for example newlib can be configured for semihosting by adding `--specs=rdimon.specs` to the linker options.
+When using QEMU for running unit tests, and expecting the exit code to reflect the test result, it is mandatory for the application to be compiled and linked as a **fully semihosted application**, in other words all system calls to be implemented using the semihosting interface. For the projects created by the GNU MCU Eclipse wizards, this is achieved by defining `OS_USE_SEMIHOSTING`; outside GNU MCU Eclipse it depends on the libraries used, for example newlib can be configured for semihosting by adding `--specs=rdimon.specs` to the linker options.

@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /qemu/download/
-title: How to download the GNU ARM Eclipse QEMU?
+title: How to download the GNU MCU Eclipse QEMU?
 author: Liviu Ionescu
 
 date: 2015-09-16 20:15:00 +0300
@@ -10,7 +10,7 @@ date: 2015-09-16 20:15:00 +0300
 
 ## GitHub Releases
 
-All versions of the GNU ARM Eclipse QEMU are available via the [GitHub Releases](https://github.com/gnuarmeclipse/qemu/releases) page. For details how to reach it, see the [Downloads]({{ site.baseurl }}/downloads/) page.
+All versions of the GNU MCU Eclipse QEMU are available via the [GitHub Releases](https://github.com/gnu-mcu-eclipse/qemu/releases) page. For details how to reach it, see the [Downloads]({{ site.baseurl }}/downloads/) page.
 
 ![QEMU Releases]({{ site.baseurl }}/assets/images/2015/github-gae-qemu-releases.png)
 

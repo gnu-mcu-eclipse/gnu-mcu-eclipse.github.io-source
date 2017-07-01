@@ -9,7 +9,7 @@ date: 2016-10-28 12:28:00 +0300
 
 ---
 
-The Windows Build Tools binaries are published on GitHub  [Releases](https://github.com/gnuarmeclipse/windows-build-tools/releases)).
+The Windows Build Tools binaries are published on GitHub  [Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases)).
 
 ## Update the Change log
 
@@ -32,7 +32,7 @@ In the **gnuarmeclipse/windows-build-tools** project, commit all changes.
 Be sure the scripts in the **build-scripts.git** are up to date.
 
 ```
-$ git clone https://github.com/gnuarmeclipse/build-scripts.git \
+$ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
   ~/Downloads/build-scripts.git
 ```
 
@@ -47,7 +47,7 @@ $ caffeinate bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tool
 
 - add a new file to `_posts/windows-build-tools/releases`
 - name the file like `2016-10-28-windows-build-tools-v2-7-20161028-released.md`
-- name the post like: **GNU ARM Eclipse Windows Build Tools v2.7-20161028* released**.
+- name the post like: **GNU MCU Eclipse Windows Build Tools v2.7-20161028* released**.
 
 ## Update the release post with the MD5 sums
 
@@ -75,11 +75,11 @@ With SourceTree, push to the GitHub remote, the **master** branche.
 ## Create the release
 
 - for stable releases, be sure the **master** branch is up to date and set as default
-- go to the [GitHub Releases](https://github.com/gnuarmeclipse/windows-build-tools/releases) page
+- go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases) page
 - click **Draft a new release**
 - name the tag like **v2.7**
 - select the **master** branch
-- name the release like **GNU ARM Eclipse Windows Build Tools v2.7-201610281058**
+- name the release like **GNU MCU Eclipse Windows Build Tools v2.7-201610281058**
 - as description, copy the first paragraph from the Web release page
 - add a link to the Web page **\[Continue reading »\]\(\)**
 - get URL from web and update the above link
@@ -90,7 +90,7 @@ Note: at this moment the system should send a notification to all clients watchi
 
 ## Copy binaries to the local archive folder
 
--   go to `.../GNU ARM Eclipse/archive`
+-   go to `.../GNU MCU Eclipse/archive`
 -   move the latest binaries and MD5 to `releases/build-tools`
 
 ## Share on Facebook

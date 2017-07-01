@@ -12,7 +12,7 @@ date: 2015-09-10 21:06:00 +0300
 
 The build tools path preference is:
 
-    buildTools.path=C:/Program Files/GNU ARM Eclipse/Build Tools/bin
+    buildTools.path=C:/Program Files/GNU MCU Eclipse/Build Tools/bin
 
 This value can be stored in all persistent scopes (Eclipse, workspace, project).
 
@@ -63,7 +63,7 @@ Note: in March 2015, the name of the **Linaro ARMv7 big-endian Linux GNU EABI HF
 
 All persistent values can be given defaults, for example:
 
-    ilg.gnuarmeclipse.managedbuild.cross/buildTools.path=C:/Program Files/GNU ARM Eclipse/Build Tools/bin
+    ilg.gnuarmeclipse.managedbuild.cross/buildTools.path=C:/Program Files/GNU MCU Eclipse/Build Tools/bin
 
     ilg.gnuarmeclipse.managedbuild.cross/toolchain.name=GNU Tools for ARM Embedded Processors
     ilg.gnuarmeclipse.managedbuild.cross/toolchain.path.1287942917=/usr/local/gcc-arm-none-eabi-4_8-2014q2/bin

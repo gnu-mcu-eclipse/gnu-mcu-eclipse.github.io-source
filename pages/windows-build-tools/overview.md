@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The GNU ARM Eclipse Windows Build Tools
+title: The GNU MCU Eclipse Windows Build Tools
 permalink: /windows-build-tools/
 
 author: Liviu Ionescu
@@ -14,14 +14,14 @@ date: 2015-09-04 17:02:00 +0300
 If you know all about the Windows Build Tools, and all you need is how to install/build/etc, the direct links are below.
 
 * [Windows Build Tools Install]({{ site.baseurl }}/windows-build-tools/install)
-* [Support](https://github.com/gnuarmeclipse/windows-build-tools/issues/1)  (using the GitHub Issues)
+* [Support](https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1)  (using the GitHub Issues)
 * [How to build]({{ site.baseurl }}/windows-build-tools/build-procedure) (using Docker containers)
 * [Change log]({{ site.baseurl }}/windows-build-tools/change-log)
 * [Releases]({{ site.baseurl }}/windows-build-tools/releases)
 
 ## Overview
 
-The **GNU ARM Eclipse Windows Build Tools** is a Windows specific package, customised for the requirements of the Eclipse CDT managed build projects. It includes a recent version of **GNU make** and a recent version of **BusyBox**, which provides a convenient implementation for **sh**/**rm**/**echo**.
+The **GNU MCU Eclipse Windows Build Tools** is a Windows specific package, customised for the requirements of the Eclipse CDT managed build projects. It includes a recent version of **GNU make** and a recent version of **BusyBox**, which provides a convenient implementation for **sh**/**rm**/**echo**.
 
 Note: Traditionally Windows systems do not provide any standard make programs, and without one building Eclipse managed projects is not possible (using the internal builder is highly discouraged, since it is no longer supported).
 
@@ -37,25 +37,25 @@ The managed build plug-in generally **auto-detects** the latest build tools vers
 
 ## Forward vs. Back-slashes
 
-Eclipse is a more or POSIX compliant environment, which favours the use of standard forward slashed for path separators, and all automatically generated make files use this convention. The version of the make and /bin/sh packed by **GNU ARM Eclipse Windows Build Tools** also favour POSIX standard forward slashes.
+Eclipse is a more or POSIX compliant environment, which favours the use of standard forward slashed for path separators, and all automatically generated make files use this convention. The version of the make and /bin/sh packed by **GNU MCU Eclipse Windows Build Tools** also favour POSIX standard forward slashes.
 
 As such, the use of Windows specific backslash path separators cannot be properly supported, and attempts to build manually written Windows specific make files might fail.
 
 ## Download
 
-All **GNU ARM Eclipse Windows Build Tools** versions are available from the [GitHub Releases](https://github.com/gnuarmeclipse/windows-build-tools/releases) page. Identify the **Latest release** entry and carefully read the release page.
+All **GNU MCU Eclipse Windows Build Tools** versions are available from the [GitHub Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases) page. Identify the **Latest release** entry and carefully read the release page.
 
 ![The Windows Build Tools Releases page]({{ site.baseurl }}/assets/images/2015/github-gae-build-tools-releases.png)
 
 ## Install
 
-The details of installing the **GNU ARM Eclipse Windows Build Tools** on various platforms are presented in a dedicated [Install]({{ site.baseurl }}/windows-build-tools/install) page.
+The details of installing the **GNU MCU Eclipse Windows Build Tools** on various platforms are presented in a dedicated [Install]({{ site.baseurl }}/windows-build-tools/install) page.
 
 Please note that **Eclipse plug-ins are not included** in these packages, and need to be installed as usual.
 
 ## Updates
 
-The latest GNU ARM Eclipse Windows Build Tools package includes the version **4.1** of **GNU make** (built from MSYS2 source files), and version **1.24**.0-git of **BusyBox**, also build from sources.
+The latest GNU MCU Eclipse Windows Build Tools package includes the version **4.1** of **GNU make** (built from MSYS2 source files), and version **1.24**.0-git of **BusyBox**, also build from sources.
 
 It is planned to follow further GNU make and BusyBox releases, but the update frequency is not expected to be high, since these are already mature packages.
 
@@ -65,7 +65,7 @@ The change log is available as a separate [Change log]({{ site.baseurl }}/window
 
 ## Build details
 
-For those interested on the procedure used to build these packages, please read the [How to build]({{ site.baseurl }}/windows-build-tools/build-procedure) page. However, the ultimate source for details are the build scripts themselves, all available from the [build-scripts Git](https://github.com/gnuarmeclipse/build-scripts/tree/master/scripts).
+For those interested on the procedure used to build these packages, please read the [How to build]({{ site.baseurl }}/windows-build-tools/build-procedure) page. However, the ultimate source for details are the build scripts themselves, all available from the [build-scripts Git](https://github.com/gnu-mcu-eclipse/build-scripts/tree/master/scripts).
 
 ## Releases
 

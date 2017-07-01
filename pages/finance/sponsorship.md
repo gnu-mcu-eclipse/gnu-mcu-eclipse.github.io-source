@@ -10,7 +10,7 @@ date: 2015-09-09 13:09:00 +0300
 
 ## Financial status
 
-Since September 2013, when a time tracking solution was put in place, the GNU ARM Eclipse project accounted **more than 3.500 development hours** (including more than 800h for QEMU), with the bulk of them being advanced by a single private person (the author).
+Since September 2013, when a time tracking solution was put in place, the GNU MCU Eclipse project accounted **more than 3.500 development hours** (including more than 800h for QEMU), with the bulk of them being advanced by a single private person (the author).
 
 In a similar effort, **more than 3.400 hours** were accounted for the syster projects **µOS++** (~2.900h) and **xPack** (~500h).
 
@@ -18,7 +18,7 @@ Out of these, only the following were covered by commercial contracts:
 
 * 400h by Infineon, for integrating the J-Link Debugging plug-in in DAVE and further developing the peripheral registers view
 
-None of the other companies using the GNU ARM Eclipse plug-ins in their development tools considered supporting the development.
+None of the other companies using the GNU MCU Eclipse plug-ins in their development tools considered supporting the development.
 
 The current (April 2017) financial status is a steady red <span style="color: red">**-6.500h**</span>.
 
@@ -38,14 +38,14 @@ The opportunity of releasing future versions under dual license was considered, 
 
 ### For end-users
 
-The GNU ARM Eclipse end-users are generally software developers; for them the license means two things:
+The GNU MCU Eclipse end-users are generally software developers; for them the license means two things:
 
 * it guarantees they can use the plug-ins for free, to develop any type of applications they want, private or commercial, without any limitations;
 * the plug-ins are provided on an _as is_ basis, without warrantees or conditions of any kind.
 
 ### For Commercial Contributors
 
-_Commercial Contributors_ are subsequent for-profit contributors who include the GNU ARM Eclipse plug-ins in their derivative work, generally development environments/tools, and provide them to third parties (either for-profit or for-free).
+_Commercial Contributors_ are subsequent for-profit contributors who include the GNU MCU Eclipse plug-ins in their derivative work, generally development environments/tools, and provide them to third parties (either for-profit or for-free).
 
 #### Binary files
 
@@ -53,7 +53,7 @@ If only the binary versions of the original plug-ins are repacked in the derivat
 
 An example of such a notice is:
 
-**XYZ Design Studio includes features from [GNU ARM Eclipse](http://gnuarmeclipse.github.io), Copyright © 2009 Liviu Ionescu.**
+**XYZ Design Studio includes features from [GNU MCU Eclipse](http://gnuarmeclipse.github.io), Copyright © 2009 Liviu Ionescu.**
 
 #### Source file changes
 
@@ -73,11 +73,11 @@ In other words, consider the sponsorship scheme as a warranty that you'll not ha
 
 #### Commercial contracts
 
-In addition to becoming sponsors/donors, Commercial Contributors can also support the GNU ARM Eclipse project by paying commercial contracts to develop new features and releasing the results with the same Eclipse Public License.
+In addition to becoming sponsors/donors, Commercial Contributors can also support the GNU MCU Eclipse project by paying commercial contracts to develop new features and releasing the results with the same Eclipse Public License.
 
 General purpose features will have higher priority than vendor specific features, and might also benefit from better rates.
 
-Some credit for supporting the development of new features in GNU ARM Eclipse project goes to (in chronological order):
+Some credit for supporting the development of new features in GNU MCU Eclipse project goes to (in chronological order):
 
 - Infineon Technologies AG
 - Analog Devices GmbH
@@ -86,7 +86,7 @@ Some credit for supporting the development of new features in GNU ARM Eclipse pr
 
 ## Sponsorship opportunities
 
-Companies interested in supporting the GNU ARM Eclipse project and seeing their logo in the project web, can apply for various levels of sponsorship.
+Companies interested in supporting the GNU MCU Eclipse project and seeing their logo in the project web, can apply for various levels of sponsorship.
 
 To simplify things, the unit of sponsorship is set at 100 development hours.
 
@@ -100,7 +100,7 @@ Apart from sponsors, any other financial contribution to the project is gladly a
 
 If you want to help the development efforts of this project, please use the **PayPal Donate** button available in the bottom of the page.
 
-From the legal point of view, the donation goes to a small company called _Aviation Instruments Intl SRL_, which is the legal entity used to handle, among other things, the **GNU ARM Eclipse** project.
+From the legal point of view, the donation goes to a small company called _Aviation Instruments Intl SRL_, which is the legal entity used to handle, among other things, the **GNU MCU Eclipse** project.
 
 Many thanks to the following donors (in chronological order):
 

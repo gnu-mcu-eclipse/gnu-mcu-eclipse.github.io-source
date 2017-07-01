@@ -91,12 +91,12 @@ The Docker images are available from [Docker Hub](https://hub.docker.com/u/ilege
 
 ## Download the build scripts repo
 
-The build script is available from GitHub and can be [viewed online](https://github.com/gnuarmeclipse/build-scripts/blob/master/scripts/build-openocd.sh).
+The build script is available from GitHub and can be [viewed online](https://github.com/gnu-mcu-eclipse/build-scripts/blob/master/scripts/build-openocd.sh).
 
-To download it, clone the [gnuarmeclipse/build-scripts](https://github.com/gnuarmeclipse/build-scripts) Git repo. 
+To download it, clone the [gnuarmeclipse/build-scripts](https://github.com/gnu-mcu-eclipse/build-scripts) Git repo. 
 
 ```
-$ git clone https://github.com/gnuarmeclipse/build-scripts.git \
+$ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
   ~/Downloads/build-scripts.git
 ```
 
@@ -227,7 +227,7 @@ qemu/install
 
 ## Install procedure
 
-The procedure to install GNU ARM Eclipse QEMU is platform specific, but relatively straight forward (a Windows setup, an macOS install or a TGZ archive on GNU/Linux). The setup/install asks no special questions, and the defaults are generally ok for most installations.
+The procedure to install GNU MCU Eclipse QEMU is platform specific, but relatively straight forward (a Windows setup, an macOS install or a TGZ archive on GNU/Linux). The setup/install asks no special questions, and the defaults are generally ok for most installations.
 
 ## Install hierarchy
 
@@ -279,7 +279,7 @@ No other files are installed in any system folders or other locations.
 
 To uninstall QEMU from a Windows machine, use the `qemu-uninstall.exe` program.
 
-On macOS and GNU/Linux, the GNU ARM Eclipse QEMU install folder is self-contained and removing it is enough for completely removing the application.
+On macOS and GNU/Linux, the GNU MCU Eclipse QEMU install folder is self-contained and removing it is enough for completely removing the application.
 
 ## Test
 
@@ -289,10 +289,10 @@ For a true test you need to first install the package and then run the program f
 
 ```
 $ /Applications/GNU\ ARM\ Eclipse/QEMU/2.2.91-201504021111-dev/bin/qemu-system-gnuarmeclipse --version
-GNU ARM Eclipse QEMU 64-bits emulator version 2.2.91
+GNU MCU Eclipse QEMU 64-bits emulator version 2.2.91
 Copyright (c) 2003-2008 Fabrice Bellard
 ```
 
 ## More build details
 
-The script is quite complex, and an attempt to explain its functionality would require some effort. For the final authoritative details, please refer to the comments available in the [script](https://github.com/gnuarmeclipse/build-scripts/blob/master/scripts/build-qemu.sh).
+The script is quite complex, and an attempt to explain its functionality would require some effort. For the final authoritative details, please refer to the comments available in the [script](https://github.com/gnu-mcu-eclipse/build-scripts/blob/master/scripts/build-qemu.sh).

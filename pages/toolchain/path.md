@@ -52,11 +52,11 @@ In short, a portable project is a project that can be used without changes on an
 
 For more details, please see the separate [Project portability][1] page.
 
-## The GNU ARM Eclipse solution
+## The GNU MCU Eclipse solution
 
-Generating portable projects was one of the design requirements of the GNU ARM Eclipse cross build plug-in, at the same time with the apparently conflicting requirement for handling multiple toolchains and versions.
+Generating portable projects was one of the design requirements of the GNU MCU Eclipse cross build plug-in, at the same time with the apparently conflicting requirement for handling multiple toolchains and versions.
 
-To achieve this, the GNU ARM Eclipse cross build plug-in provides a large selection of existing toolchains, and associate each one with a separate path. For special projects that require a specific version, it also allows to associate a path to each project. In all cases this association is stored in the workspace internal folders, and not in the project configuration, so it is not passed via the repository from one developer to the other.
+To achieve this, the GNU MCU Eclipse cross build plug-in provides a large selection of existing toolchains, and associate each one with a separate path. For special projects that require a specific version, it also allows to associate a path to each project. In all cases this association is stored in the workspace internal folders, and not in the project configuration, so it is not passed via the repository from one developer to the other.
 
 The default (and the recommended) setting, is to use the global toolchain path.
 

@@ -25,7 +25,7 @@ Entries in this file are in reverse chronological order.
 
 ### 2016-10-20
 
-- **[Issue:[#2](https://github.com/gnuarmeclipse/windows-build-tools/issues/2)]** nsi file: add InstallDir; silent install should honour /D
+- **[Issue:[#2](https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/2)]** nsi file: add InstallDir; silent install should honour /D
 - update url to github.io
 
 ### 2016-10-17

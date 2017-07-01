@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /licenses/plug-ins/
-title: The GNU ARM Eclipse plug-ins license
+title: The GNU MCU Eclipse plug-ins license
 author: Liviu Ionescu
 
 date: 2015-09-08 23:25:00 +0300
@@ -10,11 +10,11 @@ date: 2015-09-08 23:25:00 +0300
 
 ## Copyright owner
 
-The copyright owner for all the **GNU ARM Eclipse plug-ins** is Liviu Ionescu and all rights are reserved.
+The copyright owner for all the **GNU MCU Eclipse plug-ins** is Liviu Ionescu and all rights are reserved.
 
 ## Eclipse Public License
 
-As the sole copyright owner, Liviu Ionescu released the GNU ARM Eclipse plug-ins for public use under the terms of the [Eclipse Public License v1.0](https://www.eclipse.org/legal/epl-v10.html).
+As the sole copyright owner, Liviu Ionescu released the GNU MCU Eclipse plug-ins for public use under the terms of the [Eclipse Public License v1.0](https://www.eclipse.org/legal/epl-v10.html).
 
 ## Commercial Contributors
 

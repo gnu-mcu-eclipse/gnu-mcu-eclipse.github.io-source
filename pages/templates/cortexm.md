@@ -10,7 +10,7 @@ date: 2015-09-11 19:44:00 +0300
 
 ## Overview
 
-The GNU ARM Eclipse Plug-ins provide template support for some of the most popular processor, but it is not reasonable to expect support for all existing ones. For the processors not supported by the specific templates, the GNU ARM Eclipse Plug-ins still provide a method to create projects, using the generic Cortex-M template.
+The GNU MCU Eclipse Plug-ins provide template support for some of the most popular processor, but it is not reasonable to expect support for all existing ones. For the processors not supported by the specific templates, the GNU MCU Eclipse Plug-ins still provide a method to create projects, using the generic Cortex-M template.
 
 ## Requirements
 

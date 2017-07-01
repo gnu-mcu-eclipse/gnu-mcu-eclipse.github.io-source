@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /plugins/install/
-title: How to install the GNU ARM Eclipse plug-ins?
+title: How to install the GNU MCU Eclipse plug-ins?
 author: Liviu Ionescu
 
 date: 2015-09-11 22:06:00 +0300
@@ -17,7 +17,7 @@ If you know what this is all about, drag-and-drop the **Install** button availa
 
 If you want to do it manually, you only need the update site details:
 
-* name: **GNU ARM Eclipse Plug-ins**
+* name: **GNU MCU Eclipse Plug-ins**
 * URL: `http://gnuarmeclipse.sourceforge.net/updates`
 
 It is recommended that you install the plug-ins after installing the [toolchain]({{ site.baseurl }}/toolchain/install), the [build tools]({{ site.baseurl }}/windows-build-tools/install/) (on Windows), and the [debugging binaries]({{ site.baseurl }}/debug/install/).
@@ -108,9 +108,9 @@ As mentioned before, the recommended way is to use a fresh **Eclipse IDE for C/C
 
 ### Compatibility issues
 
-Please note that starting with 3.1.x, compatibility with Eclipses previous than 4.4 Luna was no longer possible. If, for any reason, you need a solution for Eclipse Kepler, you can try the GNU ARM Eclipse Plug-in version 2.12, but please keep in mind that this version is no longer maintained.
+Please note that starting with 3.1.x, compatibility with Eclipses previous than 4.4 Luna was no longer possible. If, for any reason, you need a solution for Eclipse Kepler, you can try the GNU MCU Eclipse Plug-in version 2.12, but please keep in mind that this version is no longer maintained.
 
-Similarly, starting with 1.1.x, compatibility with Eclipses previous than 4.3 Kepler was no longer possible. If, for any reasons, you need a solution for older Eclipse versions, you can try the GNU ARM Eclipse Plug-in version 0.5.5, but please keep in mind that this old version is no longer maintained.
+Similarly, starting with 1.1.x, compatibility with Eclipses previous than 4.3 Kepler was no longer possible. If, for any reasons, you need a solution for older Eclipse versions, you can try the GNU MCU Eclipse Plug-in version 0.5.5, but please keep in mind that this old version is no longer maintained.
 
 ## Plug-ins install/update
 
@@ -124,26 +124,26 @@ The easiest way to install/update the plug-ins is to drag-and-drop the **Install
 
 <a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2593184" class="drag" title="Drag to your running Eclipse workspace."><img class="img-responsive" src="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png" alt="Drag to your running Eclipse workspace." /></a>
 
-This should make Eclipse automatically contact the Marketplace and present a window with all GNU ARM Eclipse features:
+This should make Eclipse automatically contact the Marketplace and present a window with all GNU MCU Eclipse features:
 
 ![Eclipse Marketplace Features]({{ site.baseurl }}/assets/images/2015/eclipse-marketplace-features.png)
 
 If, for any reason, this does not work, it is always possible to search the Eclipse Marketplace manually:
 
 * go to the _Eclipse_ menu → **Help** → **Eclipse Marketplace...**
-* in the Find field, enter GNU ARM Eclipse
+* in the Find field, enter GNU MCU Eclipse
 * click the Go button
 
-This should identify GNU ARM Eclipse and offer to Install/Update/Uninstall.
+This should identify GNU MCU Eclipse and offer to Install/Update/Uninstall.
 
 ![Eclipse Marketplace Search]({{ site.baseurl }}/assets/images/2015/eclipse-marketplace-search.png)
 
 ### The Eclipse update site way
 
-The classical way to install the GNU ARM Eclipse plug-ins is to use the Eclipse standard install/update mechanism: In the _Eclipse_ menu → **Help** → **Install New Software...**
+The classical way to install the GNU MCU Eclipse plug-ins is to use the Eclipse standard install/update mechanism: In the _Eclipse_ menu → **Help** → **Install New Software...**
 
 * in the *Install* window, click the **Add...** button (on future updates, select the URL in the **Work with:** combo)
-* fill in *Name:* with **GNU ARM Eclipse Plug-ins**
+* fill in *Name:* with **GNU MCU Eclipse Plug-ins**
 * fill in *Location:* with **http://gnuarmeclipse.sourceforge.net/updates**
 * click the **OK** button
 
@@ -173,11 +173,11 @@ If, for any reason, you need to install a specific version of the plug-in, the s
 
 ## Off-line install
 
-If, for any reasons, you need to install the GNU ARM Eclipse plug-ins on a system without permanent Internet connection, and decide for the alternate way presented above, please be aware that the debug plug-ins require the presence of the **C/C++ GDB Hardware Debugging** plug-in. Usually this plug-in is not included in the standard package, but is present in the **CDT Optional Features** category, packed with the CDT archives available from the [CDT download site](https://www.eclipse.org/cdt/downloads.php). Download the desired archive, add it to your update sites, select the **C/C++ GDB Hardware Debugging** plug-in, restart as usual, and then install the GNU ARM Eclipse plug-ins from the local archive, as above.
+If, for any reasons, you need to install the GNU MCU Eclipse plug-ins on a system without permanent Internet connection, and decide for the alternate way presented above, please be aware that the debug plug-ins require the presence of the **C/C++ GDB Hardware Debugging** plug-in. Usually this plug-in is not included in the standard package, but is present in the **CDT Optional Features** category, packed with the CDT archives available from the [CDT download site](https://www.eclipse.org/cdt/downloads.php). Download the desired archive, add it to your update sites, select the **C/C++ GDB Hardware Debugging** plug-in, restart as usual, and then install the GNU MCU Eclipse plug-ins from the local archive, as above.
 
 ![Install the GDB Hardware]({{ site.baseurl }}/assets/images/2013/10/GDB_Hardware_Install.png)
 
-Note: Attempts to install the GNU ARM Eclipse plug-ins off-line without having the **C/C++ GDB Hardware Debugging** installed fails with an error related to installing the `ilg.gnuarmeclipse.debug.gdbjtag.jlink.feature.group` and other debugging features.
+Note: Attempts to install the GNU MCU Eclipse plug-ins off-line without having the **C/C++ GDB Hardware Debugging** installed fails with an error related to installing the `ilg.gnuarmeclipse.debug.gdbjtag.jlink.feature.group` and other debugging features.
 
 On-line install do not have this problem since the Eclipse automatically downloads the C/C++ GDB Hardware Debugging plug-in from the CDT update site.
 
@@ -210,7 +210,7 @@ There are cases when the on-line access to the SourceForge mirror servers might 
 
 If this happens, Eclipse remains in a confused state and rarely can recover itself.
 
-The workaround is to remove the GNU ARM Eclipse update site from the available sites, restart Eclipse and add it again.
+The workaround is to remove the GNU MCU Eclipse update site from the available sites, restart Eclipse and add it again.
 
 For this go to _Eclipse_ menu → **(Window →) Preferences** → **Install/Update** → **Available Software Sites**:
 
@@ -247,7 +247,7 @@ export SWT_GTK3=0
 
 ## Plug-ins versions
 
-One of the confusing details of the GNU ARM Eclipse plug-ins versioning system is matching the version from the release announcement (for example **Version 2.6.1-201502281154 released**) with existing plug-ins/features.
+One of the confusing details of the GNU MCU Eclipse plug-ins versioning system is matching the version from the release announcement (for example **Version 2.6.1-201502281154 released**) with existing plug-ins/features.
 
 The short answer is that the announced version refers to the update site, also packed as an archive, and available from SourceForge. The same version is also used for the `ilg.gnuarmeclipse.core` plug-in:
 

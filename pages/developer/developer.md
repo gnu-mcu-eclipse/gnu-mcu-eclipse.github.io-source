@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /developer/
-title: GNU ARM Eclipse Developer page
+title: GNU MCU Eclipse Developer page
 author: Liviu Ionescu
 
 date: 2015-09-10 18:31:00 +0300
@@ -33,9 +33,9 @@ v4
 * [How Eclipse debugging options work]({{ site.baseurl }}/developer/eclipse/debugging-options)
 * [Eclipse platform tracing facility](https://wiki.eclipse.org/FAQ_How_do_I_use_the_platform_debug_tracing_facility)
 
-### GNU ARM Eclipse extension points
+### GNU MCU Eclipse extension points
 
-The GNU ARM Eclipse plug-ins define several custom extension points, to facilitate the integration with third-party plug-ins.
+The GNU MCU Eclipse plug-ins define several custom extension points, to facilitate the integration with third-party plug-ins.
 
 * [ilg.gnumcueclipse.debug.core.cprojectExtra]({{ site.baseurl }}/developer/extension/ilg.gnumcueclipse.debug.core.cprojectextra) (C Project Extra Data Manager)
 * [ilg.gnumcueclipse.debug.core.svdPath]({{ site.baseurl }}/developer/extension/ilg.gnumcueclipse.debug.core.svdpath) (SVD Path Manager)
@@ -83,7 +83,7 @@ How to build the plug-ins from sources and publish them.
 *   [Single Package](http://blogs.msdn.com/b/windows_installer_team/archive/2009/09/02/authoring-a-single-package-for-per-user-or-per-machine-installation-context-in-windows-7.aspx)
 
 
-### References to GNU ARM Eclipse
+### References to GNU MCU Eclipse
 
 - [Getting Started With STM32 Nucleo Development](http://www.amazon.com/Getting-Started-STM32-Nucleo-Development-ebook/dp/B00WBU4BPW)
 

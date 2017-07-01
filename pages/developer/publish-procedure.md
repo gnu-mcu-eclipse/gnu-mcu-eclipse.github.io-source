@@ -8,7 +8,7 @@ date: 2015-09-10 21:07:00 +0300
 
 ---
 
-The plug-ins are published both as update sites (on SourceForge, as an Eclipse update site, with multiple mirrors) and as archives (on GitHub as [Releases](https://github.com/gnuarmeclipse/plug-ins/releases)).
+The plug-ins are published both as update sites (on SourceForge, as an Eclipse update site, with multiple mirrors) and as archives (on GitHub as [Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases)).
 
 The reason SourceForge is still used is that GitHub does not provide a convenient way to publish an Eclipse update site.
 
@@ -239,7 +239,7 @@ plugins/ilg.gnuarmeclipse.templates.stm_2.6.2.201704251808.jar
 sent 8222123 bytes  received 1158 bytes  213591.71 bytes/sec
 total size is 8216700  speedup is 1.00
 Published on the test site.
-Archive available from "/Users/ilg/My Files/MacBookPro Projects/GNU ARM Eclipse/archive/internal/ilg.gnuarmeclipse.repository-3.4.1-201704251808.zip"
+Archive available from "/Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/archive/internal/ilg.gnuarmeclipse.repository-3.4.1-201704251808.zip"
 When final, don't forget to publish the archive too!
 Install new software from http://gnuarmeclipse.sourceforge.net/updates-test
 logout
@@ -251,7 +251,7 @@ Test if the new build can be used as an update site, by installing from updates-
 
 ## Create a new milestone
 
-In the [plug-ins issues](https://github.com/gnuarmeclipse/plug-ins/issues) page, click the [Milestones](https://github.com/gnuarmeclipse/plug-ins/milestones) button and add a [new](https://github.com/gnuarmeclipse/plug-ins/milestones/new) milestone. As title, use the current version, like _v3.2.1_.
+In the [plug-ins issues](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues) page, click the [Milestones](https://github.com/gnu-mcu-eclipse/eclipse-plugins/milestones) button and add a [new](https://github.com/gnu-mcu-eclipse/eclipse-plugins/milestones/new) milestone. As title, use the current version, like _v3.2.1_.
 
 ## Update the Change log
 
@@ -285,9 +285,9 @@ The structure of the post should contain:
 ## Known problems
 ```
 
-An example would be the [2.9.1](https://github.com/gnuarmeclipse/plug-ins/wiki/Release-v2.9.1-201508011813) announcement.
+An example would be the [2.9.1](https://github.com/gnu-mcu-eclipse/eclipse-plugins/wiki/Release-v2.9.1-201508011813) announcement.
 
-Scan the [GitHub Issues](https://github.com/gnuarmeclipse/plug-ins/issues) and the [SourceForge trackers](https://sourceforge.net/p/gnuarmeclipse/_list/tickets) and add references to all tracked issues.
+Scan the [GitHub Issues](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues) and the [SourceForge trackers](https://sourceforge.net/p/gnuarmeclipse/_list/tickets) and add references to all tracked issues.
 
 Mark all these issues as part of the current version milestone. Refer to them as **[Issue:#22]**. For SourceForge, refer to them as **[bugs:#98]**, **[feature-requests:#60]**, **[support-requests:#81]**.
 
@@ -347,7 +347,7 @@ Do not close the terminal before copy/paste the list to the ChangeLog page!.
 
 ## Clean the mess in the local archive folder
 
--   go to **.../GNU ARM Eclipse/archive**
+-   go to **.../GNU MCU Eclipse/archive**
 -   move the latest archive to **releases/plug-ins**
 -   move the other archives to **internal**
 
@@ -363,11 +363,11 @@ Do not close the terminal before copy/paste the list to the ChangeLog page!.
 ## Create a new GitHub release
 
 * be sure the **develop** branch is up to date and set as default
-* go to the [GitHub Releases](https://github.com/gnuarmeclipse/plug-ins/releases) page
+* go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases) page
 * click **Draft a new release**
 * name the tag like **v2.9.3-201508190739** (mind the `-` in the middle!)
 * select the **develop** branch
-* name the release like **GNU ARM Eclipse plug-ins v2.9.3-201508190739**  (mind the `-` in the middle!)
+* name the release like **GNU MCU Eclipse plug-ins v2.9.3-201508190739**  (mind the `-` in the middle!)
 * as description, copy the first paragraph from the Web release page
 * **attach binaries** (drag and drop from the archives folder will do it)
 * click the **Publish Release** button
@@ -383,7 +383,7 @@ Note: the release must exist, otherwise Travis will complain and do not publish 
 
 ## Update the release link
 
-In the [GitHub Releases](https://github.com/gnuarmeclipse/plug-ins/releases) page:
+In the [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases) page:
 
 * add a link to the Web page `[Continue reading »]()`
 * get URL from web [Releases](http://gnuarmeclipse.github.io/developer/releases/) and update the above link
@@ -398,7 +398,7 @@ The code looks like this:
 
 ## Close issues
 
-For all [GitHub issues](https://github.com/gnuarmeclipse/plug-ins/issues) marked with the current version, close them with a message like _fixed since v3.2.1-201701141320_.
+For all [GitHub issues](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues) marked with the current version, close them with a message like _fixed since v3.2.1-201701141320_.
 
 ## Publish on SourceForge ()
 
@@ -415,7 +415,7 @@ For all [GitHub issues](https://github.com/gnuarmeclipse/plug-ins/issues) marked
 
 * go to the new post and follow the Share link.
 * DO NOT select **On your own Timeline**, but **On a Page you manage**
-* select GNU ARM Eclipse
+* select GNU MCU Eclipse
 * posting as GNU ARM Eclipse
 * click **Share link**
 * check the post in the [Facebook page](https://www.facebook.com/gnuarmeclipse)

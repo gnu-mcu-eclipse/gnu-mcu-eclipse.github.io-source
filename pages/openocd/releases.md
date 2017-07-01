@@ -1,6 +1,6 @@
 ---
 layout: page
-title: GNU ARM Eclipse OpenOCD releases
+title: GNU MCU Eclipse OpenOCD releases
 permalink: /openocd/releases/
 
 author: Liviu Ionescu

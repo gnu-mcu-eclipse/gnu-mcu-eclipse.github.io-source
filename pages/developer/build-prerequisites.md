@@ -16,7 +16,7 @@ Install Sun JDK 1.8 or later (required since Eclipse 4.6); JRE is not enough, wi
 
 ### Prepare folders
 
-*   in a place of you choice, create a folder `GNU ARM Eclipse`
+*   in a place of you choice, create a folder `GNU MCU Eclipse`
 *   inside it create two more folders, `Eclipses` and `Eclipse Workspaces`
 
 ### Install Eclipse IDE for Eclipse Commiters
@@ -27,7 +27,7 @@ This instance of Eclipse will be used for actual development.
 -   download **Eclipse IDE for Eclipse Committers**, preferably the 64-bits version (for example eclipse-committers-neon-2-macosx-cocoa-x86_64.tar.gz)
 -   unpack the archive
 -   rename `Eclipse.app` to `Eclipse-com-cdt-46.app`
--   move it to `.../GNU ARM Eclipse/Eclipses`
+-   move it to `.../GNU MCU Eclipse/Eclipses`
 - create shortcut to desktop:
   -   on Windows, create a shortcut for `eclipse.exe`, rename it `E46 GAE.lnk` and copy it to the desktop or a place of your choice
   -   on macOS, create a Finder alias for `Eclipse.app`, rename it `E46 GAE` and move it to a place of your choice
@@ -144,8 +144,8 @@ Go to [Eclipse download site](http://www.eclipse.org/downloads/) and follow the 
 On Unix systems, the recommended method is using a command line:
 
 ```
-$ cd .../GNU ARM Eclipse
-$ git clone https://github.com/gnuarmeclipse/plug-ins.git plug-ins.git
+$ cd .../GNU MCU Eclipse
+$ git clone https://github.com/gnu-mcu-eclipse/eclipse-plugins.git plug-ins.git
 ```
 
 On Windows, the `git` command is available in the [Git for Windows](https://git-scm.com/download/win) package.
@@ -159,9 +159,9 @@ Import projects using the Maven importer:
   * Maven → **Existing Maven Projects**
   * click **Next**
 * Maven Projects
-  * Root Directory: `.../GNU ARM Eclipse/plug-ins.git`
+  * Root Directory: `.../GNU MCU Eclipse/plug-ins.git`
   * keep all selected
-  * Add project(s) to working set: GNU ARM Eclipse
+  * Add project(s) to working set: GNU MCU Eclipse
   * click **Finish**
 If doing this on a fresh Eclipse
   * accept m23 settings
@@ -174,7 +174,7 @@ If doing this on a fresh Eclipse
 In the Package Explorer:
 
 * click the down pointing triangle icon and select **Configure Working Sets**.
-  * select GNU ARM Eclipse and click the **Edit...** button
+  * select GNU MCU Eclipse and click the **Edit...** button
   * click the **Select All** button
   * click the **Finish** button
 * click the **OK** button
@@ -190,13 +190,13 @@ To ensure that Maven considers only the desired plugin versions during the build
 Without this option, Maven will issue many warnings, like:
 
 ```
-[INFO] Resolving dependencies of MavenProject: ilg.gnuarmeclipse:ilg.gnuarmeclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU ARM Eclipse/plug-ins.git/ilg.gnuarmeclipse.core/pom.xml
+[INFO] Resolving dependencies of MavenProject: ilg.gnuarmeclipse:ilg.gnuarmeclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/plug-ins.git/ilg.gnuarmeclipse.core/pom.xml
 [WARNING] The following locally built units have been used to resolve project dependencies:
 [WARNING]   org.eclipse.cdt.make.core/7.3.0.201702180936
 [WARNING]   org.eclipse.cdt/9.2.0.201702180936
 [WARNING]   org.eclipse.cdt.core.native/5.10.0.201702180936
 [WARNING]   org.eclipse.cdt.managedbuilder.core/8.4.0.201702180936
-[INFO] Resolving class path of MavenProject: ilg.gnuarmeclipse:ilg.gnuarmeclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU ARM Eclipse/plug-ins.git/ilg.gnuarmeclipse.core/pom.xml
+[INFO] Resolving class path of MavenProject: ilg.gnuarmeclipse:ilg.gnuarmeclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/plug-ins.git/ilg.gnuarmeclipse.core/pom.xml
 ```
 
 Unfortunately I did not find a way to pass this option in the pom files, and it must be passed only on the command line.

@@ -11,27 +11,27 @@ date: 2015-09-09 19:43:00 +0300
 
 [OpenOCD](http://openocd.org) is an open source project hosted on [SourceForge](https://sourceforge.net/projects/openocd/), and project maintainers insist that all end-users should compile it from the latest version of the source code available from their repository. There are no special stable branches or tags and there are no clear release dates for future versions. On Windows you need to install MSYS2 and use the appropriate package build procedure.
 
-If you are like us and consider that professional solutions should include stable, hassle free binary distributions, you might be interested to know that a custom packed version of OpenOCD, based on the latest public version (0.9.0) was added to GNU ARM Eclipse, as **GNU ARM Eclipse OpenOCD**. It can be downloaded from the [GitHub Releases](https://github.com/gnuarmeclipse/openocd/releases) page.
+If you are like us and consider that professional solutions should include stable, hassle free binary distributions, you might be interested to know that a custom packed version of OpenOCD, based on the latest public version (0.9.0) was added to GNU MCU Eclipse, as **GNU MCU Eclipse OpenOCD**. It can be downloaded from the [GitHub Releases](https://github.com/gnu-mcu-eclipse/openocd/releases) page.
 
-So, if you are not interested in building from sources, and appreciate a better integration with the Eclipse plug-in, please feel free to use the GNU ARM Eclipse OpenOCD binaries, and preferably install them in the default locations.
+So, if you are not interested in building from sources, and appreciate a better integration with the Eclipse plug-in, please feel free to use the GNU MCU Eclipse OpenOCD binaries, and preferably install them in the default locations.
 
-**Warning:** OpenOCD is a very complex project, capable of working with many JTAG probes, but support for them must be explicitly included at build time, so be sure that support for your JTAG probe was included in the binaries you plan to use. The **GNU ARM Eclipse OpenOCD** includes support for most existing probes.
+**Warning:** OpenOCD is a very complex project, capable of working with many JTAG probes, but support for them must be explicitly included at build time, so be sure that support for your JTAG probe was included in the binaries you plan to use. The **GNU MCU Eclipse OpenOCD** includes support for most existing probes.
 
 ## J-Link conversion
 
-If the only reason to run OpenOCD is to use the ST-LINK on-board programmer on STM Discovery or Nucleo boards, then, thanks to SEGGER, a better solution exists: it is possible to **upgrade the on-board programmer firmware to behave like a J-Link** lite, and then use the GNU ARM Eclipse J-Link plug-in. The conversion is reversible, you can return the board to ST-LINK at any time.
+If the only reason to run OpenOCD is to use the ST-LINK on-board programmer on STM Discovery or Nucleo boards, then, thanks to SEGGER, a better solution exists: it is possible to **upgrade the on-board programmer firmware to behave like a J-Link** lite, and then use the GNU MCU Eclipse J-Link plug-in. The conversion is reversible, you can return the board to ST-LINK at any time.
 
 Please follow the instructions on [Converting ST-LINK on-board into a J-Link](https://www.segger.com/jlink-st-link.html).
 
 ## Documentation
 
-If you are using the GNU ARM Eclipse OpenOCD, the documentation is part of the installed package.
+If you are using the GNU MCU Eclipse OpenOCD, the documentation is part of the installed package.
 
 Slightly older version are also available in the [Files](https://sourceforge.net/projects/openocd/files/openocd/) section of the SourceForge project. For version 0.9.0, the manual is [openocd.pdf](http://sourceforge.net/projects/openocd/files/openocd/0.9.0/openocd.pdf/download).
 
 ## Windows
 
-For user convenience, the Windows versions of **GNU ARM Eclipse OpenOCD** are packed as Windows setup wizards. Go to the [GitHub Releases](https://github.com/gnuarmeclipse/openocd/releases) page and download the latest version named like:
+For user convenience, the Windows versions of **GNU MCU Eclipse OpenOCD** are packed as Windows setup wizards. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/openocd/releases) page and download the latest version named like:
 
 - `gnuarmeclipse-openocd-win64-0.10.0-*-setup.exe`
 - `gnuarmeclipse-openocd-win32-0.10.0-*-setup.exe`
@@ -48,7 +48,7 @@ It is recommended to keep the default install location:
 
 The default install location is:
 
-- `C:\Program Files\GNU ARM Eclipse\OpenOCD\*`
+- `C:\Program Files\GNU MCU Eclipse\OpenOCD\*`
 
 The result is a structure like:
 
@@ -57,8 +57,8 @@ The result is a structure like:
 To check if OpenOCD starts, use the following command:
 
 ```
-C:>"C:\Program Files\GNU ARM Eclipse\OpenOCD\0.8.0-201503201840\bin\openocd" --version
-GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-03-20-18:40)
+C:>"C:\Program Files\GNU MCU Eclipse\OpenOCD\0.8.0-201503201840\bin\openocd" --version
+GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-03-20-18:40)
 ```
 
 ### Drivers
@@ -87,7 +87,7 @@ For some devices, for example [ARM-USB-OCD](https://www.olimex.com/Products/ARM
 
 ## macOS
 
-For user convenience, the macOS version of **GNU ARM Eclipse OpenOCD** is packed as an macOS install package. Go to the [GitHub Releases](https://github.com/gnuarmeclipse/openocd/releases) page and download the latest version named like:
+For user convenience, the macOS version of **GNU MCU Eclipse OpenOCD** is packed as an macOS install package. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/openocd/releases) page and download the latest version named like:
 
 -  `gnuarmeclipse-openocd-osx-0.10.0-*.pkg`
 
@@ -99,25 +99,25 @@ Run the install as usual.
 
 The package is installed in:
 
-* `/Applications/GNU ARM Eclipse/OpenOCD/*`
+* `/Applications/GNU MCU Eclipse/OpenOCD/*`
 
 To check if OpenOCD starts, use:
 
 ```
 $ /Applications/GNU\ ARM\ Eclipse/OpenOCD/0.8.0-201501181257/bin/openocd --version
-GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-01-18-12:57)
+GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-01-18-12:57)
 ```
 
 ## GNU/Linux
 
-The GNU/Linux versions of **GNU ARM Eclipse OpenOCD** are packed as TGZ archives. Go to the [GitHub Releases](https://github.com/gnuarmeclipse/openocd/releases) page and download the latest version named like:
+The GNU/Linux versions of **GNU MCU Eclipse OpenOCD** are packed as TGZ archives. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/openocd/releases) page and download the latest version named like:
 
 - `gnuarmeclipse-openocd-debian64-0.10.0-201501181055.tgz`
 - `gnuarmeclipse-openocd-debian32-0.10.0-201501181055.tgz`
 
 As the name implies, these are Debian `tar.gz` archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-debian64-` file for 64-bits machines and the `-debian32-` file for 32-bits machines.
 
-In case you use an older distribution and encounter difficulties to run **GNU ARM Eclipse OpenOCD**, you can also try to build it from sources on your machine. As a last resort, if your distribution includes an OpenOCD package, you can install it using the specific tools.
+In case you use an older distribution and encounter difficulties to run **GNU MCU Eclipse OpenOCD**, you can also try to build it from sources on your machine. As a last resort, if your distribution includes an OpenOCD package, you can install it using the specific tools.
 
 To install this package, unpack the archive and copy it to  `/opt/gnuarmeclipse/openocd/${version}`
 
@@ -133,7 +133,7 @@ To check if OpenOCD starts and is recent, use:
 
 ```
 $ /opt/gnuarmeclipse/openocd/0.10.0-201510281129-dev/bin/openocd --version
-GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.10.0-dev-00141-g09aeb96-dirty (2015-10-28-11:56)
+GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0-dev-00141-g09aeb96-dirty (2015-10-28-11:56)
 ```
 
 ### UDEV
@@ -179,7 +179,7 @@ To test if OpenOCD is able to connect to a specific board, you generally need to
 ```
 $ /Applications/GNU\ ARM\ Eclipse/OpenOCD/0.8.0-201501181257/bin/openocd \
   -f board/stm32f4discovery.cfg
-GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036-gb7535dd (2015-01-18-12:57)
+GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036-gb7535dd (2015-01-18-12:57)
 Licensed under GNU GPL v2
 For bug reports, read
 

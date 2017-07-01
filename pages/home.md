@@ -12,9 +12,9 @@ The **GNU MCU Eclipse** (formerly GNU ARM Eclipse) is an open source project tha
 
 ## The GNU MCU Eclipse plug-ins
 
-These plug-ins provide Eclipse CDT (C/C++ Development Tooling) extensions for GNU ARM toolchains like **GNU Tools for ARM Embedded Processors**, **Linaro**, etc.
+These plug-ins provide Eclipse CDT (C/C++ Development Tooling) extensions for GNU embedded toolchains like **GNU Tools for ARM Embedded Processors**, **Linaro**, **GNU MCU Eclipse RISC-V Embedded GCC** etc.
 
-In short, the GNU MCU Eclipse plug-ins allow to create, build, debug and in general to **manage ARM and AArch64 projects** (executables and static/shared libraries, in both 32 and 64-bits versions) with the Eclipse framework (currently tested up to Eclipse 4.6 Neon.3). The plug-ins run on Windows, GNU/Linux and macOS. For more details please visit the [Features]({{ site.baseurl }}/plugins/features/) page.
+In short, the GNU MCU Eclipse plug-ins allow to create, build, debug and in general to **manage ARM, AArch64 & RISC-V projects** (executables and static/shared libraries, in both 32 and 64-bits versions) with the Eclipse framework (currently tested up to Eclipse 4.6 Neon.3). The plug-ins run on Windows, GNU/Linux and macOS. For more details please visit the [Features]({{ site.baseurl }}/plugins/features/) page.
 
 ![Create new STM32F4 C++ project]({{ site.baseurl }}/assets/images/2015/intro-new-f4-project.png)
 
@@ -22,13 +22,17 @@ In short, the GNU MCU Eclipse plug-ins allow to create, build, debug and in gene
 
 Apart from the main Eclipse plug-ins, this project also includes several additional tools, distributed as separate packages.
 
+* **GNU MCU Eclipse RISC-V Embedded GCC**
+
+  The **GNU MCU Eclipse RISC-V Embedded GCC** subproject is a new distribution of the bare metal version of [RISC-V GCC](https://github.com/riscv/riscv-gcc), maintained by [SiFive](https://www.sifive.com). Binaries for Windows, GNU/Linux and macOS are available.
+
 * **GNU MCU Eclipse Windows Build Tools**
 
-  The **GNU MCU Eclipse Windows Build Tools** subproject includes the additional tools required on Windows (**make** & **rm**).
+  The **GNU MCU Eclipse Windows Build Tools** subproject includes the additional tools required to perform builds on Windows (**make** & **rm**).
 
 * **GNU MCU Eclipse OpenOCD**
 
-  The **GNU MCU Eclipse OpenOCD** subproject is a new distribution of [OpenOCD](http://openocd.org/), customised for a better/more convenient integration with the **GNU ARM OpenOCD Debugging** plug-in. Binaries for Windows, GNU/Linux and macOS are available.
+  The **GNU MCU Eclipse OpenOCD** subproject is a new distribution of [OpenOCD](http://openocd.org/), customised for a better/more convenient integration with the **GNU ARM OpenOCD Debugging** plug-in. It also includes the code from the [RISC-V OpenCOD](https://github.com/riscv/riscv-openocd) project, required to support debugging for the RISC-V devices. Binaries for Windows, GNU/Linux and macOS are available.
 
 * **GNU MCU Eclipse QEMU**
 
@@ -42,7 +46,7 @@ We definitely enjoyed working on the project! If you successfully installed **GN
 
 * the best way to praise us would be to **donate** - if you want to speed up development and future versions to include more and more great features, please consider donnating; any contribution, small or generous, will be highly appreciated;
 * go to the project [Facebook page](https://www.facebook.com/gnuarmeclipse) and click the **Like** button, write your opinion on the visitor posts wall, or share any of the web posts and pages with your friends;
-* star the project using the [GitHub Stars](https://github.com/gnuarmeclipse/plug-ins/stargazers);
+* star the project using the [GitHub Stars](https://github.com/gnu-mcu-eclipse/eclipse-plugins/stargazers);
 * write a short review in the main [SourceForge Project](http://sourceforge.net/projects/gnuarmeclipse) page.
 
 Thank you,

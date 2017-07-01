@@ -13,7 +13,7 @@ version-date: 20170223
 
 ## Overview
 
-The build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits ARM GNU toolchain you preffer, but, for better results, the recommended toolchain for **bare metal** target applications is [**GCC ARM Embedded Toolchain**](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm) (formerly GNU Tools for ARM Embedded Processors); for **GNU/Linux** target applications, the **[Linaro](http://www.linaro.org/downloads/)** family of toolchains provides a large selection of choices, for various specific needs (little/big endian, 32/64-bits, etc).
+The build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits ARM GNU toolchain you prefer, but, for better results, the recommended toolchain for **bare metal** target applications is [**GCC ARM Embedded Toolchain**](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm) (formerly GNU Tools for ARM Embedded Processors); for **GNU/Linux** target applications, the **[Linaro](http://www.linaro.org/downloads/)** family of toolchains provides a large selection of choices, for various specific needs (little/big endian, 32/64-bits, etc).
 
 > Important notes: 
 > GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the suspend and terminate buttons in the debug perspective are not functional. `arm-none-eabi-gdb` 7.12 from the initial `6_2-2016q4-20161216` crashes on macOS; use `6-2017-q1-update` or later.
@@ -22,8 +22,8 @@ The build plug-in is highly configurable in terms of executable names and locati
 
 Please note the distinction between the **target platform** and the **host/development platform**.
 
-* the target platform defines the environment where the application will be executed, and in general can be either a bare metal (the application sits directly on the hardware and has intimate control of it, usually including a form of scheduler to allow multiple threads to execute pseudo-simultaneously on the same processor), and applications that sit on top of an operating system, usually a distribution of GNU/Linux optimised for embedded environments
-* the host/development platform is the platform where the development tools are executed, usually as cross compilers, and can be, in our case, any platform that supports Eclipse, for example Windows, macOS, GNU/Linux, BSD, etc.
+* the target platform defines the environment where the application will be executed, and in general can be either a bare metal (the application sits directly on the hardware and has intimate control of it), and applications that sit on top of an operating system, usually a distribution of GNU/Linux optimised for embedded environments
+* the host/development platform is the platform where the development tools are executed, usually as cross compilers, and can be, in our case, any platform that supports Eclipse, for example Windows, macOS, GNU/Linux, etc.
 
 > Note: Be sure you select the proper toolchain for the target platform, otherwise builds will not succeed, or the generated applications will fail to run. **Do not** try to use the GCC ARM Embedded to build  GNU/Linux applications, because the executables will not run on anything than bare metal, and **do not try to use the Linaro toolchains for bare metal applications**.
 
@@ -31,7 +31,7 @@ The installation details described below assume the selection of the GCC ARM Em
 
 ## Download
 
-Due to portability reasons, the GNU ARM Eclipse plug-ins do not include any toolchain binaries, but they can be downloaded either from the [GNU ARM Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads).
+Due to portability reasons, the GNU MCU Eclipse plug-ins do not include any toolchain binaries, but they can be downloaded from the [GNU ARM Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads).
 
 Versions from `4_7` up to `{{ page.version-id }}` were tested and are known to work properly.
 
@@ -105,7 +105,7 @@ arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors 6-2017-q1-update) 6.3.1
 
 The complete toolchain documentation is available in the `.../share/doc/pdf/` folder.
 
-If you'll ever need to remove the toolchain, only remove the `${HOME}/opt/gcc-arm-none-eabi-{{ page.version-id }}`, there are no other components stored in system folders.
+If you'll ever need to remove the toolchain, only remove the `${HOME}/opt/gcc-arm-none-eabi-{{ page.version-id }}`, there are no other components stored in any system folders.
 
 ### MacPorts
 
@@ -164,7 +164,7 @@ arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (releas
 
 The complete toolchain documentation is available in the `.../share/doc/pdf/` folder.
 
-If you'll ever need to remove the toolchain, only remove the `${HOME}/opt/gcc-arm-none-{{ page.version-id }}`, there are no other components stored in system folders.
+If you'll ever need to remove the toolchain, only remove the `${HOME}/opt/gcc-arm-none-{{ page.version-id }}`, there are no other components stored in any system folders.
 
 ## Toolchain path
 
@@ -174,7 +174,7 @@ To be sure you did not miss this recommendation, here it is again:
 
 If there would be only one single version of one single toolchain in existence, then it wouldn't be a problem, but as soon as you start real world applications, you will face at least the need to keep multiple versions of the same toolchain installed, if not multiple toolchains, and this is when your trouble starts.
 
-The GNU ARM Eclipse plug-in has an advanced [toolchain path management]({{ site.baseurl }}/toolchain/path/) (presented in more detail in the separate page). Use it!
+The GNU MCU Eclipse plug-in has an advanced [toolchain path management]({{ site.baseurl }}/toolchain/path/) (presented in more detail in the separate page). Use it!
 
 ## GDB 7.12
 

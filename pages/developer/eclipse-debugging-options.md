@@ -13,7 +13,7 @@ date: 2015-09-10 18:33:00 +0300
 To start Eclipse with all tracing messages enabled, add `-debug <file>` to the command line:
 
 ```
-.../Eclipse.app/Contents/MacOS/eclipse -debug https://github.com/gnuarmeclipse/plug-ins/raw/develop/debug.options
+.../Eclipse.app/Contents/MacOS/eclipse -debug https://github.com/gnu-mcu-eclipse/eclipse-plugins/raw/develop/debug.options
 ```
 
 Alternatively, you can copy the file locally, edit it and point Eclipse to it:

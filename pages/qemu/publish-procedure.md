@@ -8,7 +8,7 @@ date: 2016-07-28 02:58:00 +0300
 
 ---
 
-The QEMU binaries are published on GitHub  [Releases](https://github.com/gnuarmeclipse/qemu/releases)).
+The QEMU binaries are published on GitHub  [Releases](https://github.com/gnu-mcu-eclipse/qemu/releases)).
 
 ## Update the Change log
 
@@ -38,7 +38,7 @@ For stable releases, with SourceTree
 Be sure the scripts in the **build-scripts.git** are up to date.
 
 ```
-$ git clone https://github.com/gnuarmeclipse/build-scripts.git \
+$ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
   ~/Downloads/build-scripts.git
 ```
 
@@ -56,7 +56,7 @@ $ bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh --all
 
 - add a new file to `_posts/qemu/releases`
 - name the file like `2016-07-28-qemu-v2-6-0-20160728-released.md`
-- name the post like: **GNU ARM Eclipse QEMU v2.6.0-20160728\*-dev released**.
+- name the post like: **GNU MCU Eclipse QEMU v2.6.0-20160728\*-dev released**.
 
 ## Update the release post with the MD5 sums
 
@@ -93,11 +93,11 @@ With SourceTree, push to the GitHub remote, the **gnuarmeclipse** and the **gnua
 ## Create the release
 
 - for stable releases, be sure the **gnuarmeclipse** branch is up to date and set as default
-- go to the [GitHub Releases](https://github.com/gnuarmeclipse/qemu/releases) page
+- go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/qemu/releases) page
 - click **Draft a new release**
 - name the tag like **gae-2.6.0-20160728**
 - select the **gnuarmeclipse** branch
-- name the release like **GNU ARM Eclipse QEMU v2.6.0-20160728** (development versions will be prefixed by **-dev**)
+- name the release like **GNU MCU Eclipse QEMU v2.6.0-20160728** (development versions will be prefixed by **-dev**)
 - as description, copy the first paragraph from the Web release page
 - add a link to the Web page **\[Continue reading »\]\(\)**
 - get URL from web and update the above link
@@ -108,14 +108,14 @@ Note: at this moment the system should send a notification to all clients watchi
 
 ## Copy binaries to the local archive folder
 
--   go to `.../GNU ARM Eclipse/archive`
+-   go to `.../GNU MCU Eclipse/archive`
 -   move the latest binaries and MD5 to `releases/qemu`
 
 ## Share on Facebook
 
 - go to the new post and follow the Share link.
 - DO NOT select **On your own Timeline**, but **On a Page you manage**
-- select GNU ARM Eclipse
-- posting as GNU ARM Eclipse
+- select GNU MCU Eclipse
+- posting as GNU MCU Eclipse
 - click **Post to Facebook**
 - check the post in the [Facebook page](https://www.facebook.com/gnuarmeclipse)

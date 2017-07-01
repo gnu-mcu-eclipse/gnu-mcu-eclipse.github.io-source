@@ -93,12 +93,12 @@ The Docker images are available from [Docker Hub](https://hub.docker.com/u/ilege
 
 ## Download the build scripts repo
 
-The build script is available from GitHub and can be [viewed online](https://github.com/gnuarmeclipse/build-scripts/blob/master/scripts/build-openocd.sh).
+The build script is available from GitHub and can be [viewed online](https://github.com/gnu-mcu-eclipse/build-scripts/blob/master/scripts/build-openocd.sh).
 
-To download it, clone the [gnuarmeclipse/build-scripts](https://github.com/gnuarmeclipse/build-scripts) Git repo. 
+To download it, clone the [gnuarmeclipse/build-scripts](https://github.com/gnu-mcu-eclipse/build-scripts) Git repo. 
 
 ```
-$ git clone https://github.com/gnuarmeclipse/build-scripts.git  
+$ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git  
   ~/Downloads/build-scripts.git
 ```
 
@@ -167,7 +167,7 @@ $ bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh clean
 
 ## Install hierarchy
 
-The procedure to install the GNU ARM Eclipse Build Tools is simple. The setup asks no special questions, and the defaults are generally ok for most installations.
+The procedure to install the GNU MCU Eclipse Build Tools is simple. The setup asks no special questions, and the defaults are generally ok for most installations.
 
 After install, this package should create structure like this (only the first two depth levels are shown):
 
@@ -204,4 +204,4 @@ To uninstall the Build Tools from a Windows machine, use the **build-tools-unins
 
 ## More build details
 
-The script is quite complex, and an attempt to explain its functionality would require some effort. For the final authoritative details, please refer to the comments available in the [script](https://github.com/gnuarmeclipse/build-scripts/blob/master/scripts/build-windows-build-tools.sh).
+The script is quite complex, and an attempt to explain its functionality would require some effort. For the final authoritative details, please refer to the comments available in the [script](https://github.com/gnu-mcu-eclipse/build-scripts/blob/master/scripts/build-windows-build-tools.sh).

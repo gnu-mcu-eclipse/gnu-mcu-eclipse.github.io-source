@@ -21,7 +21,7 @@ The Eclipse update site is currently hosted on SourceForge, to make use of the w
 
 - `http://gnuarmeclipse.sourceforge.net/updates`
 
-![GNU ARM Eclipse updates URL]({{ site.baseurl }}/assets/images/2015/install-new-software-updates-url.png)
+![GNU MCU Eclipse updates URL]({{ site.baseurl }}/assets/images/2015/install-new-software-updates-url.png)
 
 ## GitHub Releases pages
 
@@ -29,9 +29,9 @@ For all other manual downloads, the binary files are published as **GitHub Relea
 
 For example, to access the QEMU binaries:
 
-- go to the **GNU ARM Eclipse QEMU** project at [gnuarmeclipse/qemu](https://github.com/gnuarmeclipse/qemu)
+- go to the **GNU MCU Eclipse QEMU** project at [gnuarmeclipse/qemu](https://github.com/gnu-mcu-eclipse/qemu)
 - be sure you are in the **Code** view; if not, select the right side `<>` code icon
-- identify the [releases](https://github.com/gnuarmeclipse/qemu/releases) link in the upper line:
+- identify the [releases](https://github.com/gnu-mcu-eclipse/qemu/releases) link in the upper line:
   ![Code releases link]({{ site.baseurl }}/assets/images/2015/github-qemu-code-tab-releases.png)
 - click the releases link; this will show the Releases view, with the **Latest release** at the top of the page:
   ![The Latest release view. ]({{ site.baseurl }}/assets/images/2015/github-qemu-code-tab-latest-release.png)
