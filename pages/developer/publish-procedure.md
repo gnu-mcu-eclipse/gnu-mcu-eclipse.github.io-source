@@ -418,7 +418,7 @@ For all [GitHub issues](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issue
 * select GNU MCU Eclipse
 * posting as GNU ARM Eclipse
 * click **Share link**
-* check the post in the [Facebook page](https://www.facebook.com/gnuarmeclipse)
+* check the post in the [Facebook page](https://www.facebook.com/gnu-mcu-eclipse)
 
 ## Update the Eclipse Marketplace records
 
