@@ -33,9 +33,9 @@ After installing the toolchain, you'll end up with lots of programs prefixed by 
 
 ## Download
 
-Due to portability reasons, the GNU MCU Eclipse plug-ins do not include any toolchain binaries, but they can be downloaded from [GNU MCU Eclipse RISC-V Embdedded GCC](https://github.com/gnu-mcu-eclipse/riscv-gcc-build/releases). Alternatively, a slightly less elaborated distribution can be downloaded from the [SiFive Tools](https://www.sifive.com/products/tools/) page (currently less platforms supported and no newlib-nano).
+Due to portability reasons, the GNU MCU Eclipse plug-ins do not include any toolchain binaries, but they can be downloaded from [GNU MCU Eclipse RISC-V Embdedded GCC](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases). Alternatively, a slightly less elaborated distribution can be downloaded from the [SiFive Tools](https://www.sifive.com/products/tools/) page (currently less platforms supported and no newlib-nano).
 
-![RISC-V Releases]({{ site.baseurl }}/assets/images/2017/arm-downloads.png)
+![RISC-V Releases]({{ site.baseurl }}/assets/images/2017/riscv-releases.png)
 
 ## Windows
 
