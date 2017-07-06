@@ -14,8 +14,8 @@
 #### [Install]({{ site.baseurl }}/install/)
 
 * [Overview]({{ site.baseurl }}/install/)
-* [ARM Toolchain(s) install]({{ site.baseurl }}/toolchain/install/)
-* [RISC-V Toolchain(s) install]({{ site.baseurl }}/toolchain/install-riscv/)
+* [ARM Toolchain(s) install]({{ site.baseurl }}/toolchain/arm/install/)
+* [RISC-V Toolchain(s) install]({{ site.baseurl }}/toolchain/riscv/install/)
 * [Windows build tools (make & rm) install]({{ site.baseurl }}/windows-build-tools/install/)
 * [Debugging binaries]({{ site.baseurl }}/debug/install/)
   * [Overview]({{ site.baseurl }}/debug/install/)
@@ -56,6 +56,14 @@
 * [The OpenOCD plug-in]({{ site.baseurl }}/debug/openocd/)
 * [The QEMU plug-in]({{ site.baseurl }}/debug/qemu/)
 * [The peripheral registers view (CMSIS)]({{ site.baseurl }}/debug/peripheral-registers/)
+
+#### [GNU MCU RISC-V GCC]({{ site.baseurl }}/toolchain/riscv/)
+
+* [Overview]({{ site.baseurl }}/toolchain/riscv/)
+* [RISC-V Toolchain(s) install]({{ site.baseurl }}/toolchain/riscv/install/)
+* [How to build]({{ site.baseurl }}/toolchain/riscv/build-procedure/)
+* [Releases]({{ site.baseurl }}/toolchain/riscv/releases/)
+* [Support]({{ site.baseurl }}/toolchain/riscv/support/)
 
 #### [GNU ARM QEMU Home]({{ site.baseurl }}/qemu/)
 

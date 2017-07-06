@@ -63,7 +63,7 @@ For any GNU/Linux distribution, follow the [specific instructions](https://docs.
 
 #### Configure Docker to run as a regular user
 
-To allow docker to run as a regular user, you need to be a member of the `docker` group.
+To allow Docker to run as a regular user, you need to be a member of the `docker` group.
 
 ```
 $ sudo groupadd docker

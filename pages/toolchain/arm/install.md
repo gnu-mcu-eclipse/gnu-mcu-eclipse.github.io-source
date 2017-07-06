@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /toolchain/install/
+permalink: /toolchain/arm/install/
 title: How to install the ARM toolchain?
 author: Liviu Ionescu
 

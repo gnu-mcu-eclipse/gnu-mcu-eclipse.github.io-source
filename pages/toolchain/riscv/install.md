@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /toolchain/install-riscv/
+permalink: /toolchain/riscv/install/
 title: How to install the RISC-V toolchain?
 author: Liviu Ionescu
 
