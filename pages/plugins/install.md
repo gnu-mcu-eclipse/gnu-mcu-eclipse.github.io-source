@@ -20,7 +20,7 @@ If you want to do it manually, you only need the update site details:
 * name: **GNU MCU Eclipse Plug-ins**
 * URL: `http://gnuarmeclipse.sourceforge.net/updates`
 
-It is recommended that you install the plug-ins after installing the [toolchain]({{ site.baseurl }}/toolchain/install), the [build tools]({{ site.baseurl }}/windows-build-tools/install/) (on Windows), and the [debugging binaries]({{ site.baseurl }}/debug/install/).
+It is recommended that you install the plug-ins after installing the [toolchain]({{ site.baseurl }}/toolchain/arm/install), the [build tools]({{ site.baseurl }}/windows-build-tools/install/) (on Windows), and the [debugging binaries]({{ site.baseurl }}/debug/install/).
 
 > Important notes:
 > - if you use the Oracle JDK, starting with mid January, attempts to install from SourceForge [fail with handshake_error]({{ site.baseurl }}/blog/2017/01/29/plugins-install-issue/);
@@ -290,7 +290,7 @@ Follow the above steps and when everything is ready, proceed to [create and buil
 If you encountered any problems when installing the plug-ins, pleas refer to the [Support][8] page and **do not** send private email.
 
  [1]: {{ site.baseurl }}/eclipse/workspace/preferences/ "Workspace preferences"
- [2]: {{ site.baseurl }}/toolchain/install/ "Toolchain install"
+ [2]: {{ site.baseurl }}/toolchain/arm/install/ "ARM Toolchain install"
  [3]: {{ site.baseurl }}/windows-build-tools/ "Build tools (make & rm) on Windows"
  [4]: {{ site.baseurl }}/debug/ "Debugging"
  [5]: {{ site.baseurl }}/plugins/packs-manager/ "Packs manager"

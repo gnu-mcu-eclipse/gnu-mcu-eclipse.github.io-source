@@ -112,7 +112,7 @@ The procedure to install GNU MCU Eclipse RISC-V Embedded GCC is platform specifi
 After install, this package should create structure like this (only the first two depth levels are shown):
 
 ```
-$ $ tree -L 2 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
+$ tree -L 2 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 ├── README.md
 ├── bin

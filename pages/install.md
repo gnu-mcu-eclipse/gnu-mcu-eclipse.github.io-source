@@ -20,7 +20,7 @@ The recommended sequence is described below.
 
 This is generally a mandatory step for all platforms, since most platforms do not come by default with an ARM toolchain.
 
-Please follow the steps in the [Toolchain install]({{ site.baseurl }}/toolchain/install) page.
+Please follow the steps in the [ARM Toolchain install]({{ site.baseurl }}/toolchain/arm/install) page.
 
 ## Windows Build Tools
 
