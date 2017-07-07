@@ -1,0 +1,50 @@
+---
+layout: page
+title: The RISC-V corner
+permalink: /arch/riscv/
+
+date: 2017-07-07 19:46:00 +0300
+
+---
+
+## What is RISC-V?
+
+RISC-V (pronounced "risk-five") is an open instruction set architecture (ISA) based on established reduced instruction set computing (RISC) principles.
+
+The project was initialy developed at the University of California, Berkeley, and later by the members of the [RISC-V Foundation](https://riscv.org/), especially by [SiFive](https://www.sifive.com), who also manufactured the first RISC-V SoC, the [Freedom E310](https://www.sifive.com/products/freedom-e310/).
+
+## License
+
+In contrast to most ISAs, the RISC-V ISA can be freely used for any purpose, permitting anyone to design, manufacture and sell RISC-V chips and software. The RISC-V authors aim to provide several CPU designs freely available under a [BSD license](https://en.wikipedia.org/wiki/BSD_license).
+
+## Chips & boards
+
+The GNU MCU Eclipse currently supports the following devices:
+
+* SiFive [Freedom E310](https://www.sifive.com/products/freedom-e310/), RV32IMAC, a 32-bits embedded processor
+* SiFive [E31 Coreplex](https://www.sifive.com/products/coreplex-risc-v-ip/e31/), RV32IMAC, a Verilog synthesised 32-bits embedded processor
+* SiFive [E51 Coreplex](https://www.sifive.com/products/coreplex-risc-v-ip/e51/), RV64IMAC, a a Verilog synthesised 64-bits embedded processor
+
+The following boards are supported:
+
+* SiFive [HiFive1](https://www.sifive.com/products/hifive1/), an Arduino-compatible development kit featuring the Freedom E310
+
+![HiFive1]({{ site.baseurl }}/assets/images/2017/hifive1-top-view.png)
+
+* Xilinx/Digilent [Artix-7 35T Arty FPGA Evaluation Kit](https://www.xilinx.com/products/boards-and-kits/arty.html), a board capable of running the synthesised E31/E51 devices.
+
+## Tips & tricks
+
+* [Flashing the Arty boards]({{ site.baseurl }}/arch/riscv/arty-reflash/) - a solution to reprogram the Arty board without Xilinx Vivado
+* [FTDI JTAG drivers]({{ site.baseurl }}/arch/riscv/ftdi-jtag-drivers/) - workaround to reconfigure the FTDI as JTAG programmer
+
+## Links
+
+* [RISC-V specs & tools](https://riscv.org/specifications/)
+* [SiFive Software Development Tools](https://www.sifive.com/products/tools/)
+
+Manuals
+
+* [The RISC-V Instruction Set Manual, Volume I: User-Level ISA, Document Version 2.2](https://content.riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf) (read [online](https://riscv.org/wp-content/plugins/pdf-viewer/stable/web/viewer.html?file=https://content.riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf#page=1&zoom=auto,-16,798))
+* [The RISC-V Instruction Set Manual, Volume II: Privileged Architecture, Version1.10](https://content.riscv.org/wp-content/uploads/2017/05/riscv-privileged-v1.10.pdf) (read [online](https://riscv.org/wp-content/plugins/pdf-viewer/stable/web/viewer.html?file=https://content.riscv.org/wp-content/uploads/2017/05/riscv-privileged-v1.10.pdf#page=2&zoom=auto,-16,772))
+* [Arty Reference Manual](https://reference.digilentinc.com/reference/programmable-logic/arty/reference-manual)

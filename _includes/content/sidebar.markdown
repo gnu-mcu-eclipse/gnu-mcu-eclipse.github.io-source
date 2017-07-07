@@ -96,6 +96,12 @@
 * [Releases]({{ site.baseurl }}/windows-build-tools/releases/)
 * [Support](https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/) (report issue)
 
+#### [The RISC-V corner]({{ site.baseurl }}/arch/riscv/)
+
+* [Overview]({{ site.baseurl }}/arch/riscv/)
+* [Flashing the Arty boards]({{ site.baseurl }}/arch/riscv/arty-reflash/)
+* [FTDI JTAG drivers]({{ site.baseurl }}/arch/riscv/ftdi-jtag-drivers/)
+
 #### Advanced
 
 * [Headless builds]({{ site.baseurl }}/advanced/headless-builds/)
