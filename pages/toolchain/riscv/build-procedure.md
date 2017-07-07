@@ -13,7 +13,7 @@ The script was developed on macOS, but it should also run on any recent GNU/Linu
 
 ## Prerequisites
 
-The prerequisites are common to all binary builds. Please follow the instructions in the separate [Prerequisites for building binaries]({{ site.baseurl }}/developer/build-binaries-prerequisites) page and return when ready.
+The prerequisites are common to all binary builds. Please follow the instructions in the separate [Prerequisites for building binaries]({{ site.baseurl }}/developer/build-binaries-prerequisites/) page and return when ready.
 
 ## Download the build scripts repo
 
