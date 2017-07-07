@@ -7,7 +7,7 @@ author: Liviu Ionescu
 date: 2015-09-11 22:49:00 +0300
 
 version-id: 7.1.1-1
-version-date: 20170629-2139
+version-date: 20170702-0625
 
 ---
 
@@ -89,7 +89,7 @@ If you decide to install the toolchain in a system location, you can use the com
 * accept the terms of the license agreement
 * accept the destination folder, usually a version specific sub-folder of `C:\Program Files\GNU MCU Eclipse\RISC-V Embedded GCC`
 
-  > Note: It is highly recommended to **do not to change the install path**.
+  > Note: It is highly recommended to **do not change the install path**.
 
   ![The destination folder]({{ site.baseurl }}/assets/images/2017/riscv-setup-folder.png)
 
@@ -97,7 +97,7 @@ If you decide to install the toolchain in a system location, you can use the com
 * test if the compiler is functional; use the actual install path:
 
   ```bash
-C:\>"C:\Program Files\GNU MCU Eclipse\RISC-V Embedded GCC\7.1.1-1-20170629-2139\bin\riscv64-unknown-elf-gcc.exe" --version
+C:\>"C:\Program Files\GNU MCU Eclipse\RISC-V Embedded GCC\7.1.1-1-20170702-0625\bin\riscv64-unknown-elf-gcc.exe" --version
 riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
 ```
 
@@ -109,7 +109,7 @@ For Windows, the next step would be to install the [build tools (make & rm)]({{ 
 
 ## macOS
 
-For macOS, , the RISC-V Embedded GCC toolchain is released in two versions: 
+For macOS, the RISC-V Embedded GCC toolchain is released in two versions: 
 
 * a portable archive that can be installed in any location
 * an installable package that can install the binaries in the standard system location 
@@ -143,14 +143,33 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
   ```bash
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
-$ tar xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170629-2139-osx.tgz
-$ chmod -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170629-2139
+$ tar xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-osx.tgz
+$ chmod -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625
 ```
 
 * test if the compiler is functional; use the actual install path:
 
   ```bash
-$ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170629-2139/bin/riscv64-unknown-elf-gcc --version
+$ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
+riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
+```
+
+### Install package
+
+For those preferring to install the toolchain in the system location, there is also an install package (`.pkg`).
+
+Run the install as usual.
+
+![Install the RISC-V GCC package]({{ site.baseurl }}/assets/images/2017/riscv-mac-installer.png)
+
+The package is installed in:
+
+* `/Applications/GNU MCU Eclipse/RISC-V Embedded GCC/*`
+
+To check if the compiler starts, use:
+
+```bash
+$ /Applications/GNU\ ARM\ Eclipse/RISC-V\ Embedded\ GCC/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
 riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
 ```
 
@@ -158,7 +177,7 @@ riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 201
 
 The complete toolchain documentation is available in the `.../share/doc/pdf/` folder.
 
-If you'll ever need to remove the toolchain, only remove the `riscv-none-gcc/7.1.1-1-20170629-2139` folder, there are no other components stored in any system folders.
+If you'll ever need to remove the toolchain, only remove the `riscv-none-gcc/7.1.1-1-20170702-0625` folder, there are no other components stored in any system folders.
 
 ## GNU/Linux
 
@@ -189,14 +208,14 @@ The following steps were performed on **Ubuntu 16.04 LTSx64** (please adjust the
   ```bash
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
-$ tar xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170629-2139-debian64.tgz
-$ chmod -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170629-2139
+$ tar xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian64.tgz
+$ chmod -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625
 ```
 
 * test if the compiler is functional; use the actual install path:
 
   ```bash
-$ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170629-2139/bin/riscv64-unknown-elf-gcc --version
+$ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
 riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
 ```
 
@@ -204,7 +223,7 @@ riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 201
 
 The complete toolchain documentation is available in the `.../share/doc/pdf/` folder.
 
-If you'll ever need to remove the toolchain, only remove the `riscv-none-gcc/7.1.1-1-20170629-2139` folder, there are no other components stored in any system folders.
+If you'll ever need to remove the toolchain, only remove the `riscv-none-gcc/7.1.1-1-20170702-0625` folder, there are no other components stored in any system folders.
 
 ## Toolchain path
 
