@@ -7,7 +7,7 @@ date: 2017-07-07 10:09:00 +0300
 
 ---
 
-The RISC-V Embedded GCC binaries are published on GitHub [Releases](https://github.com/gnu-mcu-eclipse/gnu-none-gcc/releases/).
+The RISC-V Embedded GCC binaries are published on GitHub [Releases](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/).
 
 ## Update the Change log
 
@@ -37,7 +37,7 @@ Check if the library sources (gmp, mpfr, mpc, isl) did change and possibly updat
 
 ## Build
 
-Follow the steps in the separate [How to build]({{ site.baseurl }}/toolchain/riscv/build-procedures/) page.
+Follow the steps in the separate [How to build]({{ site.baseurl }}/toolchain/riscv/build-procedure/) page.
 
 
 ## Prepare a new blog post to announce the release

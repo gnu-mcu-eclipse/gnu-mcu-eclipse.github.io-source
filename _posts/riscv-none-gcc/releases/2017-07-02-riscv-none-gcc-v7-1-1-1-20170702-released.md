@@ -5,7 +5,7 @@ download_url: https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.
 
 author: Liviu Ionescu
 
-date:   2017-07-06 22:38:00 +0300
+date:   2017-07-02 22:38:00 +0300
 
 categories:
   - releases
@@ -47,7 +47,7 @@ Another addition compared to the SiFive distribution is the presence of the docu
 
 Binaries for **Windows**, **macOS** and **GNU/Linux** are provided. For Windows and macOS, separate installable and plain archives are provided. For Windows and GNU/Linux, both 32/64-bits binaries are provided.
 
-Instructions on how to install them are available in the [How to install the RISC-V toolchain?](https://gnu-mcu-eclipse.github.io/toolchain/install-riscv/) page.
+Instructions on how to install them are available in the [How to install the RISC-V toolchain?](https://gnu-mcu-eclipse.github.io/toolchain/riscv/install/) page.
 
 For better control and repetability, the build scripts use Docker containers; all files required during builds are available as a separate [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build) project. 
 
