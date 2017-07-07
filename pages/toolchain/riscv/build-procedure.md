@@ -74,11 +74,27 @@ $ caffeinate bash
 $ exec bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
 ```
 
-Many, many hours later, the output of the build script is a set of 5 files in the `deploy` folder:
+Many, many hours later, the output of the build script is a set of 8 files and their SHA signatures in the `deploy` folder:
 
 ```
 $ ls -l deploy
-...
+total 784400
+-rw-r--r--  1 ilg  staff  75678450 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg
+-rw-r--r--  1 ilg  staff       127 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg.sha
+-rw-r--r--  1 ilg  staff  75726500 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.tgz
+-rw-r--r--  1 ilg  staff       127 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.tgz.sha
+-rw-r--r--  1 ilg  staff  52436506 Jul  5 21:39 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-debian64.tgz
+-rw-r--r--  1 ilg  staff       132 Jul  5 21:39 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-debian64.tgz.sha
+-rw-r--r--  1 ilg  staff  27642907 Jul  6 01:25 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-win64-setup.exe
+-rw-r--r--  1 ilg  staff       135 Jul  6 01:25 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-win64-setup.exe.sha
+-rw-r--r--  1 ilg  staff  53128553 Jul  6 01:23 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-win64.zip
+-rw-r--r--  1 ilg  staff       129 Jul  6 01:23 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-win64.zip.sha
+-rw-r--r--  1 ilg  staff  51726488 Jul  7 04:52 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-debian32.tgz
+-rw-r--r--  1 ilg  staff       132 Jul  7 04:52 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-debian32.tgz.sha
+-rw-r--r--  1 ilg  staff  21844885 Jul  7 06:46 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32-setup.exe
+-rw-r--r--  1 ilg  staff       135 Jul  7 06:46 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32-setup.exe.sha
+-rw-r--r--  1 ilg  staff  43378400 Jul  7 06:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32.zip
+-rw-r--r--  1 ilg  staff       129 Jul  7 06:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32.zip.sha
 ```
 
 ## Subsequent runs
@@ -90,6 +106,8 @@ Instead of `--all`, you can use any combination of:
 ```
 --win32 --win64 --debian32 --debian64 --osx
 ```
+
+Please note that, due to the specifics of the GCC build process, the Windows build requires the corresponding Debian build, so `--win32` alone is equivalent to `--debian32 --win32` and `--win64` alone is equivalent to `--debian64 --win64`.
 
 ### clean
 
