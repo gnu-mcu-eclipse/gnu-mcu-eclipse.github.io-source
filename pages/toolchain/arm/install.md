@@ -39,7 +39,44 @@ Versions from `4_7` up to `{{ page.version-id }}` were tested and are known to 
 
 ## Windows
 
-The following steps can be performed on Windows:
+For Windows, the GNU ARM Embedded Toolchain is released in two versions: 
+
+* a portable archive that can be installed in any location
+* a Windows setup that can install the binaries in the standard system location
+
+Our prefered method is to install the binaries in the user home folder, but your mileage may vary.
+
+### Portable archive
+
+To install the archive, the steps are:
+
+* download the latest `gcc-arm-none-eabi-{{ page.version-id }}-*-win*.zip` file
+* open the archive in the file explorer
+* extract the `GNU MCU Eclipse` folder in `%userprofile%\AppData\Local`
+
+According to Microsoft, this is the recommended location for installing user specific packages, and the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.
+
+In addition, the GNU MCU Eclipse plug-ins also check the following locations (POSIX paths):
+
+```
+${user.home}/AppData/Local/GNU Tools ARM Embedded;\
+${user.home}/opt/GNU Tools ARM Embedded;\
+${user.home}/opt/gnu-tools-arm-embedded;\
+${user.home}/local/GNU Tools ARM Embedded;\
+${user.home}/local/gnu-tools-arm-embedded;\
+C:/opt/GNU Tools ARM Embedded;\
+C:/opt/gnu-tools-arm-embedded;\
+C:/Program Files/GNU Tools ARM Embedded;\
+C:/Program Files (x86)/GNU Tools ARM Embedded;\
+D:/Program Files/GNU Tools ARM Embedded;\
+D:/Program Files (x86)/GNU Tools ARM Embedded
+```
+
+It is recommended to use one of these locations, since the plug-ins will automatically set the default toolchain path to the most recently installed toolchain found in these folders.
+
+### Setup
+
+If you decide to install the toolchain in a system location, you can use the common setup procedure:
 
 * download the latest Windows installer **.exe** file (currently `gcc-arm-none-eabi-{{ page.version-id }}-win32.exe`, about 84 MB)
 * locate the file (usually in the `...\Downloads\`  folder) and double click it to start the installer
@@ -52,7 +89,7 @@ The following steps can be performed on Windows:
 * accept the terms of the license agreement
 * accept the destination folder, usually a version specific sub-folder of `C:\Program Files\`
 
-  > Note: It is highly recommended to **do not to change the install path**, since the plug-in tries to automatically discover the toolchain by searching only a limited set of possible locations (`${user.home}/AppData/Local/Programs/GNU Tools ARM Embedded`, `${user.home}/local/GNU Tools ARM Embedded`, `${user.home}/local`, `C:/Program Files/GNU Tools ARM Embedded`, `C:/Program Files (x86)/GNU Tools ARM Embedded`, `D:/Program Files/GNU Tools ARM Embedded`, `D:/Program Files (x86)/GNU Tools ARM Embedded`)
+  > Note: It is highly recommended to **do not change the install path**
 
   ![The destination folder]({{ site.baseurl }}/assets/images/2014/01/MS_destination_location.png)
 
@@ -65,26 +102,37 @@ The following steps can be performed on Windows:
 * test if the compiler is functional; use the actual install path:
 
   ```bash
-C:\Users\Liviu Ionescu\>"C:\Program Files\GNU Tools ARM Embedded\4.8 2014q2\bin\arm-none-eabi-gcc.exe" --version
+C:\>"C:\Program Files\GNU Tools ARM Embedded\4.8 2014q2\bin\arm-none-eabi-gcc.exe" --version
 arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-branch revision 211358]
 ```
-
-For Windows, the next step would be to install the [build tools (make & rm)]({{ site.baseurl }}/windows-build-tools/).
 
 The complete toolchain documentation is available in the `...\share\doc\pdf\` folder.
 
 If you'll ever need to remove the toolchain, there is an **uninstall.exe** program available in the toolchain root folder.
 
+For Windows, the next step would be to install the [build tools (make & rm)]({{ site.baseurl }}/windows-build-tools/).
+
 ## macOS
 
-The following steps can be performed on macOS:
+For macOS, the GNU ARM Embedded Toolchain is released as a portable archive, that can be installed in any location.
 
 * download the latest macOS install tarball file (currently `gcc-arm-none-eabi-{{ page.version-id }}-mac.tar.bz2`, about 99 MB)
 * locate the file (usually in the `${HOME}/Downloads` folder)
 * decide on a location to install the toolchain; the recommended folder is `${HOME}/opt/`
-* unpack the archive in the destination folder
 
-  > Note: It is highly recommended to **do not to change the install path**, since the plug-in tries to automatically discover the toolchain by searching only a limited set of possible locations (`${HOME}/Applications/GNU Tools ARM Embedded`, `${HOME}/local/GNU Tools ARM Embedded`, `${HOME}/local`, `${HOME}/opt`, `/usr/local`).
+  > Note: It is highly recommended to use this path, since the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.
+
+  In addition, the GNU MCU Eclipse plug-ins also check the following locations:
+
+  ```
+${user.home}/opt:\
+${user.home}/local:\
+/usr/local:\
+/opt
+```
+
+* unpack the archive in the destination folder
+* the result should be a folder like `${HOME}/opt/gcc-arm-none-eabi-{{ page.version-id }}`
 
   ```bash
 $ mkdir -p ${HOME}/opt
@@ -93,7 +141,6 @@ $ tar xjf ~/Downloads/gcc-arm-none-eabi-{{ page.version-id }}-mac.tar.bz2
 $ chmod -R -w ${HOME}/opt/gcc-arm-none-eabi-{{ page.version-id }}
 ```
 
-* the result should be a folder like `${HOME}/opt/gcc-arm-none-eabi-{{ page.version-id }}`
 * test if the compiler is functional; use the actual install path:
 
   ```bash
@@ -112,6 +159,8 @@ If you'll ever need to remove the toolchain, only remove the `${HOME}/opt/gcc-a
 In case you have MacPorts installed, be sure you remove the MacPorts path from the user path (edit the **.profile** in your home folder and comment out the line where `/opt/local/` is added in front of the PATH), especially if you installed any toolchain inside MacPorts, since this will be a serious source of confusion.
 
 ## GNU/Linux
+
+For GNU/Linux, the GNU ARM Embedded Toolchain is released as a portable archive, that can be installed in any location.
 
 The following steps were performed on **Ubuntu 14.04 LTSx64** (please adjust them accordingly for other distributions):
 
@@ -143,7 +192,7 @@ $ sudo apt-get -y install ia32-libs
 * decide on a location to install the toolchain; the recommended folder is `${HOME}/opt/`
 * unpack the archive in the destination folder
 
-  > Note: It is highly recommended to **do not to change the install path**, since the plug-in tries to automatically discover the toolchain by searching only a limited set of possible locations (`${HOME}/local`, `${HOME}/opt`, `/usr/local`).
+  > Note: It is highly recommended to **do not change the install path**, since the plug-in tries to automatically discover the toolchain by searching only a limited set of possible locations (`${HOME}/local`, `${HOME}/opt`, `/usr/local`).
 
   ```bash
 $ mkdir -p ${HOME}/opt
@@ -180,5 +229,5 @@ The GNU MCU Eclipse plug-in has an advanced [toolchain path management]({{ site.
 
 GDB 7.12 distributed with the initial GCC 6.2 (`gcc-arm-none-eabi-6_2-2016q4-20161216`) has several issues (crashes on macOS and is incompatible with Neon.2).
 
-The recommendation is to use the update version `gcc-arm-none-eabi-6-2017-q1-update`, or later. If you prefer a safer setup, use GCC 5.4 from `gcc-arm-none-eabi-5_4-2016q3-20160926`.
+The recommendation is to use the update version `gcc-arm-none-eabi-6-2017-q1-update`, or later. 
 
