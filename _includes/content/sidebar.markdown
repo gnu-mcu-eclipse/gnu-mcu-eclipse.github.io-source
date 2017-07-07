@@ -62,6 +62,7 @@
 * [Overview]({{ site.baseurl }}/toolchain/riscv/)
 * [RISC-V Toolchain(s) install]({{ site.baseurl }}/toolchain/riscv/install/)
 * [How to build]({{ site.baseurl }}/toolchain/riscv/build-procedure/)
+* [How to publish]({{ site.baseurl }}/toolchain/riscv/publish-procedure/)
 * [Releases]({{ site.baseurl }}/toolchain/riscv/releases/)
 * [Support]({{ site.baseurl }}/toolchain/riscv/support/)
 
