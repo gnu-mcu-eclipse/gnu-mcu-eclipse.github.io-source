@@ -14,4 +14,5 @@ TBD
 * [How to build?]({{ site.baseurl }}/toolchain/riscv/build-procedure/)
 * [How to publish?]({{ site.baseurl }}/toolchain/riscv/publish-procedure/)
 * [Releases]({{ site.baseurl }}/toolchain/riscv/releases/)
+* [Change log]({{ site.baseurl }}/toolchain/riscv/change-log/)
 * [Support]({{ site.baseurl }}/toolchain/riscv/support/)
