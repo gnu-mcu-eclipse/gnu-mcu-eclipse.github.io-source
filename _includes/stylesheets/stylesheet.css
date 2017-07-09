@@ -910,3 +910,7 @@ table#post-navigation td:nth-child(4){
   text-align: right;
   padding-right: 5px;
 }
+
+.right-align-image {
+  float: right;
+}

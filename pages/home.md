@@ -8,9 +8,9 @@ date: 2015-09-07 18:31:00 +0300
 
 ---
 
-Starting with Eclipse plug-ins v4.x, the project was enhanced with support for [RISC-V](https://riscv.org) devices, thus the new **MCU** name, more apropriate for a multi-platform project. For more details, see the [RISC-V Corner]({{ site.baseurl }}/arch/riscv/) page.
+![RISC-V logo]({{ site.baseurl }}/assets/images/2017/riscv-64x64.png){:class="right-align-image"}Starting with Eclipse plug-ins v4.x, the project was enhanced with support for [RISC-V](https://riscv.org) devices, thus the new **MCU** name, more apropriate for a multi-platform project. For more details, see the [RISC-V Corner]({{ site.baseurl }}/arch/riscv/) and [RISC-V GCC]({{ site.baseurl }}/toolchain/riscv/) page.
 
-The **GNU MCU Eclipse** is an open source project that includes a family of Eclipse plug-ins and tools for multi-platform embedded ARM and RISC-V development, based on GNU toolchains. This project is hosted on [GitHub](https://github.com/gnu-mcu-eclipse). The former project was hosted on [GitHub](https://github.com/gnuarmeclipse) and [SourceForge](http://sourceforge.net/projects/gnuarmeclipse/).
+**GNU MCU Eclipse** is an open source project that includes a family of Eclipse plug-ins and tools for multi-platform embedded ARM and RISC-V development, based on GNU toolchains. This project is hosted on [GitHub](https://github.com/gnu-mcu-eclipse). The former project was hosted on [GitHub](https://github.com/gnuarmeclipse) and [SourceForge](http://sourceforge.net/projects/gnuarmeclipse/).
 
 ## The GNU MCU Eclipse plug-ins
 

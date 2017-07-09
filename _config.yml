@@ -78,7 +78,7 @@ minItemsToShowToc: 3
 useExistingAnchors: true
 
 # UTC time, YYYYMMDDHHmm (minutes)
-css-date: 201702222107
+css-date: 201707092118
 
 # Content copyright. Update it to your needs.
 copyright-message: "© 2017 Liviu Ionescu"
