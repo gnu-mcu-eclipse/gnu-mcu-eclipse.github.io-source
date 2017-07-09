@@ -14,7 +14,7 @@ date: 2015-09-07 18:31:00 +0300
 
 ## The GNU MCU Eclipse plug-ins
 
-These plug-ins provide Eclipse CDT (C/C++ Development Tooling) extensions for GNU embedded toolchains like [GNU Tools for ARM Embedded Processors](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm), **Linaro**, [GNU MCU Eclipse RISC-V Embedded GCC]({{ site.baseurl }}/toolchain/riscv/), etc.
+![RISC-V logo]({{ site.baseurl }}/assets/images/2017/gme-64.png){:class="right-align-image"}These plug-ins provide Eclipse CDT (C/C++ Development Tooling) extensions for GNU embedded toolchains like [GNU Tools for ARM Embedded Processors](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm), **Linaro**, [GNU MCU Eclipse RISC-V Embedded GCC]({{ site.baseurl }}/toolchain/riscv/), etc.
 
 In short, the GNU MCU Eclipse plug-ins allow to create, build, debug and in general to **manage ARM & RISC-V projects** (executables and static/shared libraries, in both 32 and 64-bits versions) with the Eclipse framework (currently tested up to Eclipse 4.6 Neon.3). The plug-ins run on Windows, macOS and GNU/Linux. For more details please visit the [Features]({{ site.baseurl }}/plugins/features/) page.
 
