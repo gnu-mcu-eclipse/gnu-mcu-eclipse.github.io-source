@@ -40,15 +40,8 @@ The new internal URL addresses used for downloads are:
 
 - [https://dl.bintray.com/gnu-mcu-eclipse/updates](https://dl.bintray.com/gnu-mcu-eclipse/updates)
 - [https://dl.bintray.com/gnu-mcu-eclipse/updates-test](https://dl.bintray.com/gnu-mcu-eclipse/updates-test)
-- [https://dl.bintray.com/gnu-mcu-eclipse/updates-experimental](https://dl.bintray.com/gnu-mcu-eclipse/updates-experimental)
 
 ## SourceForge redirects
-
-The physical files may be stored on Bintray, but the official URL addresses to be used for installs/updates will remain on SourceForge, since SourceForge provides a convenient redirect solution:
-
-- [https://gnu-mcu-eclipse.sourceforge.io/updates](https://gnu-mcu-eclipse.sourceforge.io/updates)
-- [https://gnu-mcu-eclipse.sourceforge.io/updates-test](https://gnu-mcu-eclipse.sourceforge.io/updates-test)
-- [https://gnu-mcu-eclipse.sourceforge.io/updates-experimental](https://gnu-mcu-eclipse.sourceforge.io/updates-experimental)
 
 For compatibility reasons, the old URLs will continue to be active and maintained, being redirected to the same Bintray locations:
 
@@ -60,5 +53,9 @@ For compatibility reasons, the old URLs will continue to be active and maintaine
 This change is expected to have no negative consequences on existing Eclipse installations. Enterprise networks with absurd security limitations which prevented direct access to the update site and required manual downloads of the release archives may (or may not...) have a better chance for normal Eclipse install/update.
 
 The change in the public URL should be seamless, with all future plug-ins versions to automatically point to the new URLs.
+
+## Update
+
+Starting with Eclipse plug-ins v4.x, the **Eclipse update sites URLs** were [migrated to Netlify]({{ site.baseurl }}/blog/2017/07/09/sourceforge-to-netlify-migration/).
 
 _**Many thanks to all those who use this project!**_
