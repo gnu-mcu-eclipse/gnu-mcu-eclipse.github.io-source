@@ -1,20 +1,22 @@
 ---
 layout: main
 permalink: /
-title: Welcome to GNU MCU Eclipse!
+title: GNU ARM → GNU MCU Eclipse!
 author: Liviu Ionescu
 
 date: 2015-09-07 18:31:00 +0300
 
 ---
 
-The **GNU MCU Eclipse** (formerly GNU ARM Eclipse) is an open source project that includes a family of Eclipse plug-ins and tools for multi-platform embedded ARM and RISC-V development, based on GNU toolchains. This project is hosted on [GitHub](https://github.com/gnu-mcu-eclipse). The former project was hosted on [GitHub](https://github.com/gnuarmeclipse) and [SourceForge](http://sourceforge.net/projects/gnuarmeclipse/).
+Starting with Eclipse plug-ins v4.x, support for RISC-V devices was added to the project, thus the new project name. For more details, see the [RISC-V Corner]({{ site.baseurl }}/arch/riscv/) page.
+
+The **GNU MCU Eclipse** is an open source project that includes a family of Eclipse plug-ins and tools for multi-platform embedded ARM and RISC-V development, based on GNU toolchains. This project is hosted on [GitHub](https://github.com/gnu-mcu-eclipse). The former project was hosted on [GitHub](https://github.com/gnuarmeclipse) and [SourceForge](http://sourceforge.net/projects/gnuarmeclipse/).
 
 ## The GNU MCU Eclipse plug-ins
 
 These plug-ins provide Eclipse CDT (C/C++ Development Tooling) extensions for GNU embedded toolchains like **GNU Tools for ARM Embedded Processors**, **Linaro**, **GNU MCU Eclipse RISC-V Embedded GCC** etc.
 
-In short, the GNU MCU Eclipse plug-ins allow to create, build, debug and in general to **manage ARM, AArch64 & RISC-V projects** (executables and static/shared libraries, in both 32 and 64-bits versions) with the Eclipse framework (currently tested up to Eclipse 4.6 Neon.3). The plug-ins run on Windows, GNU/Linux and macOS. For more details please visit the [Features]({{ site.baseurl }}/plugins/features/) page.
+In short, the GNU MCU Eclipse plug-ins allow to create, build, debug and in general to **manage ARM & RISC-V projects** (executables and static/shared libraries, in both 32 and 64-bits versions) with the Eclipse framework (currently tested up to Eclipse 4.6 Neon.3). The plug-ins run on Windows, GNU/Linux and macOS. For more details please visit the [Features]({{ site.baseurl }}/plugins/features/) page.
 
 ![Create new STM32F4 C++ project]({{ site.baseurl }}/assets/images/2015/intro-new-f4-project.png)
 
