@@ -27,6 +27,34 @@ The current version is based on project [riscv/riscv-gnu-toolchain](https://gith
 * the [riscv/riscv-binutils-gdb](https://github.com/riscv/riscv-binutils-gdb) project, commit [3f21b5c](https://github.com/riscv/riscv-binutils-gdb/commit/3f21b5c9675db61ef5462442b6a068d4a3da8aaf) from May 5th, 2017
 * the [riscv/riscv-newlib](https://github.com/riscv/riscv-newlib) project, commit [ccd8a0a](https://github.com/riscv/riscv-newlib/commit/ccd8a0a4ffbbc00400892334eaf64a1616302b35) from May 2nd, 2017
 
+The supported architectures are:
+
+* rv32i[m][a][f[d]]
+* rv32g 
+* rv64i[m][a][f[d]]
+* rv64g 
+
+The supported ABIs are:
+
+* ilp32 (32-bits, soft-float)
+* ilp32f (32-bits with single-precision in registers and double in memory, niche use only)
+* ilp32d (32-bits, hard-float)
+* lp64 (64-bits long and pointers, soft-float)
+* lp64f (64-bits long and pointers, with single-precision in registers and double in memory, niche use only)
+* lp64d (64-bits long and pointers, hard-float).
+
+The supported libraries are:
+
+```
+march=rv32i/mabi=ilp32
+march=rv32im/mabi=ilp32
+march=rv32iac/mabi=ilp32
+march=rv32imac/mabi=ilp32
+march=rv32imafc/mabi=ilp32f
+march=rv64imac/mabi=lp64
+march=rv64imafdc/mabi=lp64d
+```
+
 ## Changes
 
 Compared to the original RISC-V version, there are no functional changes; the **same architecture and API options** are supported, and the **same combinations of libraries** (derived from newlib) are provided.
