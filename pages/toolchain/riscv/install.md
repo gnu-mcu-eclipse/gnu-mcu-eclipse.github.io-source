@@ -13,7 +13,7 @@ version-date: 20170702-0625
 
 ## Overview
 
-The build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for **bare metal** target applications is [**GNU MCU Eclipse RISC-V Embdedded GCC**](https://github.com/gnu-mcu-eclipse/riscv-gcc-build). This toolchain closely follows the official [RISC-V distribution](https://github.com/riscv/riscv-gcc) maintained by [SiFive](https://www.sifive.com).
+The Eclipse RISC-V build plug-in is highly configurable in terms of toolchain executable names and location, so you can use any 32/64-bits RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for **bare metal** target applications is [**GNU MCU Eclipse RISC-V Embdedded GCC**](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/). This toolchain closely follows the official [RISC-V distribution](https://github.com/riscv/riscv-gcc) maintained by [SiFive](https://www.sifive.com).
 
 
 ## Target vs host platform
@@ -29,7 +29,9 @@ The installation details described below assume the selection of the GNU MCU Ec
 
 ## riscv64-unknown-elf-gcc
 
-After installing the toolchain, you'll end up with lots of programs prefixed by `riscv64-unknown-elf-`. Don't be confused by this unfortunate name, the executables are not as _unknown_ as they pretend to be, and the **64** does not mean it runs only on 64-bits platforms, or that it produces 64-bits only executables. Actually, the toolchain produces both 32/64-bits executables, based on `-march` and `-mabi`, and you **do** have to carefully select the proper file to  match the 32/64-bits platform you are using. (A more apropriate name would have been `riscv-none-gcc`, but his is another story.)
+After installing the toolchain, you'll end up with lots of programs prefixed by `riscv64-unknown-elf-`. Don't be confused by this unfortunate name, the executables are not as _unknown_ as they pretend to be, and the **64** does not mean it runs only on 64-bits platforms, or that it produces 64-bits only binaries. Actually, the toolchain produces both 32/64-bits binaries, based on `-march` and `-mabi`.
+
+Be sure you **do** select carefully the proper release file to  match the 32/64-bits platform you are using. 
 
 ## Download
 
