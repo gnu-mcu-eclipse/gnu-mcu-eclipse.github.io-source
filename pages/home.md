@@ -18,7 +18,7 @@ These plug-ins provide Eclipse CDT (C/C++ Development Tooling) extensions for GN
 
 In short, the GNU MCU Eclipse plug-ins allow to create, build, debug and in general to **manage ARM & RISC-V projects** (executables and static/shared libraries, in both 32 and 64-bits versions) with the Eclipse framework (currently tested up to Eclipse 4.6 Neon.3). The plug-ins run on Windows, macOS and GNU/Linux. For more details please visit the [Features]({{ site.baseurl }}/plugins/features/) page.
 
-![Create new STM32F4 C++ project]({{ site.baseurl }}/assets/images/2015/intro-new-f4-project.png)
+![Create new STM32F4 C++ project]({{ site.baseurl }}/assets/images/2017/intro-new-riscv-project.png)
 
 ## Additional tools
 
