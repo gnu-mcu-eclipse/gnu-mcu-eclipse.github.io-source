@@ -40,20 +40,20 @@ To view the attached USB devices on macOS, use `system_profiler`. For example, t
 ```bash
 $ system_profiler SPUSBDataType
 ...
-            Dual RS232-HS:
+    Dual RS232-HS:
 
-              Product ID: 0x6010
-              Vendor ID: 0x0403  (Future Technology Devices International Limited)
-              Version: 7.00
-              Speed: Up to 480 Mb/sec
-              Manufacturer: FTDI
-              Location ID: 0xfa130000 / 5
-              Current Available (mA): 500
-              Current Required (mA): 500
-              Extra Operating Current (mA): 0
+      Product ID: 0x6010
+      Vendor ID: 0x0403  (Future Technology Devices International Limited)
+      Version: 7.00
+      Speed: Up to 480 Mb/sec
+      Manufacturer: FTDI
+      Location ID: 0xfa130000 / 5
+      Current Available (mA): 500
+      Current Required (mA): 500
+      Extra Operating Current (mA): 0
 ```
 
-By default, macOS identifies the board as a **Dual RS232-HS** device, and offers to configure it as a network interface. Since the board does not have an EEPROM to store an unique ID, the devices are baned using a stringcontaining the address in the HUB hierarchy, so the `a13` letters in the name are different when connecting the board to a different USB port.
+By default, macOS identifies the board as a **Dual RS232-HS** device, and offers to configure it as a network interface. Since the board does not have an EEPROM to store an unique ID, the devices are named using a string containing the address in the HUB hierarchy, so the `a13` letters in the name are different when connecting the board to a different USB port.
 
 ```bash
 $ ls -l /dev/tty.usbserial*
@@ -109,7 +109,7 @@ Error: libusb_claim_interface() failed with LIBUSB_ERROR_ACCESS
 Error: unable to open ftdi device with vid 0403, pid 6010, description 'Dual RS232-HS', serial '*' at bus location '*'
 ```
 
-The workaround it to disable all personalities of the AppleUSBFTDI kernel module and to enable only the one related to the PID 0x6010, the second interface (`AppleUSBEFTDI-6010-1`):
+The workaround it to disable all personalities of the AppleUSBFTDI kernel module and to enable only the one related to PID 0x6010, the second interface (`AppleUSBEFTDI-6010-1`):
 
 ```bash
 $ sudo kextunload -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personalities-only
