@@ -12,7 +12,7 @@ date: 2017-07-06 22:58:00 +0300
 
 The [**GNU MCU Eclipse RISC-V Embdedded GCC**](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/) is an elaborated binary distribution that closely follows the official [RISC-V distribution](https://github.com/riscv/riscv-gcc) maintained by [SiFive](https://www.sifive.com).
 
-## riscv64-unknown-elf-gcc
+## riscv64-unknown-elf-gcc vs riscv32-unknown-elf-gcc
 
 
 With lots of architectures and systems supported, GCC recommends prefixing the binaries with a unique tuple:
@@ -21,13 +21,13 @@ With lots of architectures and systems supported, GCC recommends prefixing the b
 <arch>-<vendor>-<os>-<libc/abi>-
 ```
 
-The current RISC-V prefix for the bare metal toolchain is `riscv64-unknown-elf-`.
+The current RISC-V prefixes for the bare metal toolchain are `riscv64-unknown-elf-` and `riscv32-unknown-elf-`.
 
-Well, don't be confused by this unfortunate name. The **64** attached to the architecture does not mean that the toolchain runs  on 64-bits platforms only. It does not mean either that the compiler produces 64-bits RISC-V binaries. Actually, the compiler produces both 32/64-bits binaries, based on `-march` and `-mabi`.
+Well, don't be confused by this unfortunate name. The **64** or **32** attached to the architecture does not mean that the toolchain runs on 64-bits or 32-bits platforms only. It does not mean either that the compiler produces 64-bits or 32-bits RISC-V binaries. Actually, the compilers produce both 32/64-bits binaries, based on `-march` and `-mabi`. The only difference are defaults, when the compiler are invoked without the `-march` and `-mabi` explicitly set on the command line.
 
 The **unknown** part of the tuple also does not bring any useful information. If it referes to the vendor, it could have been easily skipped. If it refers to the OS, or to the lack of it, being a bare metal toolchain, **none** would have been a shorter and more usual name.
 
-So, giving away the confusing parts, a more apropriate prefix would have been:
+So, giving away the confusing parts, a more apropriate prefix for the multilib toolchain would have been:
 
 ```
 riscv-none-newlib-
