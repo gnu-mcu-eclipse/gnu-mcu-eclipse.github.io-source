@@ -13,7 +13,7 @@ The Xilinx recommended way to re-flash the Arty board is to use the Vivado Desig
 
 For those in the synthesised hardware business, this might be a perfectly acceptable solution.
 
-For the rest of us, installing a Windows virtual machine and tens of GB applications only to re-flash a development board is a bit too much.
+For the rest of us, installing a Windows virtual machine and huge (tens of GB) applications only to re-flash a development board is a bit too much.
 
 ## xc3sprog
 
@@ -45,7 +45,7 @@ The Arty board has a FTDI interface to program the Xlinx FPGA, but the SPI flash
 Given this configuration, the Arty re-flashing is done in two steps:
 
 * the first step uses `xc3sprog` to program Xlinx to obtain access to the SPI flash
-* thethe second step uses `openocd` to program the main `.mcs` image into the SPI flash
+* the second step uses `openocd` to program the main `.mcs` image into the SPI flash
 
 ```bash
 $ xc3sprog -c nexys4 E31_ArtyTop.bit
