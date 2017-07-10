@@ -11,8 +11,7 @@ date: 2017-07-07 19:46:00 +0300
 
 ![RISC-V logo]({{ site.baseurl }}/assets/images/2017/riscv-64x64.png){:class="right-align-image"}RISC-V (pronounced "risk-five") is an open instruction set architecture (ISA) based on established reduced instruction set computing (RISC) principles.
 
-![SiFive logo]({{ site.baseurl }}/assets/images/2017/sifive-logo-v1-
-64.png){:class="right-align-image"}The project was initialy developed at the University of California, Berkeley, and later by the members of the [RISC-V Foundation](https://riscv.org/), especially by [SiFive](https://www.sifive.com), who also manufactured the first RISC-V SoC, the [Freedom E310](https://www.sifive.com/products/freedom-e310/).
+![SiFive logo]({{ site.baseurl }}/assets/images/2017/sifive-logo-v1-64.png){:class="right-align-image"}The project was initialy developed at the University of California, Berkeley, and later by the members of the [RISC-V Foundation](https://riscv.org/), especially by [SiFive](https://www.sifive.com), who also manufactured the first RISC-V SoC, the [Freedom E310](https://www.sifive.com/products/freedom-e310/).
 
 ## License
 
