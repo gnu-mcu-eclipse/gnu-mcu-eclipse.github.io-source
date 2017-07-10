@@ -23,7 +23,7 @@ With lots of architectures and systems supported, GCC recommends prefixing the b
 
 The current RISC-V prefixes for the bare metal toolchain are `riscv64-unknown-elf-` and `riscv32-unknown-elf-`.
 
-Well, don't be confused by this unfortunate name. The **64** or **32** attached to the architecture does not mean that the toolchain runs on 64-bits or 32-bits platforms only. It does not mean either that the compiler produces 64-bits or 32-bits RISC-V binaries. Actually, the compilers produce both 32/64-bits binaries, based on `-march` and `-mabi`. The only difference are defaults, when the compiler are invoked without the `-march` and `-mabi` explicitly set on the command line.
+Well, don't be confused by this unfortunate names. The **64** or **32** attached to the architecture does not mean that the toolchain runs on 64-bits or 32-bits platforms only. It does not mean either that the compiler produces 64-bits or 32-bits RISC-V binaries. Actually, the compilers produce both 32/64-bits binaries, based on `-march` and `-mabi`. The only difference are defaults, when the compiler are invoked without the `-march` and `-mabi` explicitly set on the command line.
 
 The **unknown** part of the tuple also does not bring any useful information. If it referes to the vendor, it could have been easily skipped. If it refers to the OS, or to the lack of it, being a bare metal toolchain, **none** would have been a shorter and more usual name.
 
