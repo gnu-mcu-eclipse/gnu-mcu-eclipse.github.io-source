@@ -23,8 +23,6 @@ To have access to the new packs features, you need to install the **GNU MCU Ecli
 
 ![Install packs support plug-in]({{ site.baseurl }}/assets/images/2014/07/InstallPacks.png)
 
-**Note:** If you encounter **difficulties to refresh the packs**, please use the latest beta version from **http://gnuarmeclipse.sourceforge.net/updates-test**.
-
 ## The Packs Support plug-in
 
 The GNU MCU Eclipse Packs Support plug-in is intended to manage (list/install/inspect/remove) packs from multiple sources. It currently implements the specifications of **CMSIS Packs**, as defined by [ARM/Keil](http://www.keil.com/pack/doc/CMSIS/Pack/html/index.html), with some extensions.

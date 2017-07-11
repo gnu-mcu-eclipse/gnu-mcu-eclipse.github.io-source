@@ -8,21 +8,33 @@ date: 2015-09-11 20:07:00 +0300
 
 ---
 
-## The Eclipse way
+## The Eclipse package way
+
+The simplest way is to download **GNU MCU Eclipse IDE for C/C++ Developers** from [GitHub Releases](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/) and you get at once both Eclipse CDT and the MCU plug-ins.
+
+## The Eclipse plug-ins way
 
 Installing Eclipse usually does not require to separately download any binary, since Eclipse provides a special mechanism to install and update plug-ins.
 
-The GNU MCU Eclipse plug-ins update site URL is still on SourceForge:
+Starting with v4.1, the GNU MCU Eclipse plug-ins update site URL was migrated to [netlify.com](https://www.netlify.com):
 
-`http://gnuarmeclipse.sourceforge.net/updates`
+`http://gnu-mcu-eclipse.netlify.com/v4-neon-updates`
 
 More details are available in the [Install](/plugins/install/) page.
 
-### Beta versions
+### Pre-release versions
+
+For previews, test releases are posted to a separate update site:
+
+`http://gnu-mcu-eclipse.netlify.com/v4-neon-test`
+
+Usually this site should be safe to use, but use it with caution.
+
+### Experimental versions
 
 For previews, experimental releases are posted to a separate update site:
 
-`http://gnuarmeclipse.sourceforge.net/updates-test`
+`http://gnu-mcu-eclipse.netlify.com/v4-neon-experimental`
 
 Sometimes you can use this site to test some features that are not completely implemented, or that might change before a final version is released.
 

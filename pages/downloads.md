@@ -17,9 +17,9 @@ There are two methods:
 
 ## Eclipse update site
 
-The Eclipse update site is currently hosted on SourceForge, to make use of the wide network of mirror sites SourceForge provides. The public URL is:
+The Eclipse update site is currently hosted on Bintray, to make use of the wide network of mirror sites they provides. The public URL is:
 
-- `http://gnuarmeclipse.sourceforge.net/updates`
+- `http://gnu-mcu-eclipse.netlify.com/v4-neon-updates`
 
 ![GNU MCU Eclipse updates URL]({{ site.baseurl }}/assets/images/2015/install-new-software-updates-url.png)
 

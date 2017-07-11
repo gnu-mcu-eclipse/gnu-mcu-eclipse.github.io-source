@@ -28,12 +28,10 @@ As the plug-ins provide more and more features, testing them becomes more and mo
 
 If you are willing to contribute some time to this project, beta testing new features would be highly appreciated.
 
-**To be notified on new features that require testing, please subscribe to the [Beta versions](https://sourceforge.net/p/gnuarmeclipse/beta-versions/) tracker, either by email or RSS (use the top right icons).**
-
 The beta versions are available from:
 
 
-  **http://gnuarmeclipse.sourceforge.net/updates-test**
+  **http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test**
 
 
 After performing the tests, please add your feedback separately to each new feature, preferably with suggestions on how to improve things.

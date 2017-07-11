@@ -11,7 +11,10 @@ date: 2015-09-11 22:06:00 +0300
 
 ## Quicklinks
 
-If you know what this is all about, drag-and-drop the **Install** button available below to your running Eclipse workspace and follow the **Eclipse Marketplace** install/update steps.
+If you know what this is all about, you can do the following:
+
+* use the **GNU MCU Eclipse IDE for C/C++ Developers** packages, which packs Eclipse with the plug-ins; for this go to [GitHub Releases](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/) and download the binary for your platform;
+* drag-and-drop the **Install** button available below to your running Eclipse workspace and follow the **Eclipse Marketplace** install/update steps.
 
 <a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2593184" class="drag" title="Drag to your running Eclipse workspace."><img class="img-responsive" src="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png" alt="Drag to your running Eclipse workspace." /></a>
 
@@ -21,7 +24,7 @@ If you want to do it manually, you only need the update site details:
 * URL: `http://gnu-mcu-eclipse.netlify.com/v4-neon-updates/`
 
 
-Note: the old URL `http://gnuarmeclipse.sourceforge.net/updates/` is now deprecated, and its content will point to v3.x, that can be installed to install the older versions of the plug-ins.
+Note: the old URL `http://gnuarmeclipse.sourceforge.net/updates/` is now deprecated, and its content will point to v3.x, that can be used to install the older versions of the plug-ins.
 
 It is recommended that you install the plug-ins after installing the [ARM toolchain]({{ site.baseurl }}/toolchain/arm/install) and/or the [RISC-V toolchain]({{ site.baseurl }}/toolchain/riscv/install), the [build tools]({{ site.baseurl }}/windows-build-tools/install/) (on Windows), and the [debugging binaries]({{ site.baseurl }}/debug/install/).
 
@@ -78,7 +81,13 @@ The oldest Eclipse supported by the plug-ins is Eclipse 4.4 Luna SR2 (CDT 8.6),
 
 **Neon** initially had several problems, but starting with **Neon.3** it finally seems fully functional. Avoid previous Neon versions, since they do not work properly. If you want to use GCC 6.x, you **need** Neon.3 (the compiler itself has no problems working with Mar, but GDB 7.12 is not supported on versions before Neon.3).
 
-Go to the [Eclipse packages](http://www.eclipse.org/downloads/eclipse-packages) and get the **Eclipse IDE for C/C++ Developers** archive appropriate for your platform, preferably the 64-bits version.
+#### The package way
+
+The simple way is to download **GNU MCU Eclipse IDE for C/C++ Developers** from [GitHub Releases](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/) and you get at once both Eclipse CDT and the MCU plug-ins.
+
+#### The plug-ins install way
+
+If you prefer to do this in more steps, go to the [Eclipse packages](http://www.eclipse.org/downloads/eclipse-packages) and get the **Eclipse IDE for C/C++ Developers** archive appropriate for your platform, preferably the 64-bits version.
 
 Links to older versions are available in the **More Downloads** section, at the bottom.
 
@@ -147,7 +156,7 @@ The classical way to install the GNU MCU Eclipse plug-ins is to use the Eclipse 
 
 * in the *Install* window, click the **Add...** button (on future updates, select the URL in the **Work with:** combo)
 * fill in *Name:* with **GNU MCU Eclipse Plug-ins**
-* fill in *Location:* with **http://gnuarmeclipse.sourceforge.net/updates**
+* fill in *Location:* with **http://gnu-mcu-eclipse.netlify.com/v4-neon-updates**
 * click the **OK** button
 
 ![AddRepository]({{ site.baseurl }}/assets/images/2013/10/AddRepository.png)
@@ -163,7 +172,7 @@ Once you define the update site URL, further updates are greatly simplified (**H
 
 ### The local archive way
 
-If, for any reason, you need to install a specific version of the plug-in, the solution is to download the archive from [SourceForge Files](http://sourceforge.net/projects/gnuarmeclipse/files/Current%20Releases/) and to point the Eclipse update mechanism to the local archive: In the* Eclipse* menu → **Help** → **Install New Software...**
+If, for any reason, you need to install a specific version of the plug-in, the solution is to download the archive from [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases), or, for older releases, from [SourceForge Files](http://sourceforge.net/projects/gnuarmeclipse/files/Current%20Releases/) and to point the Eclipse update mechanism to the local archive: In the* Eclipse* menu → **Help** → **Install New Software...**
 
 * in the *Install* window, click the **Add...** button
 * in the *Add Repository* window, click the **Archive...** button
@@ -206,6 +215,8 @@ To check if the paths definitions are effective, go to the project properties pa
 - if you are behind a firewall, older Java virtual machines [fail to connect to SourceForge]({{ site.baseurl }}/blog/2016/12/02/plugins-install-issue/). Install the latest JDK and retry to install the plug-ins.
 
 ### SourceForge problems
+
+Note: starting with version v4.1.1, the SourceForge server is no longer actively used, so this problem should no longer be actual.
 
 There are cases when the on-line access to the SourceForge mirror servers might not be reliable. In these cases the Eclipse update system may fail. For example:
 

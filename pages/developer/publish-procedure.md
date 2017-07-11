@@ -37,129 +37,7 @@ Created.
 Upload 'artifacts.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'artifacts.xml.xz' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'content.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'content.xml.xz' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'p2.index' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'features/ilg.gnumcueclipse.codered.feature_1.1.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'features/ilg.gnumcueclipse.debug.gdbjtag.jlink.feature_4.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'features/ilg.gnumcueclipse.debug.gdbjtag.openocd.feature_4.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'features/ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature_1.1.4.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'features/ilg.gnumcueclipse.debug.gdbjtag.qemu.feature_3.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'features/ilg.gnumcueclipse.doc.user.feature_1.1.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'features/ilg.gnumcueclipse.managedbuild.cross.arm.feature_2.5.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'features/ilg.gnumcueclipse.managedbuild.cross.riscv.feature_2.5.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'features/ilg.gnumcueclipse.packs.feature_2.2.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'features/ilg.gnumcueclipse.templates.ad.feature_1.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'features/ilg.gnumcueclipse.templates.cortexm.feature_1.4.3.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'features/ilg.gnumcueclipse.templates.freescale.feature_2.2.9.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'features/ilg.gnumcueclipse.templates.stm.feature_2.6.3.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.codered_1.1.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.core_4.1.1.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.debug.core_1.2.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.debug.gdbjtag.jlink_4.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.debug.gdbjtag.openocd_4.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.debug.gdbjtag.pyocd_1.1.4.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.debug.gdbjtag.qemu_3.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.debug.gdbjtag.restart_1.3.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.debug.gdbjtag_3.2.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.debug.packs_1.1.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.doc.user_1.1.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.managedbuild.cross.arm_2.5.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.managedbuild.cross.riscv_2.5.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.managedbuild.cross_1.1.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.managedbuild.packs_1.3.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.packs.core_1.1.4.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.packs.data_1.3.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.packs.ui_1.2.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.packs_1.2.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.templates.ad_1.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.templates.core_2.5.7.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.templates.cortexm_1.4.3.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.templates.freescale.pe_1.2.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
-Upload 'plugins/ilg.gnumcueclipse.templates.freescale_2.2.9.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-######################################################################## 100.0%
-Uploaded.
+...
 Upload 'plugins/ilg.gnumcueclipse.templates.stm_2.6.3.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
@@ -335,4 +213,29 @@ For all [GitHub issues](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issue
 * log in
 * click **Edit**
 * update version number, minimum Eclipse versions.
+
+## Eclipse Packaging
+
+The Eclipse Packaging Project allows to create complete Eclipse packages for all relevant platforms.
+
+### Build
+
+* clone the `gnu-mcu-eclipse/org.eclipse.epp.packages` project
+* edit `org.eclipse.epp.packages.git/releng/org.eclipse.epp.config/parent/pom.xml`
+  * update `<gnumcueclipse.version>4.1.1</gnumcueclipse.version>`
+* be sure the `v4-neon-updates` is up to date
+* run the `org.eclipse.epp.packages.git/scripts/build.mac.command`
+
+### Publish
+
+## Create a new GitHub release
+
+* be sure the **gnumcueclipse** branch is up to date and set as default
+* go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases) page
+* click **Draft a new release**
+* name the tag like **v4.1.1-20170711** (mind the `-` in the middle!)
+* select the **gnumcueclipse** branch
+* name the release like **GNU MCU Eclipse IDE for C/C++ Developers Neon.3 20170711**  (mind the `-` in the middle!)
+* **attach binaries** (drag and drop from the archives folder will do it)
+* click the **Publish Release** button
 
