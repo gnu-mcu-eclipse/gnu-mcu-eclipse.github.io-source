@@ -294,10 +294,10 @@ Note: at this moment the system should send a notification to all clients watchi
 
 ## Publish the Web
 
-* Git Push & Sync the **gnuarmeclipse.github.io-source** project; use something like `v3.2.1-201701141320 released` as message
+* Git Push & Sync the **gnu-mcu-eclipse.github.io-source** project; use something like `v3.2.1-201701141320 released` as message
 * wait for the Travis build to complete; occasionally links to not work, and might need to restart the build
 
-Note: the release must exist, otherwise Travis will complain and do not publish the site to **gnuarmeclipse.github.io**.
+Note: the release must exist, otherwise Travis will complain and do not publish the site to **gnu-mcu-eclipse.github.io**.
 
 ## Update the release link
 
@@ -311,36 +311,27 @@ In the [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/rele
 The code looks like this:
 
 ```
-[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnuarmeclipse/plug-ins/v3.4.1-201704251808/total.svg)](http://gnuarmeclipse.github.io/blog/2017/02/25/plugins-v3.4.1-201704251808-released/)
+[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/plug-ins/v4.1.1-201707111115/total.svg)](https://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/)
 ```
+
+Copy/paste it after _Continue reading..._ and update the URLs.
 
 ## Close issues
 
 For all [GitHub issues](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues) marked with the current version, close them with a message like _fixed since v3.2.1-201701141320_.
-
-## Publish on SourceForge ()
-
-* go to [SourceForge Files](http://sourceforge.net/projects/gnuarmeclipse/files/Current%20Releases/)
-* select the folder corresponding to the latest version (currently **3.x**); create a new one if necessary
-* click the **Add File** button
-* drag and drop the file (for example ilg.gnuarmeclipse.repository-3.1.1-201606210758.zip) in the upload window and click the **Upload** button
-* click the **Done** button
-* check it the new file was published; click the info icon
-* enable the **Windows**, **macOS** and **Linux** buttons
-* after a while the new upload will be marked as latest version
 
 ## Share on Facebook
 
 * go to the new post and follow the Share link.
 * DO NOT select **On your own Timeline**, but **On a Page you manage**
 * select GNU MCU Eclipse
-* posting as GNU ARM Eclipse
+* posting as GNU MCU Eclipse
 * click **Share link**
 * check the post in the [Facebook page](https://www.facebook.com/gnu-mcu-eclipse)
 
 ## Update the Eclipse Marketplace records
 
-* go to [Eclipse Marketplace](https://marketplace.eclipse.org/content/gnu-arm-eclipse)
+* go to [Eclipse Marketplace](https://marketplace.eclipse.org/content/gnu-mcu-eclipse)
 * log in
 * click **Edit**
 * update version number, minimum Eclipse versions.
