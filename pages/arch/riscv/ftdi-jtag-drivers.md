@@ -33,9 +33,9 @@ TODO: provide the driver binaries.
 
 ## macOS
 
-When dealing with USB drivers, Apple is even stricter; if the USB device has the FTDI VID:PID, it assumes it should be associated with a virtual UART device, and there is no simple way to reconfigure this.
+When dealing with USB drivers, Apple is even stricter; if the USB device has any of the FTDI VID:PID pairs, macOS assumes it should be associated with a virtual UART device, and there is no simple way to reconfigure this.
 
-To view the attached USB devices on macOS, use `system_profiler`. For example, the HiFive1 board is seen as PID:VID 6010:0403:
+To view the attached USB devices on macOS, use `system_profiler`. For example, the HiFive1 board is seen as Dual RS232-HS, PID:VID 6010:0403:
 
 ```bash
 $ system_profiler SPUSBDataType
@@ -53,7 +53,9 @@ $ system_profiler SPUSBDataType
       Extra Operating Current (mA): 0
 ```
 
-By default, macOS identifies the board as a **Dual RS232-HS** device, and offers to configure it as a network interface. Since the board does not have an EEPROM to store an unique ID, the devices are named using a string containing the address in the HUB hierarchy, so the `a13` letters in the name are different when connecting the board to a different USB port.
+If you already use FTDI based USB/UART adapters, remember the Product ID, since you need to manually enable it in a later step.
+
+By default, macOS identifies the board as a **Dual RS232-HS** device, and offers to configure it as a network interface. Since the HiFive1 board does not have an EEPROM to store an unique ID, the devices are named using a string containing the address in the HUB hierarchy, so the `a13` letters in the name are different when connecting the board to a different USB port.
 
 ```bash
 $ ls -l /dev/tty.usbserial*
@@ -109,23 +111,15 @@ Error: libusb_claim_interface() failed with LIBUSB_ERROR_ACCESS
 Error: unable to open ftdi device with vid 0403, pid 6010, description 'Dual RS232-HS', serial '*' at bus location '*'
 ```
 
-The workaround it to disable all personalities of the AppleUSBFTDI kernel module and to enable only the one related to PID 0x6010, the second interface (`AppleUSBEFTDI-6010-1`):
+The workaround it to disable all _personalities_ of the AppleUSBFTDI kernel:
 
 ```bash
 $ sudo kextunload -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personalities-only
-$ sudo kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-1
 ```
 
-The first interface should no longer be available as a tty device, but as JTAG:
+This command will remove the UART associations for all FTDI based devices. All devices will be available for user space drivers, like `libusb`. 
 
-```bash
-$ ls -l /dev/tty.usbserial*
-crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
-```
-
-The second interface should be available to `screen`, as before.
-
-In addition, OpenOCD should also be able to connect to the JTAG interface:
+In the HiFive1 case, the first interface should no longer be available as a tty device, but as JTAG, and OpenOCD should be able to connect to the JTAG interface:
 
 ```bash
 $ openocd -f board/sifive-freedom-e300-hifive1.cfg 
@@ -149,16 +143,19 @@ Info : Found flash device 'issi is25lp128' (ID 0x0018609d)
 cleared protection for sectors 64 through 255 on flash bank 0
 ```
 
-To bring back only the interface 0 as a tty:
+This next command will redo the UART association only for the given personality, in this case the second interface of PID 0x6010 (`AppleUSBEFTDI-6010-1`).
 
 ```bash
-$ sudo kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-0
+$ sudo kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-1
 $ ls -l /dev/tty.usbserial*
-crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13A
 crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
 ```
 
-The AppleUSBFTDI module has many _personalities_, to bring them back start `kextutil` in interractive mode, or reboot:
+The second interface should be available again to `screen`, as before.
+
+If you have other FTDI devices that you need to remain associated to UART, issue similar commands, for each one.
+
+The AppleUSBFTDI module has many _personalities_; to bring them back, start `kextutil` in interractive mode, or reboot:
 
 ```bash
 $ sudo kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -interactive
@@ -185,6 +182,27 @@ Send personality AppleUSBEFTDI-SeaLevel [Y/n/a]?
 Send personality TI XDS100v2 Serial [Y/n/a]? 
 Send personality AppleUSBEFTDI-6011-2 [Y/n/a]? 
 Send personality AppleUSBEFTDI-6014 [Y/n/a]? 
+```
+
+### Use case
+
+I personaly have two USB/UART DB-9 adapters and the RISC-V HiFive1 and Arty boards.
+
+To make them work, I use a file
+
+```
+# Disable all FTDI devices
+kextunload -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personalities-only
+# Enable the second interface on the HiFive1 board
+kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-1
+# Enable the DIGITUS USB/UART DB-9 adapters
+kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6001
+```
+
+that I start with:
+
+```
+$ sudo bash ${HOME}/opt/scripts/ftdi.sh
 ```
 
 ## GNU/Linux
