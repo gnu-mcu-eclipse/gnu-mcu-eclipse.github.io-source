@@ -49,8 +49,8 @@ The GNU MCU Eclipse plug-ins define several custom extension points, to facilita
 
 How to build the plug-ins from sources and publish them.
 
-* [Prerequisites]({{ site.baseurl }}/developer/build-prerequisites) ([v4]({{ site.baseurl }}/developer/build-prerequisites-v4))
-* [How to build]({{ site.baseurl }}/developer/build-procedure) ([v4]({{ site.baseurl }}/developer/build-procedure-v4))
+* [Prerequisites]({{ site.baseurl }}/developer/build-prerequisites)
+* [How to build]({{ site.baseurl }}/developer/build-procedure)
 * [How to publish]({{ site.baseurl }}/developer/publish-procedure)
 * [Development environment]({{ site.baseurl }}/developer/development-environment)
 * [Change log]({{ site.baseurl }}/developer/change-log) ([2014]({{ site.baseurl }}/developer/change-log/2014)) ([2013]({{ site.baseurl }}/developer/change-log/2013)) ([v0.5.x]({{ site.baseurl }}/developer/change-log/v05x))
