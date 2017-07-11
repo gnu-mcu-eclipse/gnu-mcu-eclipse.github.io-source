@@ -12,6 +12,261 @@ Entries in this file are in reverse chronological order.
 
 ## 2017
 
+### 2017-07-11
+
+* version 4.1.1.201707111115 released
+
+```
+features:
+ilg.gnumcueclipse.codered.feature_1.1.2.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink.feature_4.1.5.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd.feature_4.1.5.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature_1.1.4.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu.feature_3.1.5.201707111115.jar
+ilg.gnumcueclipse.doc.user.feature_1.1.2.201707111115.jar
+ilg.gnumcueclipse.managedbuild.cross.arm.feature_2.5.2.201707111115.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv.feature_2.5.2.201707111115.jar
+ilg.gnumcueclipse.packs.feature_2.2.2.201707111115.jar
+ilg.gnumcueclipse.templates.ad.feature_1.1.5.201707111115.jar
+ilg.gnumcueclipse.templates.cortexm.feature_1.4.3.201707111115.jar
+ilg.gnumcueclipse.templates.freescale.feature_2.2.9.201707111115.jar
+ilg.gnumcueclipse.templates.stm.feature_2.6.3.201707111115.jar
+
+plugins:
+ilg.gnumcueclipse.codered_1.1.2.201707111115.jar
+ilg.gnumcueclipse.core_4.1.1.201707111115.jar
+ilg.gnumcueclipse.debug.core_1.2.2.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink_4.1.5.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd_4.1.5.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd_1.1.4.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu_3.1.5.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.restart_1.3.2.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag_3.2.2.201707111115.jar
+ilg.gnumcueclipse.debug.packs_1.1.2.201707111115.jar
+ilg.gnumcueclipse.doc.user_1.1.2.201707111115.jar
+ilg.gnumcueclipse.managedbuild.cross.arm_2.5.2.201707111115.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv_2.5.2.201707111115.jar
+ilg.gnumcueclipse.managedbuild.cross_1.1.2.201707111115.jar
+ilg.gnumcueclipse.managedbuild.packs_1.3.2.201707111115.jar
+ilg.gnumcueclipse.packs.core_1.1.4.201707111115.jar
+ilg.gnumcueclipse.packs.data_1.3.2.201707111115.jar
+ilg.gnumcueclipse.packs.ui_1.2.5.201707111115.jar
+ilg.gnumcueclipse.packs_1.2.5.201707111115.jar
+ilg.gnumcueclipse.templates.ad_1.1.5.201707111115.jar
+ilg.gnumcueclipse.templates.core_2.5.7.201707111115.jar
+ilg.gnumcueclipse.templates.cortexm_1.4.3.201707111115.jar
+ilg.gnumcueclipse.templates.freescale.pe_1.2.2.201707111115.jar
+ilg.gnumcueclipse.templates.freescale_2.2.9.201707111115.jar
+ilg.gnumcueclipse.templates.stm_2.6.3.201707111115.jar
+```
+
+* p2.inf: gnu-mcu-eclipse.netlify.com
+
+### 2017-06-29 
+
+* rebrand url http://gnu-mcu-eclipse.github.io
+* update url to http://gnu-mcu-eclipse.netlify.com
+
+### 2017-06-12 
+
+* refurbish all path discovery code
+* gdbjtag: common code to discover Installpath
+* mbs.cross: common code to discover toolchain
+* openocd: search path includes "bin"
+* preferences.ini: update search paths
+
+### 2017-06-11 
+
+* mbs.cross: process build tools path centrally
+* cross.arm: rework the path search
+* cross.riscv: remove build tools path, done centrally
+* cross.riscv: rework the path search
+* cross.arm: group preference classes
+* cross: DefaultPreferences cleanups
+* gdbjtag.*: create package .preferences
+* core: reorganise packages .preferences & .ui
+
+### 2017-06-09 
+
+* dynamic variables: quote strings for '\' for '$'
+* gdbjtag.*: fix TabMain deprecation warning
+
+### 2017-06-08 
+
+* persistent preferences: fix npe
+* [#207] dynamic variables: fix regexp
+
+### 2017-06-02 
+
+* core: add Default & Persistent preferences
+* gdbjtag.*: refurbish preferences & properties
+* mbs.cross.*: refurbish preferences & properties
+* fix references to Activator
+
+### 2017-06-01 
+
+* openocd: add actual executable & links
+* mbs.cross,arm,riscv: fix build tools processing
+* core: remove unused global field editors
+
+### 2017-05-31 
+
+* core: field editors pick preferences if empty
+* core: add global field editors
+* openocd/preferences: add install.folder & co.
+* openocd: switch to dynamic variables
+* openocd: rename Workspace OpenOCD Path
+* core: add common MCU preferences & properties
+* core/EclipseUtils: add getProjectByLaunchConfig
+* core: fix message for MCU preferences page
+* openocd: separate global/workspace/project configs
+* mbs.cross: move arm & riscv prefs & props
+
+### 2017-05-30 
+
+* core: DirectoryNotStrict use getString()
+* core: setVariableValue() more verbose
+* scripts/publish-updates.sh: update path to repos
+* core: field editors: also use persistent store
+* category.xml: consistent artefact feature names
+
+### 2017-05-29 
+
+* maven cleanups in repositories
+* project names: give up the '-', use '.'
+
+### 2017-05-28 
+
+* cleanups in maven configuration
+
+### 2017-05-27 
+
+* create bundles, features, repos folders
+
+### 2017-05-26 
+
+* cross.arm & riscv: fix toolchain path discovery
+* more verbose debug
+* cross.arm & riscv: simplify toolchain search path
+* publish-updates.sh: no more SourceForge
+* windows toolchain path simplified too much
+* gdbjtag.*: check & update preferences
+* gdbjtag.*: make verbose messages specific
+* core/Discoverer: increase trace verbosity
+
+### 2017-05-25 
+
+* add debug.options with all options enabled
+* logos: add gme-*.png files
+
+### 2017-05-23 
+
+* mbs.cross: make secondary bool options invisible
+* mbs.riscv: isa fp text: RVFD, RVFDQ (multiletters)
+* cross.riscv: add more enablements to -march/-mabi
+
+### 2017-05-22 
+
+* mbs.cross: all common xml definitions extracted
+* riscv-repo: add debug & codered features
+
+### 2017-05-20 
+
+* suppress some warnings
+* core & debug.gdbjtag: fix non-API warnings
+* core/semver: silence some warnings
+* cross.[arm|riscv]: contenttype.contentTypes
+* packs.ui, cross.riscv: fix static use warnings
+* fix import warnings
+* gdbjtag: fix super() call warning
+* mbs.cross: extract common arm/riscv classes
+* mbs.cross: extract common plugin.xml defs
+* mbs.riscv/template: remove semi-hosting notice
+
+### 2017-05-19 
+
+* p2.inf & about.properties: update repo url
+* scripts to publish to v4-neon-updates*
+* comment out remover feature
+* fix deprecated ViewerSorter
+* fix cleanupLaunchLocal() deprecation warning
+* remove any project setting related to Java 1.7
+* debug/jlink: fix startup problem
+* debug/openocd,pyocd,qemu: add deprecated names
+* packs: build.properties output... fixed
+
+### 2017-05-17 
+
+* raise API Baseline to 9.2.1 and Java to 1.8
+* update version for dependencies to Neon.3
+* add GNU ARM Eclipse remover, as simple plug-in
+* add GNU ARM Eclipse removers
+* redo GNU MCU Eclipse branding
+
+### 2017-05-16 
+
+* risc-v target options reordered
+
+### 2017-05-15
+
+* MAJOR: rebrand to GNU MCU
+* versions: increase patch to mark rebranding
+
+### 2017-05-12 
+
+* add managedbuild.cross 1.1.1
+* mbs.riscv: use MCU properties & preferences
+* mbs.arm: use MCU properties & preferences
+* mcu.mbs.cross: add preferences package
+* mcu.mbs.cross.riscv: use common preferences
+* gnuarmeclipse.mbs.cross: use common paths
+* rename ilg.gnumcueclipse.managedbuld.cross.arm
+
+### 2017-05-10 
+
+* gnuarmeclipse-repository: add RISC-V mbs feature
+* mbs.riscv: fix target options spelling
+* mbs.riscv: optimize imports
+* mbs.riscv: process options
+* mbs.riscv: clean rdimon refs from templates
+* mbs.riscv: temporarily disable -mmemcpy
+
+### 2017-05-08 
+
+* mbs.riscv: ToolchainDefinition riscv64-unknown-elf
+* mbs.riscv: disable ARM options in UI
+* mbs.riscv: Target options definitions
+
+### 2017-05-04 
+
+* riscv-repository: category name Cross C/C++ Dev
+* mcu-repository: category name Cross C/C++ Dev
+* riscv: inconsistent name, must be C/C++ Cross *
+* arm: inconsistent name, must be C/C++ Cross *
+* mbs.riscv: preliminary abi & architecture fields
+* mbs.arm: fix debugg typo
+
+### 2017-05-03 
+
+* mbs.riscv: rename everything to use mcu.riscv
+* mbs.riscv: preliminary toolchain defs
+* mbs.arm: update toolchain & tools names
+* mbs.arm: promote opt in the search path
+* versions: mbs.arm 2.5.1, mbs.riscv 2.5.1
+* pyocd: fix reference to livius.net
+* pyocd: version 1.1.4
+
+2017-05-02 
+
+* add first riscv projects
+* version 4.1.1
+* Merge branch 'develop' into riscv
+* update riscv projects to 4.1.1
+* mbs.cross*-feature: add dependency to debug.core
+* mbs.cross.riscv: templates mention RISC-V
+* scripts: add riscv support
+
+
 ### 2017-04-25
 
 * version 3.4.1.201704251808 released
