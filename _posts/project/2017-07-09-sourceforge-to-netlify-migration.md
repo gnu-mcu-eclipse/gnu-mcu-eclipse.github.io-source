@@ -22,7 +22,7 @@ tags:
 
 Starting with Eclipse plug-ins v4.x, the **Eclipse update sites URLs** were **migrated** from the venerable SourceForge **to the new Netlify site**.
 
-The project currently has no more operational dependencies on SourceForge.
+Currently the project has no more operational dependencies on SourceForge.
 
 [Netlify](https://www.netlify.com) is a new (open source friendly) web hosting profider, with a very convenient way of managing and updating sites.
 

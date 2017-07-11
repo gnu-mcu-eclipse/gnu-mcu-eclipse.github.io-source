@@ -8,240 +8,168 @@ date: 2015-09-10 21:07:00 +0300
 
 ---
 
-The plug-ins are published both as update sites (on SourceForge, as an Eclipse update site, with multiple mirrors) and as archives (on GitHub as [Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases)).
+The plug-ins are published both as update sites (on Bintray, as an Eclipse update site, with multiple mirrors) and as archives (on GitHub as [Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases)).
 
-The reason SourceForge is still used is that GitHub does not provide a convenient way to publish an Eclipse update site.
+The reason Bintray is used is that GitHub does not provide a convenient way to publish an Eclipse update site.
 
-## Publish on the SourceForge test site
+## Publish current work on the Bintray experimental site
 
-After each new build, to allow testing on various platforms, the plug-ins are published on the test site.
+After each new build, to allow testing on various platforms, the plug-ins are published on the experimental site.
 
-For this, run the `scripts/publish-updates-test.command` (this is a script that can be executed directly in the macOS Finder).
+For this, run the `scripts/publish-v4-neon-updates-experimental.command` (this is a script that can be executed directly in the macOS Finder).
+
+## Publish pre-release on the Bintray test site
+
+For this, run the `scripts/publish-v4-neon-updates-test.command` (this is a script that can be executed directly in the macOS Finder).
 
 A typical session looks like:
 
 ```
-$ /Users/ilg/My\ Files/MacBookPro\ Projects/GNU\ ARM\ Eclipse/plug-ins.git/scripts/publish-updates-test.command ; exit;
-Updating Eclipse/updates-test
+$ /Users/ilg/My\ Files/MacBookPro\ Projects/GNU\ ARM\ Eclipse/plug-ins.git/scripts/publish-v4-neon-updates-test.command ; exit;
 
 User: ilg-ul
-API key: XXXXXXXXXXXX
-Owner: gnuarmeclipse
-Create version 'updates-test/p2/3.4.1.201704251808'
+API key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Owner: gnu-mcu-eclipse
+Create version 'v4-neon-updates-test/p2/4.1.1.201707111115'
 ######################################################################## 100.0%
 Created.
 
-Upload 'artifacts.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'artifacts.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'artifacts.xml.xz' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'artifacts.xml.xz' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'content.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'content.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'content.xml.xz' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'content.xml.xz' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'p2.index' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'p2.index' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'features/ilg.gnuarmeclipse.codered_1.1.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'features/ilg.gnumcueclipse.codered.feature_1.1.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'features/ilg.gnuarmeclipse.debug.gdbjtag.jlink_4.1.4.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'features/ilg.gnumcueclipse.debug.gdbjtag.jlink.feature_4.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'features/ilg.gnuarmeclipse.debug.gdbjtag.openocd_4.1.4.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'features/ilg.gnumcueclipse.debug.gdbjtag.openocd.feature_4.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'features/ilg.gnuarmeclipse.debug.gdbjtag.pyocd_1.1.3.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'features/ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature_1.1.4.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'features/ilg.gnuarmeclipse.debug.gdbjtag.qemu_3.1.4.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'features/ilg.gnumcueclipse.debug.gdbjtag.qemu.feature_3.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'features/ilg.gnuarmeclipse.doc.user_1.1.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'features/ilg.gnumcueclipse.doc.user.feature_1.1.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'features/ilg.gnuarmeclipse.managedbuild.cross_2.4.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'features/ilg.gnumcueclipse.managedbuild.cross.arm.feature_2.5.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'features/ilg.gnuarmeclipse.packs_2.2.2.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'features/ilg.gnumcueclipse.managedbuild.cross.riscv.feature_2.5.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'features/ilg.gnuarmeclipse.templates.ad_1.1.4.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'features/ilg.gnumcueclipse.packs.feature_2.2.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'features/ilg.gnuarmeclipse.templates.cortexm_1.4.2.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'features/ilg.gnumcueclipse.templates.ad.feature_1.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'features/ilg.gnuarmeclipse.templates.freescale_2.2.8.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'features/ilg.gnumcueclipse.templates.cortexm.feature_1.4.3.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'features/ilg.gnuarmeclipse.templates.stm_2.6.2.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'features/ilg.gnumcueclipse.templates.freescale.feature_2.2.9.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.codered_1.1.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'features/ilg.gnumcueclipse.templates.stm.feature_2.6.3.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.core_3.4.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.codered_1.1.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.debug.core_1.2.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.core_4.1.1.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.debug.gdbjtag.jlink_4.1.4.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.debug.core_1.2.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.debug.gdbjtag.openocd_4.1.4.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.debug.gdbjtag.jlink_4.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.debug.gdbjtag.pyocd_1.1.3.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.debug.gdbjtag.openocd_4.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.debug.gdbjtag.qemu_3.1.4.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.debug.gdbjtag.pyocd_1.1.4.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.debug.gdbjtag.restart_1.3.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.debug.gdbjtag.qemu_3.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.debug.gdbjtag_3.2.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.debug.gdbjtag.restart_1.3.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.debug.packs_1.1.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.debug.gdbjtag_3.2.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.doc.user_1.1.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.debug.packs_1.1.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.managedbuild.cross_2.4.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.doc.user_1.1.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.managedbuild.packs_1.3.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.managedbuild.cross.arm_2.5.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.packs.core_1.1.3.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.managedbuild.cross.riscv_2.5.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.packs.data_1.3.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.managedbuild.cross_1.1.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.packs.ui_1.2.4.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.managedbuild.packs_1.3.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.packs_1.2.4.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.packs.core_1.1.4.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.templates.ad_1.1.4.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.packs.data_1.3.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.templates.core_2.5.6.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.packs.ui_1.2.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.templates.cortexm_1.4.2.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.packs_1.2.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.templates.freescale.pe_1.2.1.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.templates.ad_1.1.5.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.templates.freescale_2.2.8.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.templates.core_2.5.7.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Upload 'plugins/ilg.gnuarmeclipse.templates.stm_2.6.2.201704251808.jar' to '/updates-test/p2/3.4.1.201704251808/'
+Upload 'plugins/ilg.gnumcueclipse.templates.cortexm_1.4.3.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
 ######################################################################## 100.0%
 Uploaded.
-Publish 'updates-test/p2/3.4.1.201704251808'
-{"files":35}
+Upload 'plugins/ilg.gnumcueclipse.templates.freescale.pe_1.2.2.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
+######################################################################## 100.0%
+Uploaded.
+Upload 'plugins/ilg.gnumcueclipse.templates.freescale_2.2.9.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
+######################################################################## 100.0%
+Uploaded.
+Upload 'plugins/ilg.gnumcueclipse.templates.stm_2.6.3.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
+######################################################################## 100.0%
+Uploaded.
+Publish 'v4-neon-updates-test/p2/4.1.1.201707111115'
+{"files":38}
 
-Rsync-ing SourceForge Eclipse/updates-test site (-vrCt --exclude=scripts --exclude=.* --delete --checksum)
-Password: 
-building file list ... done
-deleting features/ilg.gnuarmeclipse.templates.stm_2.6.2.201704242117.jar
-deleting features/ilg.gnuarmeclipse.templates.freescale_2.2.8.201704242117.jar
-deleting features/ilg.gnuarmeclipse.templates.cortexm_1.4.2.201704242117.jar
-deleting features/ilg.gnuarmeclipse.templates.ad_1.1.4.201704242117.jar
-deleting features/ilg.gnuarmeclipse.packs_2.2.2.201704242117.jar
-deleting features/ilg.gnuarmeclipse.managedbuild.cross_2.4.1.201704242117.jar
-deleting features/ilg.gnuarmeclipse.doc.user_1.1.1.201704242117.jar
-deleting features/ilg.gnuarmeclipse.debug.gdbjtag.qemu_3.1.4.201704242117.jar
-deleting features/ilg.gnuarmeclipse.debug.gdbjtag.pyocd_1.1.3.201704242117.jar
-deleting features/ilg.gnuarmeclipse.debug.gdbjtag.openocd_4.1.4.201704242117.jar
-deleting features/ilg.gnuarmeclipse.debug.gdbjtag.jlink_4.1.4.201704242117.jar
-deleting features/ilg.gnuarmeclipse.codered_1.1.1.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.templates.stm_2.6.2.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.templates.freescale_2.2.8.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.templates.freescale.pe_1.2.1.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.templates.cortexm_1.4.2.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.templates.core_2.5.6.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.templates.ad_1.1.4.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.packs_1.2.3.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.packs.ui_1.2.3.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.packs.data_1.3.1.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.packs.core_1.1.3.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.managedbuild.packs_1.3.1.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.managedbuild.cross_2.4.1.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.doc.user_1.1.1.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.debug.packs_1.1.1.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.debug.gdbjtag_3.1.2.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.debug.gdbjtag.restart_1.3.1.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.debug.gdbjtag.qemu_3.1.4.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.debug.gdbjtag.pyocd_1.1.3.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.debug.gdbjtag.openocd_4.1.4.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.debug.gdbjtag.jlink_4.1.4.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.debug.core_1.2.1.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.core_3.4.1.201704242117.jar
-deleting plugins/ilg.gnuarmeclipse.codered_1.1.1.201704242117.jar
-./
-artifacts.jar
-artifacts.xml.xz
-content.jar
-content.xml.xz
-p2.index
-features/
-features/ilg.gnuarmeclipse.codered_1.1.1.201704251808.jar
-features/ilg.gnuarmeclipse.debug.gdbjtag.jlink_4.1.4.201704251808.jar
-features/ilg.gnuarmeclipse.debug.gdbjtag.openocd_4.1.4.201704251808.jar
-features/ilg.gnuarmeclipse.debug.gdbjtag.pyocd_1.1.3.201704251808.jar
-features/ilg.gnuarmeclipse.debug.gdbjtag.qemu_3.1.4.201704251808.jar
-features/ilg.gnuarmeclipse.doc.user_1.1.1.201704251808.jar
-features/ilg.gnuarmeclipse.managedbuild.cross_2.4.1.201704251808.jar
-features/ilg.gnuarmeclipse.packs_2.2.2.201704251808.jar
-features/ilg.gnuarmeclipse.templates.ad_1.1.4.201704251808.jar
-features/ilg.gnuarmeclipse.templates.cortexm_1.4.2.201704251808.jar
-features/ilg.gnuarmeclipse.templates.freescale_2.2.8.201704251808.jar
-features/ilg.gnuarmeclipse.templates.stm_2.6.2.201704251808.jar
-plugins/
-plugins/ilg.gnuarmeclipse.codered_1.1.1.201704251808.jar
-plugins/ilg.gnuarmeclipse.core_3.4.1.201704251808.jar
-plugins/ilg.gnuarmeclipse.debug.core_1.2.1.201704251808.jar
-plugins/ilg.gnuarmeclipse.debug.gdbjtag.jlink_4.1.4.201704251808.jar
-plugins/ilg.gnuarmeclipse.debug.gdbjtag.openocd_4.1.4.201704251808.jar
-plugins/ilg.gnuarmeclipse.debug.gdbjtag.pyocd_1.1.3.201704251808.jar
-plugins/ilg.gnuarmeclipse.debug.gdbjtag.qemu_3.1.4.201704251808.jar
-plugins/ilg.gnuarmeclipse.debug.gdbjtag.restart_1.3.1.201704251808.jar
-plugins/ilg.gnuarmeclipse.debug.gdbjtag_3.2.1.201704251808.jar
-plugins/ilg.gnuarmeclipse.debug.packs_1.1.1.201704251808.jar
-plugins/ilg.gnuarmeclipse.doc.user_1.1.1.201704251808.jar
-plugins/ilg.gnuarmeclipse.managedbuild.cross_2.4.1.201704251808.jar
-plugins/ilg.gnuarmeclipse.managedbuild.packs_1.3.1.201704251808.jar
-plugins/ilg.gnuarmeclipse.packs.core_1.1.3.201704251808.jar
-plugins/ilg.gnuarmeclipse.packs.data_1.3.1.201704251808.jar
-plugins/ilg.gnuarmeclipse.packs.ui_1.2.4.201704251808.jar
-plugins/ilg.gnuarmeclipse.packs_1.2.4.201704251808.jar
-plugins/ilg.gnuarmeclipse.templates.ad_1.1.4.201704251808.jar
-plugins/ilg.gnuarmeclipse.templates.core_2.5.6.201704251808.jar
-plugins/ilg.gnuarmeclipse.templates.cortexm_1.4.2.201704251808.jar
-plugins/ilg.gnuarmeclipse.templates.freescale.pe_1.2.1.201704251808.jar
-plugins/ilg.gnuarmeclipse.templates.freescale_2.2.8.201704251808.jar
-plugins/ilg.gnuarmeclipse.templates.stm_2.6.2.201704251808.jar
-
-sent 8222123 bytes  received 1158 bytes  213591.71 bytes/sec
-total size is 8216700  speedup is 1.00
 Published on the test site.
-Archive available from "/Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/archive/internal/ilg.gnuarmeclipse.repository-3.4.1-201704251808.zip"
+Archive available from "/Users/ilg/My Files/MacBookPro Projects/GNU ARM Eclipse/archive/internal/ilg.gnumcueclipse.repository-4.1.1-201707111115.zip"
 When final, don't forget to publish the archive too!
-Install new software from http://gnuarmeclipse.sourceforge.net/updates-test
+Install new software from http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test
 logout
 ```
 
@@ -262,7 +190,9 @@ $ git log --pretty='%cd * %s' --since 2015-06-24 \
 --reverse --date=short >~/Desktop/ChangeLog.txt
 ```
 
-Add an entry with the latest feature & plug-in versions, copied from the publish script output.
+## Update the list of current features and plug-ins versions
+
+Add an entry with the latest feature & plug-in versions, copied from the publish script output. Name it like **version 4.1.1.201707111115 released**.
 
 ## Prepare a new blog post to announce the release
 
@@ -298,52 +228,40 @@ Mark all these issues as part of the current version milestone. Refer to them as
 * Git Push & Sync the **gnuarmeclipse.github.io-source** project; use something like `v3.2.1-201701141320 released` as message
 * Git Push & Sync the **gnuarmeclipse.github.io** project; use something like `v3.2.1-201701141320 released` as message
 
-## Publish on the main SourceForge updates site
+## Publish on the main Bintray updates site
 
-When all ready, run the `scripts/publish-updates.command`:
+When all ready, run the `scripts/publish-v4-neon-updates.command`:
 
-    ilg-mbp:~ ilg$ /Users/ilg/My\ Files/MacBookPro\ Projects/GNU\ ARM\ Eclipse/gnuarmeclipse-se-git/scripts/publish-updates.command ; exit;
-    Do you really want to publish? (Yes)? Yes
-    Updating Eclipse/updates
-    Rsync-ing SourceForge Eclipse/updates site
-    Password:
-    building file list ... done
-    deleting features/ilg.gnuarmeclipse.templates.stm_1.6.1.201401111229.jar
-    deleting features/ilg.gnuarmeclipse.managedbuild.cross_1.7.1.201401111229.jar
-    deleting features/ilg.gnuarmeclipse.debug.gdbjtag.jlink_1.2.1.201401111229.jar
-    deleting plugins/ilg.gnuarmeclipse.templates.stm_1.6.1.201401111229.jar
-    deleting plugins/ilg.gnuarmeclipse.templates.core_1.1.1.201401111229.jar
-    deleting plugins/ilg.gnuarmeclipse.managedbuild.cross_1.7.1.201401111229.jar
-    deleting plugins/ilg.gnuarmeclipse.debug.gdbjtag.jlink_1.2.1.201401111229.jar
-    ./
-    artifacts.jar
-    content.jar
-    features/
-    features/ilg.gnuarmeclipse.debug.gdbjtag.jlink_1.4.1.201402140758.jar
-    features/ilg.gnuarmeclipse.debug.gdbjtag.openocd_1.1.1.201402140758.jar
-    features/ilg.gnuarmeclipse.managedbuild.cross_1.8.1.201402140758.jar
-    features/ilg.gnuarmeclipse.templates.freescale_1.2.1.201402140758.jar
-    features/ilg.gnuarmeclipse.templates.stm_1.7.1.201402140758.jar
-    features/org.eclipse.cdt.cross.arm.gnu_0.5.5.201310221100.jar
-    plugins/
-    plugins/ilg.gnuarmeclipse.debug.gdbjtag.jlink_1.4.1.201402140758.jar
-    plugins/ilg.gnuarmeclipse.debug.gdbjtag.openocd_1.1.1.201402140758.jar
-    plugins/ilg.gnuarmeclipse.debug.gdbjtag.restart_1.1.1.201402140758.jar
-    plugins/ilg.gnuarmeclipse.managedbuild.cross_1.8.1.201402140758.jar
-    plugins/ilg.gnuarmeclipse.templates.core_1.2.1.201402140758.jar
-    plugins/ilg.gnuarmeclipse.templates.freescale.pe_1.1.2.201402140758.jar
-    plugins/ilg.gnuarmeclipse.templates.freescale_1.2.1.201402140758.jar
-    plugins/ilg.gnuarmeclipse.templates.stm_1.7.1.201402140758.jar
-    plugins/org.eclipse.cdt.cross.arm.gnu_0.5.5.201310221100.jar
+```
+$ /Users/ilg/My\ Files/MacBookPro\ Projects/GNU\ ARM\ Eclipse/plug-ins.git/scripts/publish-v4-neon-updates.command ; exit;
+Do you really want to publish? (Yes)? Yes
 
-    sent 3926827 bytes  received 1714 bytes  270933.86 bytes/sec
-    total size is 3999834  speedup is 1.02
-    Published on the main site.
-    logout
+User: ilg-ul
+API key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Owner: gnu-mcu-eclipse
+Create version 'v4-neon-updates/p2/4.1.1.201707111115'
+######################################################################## 100.0%
+Created.
 
-    [Process completed]
+Upload 'artifacts.jar' to '/v4-neon-updates/p2/4.1.1.201707111115/'
+######################################################################## 100.0%
+...
+Upload 'plugins/ilg.gnumcueclipse.templates.stm_2.6.3.201707111115.jar' to '/v4-neon-updates/p2/4.1.1.201707111115/'
+######################################################################## 100.0%
+Uploaded.
+Publish 'v4-neon-updates/p2/4.1.1.201707111115'
+{"files":38}
+
+Published on the main site.
+When final, don't forget to publish the archive too!
+logout
+```
 
 Do not close the terminal before copy/paste the list to the ChangeLog page!.
+
+## Publish on the main RISC-V update site
+
+Use the `publish-riscv-v4-neon-updates.command` command.
 
 ## Clean the mess in the local archive folder
 
