@@ -18,9 +18,12 @@ If you know what this is all about, drag-and-drop the **Install** button availa
 If you want to do it manually, you only need the update site details:
 
 * name: **GNU MCU Eclipse Plug-ins**
-* URL: `http://gnuarmeclipse.sourceforge.net/updates`
+* URL: `http://gnu-mcu-eclipse.netlify.com/v4-neon-updates/`
 
-It is recommended that you install the plug-ins after installing the [toolchain]({{ site.baseurl }}/toolchain/arm/install), the [build tools]({{ site.baseurl }}/windows-build-tools/install/) (on Windows), and the [debugging binaries]({{ site.baseurl }}/debug/install/).
+
+Note: the old URL `http://gnuarmeclipse.sourceforge.net/updates/` is now deprecated, and its content will point to v3.x, that can be installed to install the older versions of the plug-ins.
+
+It is recommended that you install the plug-ins after installing the [ARM toolchain]({{ site.baseurl }}/toolchain/arm/install) and/or the [RISC-V toolchain]({{ site.baseurl }}/toolchain/riscv/install), the [build tools]({{ site.baseurl }}/windows-build-tools/install/) (on Windows), and the [debugging binaries]({{ site.baseurl }}/debug/install/).
 
 > Important notes:
 > - if you use the Oracle JDK, starting with mid January, attempts to install from SourceForge [fail with handshake_error]({{ site.baseurl }}/blog/2017/01/29/plugins-install-issue/);
