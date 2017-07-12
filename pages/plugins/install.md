@@ -85,6 +85,8 @@ The oldest Eclipse supported by the plug-ins is Eclipse 4.4 Luna SR2 (CDT 8.6),
 
 The simple way is to download **GNU MCU Eclipse IDE for C/C++ Developers** from [GitHub Releases](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/) and you get at once both Eclipse CDT and the MCU plug-ins.
 
+![Eclipse EPP]({{ site.baseurl }}/assets/images/2017/epp-releases.png)
+
 #### The plug-ins install way
 
 If you prefer to do this in more steps, go to the [Eclipse packages](http://www.eclipse.org/downloads/eclipse-packages) and get the **Eclipse IDE for C/C++ Developers** archive appropriate for your platform, preferably the 64-bits version.
@@ -95,7 +97,7 @@ Links to older versions are available in the **More Downloads** section, at the 
 
 In case you reached the main Eclipse downloads page, avoid the recommended download and follow the link to the Eclipse packages.
 
-![Eclipse packages]({{ site.baseurl }}/assets/images/2016/eclipse-downloads.png)
+![Eclipse downloads]({{ site.baseurl }}/assets/images/2016/eclipse-downloads.png)
 
 Traditionally Eclipse does not need an installer, Eclipse is distributed as a plain archive. To install Eclipse, simply unpack the archive at a place of your choice and start using it.
 
