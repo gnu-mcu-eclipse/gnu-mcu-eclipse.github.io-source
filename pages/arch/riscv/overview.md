@@ -35,6 +35,7 @@ The following boards are supported:
 
 ## Tips & tricks
 
+* [Programmer]({{ site.baseurl }}/arch/riscv/programmer/) - programmer info
 * [Flashing the Arty boards]({{ site.baseurl }}/arch/riscv/arty-reflash/) - a solution to reprogram the Arty board without Xilinx Vivado
 * [FTDI JTAG drivers]({{ site.baseurl }}/arch/riscv/ftdi-jtag-drivers/) - workaround to reconfigure the FTDI as JTAG programmer
 
