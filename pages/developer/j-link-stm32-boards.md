@@ -20,7 +20,7 @@ Preferably the J-Link debug plug-in would be used, but, for costs reasons, ST di
 
 ## Convert the ST-LINK on-board into a J-Link
 
-In a very inspired move to address this issue, SEGGER provided an upgrade path, and most of the ST bemo boards can now be converted to J-Link; please follow the SEGGER [Converting ST-LINK on-board into a J-Link](https://www.segger.com/jlink-st-link.html) page.
+In a very inspired move to address this issue, SEGGER provided an upgrade path, and most of the ST bemo boards can now be converted to J-Link; please follow the SEGGER [Converting ST-LINK on-board into a J-Link](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/) page.
 
 After the firmware upgrade, you'll be able to connect the J-Link GDB server via the existing board USB port. However, please note that not all J-Link features are available via this solution, which is somehow a J-Link Lite version.
 

@@ -21,7 +21,7 @@ So, if you are not interested in building from sources, and appreciate a better 
 
 If the only reason to run OpenOCD is to use the ST-LINK on-board programmer on STM Discovery or Nucleo boards, then, thanks to SEGGER, a better solution exists: it is possible to **upgrade the on-board programmer firmware to behave like a J-Link** lite, and then use the GNU MCU Eclipse J-Link plug-in. The conversion is reversible, you can return the board to ST-LINK at any time.
 
-Please follow the instructions on [Converting ST-LINK on-board into a J-Link](https://www.segger.com/jlink-st-link.html).
+Please follow the instructions on [Converting ST-LINK on-board into a J-Link](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/).
 
 ## Documentation
 
