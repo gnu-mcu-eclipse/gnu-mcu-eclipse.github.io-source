@@ -47,7 +47,7 @@ Your Eclipse does not include CDT. You need to install **Eclipse IDE for C/C++ D
 
 ## I cannot connect via J-Link to my ST DISCOVERY or NUCLEO board
 
-If you try to connect via the SEGGER J-Link debug plug-in to a stock ST DISCOVERY or NUCLEO board and the JLinkGDBServer keeps refuses to connect (_'Connecting to J-Link failed. Connected correctly?'_), please note that the on-board programmer firmware on the ST boards is compatible with ST-LINK/v2, not J-Link. However, SEGGER provides an upgrade path, and most of the ST bemo boards can be converted to J-Link; please follow the SEGGER [Converting ST-LINK on-board into a J-Link](https://www.segger.com/jlink-st-link.html) page.
+If you try to connect via the SEGGER J-Link debug plug-in to a stock ST DISCOVERY or NUCLEO board and the JLinkGDBServer keeps refuses to connect (_'Connecting to J-Link failed. Connected correctly?'_), please note that the on-board programmer firmware on the ST boards is compatible with ST-LINK/v2, not J-Link. However, SEGGER provides an upgrade path, and most of the ST bemo boards can be converted to J-Link; please follow the SEGGER [Converting ST-LINK on-board into a J-Link](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/) page.
 
 ## I installed Eclipse with Synaptics and I have problems to install the plug-ins
 

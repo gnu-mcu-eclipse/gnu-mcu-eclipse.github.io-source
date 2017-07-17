@@ -84,7 +84,7 @@ To save you time, we compiled a list of other GDB servers, with some of their fe
 
 ## OpenSDA
 
-Another interesting solution is Freescale's **OpenSDA** debug/programming interface. For the Kinetis L based Freedom Development Boards, SEGGER provides a high performance [OpenSDA](http://www.segger.com/opensda.html) implementation fully compatible with the J-Link Lite, so the J-Link plug-in can be successfully used for these evaluation boards without having a physical J-Link probe. More details on installing OpenSDA can be found on [MCU on Eclipse](http://mcuoneclipse.com/2013/05/16/freedom-board-with-segger-opensda-debug-firmware/).
+Another interesting solution is Freescale's **OpenSDA** debug/programming interface. For the Kinetis L based Freedom Development Boards, SEGGER provides a high performance [OpenSDA](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/opensda-sda-v2/) implementation fully compatible with the J-Link Lite, so the J-Link plug-in can be successfully used for these evaluation boards without having a physical J-Link probe. More details on installing OpenSDA can be found on [MCU on Eclipse](http://mcuoneclipse.com/2013/05/16/freedom-board-with-segger-opensda-debug-firmware/).
 
 ## Eclipse debugging plug-ins
 
