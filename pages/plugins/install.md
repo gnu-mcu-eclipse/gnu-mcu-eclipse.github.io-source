@@ -14,9 +14,7 @@ date: 2015-09-11 22:06:00 +0300
 If you know what this is all about, you can do the following:
 
 * use the **GNU MCU Eclipse IDE for C/C++ Developers** packages, which packs Eclipse with the plug-ins; for this go to [GitHub Releases](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/) and download the binary for your platform;
-* drag-and-drop the **Install** button available below to your running Eclipse workspace and follow the **Eclipse Marketplace** install/update steps.
-
-<a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2593184" class="drag" title="Drag to your running Eclipse workspace."><img class="img-responsive" src="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png" alt="Drag to your running Eclipse workspace." /></a>
+* go to the _Eclipse_ menu → **Help** → **Eclipse Marketplace…**, find **GNU MCU Eclipse** and install
 
 If, for any reason, this does not work and you have to do it manually, you only need the update site details:
 
@@ -120,7 +118,6 @@ As mentioned before, the recommended way is to use a fresh **Eclipse IDE for C/C
 
 ### Compatibility issues
 
-
 Please note that starting with 4.x, compatibility with Eclipses previous than 4.6 Neon was no longer possible. If, for any reason, you need a solution for Eclipse Luna or Mars, you can try the GNU MCU Eclipse Plug-in version 3.*, but please keep in mind that this version is no longer maintained.
 
 Similarly:
@@ -136,19 +133,11 @@ The following samples are from a slightly older Eclipse 4.3 Kepler on macOS. Oth
 
 ### The Eclipse Marketplace way
 
-The easiest way to install/update the plug-ins is to drag-and-drop the **Install** button below to your running Eclipse workspace (If you are still in the **Welcome screen**, click the **Workspace** link to switch to the workspace, the drag-and-drop does not work in the Welcome screen).
-
-<a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2593184" class="drag" title="Drag to your running Eclipse workspace."><img class="img-responsive" src="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png" alt="Drag to your running Eclipse workspace." /></a>
-
-This should make Eclipse automatically contact the Marketplace and present a window with all GNU MCU Eclipse features:
-
-![Eclipse Marketplace Features]({{ site.baseurl }}/assets/images/2017/eclipse-marketplace-features.png)
-
-If, for any reason, this does not work, it is always possible to search the Eclipse Marketplace manually:
+The easiest way to install/update the plug-ins is to use the Eclipse Marketplace:
 
 * go to the _Eclipse_ menu → **Help** → **Eclipse Marketplace...**
-* in the Find field, enter GNU MCU Eclipse
-* click the Go button
+* in the Find field, enter **GNU MCU Eclipse**
+* click the **Go** button
 
 This should identify GNU MCU Eclipse and offer to Install/Update/Uninstall 
 assets
