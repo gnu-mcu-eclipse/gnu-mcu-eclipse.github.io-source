@@ -16,11 +16,11 @@ Although GNU MCU Eclipse is not yet a packed suite to be installed in a single s
 
 The recommended sequence is described below.
 
-## ARM Toolchain
+## Toolchain
 
-This is generally a mandatory step for all platforms, since most platforms do not come by default with an ARM toolchain.
+This is generally a mandatory step for all platforms, since most platforms do not come by default with an embedded GCC toolchain (ARM or RISC-V).
 
-Please follow the steps in the [ARM Toolchain install]({{ site.baseurl }}/toolchain/arm/install) page.
+Please follow the steps in the [ARM Toolchain install]({{ site.baseurl }}/toolchain/arm/install) or [RISC-V Toolchain install]({{ site.baseurl }}/toolchain/riscv/install) page.
 
 ## Windows Build Tools
 
@@ -28,7 +28,7 @@ This step is Windows specific, and it is highly recommended to use the GNU MCU E
 
 Please follow the steps in the [How to install the Windows Build Tools]({{ site.baseurl }}/windows-build-tools/install/) page.
 
-POSIX platforms generally include `make` in the system distribution, or might require to install some developer packages.
+POSIX platforms generally include `make` in the system distribution, or might require to install some developer packages (for example on macOS you need to install the Xcode Command Line Tools).
 
 ## SEGGER J-Link
 
@@ -39,6 +39,8 @@ SEGGER J-Link is the recommended debugger and, if available, please follow the s
 For the unfortunate developers who do not have a J-Link available, the alternative is to follow the steps in the [How to install the OpenOCD binaries]({{ site.baseurl }}/openocd/install) page.
 
 OpenOCD might be needed when using development boards with integrated debuggers, like STM32F4-DISCOVERY boards, although the recommended solution is to prepare a [custom cable]({{ site.baseurl }}/developer/j-link-stm32-boards) and connect them to J-Link.
+
+OpenOCD is also needed when using RISC-V boards with integrated debuggers.
 
 ## QEMU
 
@@ -58,7 +60,9 @@ More details are available in the [How to install the GNU MCU Eclipse plug-ins](
 
 Eclipse is the development platform where the GNU MCU Eclipse plug-ins run. Generally it is not available by default on most platforms and requires separate installation.
 
-Be sure you install the **Eclipse IDE for C/C++ Developers**, not other package, since otherwise you'll have to manually install CDT.
+The simple way is to download **GNU MCU Eclipse IDE for C/C++ Developers** from [GitHub Releases](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/) and you get at once both Eclipse CDT and the MCU plug-ins.
+
+If you prefer the manual way, be sure you install the **Eclipse IDE for C/C++ Developers**, not other package, since otherwise you'll have to manually install CDT.
 
 More details are available in the [How to install the GNU MCU Eclipse plug-ins]({{ site.baseurl }}/plugins/install/) page.
 
