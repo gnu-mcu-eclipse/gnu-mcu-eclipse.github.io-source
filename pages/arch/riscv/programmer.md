@@ -152,3 +152,57 @@ $ ./riscv64-unknown-elf-gcc -march=rv64imafdc -mabi=lp64d -E -dM - < /dev/null |
 #define __riscv_float_abi_single 1
 #define __riscv_float_abi_double 1
 ```
+
+### The `gp` (Global Pointer) register
+
+The `gp` (Global Pointer) register is a solution to further optimise memory accesses within a single 4KB region. 
+
+The linker uses the `__global_pointer$` symbol definition to compare the memory addresses and, if within range, it replaces absolute/pc-relative addressing with gp-relative addressing, which makes the code more efficient. This process is also called _relaxing_, and can be disabled by `-Wl,--no-relax`.
+
+```
+$ cat main.c 
+int i;
+int main()
+{
+  return i;
+}
+
+$ riscv32-unknown-elf-gcc  main.c --save-temps
+$ cat main.s
+...
+	lui	a5,%hi(i)
+	lw	a5,%lo(i)(a5)
+...
+$ riscv32-unknown-elf-objdump -d a.out
+...
+   101b4:       8341a783                lw      a5,-1996(gp) # 11fdc <i>
+...
+```
+
+The gp register should be loaded during startup with the address of the `__global_pointer$` symbol and should not be changed later. 
+
+```c
+	.section .reset_entry,"ax",@progbits
+	.align	1
+	.globl	_reset_entry
+	.type	_reset_entry, @function
+_reset_entry:
+
+.option push
+.option norelax
+	la gp, __global_pointer$
+.option pop
+
+	la sp, __stack
+
+	j _start
+```
+
+The 4K region can be anywhere in the addressed memory, but, for the optimisation to be effective, it should preferably cover the most intensely used RAM area. For standard newlib applications, this is the area where the `.sdata` section is allocated, since it includes variables like `_impure_ptr`, `__malloc_sbrk_base`, etc. Thus, the definition should be placed right before the `.sdata` section. For example:
+
+```
+PROVIDE( __global_pointer$ = . + (4K / 2) );
+*(.sdata .sdata.*)
+```
+
+The region size is 4K because RISC-V immediate values are 12-bit signed values, which are +/- 2048 in decimal or +/- 0x800 in hex; since the values are signed, the `__global_pointer$` must point to the middle of the region.
