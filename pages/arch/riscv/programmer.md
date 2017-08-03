@@ -153,7 +153,7 @@ $ ./riscv64-unknown-elf-gcc -march=rv64imafdc -mabi=lp64d -E -dM - < /dev/null |
 #define __riscv_float_abi_double 1
 ```
 
-### The `gp` (Global Pointer) register
+## The `gp` (Global Pointer) register
 
 The `gp` (Global Pointer) register is a solution to further optimise memory accesses within a single 4KB region. 
 
