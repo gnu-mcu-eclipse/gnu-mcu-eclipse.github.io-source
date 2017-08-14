@@ -64,7 +64,7 @@ The default (and the recommended) setting, is to use the global toolchain path.
 
 The displayed path is associated with the selected toolchain. To change the toolchain path use the hyperlinks; it is recommended to use the global page, but, if needed, the toolchain path can also be configured per workspace or even per project.
 
-![Global Tools Paths]({{ site.baseurl }}/assets/images/2017global-arm-toolchains-paths.png)
+![Global Tools Paths]({{ site.baseurl }}/assets/images/2017/global-arm-toolchains-paths.png)
 
 Using the global toolchain path does not store any data in the project configuration files, but in the Eclipse folders, so the project portability is not affected.
 
