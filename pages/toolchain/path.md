@@ -40,7 +40,7 @@ This mechanism can be both flexible and a source of nuisance. When only a single
 
 However, when multiple toolchains are installed, the use of any global setting is strongly discouraged, since it soon leads to serious problems generally due to messing headers and executables between different toolchains. In this case the only recommended solution is to define the toolchain path for each build configuration.
 
-![Toolchain path in project environment]({{ site.baseurl }}/assets/images/2014/02/ProjectEnvironment.png)
+![Toolchain path in project environment]({{ site.baseurl }}/assets/images/2017/project-environment.png)
 
 ## CDT Cross build plug-in
 
@@ -60,11 +60,11 @@ To achieve this, the GNU MCU Eclipse cross build plug-in provides a large select
 
 The default (and the recommended) setting, is to use the global toolchain path.
 
-![Toolchains Properties]({{ site.baseurl }}/assets/images/2014/02/ToolchainsProperties.png)
+![Toolchains Properties]({{ site.baseurl }}/assets/images/2017/toolchain-properties.png)
 
 The displayed path is associated with the selected toolchain. To change the toolchain path use the hyperlinks; it is recommended to use the global page, but, if needed, the toolchain path can also be configured per workspace or even per project.
 
-![Global Tools Paths]({{ site.baseurl }}/assets/images/2015/02/GlobalToolsPaths.png)
+![Global Tools Paths]({{ site.baseurl }}/assets/images/2017global-arm-toolchains-paths.png)
 
 Using the global toolchain path does not store any data in the project configuration files, but in the Eclipse folders, so the project portability is not affected.
 
