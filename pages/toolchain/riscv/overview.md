@@ -36,7 +36,7 @@ riscv-none-newlib-
 or even the shorter:
 
 ```
-risc-none-
+riscv-none-
 ```
 
 Hopefully, someday RISC-V will revise the toolchain naming scheme, and correct this confusion.
