@@ -22,30 +22,30 @@ Close issues on the way. Refer to them as:
 
 ## Update the CHANGES.txt file
 
-In the project git, edit the `gnuarmeclipse/info/CHANGES.txt` file (copy the entries from the web change log).
+In the project git, edit the `gnu-mcu-eclipse/info/CHANGES.txt` file (copy the entries from the web change log).
 
 ## Commit to the project git
 
-In the **gnuarmeclipse/openocd** project, commit all changes.
+In the **gnu-mcu-eclipse/openocd** project, commit all changes.
 
 ## Merge stable release
 
 For **stable releases**, with SourceTree
 
-- change to the **gnuarmeclipse** branch
-- merge **gnuarmeclipse-dev**.
+- change to the **gnu-mcu-eclipse** branch
+- merge **gnu-mcu-eclipse-dev**.
 
 ## Push the project git
 
-With SourceTree, push to the GitHub remote, the **gnuarmeclipse** and the **gnuarmeclipse-dev** branches.
+With SourceTree, push to the GitHub remote, the **gnu-mcu-eclipse** and the **gnu-mcu-eclipse-dev** branches.
 
 ## Check/clone/pull build scripts
 
-Be sure the scripts in the **build-scripts.git** are up to date.
+Be sure the scripts in the **openocd/build.git** are up to date.
 
 ```
-$ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
-  ~/Downloads/build-scripts.git
+$ git clone https://github.com/gnu-mcu-eclipse/openocd-build.git \
+  ~/Downloads/openocd-build.git
 ```
 
 ## Build
@@ -53,9 +53,10 @@ $ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
 Important note: Before starting the build, double check if the repository is clean (all changes were commited), otherwise the build version will be stamped with `-dirty`).
 
 ```
-$ bash ~/Downloads/build-scripts.git/scripts/build-openocd.sh cleanall
-$ bash ~/Downloads/build-scripts.git/scripts/build-openocd.sh checkout-stable
-$ caffeinate bash ~/Downloads/build-scripts.git/scripts/build-openocd.sh --all
+$ bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
+$ bash ~/Downloads/openocd-build.git/scripts/build.sh checkout-stable
+$ caffeinate bash 
+$ exec bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 ```
 
 ## Prepare a new blog post to announce the release
@@ -100,9 +101,9 @@ gnuarmeclipse-openocd-win64-0.10.0-201601101000-dev-setup.exe
 - for stable releases, be sure the **gnuarmeclipse** branch is up to date and set as default
 - go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/openocd/releases) page
 - click **Draft a new release**
-- name the tag like **gae-0.10.0-20160110**
+- name the tag like **v0.10.0-3-20170826-1813**
 - select the**gnuarmeclipse** or **gnuarmeclipse-dev** branch
-- name the release like **GNU MCU Eclipse OpenOCD v0.10.0-201601101000-dev**
+- name the release like **GNU MCU Eclipse OpenOCD v0.10.0-3-20170826-1813**
 - as description, copy the first paragraph from the Web release page
 - add a link to the Web page **\[Continue reading »\]\(\)**
 - get URL from web and update the above link

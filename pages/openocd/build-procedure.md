@@ -15,7 +15,7 @@ The script was developed on macOS, but it also runs on any recent GNU/Linux dist
 
 The main trick that made the multi-platform build possible is [Docker](https://www.docker.com).
 
-Containers based on three docker images are used, one packing MinGW-w64 in a Debian 8, and two packing the basic system in Debian 8 (separate 32/64-bits containers). The more conservative Debian was preferred to generate the GNU/Linux versions, to avoid problems when attempting to run the executables on older versions.
+Containers based on three docker images are used, one packing MinGW-w64 in two Debian 9 (32/64-bits) containers. The more conservative Debian was preferred to generate the GNU/Linux versions, to avoid problems when attempting to run the executables on older versions.
 
 ### macOS
 
@@ -23,19 +23,28 @@ Containers based on three docker images are used, one packing MinGW-w64 in a Deb
 
 The macOS compiler and other development tools are packed in a separate Xcode add-on. The best place to get it is from the [Developer](https://developer.apple.com/xcode/downloads/) site, although this might require enrolling to the developer program (free of charge).
 
+It is also possible to install the Command Line Tools via a command line:
+
+```bash
+$ xcode-select --install
+$ xcode-select -p
+/Library/Developer/CommandLineTools
+```
+
 To test if the compiler is available, use:
 
-```
+```bash
 $ gcc --version
-Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
-Apple LLVM version 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
-Target: x86_64-apple-darwin14.3.0
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 8.1.0 (clang-802.0.42)
+Target: x86_64-apple-darwin16.7.0
 Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 ```
 
 #### Install a custom instance of Homebrew
 
-The build process is quite complex, and requires tools not available in the standard Apple macOS distribution. These tools can be installed with Homebrew. To keep these tools separate, a custom instance of Homebrew is installed in `${HOME}/opt/homebrew-gae`. 
+The build process is quite complex, and requires tools not available in the standard Apple macOS distribution. These tools can be installed with Homebrew. To keep these tools separate, a custom instance of Homebrew is installed in `${HOME}/opt/homebrew/gme`. 
 
 In a separate run, the **[MacTex](http://www.tug.org/mactex/)** tools are also installed in `${HOME}/opt/texlive`. Alternatively you can install MacTex in `/usr/local` using the official distribution, but this will add lots of programs to the system path, and this is a bad thing.
 
@@ -45,11 +54,11 @@ The entire process can be automated with two scripts, available from GitHub:
 $ mkdir -p ${HOME}/opt
 $ git clone https://github.com/ilg-ul/opt-install-scripts \
     ${HOME}/opt/install-scripts.git
-$ bash ${HOME}/opt/install-scripts.git/install-homebrew-gae.sh
+$ bash ${HOME}/opt/install-scripts.git/install-homebrew-gme.sh
 $ bash ${HOME}/opt/install-scripts.git/install-texlive.sh
 ```
 
-The scripts run with user credentials, no `sudo` access is required.
+The scripts run with user credentials, no `sudo` access is required. Please be aware that the TeX install takes quite some time.
 
 #### Install Docker
 
@@ -91,13 +100,13 @@ The Docker images are available from [Docker Hub](https://hub.docker.com/u/ilege
 
 ## Download the build scripts repo
 
-The build script is available from GitHub and can be [viewed online](https://github.com/gnu-mcu-eclipse/build-scripts/blob/master/scripts/build-openocd.sh).
+The build script is available from GitHub and can be [viewed online](https://github.com/gnu-mcu-eclipse/openocd-build/blob/master/scripts/build.sh).
 
-To download it, clone the [gnuarmeclipse/build-scripts](https://github.com/gnu-mcu-eclipse/build-scripts) Git repo. 
+To download it, clone the [gnu-mcu-eclipse/openocd-build](https://github.com/gnu-mcu-eclipse/openocd-build) Git repo. 
 
 ```
-$ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
-  ~/Downloads/build-scripts.git
+$ git clone https://github.com/gnu-mcu-eclipse/openocd-build.git \
+  ~/Downloads/openocd-build.git
 ```
 
 ## Check the script
@@ -111,7 +120,7 @@ Docker does not require to explicitly download new images, but does this automat
 However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:
 
 ```
-$ bash ~/Downloads/build-scripts.git/scripts/build-openocd.sh preload-images
+$ bash ~/Downloads/openocd-build.git/scripts/build.sh preload-images
 ```
 
 The result should look similar to:
@@ -119,9 +128,9 @@ The result should look similar to:
 ```
 $ docker images
 REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
-ilegeul/debian32    8-gnuarm-gcc-x11-v3   14a0dcce0dd7        11 months ago       1.633 GB
-ilegeul/debian      8-gnuarm-gcc-x11-v3   a461714e9b42        11 months ago       1.771 GB
-ilegeul/debian      8-gnuarm-mingw        1c04c24123c1        15 months ago       2.486 GB
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ilegeul/debian      9-gnu-mcu-eclipse   ff8a853cf6cb        7 weeks ago         3.2GB
+ilegeul/debian32    9-gnu-mcu-eclipse   a22ccdf38f1f        7 weeks ago         3.2GB
 ```
 
 ## Select the stable or the development branch
@@ -131,48 +140,61 @@ The repository has two branches; by default the development branch is used.
 To select the stable branch, use:
 
 ```
-$ bash ~/Downloads/build-scripts.git/scripts/build-openocd.sh checkout-stable
+$ bash ~/Downloads/openocd-build.git/scripts/build.sh checkout-stable
 ```
 
 To later switch back to the development branch, use:
 
 ```
-$ bash ~/Downloads/build-scripts.git/scripts/build-openocd.sh checkout-dev
+$ bash ~/Downloads/openocd-build.git/scripts/build.sh checkout-dev
 ```
 
 To pull new commits from the repository, use:
 
 ```
-$ bash ~/Downloads/build-scripts.git/scripts/build-openocd.sh pull
+$ bash ~/Downloads/openocd-build.git/scripts/build.sh pull
 ```
 
 ## Build all distribution files
 
 ```
-$ bash ~/Downloads/build-scripts.git/scripts/build-openocd.sh --all
+$ bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 ```
 
 On macOS, to prevent entering sleep, use:
 
 ```
-$ caffeinate bash ~/Downloads/build-scripts.git/scripts/build-openocd.sh --all
+$ caffeinate bash 
+$ exec bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 ```
 
 About half an hour later, the output of the build script is a set of 5 files in the output folder:
 
 ```
-$ ls -l output
-total 105616
-drwxr-xr-x  8 ilg  staff      272 May 11 15:28 debian32
-drwxr-xr-x  8 ilg  staff      272 May 11 15:20 debian64
--rw-r--r--  1 ilg  staff  2313130 May 10 11:41 gnuarmeclipse-openocd-debian32-0.8.0-201505100809.tgz
--rw-r--r--  1 ilg  staff  2313130 May 10 11:41 gnuarmeclipse-openocd-debian64-0.8.0-201505100809.tgz
--rw-r--r--  1 ilg  staff  2274022 May 10 11:45 gnuarmeclipse-openocd-osx-0.8.0-201505100809.pkg
--rw-r--r--  1 ilg  staff  2253926 May 10 11:29 gnuarmeclipse-openocd-win32-0.8.0-201505100809-setup.exe
--rw-r--r--  1 ilg  staff  2285654 May 10 11:20 gnuarmeclipse-openocd-win64-0.8.0-201505100809-setup.exe
-drwxr-xr-x  8 ilg  staff      272 May 11 15:33 osx
-drwxr-xr-x  8 ilg  staff      272 May 11 15:13 win32
-drwxr-xr-x  8 ilg  staff      272 May 11 15:13 win64
+$ ls -l deploy
+total 41992
+drwxr-xr-x  8 ilg  staff      272 Aug 26 12:57 debian32
+drwxr-xr-x  8 ilg  staff      272 Aug 26 12:45 debian64
+-rw-r--r--  1 ilg  staff        1 Aug 26 13:03 empty.sha
+-rw-r--r--  1 ilg  staff  2782562 Aug 26 12:57 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-debian32.tgz
+-rw-r--r--  1 ilg  staff      130 Aug 26 12:57 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-debian32.tgz.sha
+-rw-r--r--  1 ilg  staff  2727918 Aug 26 12:46 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-debian64.tgz
+-rw-r--r--  1 ilg  staff      130 Aug 26 12:46 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-debian64.tgz.sha
+-rw-r--r--  1 ilg  staff  2552555 Aug 26 12:42 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-osx.pkg
+-rw-r--r--  1 ilg  staff      125 Aug 26 12:42 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-osx.pkg.sha
+-rw-r--r--  1 ilg  staff  2522421 Aug 26 12:42 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-osx.tgz
+-rw-r--r--  1 ilg  staff      125 Aug 26 12:42 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-osx.tgz.sha
+-rw-r--r--  1 ilg  staff  2334787 Aug 26 13:03 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win32-setup.exe
+-rw-r--r--  1 ilg  staff      133 Aug 26 13:03 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win32-setup.exe.sha
+-rw-r--r--  1 ilg  staff  3058854 Aug 26 13:03 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win32.zip
+-rw-r--r--  1 ilg  staff      127 Aug 26 13:03 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win32.zip.sha
+-rw-r--r--  1 ilg  staff  2369301 Aug 26 12:53 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win64-setup.exe
+-rw-r--r--  1 ilg  staff      133 Aug 26 12:53 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win64-setup.exe.sha
+-rw-r--r--  1 ilg  staff  3096610 Aug 26 12:53 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win64.zip
+-rw-r--r--  1 ilg  staff      127 Aug 26 12:53 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win64.zip.sha
+drwxr-xr-x  8 ilg  staff      272 Aug 26 12:42 osx
+drwxr-xr-x  8 ilg  staff      272 Aug 26 13:03 win32
+drwxr-xr-x  8 ilg  staff      272 Aug 26 12:52 win64
 ```
 
 ## Subsequent runs
@@ -190,13 +212,13 @@ Instead of `--all`, you can use any combination of:
 To remove most build files, use:
 
 ```
-$ bash ~/Downloads/build-scripts.git/scripts/build-openocd.sh clean
+$ bash ~/Downloads/openocd-build.git/scripts/build.sh clean
 ```
 
 To also remove the repository and the output files, use:
 
 ```
-$ bash ~/Downloads/build-scripts.git/scripts/build-openocd.sh cleanall
+$ bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
 ```
 
 ## Install hierarchy
@@ -206,8 +228,8 @@ The procedure to install GNU MCU Eclipse OpenOCD is platform specific, but relat
 After install, this package should create structure like this (only the first two depth levels are shown):
 
 ```
-$ tree -L 2 /Applications/GNU\ ARM\ Eclipse/OpenOCD
-/Applications/GNU\ ARM\ Eclipse/OpenOCD
+$ tree -L 2 /Applications/GNU\ MCU\ Eclipse/OpenOCD
+/Applications/GNU\ MCU\ Eclipse/OpenOCD
 ├── bin
 │   └── openocd
 ├── doc
@@ -241,7 +263,7 @@ No other files are installed in any system folders or other locations.
 
 ## Uninstall
 
-To uninstall OpenOCD from a Windows machine, use the `openocd-uninstall.exe` program.
+To uninstall OpenOCD from a Windows machine, use the `uninstall.exe` program.
 
 On macOS and GNU/Linux, the GNU MCU Eclipse OpenOCD install folder is self-contained and removing it is enough for completely removing the application.
 
@@ -252,13 +274,13 @@ A simple test is performed by the script at the end, by launching the executable
 For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:
 
 ```
-$ /Applications/GNU\ ARM\ Eclipse/OpenOCD/bin/openocd --version
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00022-g2628c74 (2015-01-15-20:44)
+$ opt/gnu-mcu-eclipse/openocd/0.10.0-3-20170826-0939-dev/bin/openocd --version
+GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00138-g96c70022 (2017-08-26-12:40)
 Licensed under GNU GPL v2
 For bug reports, read
-    http://openocd.sourceforge.net/doc/doxygen/bugs.html
+	http://openocd.org/doc/doxygen/bugs.html
 ```
 
 ## More build details
 
-The script is quite complex, and an attempt to explain its functionality would require some effort. For the final authoritative details, please refer to the comments available in the [script](https://github.com/gnu-mcu-eclipse/build-scripts/blob/master/scripts/build-openocd.sh).
+The script is quite complex, and an attempt to explain its functionality would require some effort. For the final authoritative details, please refer to the comments available in the [script](https://github.com/gnu-mcu-eclipse/openocd-build/blob/master/scripts/build.sh).
