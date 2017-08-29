@@ -11,6 +11,37 @@ Entries in this file are in reverse chronological order.
 
 ## 2017
 
+### 2017-08-25
+
+- v0.10.0-3-20170826-*-dev released
+- merge RISC-V tag v20170818
+- server.c: fix clang warning in getsockname()
+
+### 2017-06-22
+
+- v0.10.0-2-20170622-1535-dev released
+- merge RISC-V tag v20170621 
+
+### 2017-06-12
+
+- use #if BUILD_RISCV == 1, --enable-riscv
+- configure.ac: add --enable-branding
+
+### 2017-06-11
+
+- update jimtcl to 0.77
+
+### 2017-06-08
+
+- v0.10.0-1-20170607-2132-dev released
+- merge RISC-V code
+- rename to gnu-mcu-eclipse
+- rename 60-openocd.rules
+
+### 2017-06-04
+
+- merge master
+
 ### 2017-01-24
 
 - v0.10.0-20170124* released (stable)
