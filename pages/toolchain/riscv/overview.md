@@ -47,44 +47,71 @@ The RISC-V design is not a single architecture, but a family of architectures, w
 
 RISC-V ISA strings begin with either RV32I, RV32E, RV64I, or RV128I indicating the supported address space size in bits for the base integer ISA.
 
-Standard General-Purpose ISA
+* RV32I: A load-store ISA with 32, 32-bit general-purpose integer registers. 
+* RV32E: An embedded flavor of RV32I with only 16 integer registers. 
+* RV64I: A 64-bit flavor of RV32I where the general-purpose integer registers are 64-bits wide. 
 
-* I - Integer
+In addition to these base ISAs, a handful of extensions have been 
+specified. The extensions that have both been specified and are supported by the toolchain are: 
+
 * M - Integer Multiplication and Division 
 * A - Atomics
 * F - Single-Precision Floating-Point 
 * D - Double-Precision Floating-Point
+* C - 16-bit Compressed Instructions 
+
 * G - General, a shortcut to IMAFD
 
-Standard User-Level Extensions
-
-* Q - Quad-Precision Floating-Point 
-* L - Decimal Floating-Point
-* C - 16-bit Compressed Instructions 
-* B - Bit Manipulation
-* J - Dynamic Languages 
-* T - Transactional Memory 
-* P - Packed-SIMD Extensions 
-* V - Vector Extensions 
-* N - User-Level Interrupts
+RISC-V ISA strings are defined by appending the supported extensions to the 
+base ISA in the order listed above. For example, the RISC-V ISA with 32, 
+32-bit integer registers and the instructions to for multiplication would 
+be denoted as "RV32IM". Users can control the set of instructions that GCC 
+uses when generating assembly code by passing the lower-case ISA string to 
+the `-march` GCC option: for example `-march=rv32im`. 
 
 For more details, please see [The RISC-V Instruction Set Manual, Volume I: User-Level ISA, Document Version 2.2](https://content.riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf).
 
-Not all these extendsions are yet defined or implemented by the compiler; the `-march` supports only:
+In addition to controlling the instructions available to GCC during code 
+generating (which defines the set of implementations the generated code 
+will run on), users can select from various ABIs to target (which defines 
+the calling convention and layout of objects in memory). Objects and 
+libraries may only be linked together if they follow the same ABI. 
 
-* rv32i[m][a][f[d]]
-* rv32g 
-* rv64i[m][a][f[d]]
-* rv64g 
+RISC-V defines two integer ABIs and three floating-point ABIs, which 
+together are treated as a single ABI string. The integer ABIs follow the 
+standard ABI naming scheme: 
 
-The RISC-V supported application binary interfaces (`-mabi`) are:
+* `ilp32`: "int", "long", and pointers are all 32-bits long. "long long" is 
+a 64-bit type, "char" is 8-bit, and "short" is 16-bit. 
+* `lp64`: "long" and pointers are 64-bits long, while "int" is a 32-bit type. 
+The other types remain the same as ilp32. 
 
-* ilp32 (32-bits, soft-float)
-* ilp32f (32-bits with single-precision in registers and double in memory, niche use only)
-* ilp32d (32-bits, hard-float)
-* lp64 (64-bits long and pointers, soft-float)
-* lp64f (64-bits long and pointers, with single-precision in registers and double in memory, niche use only)
-* lp64d (64-bits long and pointers, hard-float).
+while the floating-point ABIs are a RISC-V specific addition: 
+
+* "" (the empty string): No floating-point arguments are passed in registers. 
+* `f`: 32-bit and smaller floating-point arguments are passed in registers. 
+This ABI requires the F extension, as without F there are no 
+floating-point registers. 
+* `d`: 64-bit and smaller floating-point arguments are passed in registers. 
+This ABI requires the D extension. 
+
+Just like ISA strings, ABI strings are concatenated together and passed via 
+the `-mabi` argument to GCC. For example: 
+
+* `-march=rv32imafdc -mabi=ilp32d`: Hardware floating-point instructions can 
+be generated and floating-point arguments are passed in registers. This 
+is like the `-mfloat-abi=hard` option to ARM's GCC. 
+* `-march=rv32imac -mabi=ilp32`: No floating-point instructions can be 
+generated and no floating-point arguments are passed in registers. This 
+is like the `-mfloat-abi=soft` argument to ARM's GCC. 
+* `-march=rv32imafdc -mabi=ilp32`: Hardware floating-point instructions can 
+be generated, but no floating-point arguments will be passed in 
+registers. This is like the `-mfloat-abi=softfp` argument to ARM's GCC, 
+and is usually used when interfacing with soft-float binaries on a 
+hard-float system. 
+* `-march=rv32imac -mabi=ilp32d`: Illegal, as the ABI requires floating-point 
+arguments are passed in registers but the ISA defines no floating-point 
+registers to pass them in. 
 
 The GNU MCU Eclipse RISC-V plug-in supports all current options, and reserves some for near future use.
 
