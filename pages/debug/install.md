@@ -110,5 +110,5 @@ Specific plug-in usage documentation is available from separate pages:
  [6]: {{ site.baseurl }}/plugins/install/ "Plug-ins install"
  [7]: {{ site.baseurl }}/debug/jlink/ "The J-Link hardware debugging Eclipse plug-in"
  [8]: {{ site.baseurl }}/debug/qemu/ "The QEMU debugging Eclipse plug-in"
- [9]: http://www.st.com/web/en/catalog/tools/PF258168
+ [9]: http://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stsw-link004.html
  [10]: https://github.com/texane/stlink
