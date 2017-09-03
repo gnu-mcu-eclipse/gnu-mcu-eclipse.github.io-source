@@ -13,90 +13,7 @@ The script was developed on macOS, but it also runs on any recent GNU/Linux dist
 
 ## Prerequisites
 
-The main trick that made the multi-platform build possible is [Docker](https://www.docker.com).
-
-Containers based on three docker images are used, one packing MinGW-w64 in two Debian 9 (32/64-bits) containers. The more conservative Debian was preferred to generate the GNU/Linux versions, to avoid problems when attempting to run the executables on older versions.
-
-### macOS
-
-#### Install the Command Line Tools
-
-The macOS compiler and other development tools are packed in a separate Xcode add-on. The best place to get it is from the [Developer](https://developer.apple.com/xcode/downloads/) site, although this might require enrolling to the developer program (free of charge).
-
-It is also possible to install the Command Line Tools via a command line:
-
-```bash
-$ xcode-select --install
-$ xcode-select -p
-/Library/Developer/CommandLineTools
-```
-
-To test if the compiler is available, use:
-
-```bash
-$ gcc --version
-Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
-Apple LLVM version 8.1.0 (clang-802.0.42)
-Target: x86_64-apple-darwin16.7.0
-Thread model: posix
-InstalledDir: /Library/Developer/CommandLineTools/usr/bin
-```
-
-#### Install a custom instance of Homebrew
-
-The build process is quite complex, and requires tools not available in the standard Apple macOS distribution. These tools can be installed with Homebrew. To keep these tools separate, a custom instance of Homebrew is installed in `${HOME}/opt/homebrew/gme`. 
-
-In a separate run, the **[MacTex](http://www.tug.org/mactex/)** tools are also installed in `${HOME}/opt/texlive`. Alternatively you can install MacTex in `/usr/local` using the official distribution, but this will add lots of programs to the system path, and this is a bad thing.
-
-The entire process can be automated with two scripts, available from GitHub:
-
-```
-$ mkdir -p ${HOME}/opt
-$ git clone https://github.com/ilg-ul/opt-install-scripts \
-    ${HOME}/opt/install-scripts.git
-$ bash ${HOME}/opt/install-scripts.git/install-homebrew-gme.sh
-$ bash ${HOME}/opt/install-scripts.git/install-texlive.sh
-```
-
-The scripts run with user credentials, no `sudo` access is required. Please be aware that the TeX install takes quite some time.
-
-#### Install Docker
-
-On macOS, Docker can be installed by following the official [Install Docker on macOS](https://docs.docker.com/installation/mac/) instructions.
-
-### GNU/Linux
-
-#### Install Docker
-
-For any GNU/Linux distribution, follow the [specific instructions](https://docs.docker.com/installation/#installation).
-
-#### Configure Docker to run as a regular user
-
-To allow docker to run as a regular user, you need to be a member of the `docker` group.
-
-```
-$ sudo groupadd docker
-$ sudo gpasswd -a ${USER} docker
-$ sudo service docker restart
-```
-
-To make these changes effective, logout and login.
-
-The above are for Ubuntu and the Debian family. For other distributions, the last line may differ, for example for Arch Linux use:
-
-```
-$ systemctl restart docker
-```
-
-#### Install required packages
-
-Since most of the build is performed inside the Docker containers, there are not many requirements for the host, and most of the time these programs are in the standard distribution (`curl`, `git`, `automake`, `patch`, `tar`, `unzip`).
-
-The script checks for them; if the script fails, install them and re-run.
-
-### Docker images
-
-The Docker images are available from [Docker Hub](https://hub.docker.com/u/ilegeul/). They were build using the Dockerfiles available from [ilg-ul/docker on GitHub](https://github.com/ilg-ul/docker).
+The prerequisites are common to all binary builds. Please follow the instructions in the separate [Prerequisites for building binaries]({{ site.baseurl }}/developer/build-binaries-prerequisites/) page and return when ready.
 
 ## Download the build scripts repo
 
@@ -104,8 +21,8 @@ The build script is available from GitHub and can be [viewed online](https://git
 
 To download it, clone the [gnu-mcu-eclipse/openocd-build](https://github.com/gnu-mcu-eclipse/openocd-build) Git repo. 
 
-```
-$ git clone https://github.com/gnu-mcu-eclipse/openocd-build.git \
+```bash
+$ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/openocd-build.git \
   ~/Downloads/openocd-build.git
 ```
 
@@ -119,18 +36,28 @@ Docker does not require to explicitly download new images, but does this automat
 
 However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:
 
-```
+```bash
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh preload-images
 ```
 
 The result should look similar to:
 
-```
+```bash
 $ docker images
 REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-ilegeul/debian      9-gnu-mcu-eclipse   ff8a853cf6cb        7 weeks ago         3.2GB
-ilegeul/debian32    9-gnu-mcu-eclipse   a22ccdf38f1f        7 weeks ago         3.2GB
+ilegeul/debian      9-gnu-mcu-eclipse     ff8a853cf6cb        4 days ago          3.2GB
+ilegeul/debian32    9-gnu-mcu-eclipse     a22ccdf38f1f        4 days ago          3.2GB
+ilegeul/debian32    9                     7348339e67f5        4 days ago          116MB
+debian              9                     a2ff708b7413        2 weeks ago         100MB
+hello-world         latest                1815c82652c0        3 weeks ago         1.84kB
+```
+
+## Rebuild the Docker images
+
+If the download speed is limited, probably it is faster to rebuild the images locally. For this see the `build-images` command:
+
+```bash
+$ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
 ```
 
 ## Select the stable or the development branch
@@ -164,13 +91,13 @@ $ bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 On macOS, to prevent entering sleep, use:
 
 ```
-$ caffeinate bash 
+$ caffeinate bash
 $ exec bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 ```
 
 About half an hour later, the output of the build script is a set of 5 files in the output folder:
 
-```
+```bash
 $ ls -l deploy
 total 41992
 drwxr-xr-x  8 ilg  staff      272 Aug 26 12:57 debian32
@@ -211,13 +138,13 @@ Instead of `--all`, you can use any combination of:
 
 To remove most build files, use:
 
-```
+```bash
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh clean
 ```
 
 To also remove the repository and the output files, use:
 
-```
+```bash
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
 ```
 
@@ -227,7 +154,7 @@ The procedure to install GNU MCU Eclipse OpenOCD is platform specific, but relat
 
 After install, this package should create structure like this (only the first two depth levels are shown):
 
-```
+```bash
 $ tree -L 2 /Applications/GNU\ MCU\ Eclipse/OpenOCD
 /Applications/GNU\ MCU\ Eclipse/OpenOCD
 ├── bin
@@ -273,8 +200,8 @@ A simple test is performed by the script at the end, by launching the executable
 
 For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:
 
-```
-$ opt/gnu-mcu-eclipse/openocd/0.10.0-3-20170826-0939-dev/bin/openocd --version
+```bash
+$ ${HOME}/opt/gnu-mcu-eclipse/openocd/0.10.0-3-20170826-0939-dev/bin/openocd --version
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00138-g96c70022 (2017-08-26-12:40)
 Licensed under GNU GPL v2
 For bug reports, read
