@@ -21,7 +21,7 @@ The build script is available from GitHub and can be [viewed online](https://git
 
 To download it, clone the [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build) Git repo, including submodules. 
 
-```
+```bash
 $ rm -rf ~/Downloads/riscv-none-gcc-build.git
 $ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build.git \
   ~/Downloads/riscv-none-gcc-build.git
@@ -63,20 +63,20 @@ $ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
 
 ## Build all distribution files
 
-```
+```bash
 $ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
 ```
 
 On macOS, to prevent entering sleep, use:
 
-```
+```bash
 $ caffeinate bash
 $ exec bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
 ```
 
 Many, many hours later, the output of the build script is a set of 8 files and their SHA signatures in the `deploy` folder:
 
-```
+```bash
 $ ls -l deploy
 total 784400
 -rw-r--r--  1 ilg  staff  75678450 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg
@@ -129,7 +129,7 @@ The procedure to install GNU MCU Eclipse RISC-V Embedded GCC is platform specifi
 
 After install, this package should create structure like this (only the first two depth levels are shown):
 
-```
+```bash
 $ tree -L 2 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 ├── README.md
@@ -215,7 +215,7 @@ A simple test is performed by the script at the end, by launching the executable
 
 For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:
 
-```
+```bash
 $ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
 riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
 ```
