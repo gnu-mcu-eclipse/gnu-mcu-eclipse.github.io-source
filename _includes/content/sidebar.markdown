@@ -77,7 +77,7 @@
 * [Releases]({{ site.baseurl }}/qemu/releases/)
 * [Support](https://github.com/gnu-mcu-eclipse/qemu/issues/1/) (report issue)
 
-#### [GNU ARM OpenOCD Home]({{ site.baseurl }}/openocd/)
+#### [GNU MCU OpenOCD Home]({{ site.baseurl }}/openocd/)
 
 * [Overview]({{ site.baseurl }}/openocd/) (read me first!)
 * [OpenOCD Install]({{ site.baseurl }}/openocd/install/)
