@@ -19,26 +19,34 @@ The Windows binaries are also generated on GNU/Linux, using [mingw-w64](http://m
 
 The macOS compiler and other development tools are packed in a separate Xcode add-on. The best place to get it is from the [Developer](https://developer.apple.com/xcode/downloads/) site, although this might require enrolling to the developer program (free of charge).
 
+It is also possible to install the Command Line Tools via a command line:
+
+```bash
+$ xcode-select --install
+$ xcode-select -p
+/Library/Developer/CommandLineTools
+```
+
 To test if the compiler is available, use:
 
 ```bash
 $ gcc --version
-Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
 Apple LLVM version 8.1.0 (clang-802.0.42)
-Target: x86_64-apple-darwin16.6.0
+Target: x86_64-apple-darwin16.7.0
 Thread model: posix
-InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 ```
 
 #### Install a custom instance of Homebrew
 
-The build process is quite complex, and requires tools not available in the standard Apple macOS distribution. These tools can be installed with Homebrew. To keep these tools separate, a custom instance of Homebrew is installed in `${HOME}/opt/homebrew-gme`. 
+The build process is quite complex, and requires tools not available in the standard Apple macOS distribution. These tools can be installed with Homebrew. To keep these tools separate, a custom instance of Homebrew is installed in `${HOME}/opt/homebrew/gme`. 
 
 In a separate run, the **[MacTex](http://www.tug.org/mactex/)** tools are also installed in `${HOME}/opt/texlive`. Alternatively you can install MacTex in `/usr/local` using the official distribution, but this will add lots of programs to the system path, and this is a bad thing.
 
 The entire process can be automated with two scripts, available from GitHub:
 
-```bash
+```
 $ mkdir -p ${HOME}/opt
 $ git clone https://github.com/ilg-ul/opt-install-scripts \
     ${HOME}/opt/install-scripts.git
@@ -46,7 +54,7 @@ $ bash ${HOME}/opt/install-scripts.git/install-homebrew-gme.sh
 $ bash ${HOME}/opt/install-scripts.git/install-texlive.sh
 ```
 
-The scripts run with user credentials, no `sudo` access is required.
+The scripts run with user credentials, no `sudo` access is required. Please be aware that the TeX install takes quite some time.
 
 #### Install Docker
 
@@ -57,7 +65,6 @@ Due to the specifics of macOS, Docker cannot run native; instead, it uses a GNU/
 For better results, dedicate 2 cores and at least 2 GB of RAM to the Docker.
 
 Warning: The current Docker version (17.x) has a memory leak in `com.docker.osxfs`, which makes its use questionable for long builds. As a workaround, install an Ubuntu 16.04 LTS virtual machine and use the GNU/Linux Docker.
-
 
 ### GNU/Linux
 
@@ -125,7 +132,13 @@ Hello from Docker!
 
 #### Install required packages
 
-Since most of the build is performed inside the Docker containers, there are not many requirements for the host, and most of the time these programs are in the standard distribution (`curl`, `git`, `automake`, `patch`, `tar`, `unzip`).
+Since most of the build is performed inside the Docker containers, there are not many requirements for the host, and most of the time these programs are in the standard distribution.
+
+However, a very few of them might need to be installed explicitly. On Ubuntu the command is:
+
+```bash
+sudo apt-get -y install curl git automake patch tar unzip
+```
 
 The script checks for them; if the script fails, install them and re-run.
 
