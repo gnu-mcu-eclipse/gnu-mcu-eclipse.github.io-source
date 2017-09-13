@@ -21,19 +21,21 @@ In the `gnu-mcu-eclipse/riscv-none-gcc-build` project git, edit the `gnu-mcu-ecl
 
 ## Add tags to source repos
 
-Check the project [riscv/riscv-gnu-toolchain](https://github.com/riscv/riscv-gnu-toolchain), and determine the specific commits used in the official distribution. 
+Check the project [riscv/riscv-gnu-toolchain](https://github.com/riscv/riscv-gnu-toolchain), and determine the specific commits used in the official distribution. Also check if newer stable commits are available
 
-Add tags with the original version number (like `v20170612`), in the following projects:
+If not present, add tags with the original version number (like `v20170612`).
 
-* the [riscv/riscv-gcc](https://github.com/riscv/riscv-gcc) project
-* the [riscv/riscv-binutils-gdb](https://github.com/riscv/riscv-binutils-gdb) project
-* the [riscv/riscv-newlib](https://github.com/riscv/riscv-newlib) project
+Add tags with the current version number (like `v7.1.1-2-20170912`), in the following projects:
+
+* the [gnu-mcu-eclipse/riscv-gcc](https://github.com/gnu-mcu-eclipse/riscv-gcc) project
+* the [gnu-mcu-eclipse/riscv-binutils-gdb](https://github.com/gnu-mcu-eclipse/riscv-binutils-gdb) project
+* the [gnu-mcu-eclipse/riscv-newlib](https://github.com/gnu-mcu-eclipse/riscv-newlib) project
 
 ## Update the script 
 
-In the [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build), update the `scripts/build.sh` to refer to the latest version number.
+In the [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build), update the `scripts/build.sh` to refer to the latest version number (`RELEASE_VERSION`).
 
-Check if the library sources (gmp, mpfr, mpc, isl) did change and possibly update them.
+For major releases, Check if the library sources (gmp, mpfr, mpc, isl) did change and possibly update them.
 
 ## Build
 
@@ -76,7 +78,7 @@ In the [gnu-mcu-eclipse/riscv-none-gcc](https://github.com/gnu-mcu-eclipse/riscv
 
 * go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases) page
 * click **Draft a new release**
-* name the tag like **v7.1.1-1-20170702-0625** (mind the dashes in the middle!)
+* name the tag like **v7.1.1-1-20170702** (mind the dashes in the middle!)
 * as description, copy the first paragraph from the Web release page
 * **attach binaries** (drag and drop from the `deploy` folder will do it)
 * click the **Publish Release** button
@@ -87,11 +89,11 @@ Note: at this moment the system should send a notification to all clients watchi
 
 In the project web, the recent post:
 
-* update the **Binary files »** link to use the actual version, like `https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.1.1-1-20170702-0625` (copy/paste it from the browser).
+* update the **Binary files »** link to use the actual version, like `https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.1.1-1-20170702` (copy/paste it from the browser).
 
 ## Publish the Web
 
-* git commit & push the `gnu-mcu-eclipse.github.io-source` project; use something like `v7.1.1-1-20170702-0625 update link` as message
+* git commit & push the `gnu-mcu-eclipse.github.io-source` project; use something like `v7.1.1-1-20170702 update link` as message
 
 ## Share on Facebook
 
