@@ -13,9 +13,9 @@ categories:
 
 ---
 
-Version v7.1.1-2-20170912-2255 is a new release of **GNU MCU Eclipse RISC-V Embedded GCC**; after the initial version of the `riscv64-unknown-elf` toolchain was released, it was discovered that it was intended more to applications that include a kernel-like environment, and less to bare-metal environments. This second release is intended to provide a temporary fix to this problem and make the toolchain more suitable for embedded bare-metal applications; for this it was necessary to **remove the mandatory use of libgloss** and to update to the latest newlib version which uses 'underscore' syscall functions. Hopefully the official toolchain distribution will follow shortly.
+Version v7.1.1-2-20170912-2255 is a new release of **GNU MCU Eclipse RISC-V Embedded GCC**; after the initial version of the `riscv64-unknown-elf` toolchain was released, it was discovered that it was intended more to applications that include a kernel-like environment, and less to bare-metal environments. This second release is intended to provide a temporary fix to this problem and make the toolchain more suitable for embedded bare-metal applications; for this it was necessary to to update to the latest newlib 2.5 release which uses 'underscore' syscall functions and to **remove the mandatory use of libgloss**. Hopefully the official toolchain distribution will follow shortly and use the same approach.
 
-In addition, this release adds a new multilib library for `march=rv32imaf/mabi=ilp32f`.
+In addition, based on users request, support for a new `march=rv32imaf/mabi=ilp32f` library was added.
 
 [Binary files »]({{ page.download_url }})
 
