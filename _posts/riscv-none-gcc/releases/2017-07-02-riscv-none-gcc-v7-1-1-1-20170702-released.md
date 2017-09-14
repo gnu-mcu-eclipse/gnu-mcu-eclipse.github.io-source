@@ -81,6 +81,15 @@ Instructions on how to install them are available in the [How to install the RIS
 
 For better control and repetability, the build scripts use Docker containers; all files required during builds are available as a separate [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build) project. 
 
+## Known problems
+
+[2017-09-14 update] Soon after this release was used in real projects, it was discovered that the general configuration of the toolchain was intended more to applications that include a kernel-like environment, and less to bare-metal environments. The main problems are:
+
+* the `newlib` configuration does not use the `underscore` syscall function, but the direct names (like `write()` instead of `_write()`), calls that are always forwarded to `libgloss`
+* the compiler configuration always links `libgloss` to the application; `libgloss` implements all system calls via traps to a unix like kernel.
+
+Both problems were fixed in the [v7.1.1-2-20170912](https://gnu-mcu-eclipse.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/) release.
+
 ## Checksums
 
 The SHA-256 hashes for the files are:
