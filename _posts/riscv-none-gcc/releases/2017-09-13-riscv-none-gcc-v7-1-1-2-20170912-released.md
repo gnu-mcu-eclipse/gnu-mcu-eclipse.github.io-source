@@ -21,7 +21,7 @@ In addition, based on users request, support for a new `march=rv32imaf/mabi=ilp3
 
 ## Compliance
 
-All **GNU MCU Eclipse RISC-V Embedded GCC** releases follow the official [RISC-V distribution](https://github.com/riscv/riscv-gcc) maintained by [SiFive](https://www.sifive.com).
+All **GNU MCU Eclipse RISC-V Embedded GCC** releases are based on the official [RISC-V source files](https://github.com/riscv/riscv-gcc) maintained by [SiFive](https://www.sifive.com).
 
 The current version is based on the following commits:
 
@@ -64,9 +64,10 @@ Please note that, although all combinations of `march/mabi` are supported by the
 
 Compared to the original RISC-V `riscv64-unknown-elf` toolchain, the following improvements can be noted:
 
+* a newer `newlib` was included, which supports the 'underscore' syscall functions
 * the mandatory reference to `libgloss` in the linker configuration was removed
 * the `march=rv32imaf/mabi=ilp32f` libary was added to the list of multilibs
-* `newlib-nano` was added
+* support for `newlib-nano` was added
 * the standard documentation, in PDF and HTML, was added
 
 ## newlib-nano
