@@ -95,6 +95,21 @@ In the project web, the recent post:
 
 * git commit & push the `gnu-mcu-eclipse.github.io-source` project; use something like `v7.1.1-1-20170702 update link` as message
 
+## Update the release link
+
+In the release page:
+
+* add **\[Continue reading »\]\(\)**
+* get URL from web and update the link
+
+## Add badge
+
+In the release page, at the end:
+
+```
+[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/riscv-none-gcc/vv7.1.1-2-20170912/total.svg)](https://gnu-mcu-eclipse.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/)
+```
+
 ## Share on Facebook
 
 * go to the new post and follow the Share link.
@@ -103,6 +118,4 @@ In the project web, the recent post:
 * posting as GNU ARM Eclipse
 * click **Share link**
 * check the post in the [Facebook page](https://www.facebook.com/gnu-mcu-eclipse)
-
-
 
