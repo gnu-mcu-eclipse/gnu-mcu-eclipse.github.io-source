@@ -11,6 +11,12 @@ Entries in this file are in reverse chronological order.
 
 ## 2017
 
+### 2017-09-12
+
+- v7.1.1-2-20170912-2255 released
+- add multilib support for rv32imaf/ilp32f
+- remove mandatory link of libgloss
+
 ### 2017-07-02
 
 - v7.1.1-1-20170702-0625 released
