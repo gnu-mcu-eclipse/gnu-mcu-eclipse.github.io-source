@@ -83,7 +83,7 @@ function do_script() {
 
   # Mainly to validate the internal & external links.
   do_run bundle exec htmlproofer \
-  --url-ignore "https://developer.apple.com/xcode/downloads/,http://developer.apple.com/xcode/downloads/,https://img.shields.io/,https://shields.io/" \
+  --url-ignore "https://developer.apple.com/xcode/downloads/,http://developer.apple.com/xcode/downloads/" \
   "${site}"
 
   # ---------------------------------------------------------------------------
