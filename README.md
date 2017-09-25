@@ -19,27 +19,30 @@ The web site is generated off-line by [Jekyll](http://jekyllrb.com). It cannot b
 
 To be able to run the Jekyll build process, the `ruby` interpreter and the `gem` tool are required. In macOS 10.10.5, these tools are preinstalled, at least when the Developer Command Line tools are present.
 
-	$ ruby --version
-	ruby 2.0.0p481 (2014-05-08 revision 45883) [universal.x86_64-darwin14]
-	$ gem --version
-	2.0.14
-	$ sudo gem install jekyll
-	...
-	$ jekyll --version
-	jekyll 2.5.3
-
+```bash
+$ ruby --version
+ruby 2.0.0p481 (2014-05-08 revision 45883) [universal.x86_64-darwin14]
+$ gem --version
+2.0.14
+$ sudo gem install jekyll
+...
+$ jekyll --version
+jekyll 2.5.3
+```
 
 In addition, the several specific gems are required:
 
-	$ sudo gem install redcarpet jekyll-mentions jemoji jekyll-redirect-from jekyll-feed jekyll-sitemap jekyll-last-modified-at
-
-
+```bash
+$ sudo gem install redcarpet jekyll-mentions jemoji jekyll-redirect-from jekyll-feed jekyll-sitemap jekyll-last-modified-at
+```
 
 ## Clone Git
 
 To manage the web site, a local copy of this repository is required.
 
-	$ git clone https://github.com/gnu-mcu-eclipse/gnu-mcu-eclipse.github.io-source.git gnu-mcu-eclipse.github.io-source.git
+```bash
+$ git clone https://github.com/gnu-mcu-eclipse/gnu-mcu-eclipse.github.io-source.git gnu-mcu-eclipse.github.io-source.git
+```
 
 ## Development
 
@@ -47,14 +50,18 @@ The current development cycle is edit-save-build-view.
 
 The build can be performed automatically by Jekyll when started in server mode.
 
-	$ cd gnu-mcu-eclipse.github.io-source.git
-	$ jekyll serve --baseurl "" --trace
+```bash
+$ cd gnu-mcu-eclipse.github.io-source.git
+$ jekyll serve --baseurl "" --trace
+```
 
 To view the result, point the browser to `localhost:4000`.
 
 ## Publish
 
-The build result is in the `_site` folder.
+Normally the Travis job published the site if everything is fine.
+
+When running the build manually, the result is in the `_site` folder.
 
 This folder is configured as a submodule, linked to the [gnu-mcu-eclipse.github.io](https://github.com/gnu-mcu-eclipse/gnu-mcu-eclipse.github.io) project.
 
