@@ -10,9 +10,9 @@ date: 2015-09-10 20:22:00 +0300
 
 ## Build
 
--   select the **gnumcueclipse-plugins** parent project
--   right click, select **Run As** → **Run configurations...** → **GME clean verify** (be sure you do not run the **install** goal, it'll pollute the cache)
--   wait a while for Maven to load all required modules
+*   select the **gnumcueclipse-plugins** parent project
+*   right click, select **Run As** → **Run configurations...** → **GME clean verify** (be sure you do not run the **install** goal, it'll pollute the cache)
+*   wait a while for Maven to load all required modules
 
 The result of a successful build looks like this:
 
@@ -67,9 +67,10 @@ The result of a successful build looks like this:
 [INFO] ------------------------------------------------------------------------
 ```
 
-The build result is in the `ilg.gnumcueclipse.repository` project
-* the `target/ilg.gnumcueclipse.repository-3.3.1-SNAPSHOT.zip` file
-* the `target/repository` folder, with the p2 update site
+The result are two p2 repositories:
+
+* `repositories/ilg.gnumcueclipse.repository/target/repository`
+* `repositories/ilg.gnumcueclipse.riscv.repository/target/repository`
 
 ## Debug
 
@@ -121,8 +122,8 @@ A more elaborated configuration is required when willing to run debug sessions u
 
 Clone the CDT repository:
 
-```
-git clone git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git org.eclipse.cdt.git
+```bash
+$ git clone git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git org.eclipse.cdt.git
 ```
 
 Create a new working set named **CDT**
