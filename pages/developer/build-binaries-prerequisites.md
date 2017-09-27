@@ -137,7 +137,7 @@ Since most of the build is performed inside the Docker containers, there are not
 However, a very few of them might need to be installed explicitly. On Ubuntu the command is:
 
 ```bash
-sudo apt-get -y install curl git automake patch tar unzip
+sudo apt-get -y install curl git automake libtool patch tar unzip
 ```
 
 The script checks for them; if the script fails, install them and re-run.
