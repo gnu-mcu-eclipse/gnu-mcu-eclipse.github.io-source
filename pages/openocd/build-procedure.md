@@ -64,18 +64,6 @@ $ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
 
 The repository has two branches; by default the development branch is used.
 
-To select the stable branch, use:
-
-```
-$ bash ~/Downloads/openocd-build.git/scripts/build.sh checkout-stable
-```
-
-To later switch back to the development branch, use:
-
-```
-$ bash ~/Downloads/openocd-build.git/scripts/build.sh checkout-dev
-```
-
 To pull new commits from the repository, use:
 
 ```
