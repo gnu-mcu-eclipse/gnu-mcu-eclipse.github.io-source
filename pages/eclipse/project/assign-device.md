@@ -20,17 +20,12 @@ The **Devices** tab is visible in the **Settings** properties page only for proj
 
 It is not possible to assign devices/boards to projects created by other plug-ins, because they lack the mechanisms to handle such additional data.
 
-### The Packs plug-ins
+### The Packs are available
 
-For the device list to be populated, it is required that the Packs plug-ins are first installed. To check this, use the **About Eclipse** menu and click the **Installation Details** button.
+For the device list to be populated, it is required that:
 
-![Check the presence of the Packs plug-ins]({{ site.baseurl }}/assets/images/2014/10/PacksFeature.png)
-
-If not present, it is recommended to first read the [Packs manager]({{ site.baseurl }}/plugins/packs-manager/) documentation page where installation details are also provided.
-
-### Install required packs
-
-Once the Packs plug-ins are available, and the list of available packages was retrieved, it is necessary to install the packages related to the devices used by the projects under development.
+* the Packs plug-ins are first installed ([Packs manager]({{ site.baseurl }}/plugins/packs-manager/))
+* the packages related to the devices used by the projects under development are installed
 
 Please note that failure to do so will prevent the device selection window to make the desired device available for selection.
 
