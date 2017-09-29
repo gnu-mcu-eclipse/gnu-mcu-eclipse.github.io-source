@@ -92,7 +92,7 @@ How to build the plug-ins from sources and publish them.
 
 ### Installers
 
-*   [NSIS](http://nsis.sourceforge.net/Main_Page)
+*   [NSIS](https://sourceforge.net/projects/nsis/)
 *   [Single Package](http://blogs.msdn.com/b/windows_installer_team/archive/2009/09/02/authoring-a-single-package-for-per-user-or-per-machine-installation-context-in-windows-7.aspx)
 
 
