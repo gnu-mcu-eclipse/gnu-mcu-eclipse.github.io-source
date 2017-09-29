@@ -45,8 +45,8 @@ The new internal URL addresses used for downloads are:
 
 For compatibility reasons, the old URLs will continue to be active and maintained, being redirected to the same Bintray locations:
 
-- [http://gnuarmeclipse.sourceforge.net/updates](http://gnuarmeclipse.sourceforge.net/updates)
-- [http://gnuarmeclipse.sourceforge.net/updates-test](http://gnuarmeclipse.sourceforge.net/updates-test)
+- `http://gnuarmeclipse.sourceforge.net/updates`
+- `http://gnuarmeclipse.sourceforge.net/updates-test`
 
 ## Expected issues
 
