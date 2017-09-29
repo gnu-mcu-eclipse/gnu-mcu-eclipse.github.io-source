@@ -115,7 +115,7 @@ During the lifetime of a project, creating/editing source files and building bi
 There are many debugging techniques and tools, but we recommend two solutions:
 
 * the [SEGGER J-Link](http://www.segger.com/jlink_base.html) probe with its integrated GDB server, via [the J-Link plug-in][7]
-* the [OpenOCD](http://openocd.sourceforge.net) GDB server for many other JTAG probes.
+* the [OpenOCD](http://openocd.org) GDB server for many other JTAG probes.
 
   ![The J-Link Debugger tab]({{ site.baseurl }}/assets/images/2015/launch-jlink-debugger-tab.png)
 

@@ -92,5 +92,5 @@ We are aware that a lot of links to the previous sites are in use. To avoid brea
 
 The previous WordPress and MediaWiki sites were moved back to SourceForge and, for historical reasons, will be preserved there, but will no longer be maintained:
 
-* [`http://gnuarmeclipse.sourceforge.net/blog/`](http://gnuarmeclipse.sourceforge.net/blog/)
-* [`http://gnuarmeclipse.sourceforge.net/wiki/`](http://gnuarmeclipse.sourceforge.net/wiki/)
+* `http://gnuarmeclipse.sourceforge.net/blog/`
+* `http://gnuarmeclipse.sourceforge.net/wiki/`

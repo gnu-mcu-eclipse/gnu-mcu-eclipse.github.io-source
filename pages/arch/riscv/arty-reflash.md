@@ -17,7 +17,7 @@ For the rest of us, installing a Windows virtual machine and huge (tens of GB) a
 
 ## xc3sprog
 
-A simpler solution is to use the open source [xc3sprog](http://xc3sprog.sourceforge.net) program.
+A simpler solution is to use the open source [xc3sprog](https://sourceforge.net/projects/xc3sprog/) program.
 
 ### How to build
 
