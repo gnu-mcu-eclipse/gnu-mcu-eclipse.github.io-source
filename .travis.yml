@@ -16,6 +16,11 @@ language: ruby
 rvm:
   - 2.3.1
 
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
+
 # all commits required for jekyll-last-modified-at
 git:
   depth: 999999999

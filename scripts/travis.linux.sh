@@ -82,7 +82,8 @@ function do_script() {
   # curl -L --url http://developer.apple.com/xcode/downloads/ --verbose
 
   # Mainly to validate the internal & external links.
-  do_run bundle exec htmlproofer --only-4xx "${site}"
+  # do_run bundle exec htmlproofer --only-4xx "${site}"
+  do_run bundle exec htmlproofer "${site}"
 
   # ---------------------------------------------------------------------------
   # The deployment code is present here not in after_success, 
