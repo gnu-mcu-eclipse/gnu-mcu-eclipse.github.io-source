@@ -121,3 +121,4 @@ Many thanks to the following donors (in chronological order):
 * Seth Johnson, USA
 * Christopher Parish, USA
 * Mark Bianchi, USA
+* Gerhard Rollinger, Germany
