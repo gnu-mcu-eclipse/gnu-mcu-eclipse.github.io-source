@@ -38,7 +38,7 @@ This change also raised the minimum supported version to Eclipse Luna SR2 and Ja
 
 > I get the following when trying to install Cross Compiler
 
-```bash
+```console
 Cannot complete the install because one or more required items could not be found.
 Software being installed: GNU ARM C/C++ Cross Compiler 1.15.2.201511061603 (ilg.gnuarmeclipse.managedbuild.cross.feature.group 1.15.2.201511061603)
 ```
@@ -61,7 +61,7 @@ Instead, go to the [Eclipse download site](http://www.eclipse.org/downloads/) an
 
 The syntax required by the OpenOCD `echo` command is a single string, in other words both echo and the message must be in the same string. To achieve this in a shell, the string must be quoted:
 
-```bash
+```
 -c 'echo "Started by GNU ARM Eclipse"'
 ```
 
@@ -224,7 +224,7 @@ If you have lots of folders and re-entereing them is tedious, you can try to man
 
 ## I tried to use Float ABI: hard on Cortex-M4, but the linker fails
 
-```bash
+```console
 Building target: test1.elf
 Invoking: Cross ARM C++ Linker
 /usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/bin/ld: error: test1.elf uses VFP register arguments

@@ -37,7 +37,7 @@ For stable releases, with SourceTree
 
 Be sure the scripts in the **build-scripts.git** are up to date.
 
-```
+```console
 $ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
   ~/Downloads/build-scripts.git
 ```
@@ -46,7 +46,7 @@ $ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
 
 Important note: Before starting the build, double check if the repository is clean (all changes were commited), otherwise the build version will be stamped with `-dirty`).
 
-```
+```console
 $ caffeinate bash
 $ bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh cleanall
 $ bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh --all
@@ -62,7 +62,7 @@ $ bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh --all
 
 Copy/paste the build report at the end of the post as
 
-```
+```console
 00fa757a9bd0f80ce897e6d546183b58  
 gnuarmeclipse-qemu-debian32-2.4.50-201510290935-dev.tgz
 

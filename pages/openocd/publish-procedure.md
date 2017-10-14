@@ -43,7 +43,7 @@ With SourceTree, push to the GitHub remote, the **gnu-mcu-eclipse** and the **gn
 
 Be sure the scripts in the **openocd/build.git** are up to date.
 
-```
+```console
 $ git clone https://github.com/gnu-mcu-eclipse/openocd-build.git \
   ~/Downloads/openocd-build.git
 ```
@@ -52,7 +52,7 @@ $ git clone https://github.com/gnu-mcu-eclipse/openocd-build.git \
 
 Important note: Before starting the build, double check if the repository is clean (all changes were commited), otherwise the build version will be stamped with `-dirty`).
 
-```
+```console
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh checkout-stable
 $ caffeinate bash 
@@ -71,7 +71,7 @@ In the documentation git:
 
 Copy/paste the build report at the end of the post as
 
-```
+```console
 4ca0dd6d9c9ad24af2aa4eddec7717e1  
 gnuarmeclipse-openocd-debian32-0.10.0-201601101000-dev.tgz
 

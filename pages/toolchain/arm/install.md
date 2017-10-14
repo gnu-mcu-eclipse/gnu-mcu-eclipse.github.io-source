@@ -58,7 +58,7 @@ According to Microsoft, this is the recommended location for installing user spe
 
 In addition, the GNU MCU Eclipse plug-ins also check the following locations (POSIX paths):
 
-```
+```console
 ${user.home}/AppData/Local/GNU Tools ARM Embedded;\
 ${user.home}/opt/GNU Tools ARM Embedded;\
 ${user.home}/opt/gnu-tools-arm-embedded;\
@@ -101,7 +101,7 @@ If you decide to install the toolchain in a system location, you can use the com
 * read the `readme.txt` file
 * test if the compiler is functional; use the actual install path:
 
-  ```bash
+  ```console
 C:\>"C:\Program Files\GNU Tools ARM Embedded\4.8 2014q2\bin\arm-none-eabi-gcc.exe" --version
 arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-branch revision 211358]
 ```
@@ -134,7 +134,7 @@ ${user.home}/local:\
 * unpack the archive in the destination folder
 * the result should be a folder like `${HOME}/opt/gcc-arm-none-eabi-{{ page.version-id }}`
 
-  ```bash
+  ```console
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
 $ tar xjf ~/Downloads/gcc-arm-none-eabi-{{ page.version-id }}-mac.tar.bz2
@@ -143,7 +143,7 @@ $ chmod -R -w ${HOME}/opt/gcc-arm-none-eabi-{{ page.version-id }}
 
 * test if the compiler is functional; use the actual install path:
 
-  ```bash
+  ```console
 $ ${HOME}/opt/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc --version
 arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors 6-2017-q1-update) 6.3.1 20170215 (release) [ARM/embedded-6-branch revision 245512]
 ```
@@ -168,19 +168,19 @@ The following steps were performed on **Ubuntu 14.04 LTSx64** (please adjust the
 
 * in older versions, the toolchain executables are 32-bits apps; when running on 64-bits machines, be sure you install the following 32-bits libraries (for different versions check the toolchain README for the actual list):
 
-  ```bash
+  ```console
 $ sudo apt-get -y install lib32z1 lib32ncurses5 lib32bz2-1.0
 ```
 
 * on Ubuntu 15.04 the following libraries are required:
 
-  ```bash
+  ```console
 $ sudo apt-get -y install lib32ncurses5
 ```
 
 * on Ubuntu 12 LTSx64 all 32-bits libraries were packed in ia32-libs, so you can also use, but be prepared to get a lot of useless libraries:
 
-  ```bash
+  ```console
 $ sudo apt-get -y install ia32-libs
 ```
 
@@ -194,7 +194,7 @@ $ sudo apt-get -y install ia32-libs
 
   > Note: It is highly recommended to **do not change the install path**, since the plug-in tries to automatically discover the toolchain by searching only a limited set of possible locations (`${HOME}/local`, `${HOME}/opt`, `/usr/local`).
 
-  ```bash
+  ```console
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
 $ tar xjf ~/Downloads/gcc-arm-none-eabi-{{ page.version-id }}-linux.tar.bz2
@@ -204,7 +204,7 @@ $ chmod -R -w ${HOME}/opt/gcc-arm-none-eabi-{{ page.version-id }}
 * the result should be a folder like `${HOME}/opt/gcc-arm-none-eabi-{{ page.version-id }}`
 * test if the compiler is functional; use the actual install path:
 
-  ```bash
+  ```console
 $ ${HOME}/opt/gcc-arm-none-eabi-4_8-2014q1/bin/arm-none-eabi-gcc --version
 arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-branch revision 208322]
 ```

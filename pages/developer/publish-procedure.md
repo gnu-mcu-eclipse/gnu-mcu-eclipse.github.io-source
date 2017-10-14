@@ -24,7 +24,7 @@ For this, run the `scripts/publish-v4-neon-updates-test.command` (this is a scri
 
 A typical session looks like:
 
-```
+```console
 $ /Users/ilg/My\ Files/MacBookPro\ Projects/GNU\ ARM\ Eclipse/plug-ins.git/scripts/publish-v4-neon-updates-test.command ; exit;
 
 User: ilg-ul
@@ -63,7 +63,7 @@ In the [plug-ins issues](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issu
 
 Scan the Git log and add new entries to the [Change log]({{ site.baseurl }}/developer/change-log/) (pages/developer/change-log.md), grouped by days.
 
-```
+```console
 $ git log --pretty='%cd * %s' --since 2015-06-24 \
 --reverse --date=short >~/Desktop/ChangeLog.txt
 ```
@@ -110,7 +110,7 @@ Mark all these issues as part of the current version milestone. Refer to them as
 
 When all ready, run the `scripts/publish-v4-neon-updates.command`:
 
-```
+```console
 $ /Users/ilg/My\ Files/MacBookPro\ Projects/GNU\ ARM\ Eclipse/plug-ins.git/scripts/publish-v4-neon-updates.command ; exit;
 Do you really want to publish? (Yes)? Yes
 

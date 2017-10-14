@@ -31,14 +31,14 @@ In the **gnuarmeclipse/windows-build-tools** project, commit all changes.
 
 Be sure the scripts in the **build-scripts.git** are up to date.
 
-```
+```console
 $ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
   ~/Downloads/build-scripts.git
 ```
 
 ## Build
 
-```
+```console
 $ bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh cleanall
 $ caffeinate bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh --all
 ```
@@ -53,7 +53,7 @@ $ caffeinate bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tool
 
 Copy/paste the build report at the end of the post as
 
-```
+```console
 c88f834f14f20b99bda1747ab6a8857b
 gnuarmeclipse-build-tools-win32-2.7-201610281058-setup.exe
 

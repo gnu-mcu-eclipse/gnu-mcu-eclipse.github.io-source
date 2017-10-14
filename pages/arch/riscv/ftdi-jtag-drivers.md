@@ -37,7 +37,7 @@ When dealing with USB drivers, Apple is even stricter; if the USB device has any
 
 To view the attached USB devices on macOS, use `system_profiler`. For example, the HiFive1 board is seen as Dual RS232-HS, PID:VID 6010:0403:
 
-```bash
+```console
 $ system_profiler SPUSBDataType
 ...
     Dual RS232-HS:
@@ -57,7 +57,7 @@ If you already use FTDI based USB/UART adapters, remember the Product ID, since 
 
 By default, macOS identifies the board as a **Dual RS232-HS** device, and offers to configure it as a network interface. Since the HiFive1 board does not have an EEPROM to store an unique ID, the devices are named using a string containing the address in the HUB hierarchy, so the `a13` letters in the name are different when connecting the board to a different USB port.
 
-```bash
+```console
 $ ls -l /dev/tty.usbserial*
 crw-rw-rw-  1 root  wheel   19,  28 Jul 10 12:09 /dev/tty.usbserial-fa13A
 crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
@@ -65,7 +65,7 @@ crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
 
 Attempts to open the trace port (the second UART) are ok:
 
-```bash
+```console
 $ screen /dev/tty.usbserial-fa13B 115200
                 SIFIVE, INC.
 
@@ -99,7 +99,7 @@ Use `Ctrl-A Ctrl-K` to kill the session, or `Ctrl-A Ctrl-D` to detach and `scree
 
 Attempts to open the HiFive1 board with OpenOCD fail with:
 
-```
+```console
 $ openocd -f board/sifive-freedom-e300-hifive1.cfg 
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00135-g80299198 (2017-06-22-18:37)
 Licensed under GNU GPL v2
@@ -113,7 +113,7 @@ Error: unable to open ftdi device with vid 0403, pid 6010, description 'Dual RS2
 
 The workaround it to disable all _personalities_ of the AppleUSBFTDI kernel:
 
-```bash
+```console
 $ sudo kextunload -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personalities-only
 ```
 
@@ -121,7 +121,7 @@ This command will remove the UART associations for all FTDI based devices. All d
 
 In the HiFive1 case, the first interface should no longer be available as a tty device, but as JTAG, and OpenOCD should be able to connect to the JTAG interface:
 
-```bash
+```console
 $ openocd -f board/sifive-freedom-e300-hifive1.cfg 
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00135-g80299198 (2017-06-22-18:37)
 Licensed under GNU GPL v2
@@ -145,7 +145,7 @@ cleared protection for sectors 64 through 255 on flash bank 0
 
 This next command will redo the UART association only for the given personality, in this case the second interface of PID 0x6010 (`AppleUSBEFTDI-6010-1`).
 
-```bash
+```console
 $ sudo kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-1
 $ ls -l /dev/tty.usbserial*
 crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
@@ -157,7 +157,7 @@ If you have other FTDI devices that you need to remain associated to UART, issue
 
 The AppleUSBFTDI module has many _personalities_; to bring them back, start `kextutil` in interractive mode, or reboot:
 
-```bash
+```console
 $ sudo kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -interactive
 Defaulting to kernel file '/System/Library/Kernels/kernel'
 /System/Library/Extensions/AppleUSBFTDI.kext appears to be loadable (not including linkage for on-disk libraries).
@@ -190,7 +190,7 @@ I personaly have two USB/UART DB-9 adapters and the RISC-V HiFive1 and Arty boar
 
 To make them work, I use a file
 
-```
+```console
 # Disable all FTDI devices
 kextunload -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personalities-only
 # Enable the second interface on the HiFive1 board
@@ -201,7 +201,7 @@ kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSB
 
 that I start with:
 
-```
+```console
 $ sudo bash ${HOME}/opt/scripts/ftdi.sh
 ```
 
@@ -209,7 +209,7 @@ $ sudo bash ${HOME}/opt/scripts/ftdi.sh
 
 GNU/Linux systems do not need suplimentary drivers to access the FTDI devices, but only some configuration tweaks.
 
-```
+```console
 $ lsusb
 ...
 Bus XXX Device XXX: ID 0403:6010 Future Technology Devices

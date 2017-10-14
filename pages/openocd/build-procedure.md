@@ -62,13 +62,13 @@ $ bash ~/Downloads/openocd-build.git/scripts/build.sh build-images
 
 ## Build all distribution files
 
-```
+```console
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 ```
 
 On macOS, to prevent entering sleep, use:
 
-```
+```console
 $ caffeinate bash
 $ exec bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 ```

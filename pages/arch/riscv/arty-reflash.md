@@ -25,7 +25,7 @@ A simpler solution is to use the open source [xc3sprog](https://sourceforge.net/
 
 On GNU/Linux, building `xc3sprog` requires `svn`, `cmake`, `libftdi` and `libusb`.
 
-```bash
+```console
 $ svn http://xc3sprog.svn.sourceforge.net/svnroot/xc3sprog/trunk xc3sprog.svn
 $ mkdir build
 $ cd build
@@ -47,7 +47,7 @@ Given this configuration, the Arty re-flashing is done in two steps:
 * the first step uses `xc3sprog` to program Xlinx to obtain access to the SPI flash
 * the second step uses `openocd` to program the main `.mcs` image into the SPI flash
 
-```bash
+```console
 $ xc3sprog -c nexys4 E31_ArtyTop.bit
 $ cd freedom-e-sdk
 $ openocd -f bsp/env/coreplexip-e31-arty/openocd.cfg \

@@ -56,7 +56,7 @@ The result is a structure like:
 
 To check if OpenOCD starts, use the following command:
 
-```
+```console
 C:>"C:\Program Files\GNU MCU Eclipse\OpenOCD\0.8.0-201503201840\bin\openocd" --version
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-03-20-18:40)
 ```
@@ -103,7 +103,7 @@ The package is installed in:
 
 To check if OpenOCD starts, use:
 
-```
+```console
 $ /Applications/GNU\ ARM\ Eclipse/OpenOCD/0.8.0-201501181257/bin/openocd --version
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-01-18-12:57)
 ```
@@ -121,7 +121,7 @@ In case you use an older distribution and encounter difficulties to run **GNU M
 
 To install this package, unpack the archive and copy it to  `/opt/gnuarmeclipse/openocd/${version}`
 
-```
+```console
 $ sudo mkdir -p /opt/gnuarmeclipse
 $ cd /opt/gnuarmeclipse
 $ sudo tar xvf ~/Downloads/gnuarmeclipse-openocd-debian64-0.10.0-201510281129-dev.tgz
@@ -131,7 +131,7 @@ Note: although perfectly possible to install it in any location, it is recommend
 
 To check if OpenOCD starts and is recent, use:
 
-```
+```console
 $ /opt/gnuarmeclipse/openocd/0.10.0-201510281129-dev/bin/openocd --version
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0-dev-00141-g09aeb96-dirty (2015-10-28-11:56)
 ```
@@ -140,7 +140,7 @@ GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0-dev-00141-g09aeb96-dirty (2
 
 For the JTAG probes implemented as USB devices (actually most of them), the last installation step on GNU/Linux is to configure the **UDEV** subsystem. OpenOCD provides an UDEV rules file defining all the supported IDs; to install it, just copy the file to `/etc/udev/rules.d` and eventually notify the daemon:
 
-```
+```console
 $ sudo cp /opt/gnuarmeclipse/openocd/0.10.0-201510281129-dev/contrib/99-openocd.rules \
   /etc/udev/rules.d/
 $ sudo udevadm control --reload-rules
@@ -154,7 +154,7 @@ On some GNU/Linux distributions, the UDEV definitions are not enough,
 or are not effective, and when trying to access the JTAG probe,
 an error is issued:
 
-```
+```console
 libusb_open failed: LIBUSB_ERROR_ACCESS
 ```
 
@@ -163,8 +163,8 @@ for regular work you also need to grant your user permission to use the USB.
 
 For example, on Ubuntu 15.10 you need to issue something like:
 
-```
-sudo usermod -aG plugdev $USER
+```console
+$ sudo usermod -aG plugdev $USER
 ```
 
 Then relogin or restart.
@@ -176,7 +176,7 @@ when you have a functional solution post it on the project forum.
 
 To test if OpenOCD is able to connect to a specific board, you generally need to select the interface and the processor. As a shortcut, for some well known boards, there are ready made configuration files to set both the interface and the processor. For example, on macOS, to test a connection via ST/LINK v2 to the STM32F4DISCOERY board, you can use the sample below:
 
-```
+```console
 $ /Applications/GNU\ ARM\ Eclipse/OpenOCD/0.8.0-201501181257/bin/openocd \
   -f board/stm32f4discovery.cfg
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036-gb7535dd (2015-01-18-12:57)

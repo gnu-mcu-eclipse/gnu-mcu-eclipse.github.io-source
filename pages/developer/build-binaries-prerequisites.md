@@ -21,7 +21,7 @@ The macOS compiler and other development tools are packed in a separate Xcode ad
 
 It is also possible to install the Command Line Tools via a command line:
 
-```bash
+```console
 $ xcode-select --install
 $ xcode-select -p
 /Library/Developer/CommandLineTools
@@ -29,7 +29,7 @@ $ xcode-select -p
 
 To test if the compiler is available, use:
 
-```bash
+```console
 $ gcc --version
 Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
 Apple LLVM version 8.1.0 (clang-802.0.42)
@@ -76,7 +76,7 @@ For any GNU/Linux distribution, follow the [specific instructions](https://docs.
 
 The steps are basically:
 
-```bash
+```console
 $ sudo apt-get update
 
 $ sudo apt-get install apt-transport-https ca-certificates  curl software-properties-common
@@ -91,7 +91,7 @@ $ sudo apt-get -y install docker-ce
 
 To check if the install is functional, run the _Hello World_ image, for the moment as `sudo`:
 
-```bash
+```console
 $ sudo docker run hello-world
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
@@ -107,7 +107,7 @@ Hello from Docker!
 
 To allow Docker to run as a regular user, you need to be a member of the `docker` group.
 
-```bash
+```console
 $ sudo groupadd docker
 $ sudo gpasswd -a ${USER} docker
 $ sudo service docker restart
@@ -115,7 +115,7 @@ $ sudo service docker restart
 
 The above spets are for Ubuntu and the Debian family. For other distributions, the last line may differ, for example for Arch Linux use:
 
-```bash
+```console
 $ systemctl restart docker
 ```
 
@@ -123,7 +123,7 @@ To make these changes effective, logout and login.
 
 To check if the configuration change is functional, run the same _Hello World_ image without sudo:
 
-```bash
+```console
 $ docker run hello-world
 
 Hello from Docker!
@@ -136,8 +136,8 @@ Since most of the build is performed inside the Docker containers, there are not
 
 However, a very few of them might need to be installed explicitly. On Ubuntu the command is:
 
-```bash
-sudo apt-get -y install curl git automake libtool patch tar unzip
+```console
+$ sudo apt-get -y install curl git automake libtool patch tar unzip
 ```
 
 The script checks for them; if the script fails, install them and re-run.

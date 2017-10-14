@@ -43,7 +43,7 @@ By default this will install the programs in the `C:\Program Files\GNU MCU Ecli
 
 Check if the tool is functional; go to the folder where you installed the tools and run `make --version`.
 
-```
+```console
 C:\Program Files\GNU MCU Eclipse\Build Tools\bin>make --version
 GNU Make 4.1
 Built for i686-w64-mingw32

@@ -152,7 +152,7 @@ Go to [Eclipse download site](http://www.eclipse.org/downloads/) and follow the 
 
 On Unix systems, the recommended method is using a command line:
 
-```
+```console
 $ cd .../GNU\ MCU\ Eclipse
 $ git clone https://github.com/gnu-mcu-eclipse/eclipse-plugins.git eclipse-plugins.git
 ```
@@ -198,7 +198,7 @@ To ensure that Maven considers only the desired plugin versions during the build
 
 Without this option, Maven might issue many warnings, like:
 
-```
+```console
 [INFO] Resolving dependencies of MavenProject: ilg.gnumcueclipse:ilg.gnumcueclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/plug-ins.git/ilg.gnumcueclipse.core/pom.xml
 [WARNING] The following locally built units have been used to resolve project dependencies:
 [WARNING]   org.eclipse.cdt.make.core/7.3.0.201702180936

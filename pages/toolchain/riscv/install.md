@@ -98,7 +98,7 @@ If you decide to install the toolchain in a system location, you can use the com
 * wait a few moments for the installer to copy all files
 * test if the compiler is functional; use the actual install path:
 
-  ```bash
+  ```console
 C:\>"C:\Program Files\GNU MCU Eclipse\RISC-V Embedded GCC\7.1.1-1-20170702-0625\bin\riscv64-unknown-elf-gcc.exe" --version
 riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
 ```
@@ -142,7 +142,7 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 * unpack the archive in the destination folder
 * the result should be a folder like `${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/{{ page.version-id }}-{{ page.version-date }}`
 
-  ```bash
+  ```console
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
 $ tar xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-osx.tgz
@@ -151,7 +151,7 @@ $ chmod -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625
 
 * test if the compiler is functional; use the actual install path:
 
-  ```bash
+  ```console
 $ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
 riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
 ```
@@ -170,7 +170,7 @@ The package is installed in:
 
 To check if the compiler starts, use:
 
-```bash
+```console
 $ /Applications/GNU\ ARM\ Eclipse/RISC-V\ Embedded\ GCC/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
 riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
 ```
@@ -207,7 +207,7 @@ The following steps were performed on **Ubuntu 16.04 LTSx64** (please adjust the
 * unpack the archive in the destination folder
 * the result should be a folder like `${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/{{ page.version-id }}-{{ page.version-date }}`
 
-  ```bash
+  ```console
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
 $ tar xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian64.tgz
@@ -216,7 +216,7 @@ $ chmod -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625
 
 * test if the compiler is functional; use the actual install path:
 
-  ```bash
+  ```console
 $ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
 riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
 ```
@@ -243,7 +243,7 @@ The GNU MCU Eclipse RISC-V Embedded GCC includes the standard documentation, in 
 
 The documentation is located in the `share/doc` folder, for example the pdf files are:
 
-```
+```console
 $ tree share/doc/pdf
 share/doc/pdf
 ├── annotate.pdf

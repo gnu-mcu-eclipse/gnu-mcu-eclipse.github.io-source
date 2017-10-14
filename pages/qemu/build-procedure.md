@@ -25,7 +25,7 @@ The macOS compiler and other development tools are packed in a separate Xcode ad
 
 To test if the compiler is available, use:
 
-```
+```console
 $ gcc --version
 Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
 Apple LLVM version 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
@@ -41,7 +41,7 @@ In a separate run, the **[MacTex](http://www.tug.org/mactex/)** tools are also i
 
 The entire process can be automated with two scripts, available from GitHub:
 
-```
+```console
 $ mkdir -p ${HOME}/opt
 $ git clone https://github.com/ilg-ul/opt-install-scripts \
     ${HOME}/opt/install-scripts.git
@@ -65,7 +65,7 @@ For any GNU/Linux distribution, follow the [specific instructions](https://docs.
 
 To allow Docker to run as a regular user, you need to be a member of the `docker` group.
 
-```
+```console
 $ sudo groupadd docker
 $ sudo gpasswd -a ${USER} docker
 $ sudo service docker restart
@@ -75,7 +75,7 @@ To make these changes effective, logout and login.
 
 The above are for Ubuntu and the Debian family. For other distributions, the last line may differ, for example for Arch Linux use:
 
-```
+```console
 $ systemctl restart docker
 ```
 
@@ -95,7 +95,7 @@ The build script is available from GitHub and can be [viewed online](https://git
 
 To download it, clone the [gnuarmeclipse/build-scripts](https://github.com/gnu-mcu-eclipse/build-scripts) Git repo. 
 
-```
+```console
 $ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
   ~/Downloads/build-scripts.git
 ```
@@ -110,7 +110,7 @@ Docker does not require to explicitly download new images, but does this automat
 
 However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:
 
-```
+```console
 $ bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh preload-images
 ```
 
@@ -118,7 +118,7 @@ Please be patient, this will bring about 5 GB, which on a regular broadband line
 
 The result should look similar to:
 
-```
+```console
 $ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 ilegeul/debian32    8-gnuarm-gcc-x11-v3   14a0dcce0dd7        11 months ago       1.633 GB
@@ -128,19 +128,19 @@ ilegeul/debian      8-gnuarm-mingw        1c04c24123c1        15 months ago     
 
 ## Build all distribution files
 
-```
+```console
 $ bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh --all
 ```
 
 On macOS, to prevent entering sleep, use:
 
-```
+```console
 $ caffeinate bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh --all
 ```
 
 About half an hour later, the output of the build script is a set of 5 files in the output folder:
 
-```
+```console
 $ ls -l output
 total 105616
 total 51336
@@ -170,7 +170,7 @@ Instead of `--all`, you can use any combination of:
 
 To remove all build files, use:
 
-```
+```console
 $ bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh clean
 ```
 
@@ -180,7 +180,7 @@ The entire build process is contained in a Work folder, located on the host and 
 
 A typical Work folder includes sub-folders for each project:
 
-```
+```console
 $ tree -L 1 qemu
 qemu
 ├── README.txt
@@ -195,7 +195,7 @@ qemu
 
 The build and include subfolders look like:
 
-```
+```console
 $ tree -L 2 qemu/build/ qemu/install
 qemu/build/
 ├── debian32
@@ -233,7 +233,7 @@ The procedure to install GNU MCU Eclipse QEMU is platform specific, but relative
 
 After install, the package should create a structure like this (only the first two depth levels are shown):
 
-```
+```console
 $ tree -L 2 /Applications/GNU\ ARM\ Eclipse/QEMU/2.3.50-201505141607-dev
 /Applications/GNU\ ARM\ Eclipse/QEMU/2.3.50-201505141607-dev
 ├── INFO.txt
@@ -287,7 +287,7 @@ A simple test is performed by the script at the end, by launching the executable
 
 For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:
 
-```
+```console
 $ /Applications/GNU\ ARM\ Eclipse/QEMU/2.2.91-201504021111-dev/bin/qemu-system-gnuarmeclipse --version
 GNU MCU Eclipse QEMU 64-bits emulator version 2.2.91
 Copyright (c) 2003-2008 Fabrice Bellard

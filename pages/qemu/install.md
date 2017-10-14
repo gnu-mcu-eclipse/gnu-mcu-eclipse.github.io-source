@@ -48,7 +48,7 @@ The result is a structure like:
 
 To check if QEMU starts, use the following command:
 
-```bash
+```console
 C:\>"\Program Files\GNU MCU Eclipse\QEMU\2.2.92-201504041652-dev\bin\qemu-system-gnuarmeclipse.exe" --version
 GNU MCU Eclipse 32-bits QEMU emulator version 2.2.92
 Copyright (c) 2003-2008 Fabrice Bellard
@@ -67,7 +67,7 @@ For user convenience, the macOS version of GNU MCU Eclipse QEMU is packed in two
 
 The recommended way is to unpack the archive in your home folder:
 
-```bash
+```console
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
 $ tar xvf ~/Downloads/gnuarmeclipse-qemu-osx-2.8.0-201703012029-head.tgz
@@ -76,7 +76,7 @@ $ chmod -R -w ${HOME}/opt/gnuarmeclipse/qemu
 
 To check if QEMU starts, use:
 
-```bash
+```console
 $ ${HOME}/opt/gnuarmeclipse/qemu/2.8.0-201703012029-head/bin/qemu-system-gnuarmeclipse --version
 GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0 (v2.8.0-644-ge45e0e1)
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
@@ -98,7 +98,7 @@ and the result is a folder structure similar to:
 
 To check if QEMU starts, use:
 
-```bash
+```console
 $ /Applications/GNU\ ARM\ Eclipse/QEMU/2.2.92-201504041609-dev/bin/qemu-system-gnuarmeclipse --version
 GNU MCU Eclipse 64-bits QEMU emulator version 2.2.92
 Copyright (c) 2003-2008 Fabrice Bellard
@@ -117,7 +117,7 @@ Note: if your distribution already provides ready to run QEMU binaries, they cur
 
 To install this package, unpack the distribution archive and copy it to `/opt/gnuarmeclipse/qemu/${version}`
 
-```bash
+```console
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
 $ tar xvf ~/Downloads/gnuarmeclipse-qemu-debian64-2.4.50-201510290935-dev.tgz
@@ -128,7 +128,7 @@ Note: although perfectly possible to install it in any location, it is recommend
 
 To check if QEMU starts and is recent, use:
 
-```bash
+```console
 $ ${HOME}/opt/gnuarmeclipse/qemu/2.2.92-201504041716-dev/bin/qemu-system-gnuarmeclipse --version
 GNU MCU Eclipse 64-bits QEMU emulator version 2.2.92
 Copyright (c) 2003-2008 Fabrice Bellard

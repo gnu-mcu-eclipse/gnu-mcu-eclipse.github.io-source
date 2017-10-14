@@ -27,7 +27,7 @@ The macOS compiler and other development tools are packed in a separate Xcode ad
 
 To test if the compiler is available, use:
 
-```
+```console
 $ gcc --version
 Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
 Apple LLVM version 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
@@ -43,7 +43,7 @@ In a separate run, the **[MacTex](http://www.tug.org/mactex/)** tools are also i
 
 The entire process can be automated with two scripts, available from GitHub:
 
-```
+```console
 $ mkdir -p ${HOME}/opt
 $ git clone https://github.com/ilg-ul/opt-install-scripts \
     ${HOME}/opt/install-scripts.git
@@ -67,7 +67,7 @@ For any GNU/Linux distribution, follow the [specific instructions](https://docs.
 
 To allow Docker to run as a regular user, you need to be a member of the `docker` group.
 
-```
+```console
 $ sudo groupadd docker
 $ sudo gpasswd -a ${USER} docker
 $ sudo service docker restart
@@ -77,7 +77,7 @@ To make these changes effective, logout and login.
 
 The above are for Ubuntu and the Debian family. For other distributions, the last line may differ, for example for Arch Linux use:
 
-```
+```console
 $ systemctl restart docker
 ```
 
@@ -97,7 +97,7 @@ The build script is available from GitHub and can be [viewed online](https://git
 
 To download it, clone the [gnuarmeclipse/build-scripts](https://github.com/gnu-mcu-eclipse/build-scripts) Git repo. 
 
-```
+```console
 $ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git  
   ~/Downloads/build-scripts.git
 ```
@@ -112,13 +112,13 @@ Docker does not require to explicitly download new images, but does this automat
 
 However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:
 
-```
+```console
 $ bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh preload-images
 ```
 
 The result should look similar to:
 
-```
+```console
 $ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 ilegeul/debian      8-gnuarm-mingw      b8261b27add4        3 minutes ago       2.692 GB
@@ -126,19 +126,19 @@ ilegeul/debian      8-gnuarm-mingw      b8261b27add4        3 minutes ago       
 
 ## Build all distribution files
 
-```
+```console
 $ bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh --all
 ```
 
 On macOS, to prevent entering sleep, use:
 
-```
+```console
 $ caffeinate bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh --all
 ```
 
 About half an hour later, the output of the build script is a set of 5 files in the output folder:
 
-```
+```console
 $ ls -l output
 total 3680
 -rw-r--r--   1 ilg  staff   685323 May 14 23:30 gnuarmeclipse-build-tools-win32-2.5-201505142015-setup.exe
@@ -161,7 +161,7 @@ Instead of **--all**, you can use any combination of:
 
 To remove all build files, use:
 
-```
+```console
 $ bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh clean
 ```
 
@@ -171,7 +171,7 @@ The procedure to install the GNU MCU Eclipse Build Tools is simple. The setup as
 
 After install, this package should create structure like this (only the first two depth levels are shown):
 
-```
+```console
 $ tree -L 2 Build\ Tools/bin/version
 ├── COPYING
 ├── INFO.txt

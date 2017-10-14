@@ -50,7 +50,7 @@ The recommended package is the latest version from the official [Oracle **Java 
 
 On some distributions, for example on Ubuntu 16.04 LTS, Java seems to be already installed in the standard distribution:
 
-```bash
+```console
 $ java -version
 openjdk version "1.8.0_121"
 OpenJDK Runtime Environment (build 1.8.0_121-8u121-b13-0ubuntu1.16.04.2-b13)
@@ -59,7 +59,7 @@ OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode)
 
 On other distributions, for example on Ubuntu 14.04 LTS, you can install the OpenJDK run-time and test if it was properly installed with the following commands:
 
-```
+```console
 $ sudo apt-get -y install default-jdk
 $ java -version
 java version "1.7.0_85"
@@ -230,7 +230,7 @@ If this still fails, the alternative method is to manually download the latest
 
 If Eclipse complains that some required items could not be found, most probably you are trying to install the plug-ins on an older Eclipse, or on another Eclipse package than the recommended **Eclipse IDE for C/C++ Developers**.
 
-```
+```console
 Cannot complete the install because one or more required items could not be found.
   Software being installed: GNU ARM C/C++ J-Link Debugging 4.1.1.201606210758 (ilg.gnuarmeclipse.debug.gdbjtag.jlink.feature.group 4.1.1.201606210758)
   Missing requirement: GNU ARM C/C++ Core 3.1.1.201606210758 (ilg.gnuarmeclipse.core 3.1.1.201606210758) requires 'bundle org.eclipse.cdt 8.6.0' but it could not be found
@@ -248,15 +248,15 @@ Reinstall the correct Eclipse package, or add CDT to the existing Eclipse (**Pro
 
 Eclipse is incompatible with the GTK version 3 distributed with Ubuntu (confirmed even with Ubuntu 16LTS). To overcome this, disable the use of GTK 3, by adding the following line to your environment:
 
-```
-export SWT_GTK3=0
-```
+```console
+$ export SWT_GTK3=0
+```console
 
 ### macOS com.apple.quarantine
 
 On macOS Sierra and later, unsigned applications are marked as _quarantined_ and subject to a path randomization, which prevents Eclipse to maintain persistent preferences (for more details see [blog post](https://ilgthegeek.wordpress.com/2017/07/13/macos-com-apple-quarantine/)). To disable this, remove the `com.apple.quarantine` extended attribute from `Eclipse.app`:
 
-```
+```console
 $ xattr Eclipse.app
 com.apple.quarantine
 $ xattr -d com.apple.quarantine Eclipse.app

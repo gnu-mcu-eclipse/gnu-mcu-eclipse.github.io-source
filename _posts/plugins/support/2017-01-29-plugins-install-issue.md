@@ -30,7 +30,7 @@ In Jan. 2017 SourceForge did another change in the security settings used by the
 
 Checking the Eclipse log revealed a Java SSL exception:
 
-```
+```console
 !SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-01-28 18:48:05.200
 !MESSAGE Unable to read repository at http://gnuarmeclipse.sourceforge.net/updates-test/content.xml.
 !STACK 0

@@ -39,7 +39,7 @@ Assembler mnemonics for RISC-V integer and floating-point registers.
 
 ### 32 bits
 
-```bash
+```console
 $ ./riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
 #define __GXX_ABI_VERSION 1011
 #define __STDC_VERSION__ 201112L
@@ -85,7 +85,7 @@ $ ./riscv64-unknown-elf-gcc -march=rv32imafdc -mabi=ilp32d -E -dM - < /dev/null 
 
 ### 64 bits
 
-```
+```console
 $ ./riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
 #define _LP64 1
 #define __GXX_ABI_VERSION 1011
@@ -159,7 +159,7 @@ The `gp` (Global Pointer) register is a solution to further optimise memory acce
 
 The linker uses the `__global_pointer$` symbol definition to compare the memory addresses and, if within range, it replaces absolute/pc-relative addressing with gp-relative addressing, which makes the code more efficient. This process is also called _relaxing_, and can be disabled by `-Wl,--no-relax`.
 
-```
+```console
 $ cat main.c 
 int i;
 int main()

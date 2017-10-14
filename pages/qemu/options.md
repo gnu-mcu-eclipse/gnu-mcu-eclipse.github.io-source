@@ -11,8 +11,8 @@ date: 2015-11-10 19:27:00 +0300
 
 The command line used by the QEMU plug-in to start a debug session looks like this:
 
-```
-qemu-system-gnuarmeclipse --verbose --verbose --board STM32F4-Discovery \
+```console
+$ qemu-system-gnuarmeclipse --verbose --verbose --board STM32F4-Discovery \
 --mcu STM32F407VG --gdb tcp::1234 -d unimp,guest_errors \
 --semihosting-config enable=on,target=native \
 --semihosting-cmdline blinky
@@ -20,8 +20,8 @@ qemu-system-gnuarmeclipse --verbose --verbose --board STM32F4-Discovery \
 
 A typical emulation session started outside Eclipse looks like this:
 
-```
-qemu-system-gnuarmeclipse --verbose --verbose --board STM32F4-Discovery \
+```console
+$ qemu-system-gnuarmeclipse --verbose --verbose --board STM32F4-Discovery \
 --mcu STM32F407VG -d unimp,guest_errors \
 --nographic --image test.elf \
 --semihosting-config enable=on,target=native \
@@ -125,7 +125,7 @@ Cortex-M4 r0p0 core reset.
 
 Adding one more `--verbose`  will make QEMU extra verbose and it'll display details about the board hardware configuration and the memory sections loaded by GDB:
 
-```
+```console
 GNU MCU Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
 Board: 'STM32F4-Discovery' (ST Discovery kit for STM32F407/417 lines).
 Device: 'STM32F407VG' (Cortex-M4 r0p0, MPU), Flash: 1024 kB, RAM: 128 kB.

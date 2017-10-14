@@ -55,7 +55,7 @@ In the documentation git:
 
 Copy/paste the build report at the end of the post as
 
-```
+```console
 ## Checksums
 The SHA-256 hashes for the files are:
 

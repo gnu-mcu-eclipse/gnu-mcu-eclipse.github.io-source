@@ -19,7 +19,7 @@ The web site is generated off-line by [Jekyll](http://jekyllrb.com). It cannot b
 
 To be able to run the Jekyll build process, the `ruby` interpreter and the `gem` tool are required. In macOS 10.10.5, these tools are preinstalled, at least when the Developer Command Line tools are present.
 
-```bash
+```console
 $ ruby --version
 ruby 2.0.0p481 (2014-05-08 revision 45883) [universal.x86_64-darwin14]
 $ gem --version
@@ -32,7 +32,7 @@ jekyll 2.5.3
 
 In addition, the several specific gems are required:
 
-```bash
+```console
 $ sudo gem install redcarpet jekyll-mentions jemoji jekyll-redirect-from jekyll-feed jekyll-sitemap jekyll-last-modified-at
 ```
 
@@ -40,7 +40,7 @@ $ sudo gem install redcarpet jekyll-mentions jemoji jekyll-redirect-from jekyll-
 
 To manage the web site, a local copy of this repository is required.
 
-```bash
+```console
 $ git clone https://github.com/gnu-mcu-eclipse/gnu-mcu-eclipse.github.io-source.git gnu-mcu-eclipse.github.io-source.git
 ```
 
@@ -50,7 +50,7 @@ The current development cycle is edit-save-build-view.
 
 The build can be performed automatically by Jekyll when started in server mode.
 
-```bash
+```console
 $ cd gnu-mcu-eclipse.github.io-source.git
 $ jekyll serve --baseurl "" --trace
 ```

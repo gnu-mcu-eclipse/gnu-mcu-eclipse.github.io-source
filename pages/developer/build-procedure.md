@@ -16,7 +16,7 @@ date: 2015-09-10 20:22:00 +0300
 
 The result of a successful build looks like this:
 
-```
+```console
 [INFO] --- tycho-p2-plugin:0.25.0:update-local-index (default-update-local-index) @ ilg.gnumcueclipse.repository ---
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Summary:
@@ -122,7 +122,7 @@ A more elaborated configuration is required when willing to run debug sessions u
 
 Clone the CDT repository:
 
-```bash
+```console
 $ git clone git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git org.eclipse.cdt.git
 ```
 

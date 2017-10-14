@@ -26,7 +26,7 @@ For historical reasons, the GNU ARM Eclipse update sites for installing new soft
 
 In Nov. 2016 SourceForge did a change in the security settings used by their download servers and mirrors. For most of the users this was transparent, but for some, the result when trying to install new software, was the following:
 
-```
+```console
 An error occurred while collecting items to be installed
 session context was:(profile=epp.package.cpp, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
 Unable to read repository at http://gnuarmeclipse.sourceforge.net/updates-test/plugins/ilg.gnuarmeclipse.templates.ad_1.1.3.201611031134.jar.

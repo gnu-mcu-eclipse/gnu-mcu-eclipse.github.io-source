@@ -21,7 +21,7 @@ The build script is available from GitHub and can be [viewed online](https://git
 
 To download it, clone the [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build) Git repo, including submodules. 
 
-```bash
+```console
 $ rm -rf ~/Downloads/riscv-none-gcc-build.git
 $ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build.git \
   ~/Downloads/riscv-none-gcc-build.git
@@ -37,13 +37,13 @@ Docker does not require to explicitly download new images, but does this automat
 
 However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:
 
-```bash
+```console
 $ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh preload-images
 ```
 
 The result should look similar to:
 
-```bash
+```console
 $ docker images
 REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
 ilegeul/debian      9-gnu-mcu-eclipse     ff8a853cf6cb        4 days ago          3.2GB
@@ -57,26 +57,26 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 If the download speed is limited, probably it is faster to rebuild the images locally. For this see the `build-images` command:
 
-```bash
+```console
 $ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
 ```
 
 ## Build all distribution files
 
-```bash
+```console
 $ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
 ```
 
 On macOS, to prevent entering sleep, use:
 
-```bash
+```console
 $ caffeinate bash
 $ exec bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
 ```
 
 Many, many hours later, the output of the build script is a set of 8 files and their SHA signatures in the `deploy` folder:
 
-```bash
+```console
 $ ls -l deploy
 total 784400
 -rw-r--r--  1 ilg  staff  75678450 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg
@@ -113,13 +113,13 @@ Please note that, due to the specifics of the GCC build process, the Windows bui
 
 To remove most build files, use:
 
-```bash
+```console
 $ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh clean
 ```
 
 To also remove the repository and the output files, use:
 
-```bash
+```console
 $ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh cleanall
 ```
 
@@ -129,7 +129,7 @@ The procedure to install GNU MCU Eclipse RISC-V Embedded GCC is platform specifi
 
 After install, this package should create structure like this (only the first two depth levels are shown):
 
-```bash
+```console
 $ tree -L 2 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 ├── README.md
@@ -215,7 +215,7 @@ A simple test is performed by the script at the end, by launching the executable
 
 For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:
 
-```bash
+```console
 $ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
 riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
 ```
