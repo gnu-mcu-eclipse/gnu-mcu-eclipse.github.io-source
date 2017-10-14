@@ -26,7 +26,7 @@ More details are available in the [Install](/plugins/install/) page.
 
 For previews, test releases are posted to a separate update site:
 
-`http://gnu-mcu-eclipse.netlify.com/v4-neon-test`
+`http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test`
 
 Usually this site should be safe to use, but use it with caution.
 
@@ -34,7 +34,7 @@ Usually this site should be safe to use, but use it with caution.
 
 For previews, experimental releases are posted to a separate update site:
 
-`http://gnu-mcu-eclipse.netlify.com/v4-neon-experimental`
+`http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-experimental`
 
 Sometimes you can use this site to test some features that are not completely implemented, or that might change before a final version is released.
 
