@@ -21,7 +21,7 @@ The build script is available from GitHub and can be [viewed online](https://git
 
 To download it, clone the [gnu-mcu-eclipse/openocd-build](https://github.com/gnu-mcu-eclipse/openocd-build) Git repo. 
 
-```bash
+```console
 $ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/openocd-build.git \
   ~/Downloads/openocd-build.git
 ```
@@ -36,13 +36,13 @@ Docker does not require to explicitly download new images, but does this automat
 
 However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:
 
-```bash
+```console
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh preload-images
 ```
 
 The result should look similar to:
 
-```bash
+```console
 $ docker images
 REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
 ilegeul/debian      9-gnu-mcu-eclipse     ff8a853cf6cb        4 days ago          3.2GB
@@ -56,18 +56,8 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 If the download speed is limited, probably it is faster to rebuild the images locally. For this see the `build-images` command:
 
-```bash
-$ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
-```
-
-## Select the stable or the development branch
-
-The repository has two branches; by default the development branch is used.
-
-To pull new commits from the repository, use:
-
-```
-$ bash ~/Downloads/openocd-build.git/scripts/build.sh pull
+```console
+$ bash ~/Downloads/openocd-build.git/scripts/build.sh build-images
 ```
 
 ## Build all distribution files
@@ -85,7 +75,7 @@ $ exec bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 
 About half an hour later, the output of the build script is a set of 5 files in the output folder:
 
-```bash
+```console
 $ ls -l deploy
 total 41992
 drwxr-xr-x  8 ilg  staff      272 Aug 26 12:57 debian32
@@ -119,22 +109,33 @@ drwxr-xr-x  8 ilg  staff      272 Aug 26 12:52 win64
 Instead of `--all`, you can use any combination of:
 
 ```
---win32 --win64 --debian32 --debian64 --osx
+--win32 --win64 --linux32 --linux64 --osx
 ```
 
 ### clean
 
 To remove most build files, use:
 
-```bash
+```console
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh clean
 ```
 
 To also remove the repository and the output files, use:
 
-```bash
+```console
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
 ```
+
+## Native builds
+
+In addition to the Debian 9 binaries, if necessary, the script can be used to build binaries for any Linux distribution.
+
+For such cases, simply start the script without any platform option:
+
+```console
+$ bash ~/Downloads/openocd-build.git/scripts/build.sh
+```
+It is the responsibility of the user to meet all the prerequisites.
 
 ## Install hierarchy
 
@@ -142,7 +143,7 @@ The procedure to install GNU MCU Eclipse OpenOCD is platform specific, but relat
 
 After install, this package should create structure like this (only the first two depth levels are shown):
 
-```bash
+```console
 $ tree -L 2 /Applications/GNU\ MCU\ Eclipse/OpenOCD
 /Applications/GNU\ MCU\ Eclipse/OpenOCD
 ├── bin
@@ -188,7 +189,7 @@ A simple test is performed by the script at the end, by launching the executable
 
 For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:
 
-```bash
+```console
 $ ${HOME}/opt/gnu-mcu-eclipse/openocd/0.10.0-3-20170826-0939-dev/bin/openocd --version
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00138-g96c70022 (2017-08-26-12:40)
 Licensed under GNU GPL v2
