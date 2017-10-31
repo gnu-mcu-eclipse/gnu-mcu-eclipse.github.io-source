@@ -147,3 +147,13 @@ To change this setting:
 * select **Always launch the previously launched application** in the **Launch Operation** section.
 
 ![Launch previously used application]({{ site.baseurl }}/assets/images/2014/06/LaunchPrevious.png)
+
+## Show source roots
+
+For large projects, with many source folders, you might want to disable showing the source folders:
+
+* go to the _Eclipse_ menu → **(Window →) Preferences** → **C/C++** → **Appearance**
+* disable **Show source roots at top of project**.
+
+![Show source roots]({{ site.baseurl }}/assets/images/2017/preferences-show-source-roots.png)
+
