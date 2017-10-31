@@ -82,6 +82,7 @@
 * [Overview]({{ site.baseurl }}/openocd/) (read me first!)
 * [OpenOCD Install]({{ site.baseurl }}/openocd/install/)
 * [The OpenOCD plug-in]({{ site.baseurl }}/debug/openocd/)
+* [RISC-V specifics]({{ site.baseurl }}/debug/openocd/riscv/)
 * [How to build]({{ site.baseurl }}/openocd/build-procedure/)
 * [How to publish]({{ site.baseurl }}/openocd/publish-procedure/)
 * [Releases]({{ site.baseurl }}/openocd/releases/)
