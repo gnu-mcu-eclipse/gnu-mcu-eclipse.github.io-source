@@ -79,7 +79,7 @@ The GNU MCU Eclipse branches have similar names, but suffixed with `-gme`.
 
 After merging the remote branches, merge the result into the `-gme` branch.
 
-### Prepare pre-release
+### Prepare release
 
 By default, the build script uses tagged commits and downloads the corresponding archives.
 
@@ -97,6 +97,10 @@ When the result is acceptable, commit all repos and tag all with the same tag (l
 
 Update the `RELEASE_VERSION` to use exactly the same tag, but without the initial `v`.
 
+Update `gnu-mcu-eclipse/info` files:
+
+* `CHANGES.txt` (add release)
+* `INFO.md` (update references to commits)
 
 ## Build all distribution files
 
