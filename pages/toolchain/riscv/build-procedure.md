@@ -61,6 +61,43 @@ If the download speed is limited, probably it is faster to rebuild the images lo
 $ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
 ```
 
+## Development
+
+### Update git repos
+
+The GNU MCU Eclipse RISC-V GCC is following closely the official [RISC-V releases](https://github.com/riscv/riscv-gnu-toolchain/releases).
+
+The procedure is to first merge the remote branches to the local branches.
+
+Currently, the following branches are used
+
+* `riscv-gcc-7.2.0`
+* `riscv-newlib-2.5.0`
+* `riscv-binutils-2.29`
+
+The GNU MCU Eclipse branches have similar names, but suffixed with `-gme`.
+
+After merging the remote branches, merge the result into the `-gme` branch.
+
+### Prepare pre-release
+
+By default, the build script uses tagged commits and downloads the corresponding archives.
+
+While preparing the release it is important to be able to use live Git versions. For this, 
+
+* update the commit ids to the desired ones 
+* commit and push
+* start the build script and pass `--use-gits`
+
+```console
+$ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --use-gits
+```
+
+When the result is acceptable, commit all repos and tag all with the same tag (like `v7.2.0-1-20171109`).
+
+Update the `RELEASE_VERSION` to use exactly the same tag, but without the initial `v`.
+
+
 ## Build all distribution files
 
 ```console
