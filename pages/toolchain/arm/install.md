@@ -13,7 +13,7 @@ version-date: 20170223
 
 ## Overview
 
-The build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits ARM GNU toolchain you prefer, but, for better results, the recommended toolchain for **bare metal** target applications is [**GCC ARM Embedded Toolchain**](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm) (formerly GNU Tools for ARM Embedded Processors); for **GNU/Linux** target applications, the **[Linaro](http://www.linaro.org/downloads/)** family of toolchains provides a large selection of choices, for various specific needs (little/big endian, 32/64-bits, etc).
+The build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits ARM GNU toolchain you prefer, but, for better results, the recommended toolchain for **bare metal** target applications is [**GCC ARM Embedded Toolchain**](https://developer.arm.com/open-source/gnu-toolchain/gnu-arm-embedded-toolchain) (formerly GNU Tools for ARM Embedded Processors); for **GNU/Linux** target applications, the **[Linaro](http://www.linaro.org/downloads/)** family of toolchains provides a large selection of choices, for various specific needs (little/big endian, 32/64-bits, etc).
 
 > Important notes: 
 > GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the suspend and terminate buttons in the debug perspective are not functional. `arm-none-eabi-gdb` 7.12 from the initial `6_2-2016q4-20161216` crashes on macOS; use `6-2017-q1-update` or later.
@@ -31,7 +31,7 @@ The installation details described below assume the selection of the GCC ARM Em
 
 ## Download
 
-Due to portability reasons, the GNU MCU Eclipse plug-ins do not include any toolchain binaries, but they can be downloaded from the [GNU ARM Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads).
+Due to portability reasons, the GNU MCU Eclipse plug-ins do not include any toolchain binaries, but they can be downloaded from the [GNU ARM Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-arm-embedded-toolchain/downloads).
 
 Versions from `4_7` up to `{{ page.version-id }}` were tested and are known to work properly.
 
@@ -184,7 +184,7 @@ $ sudo apt-get -y install lib32ncurses5
 $ sudo apt-get -y install ia32-libs
 ```
 
-* download the latest Linux install tarball file from [ARMDeveloper](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads) (currently `gcc-arm-none-eabi-{{ page.version-id }}-linux.tar.bz2`, more than 95 MB)
+* download the latest Linux install tarball file from [ARMDeveloper](https://developer.arm.com/open-source/gnu-toolchain/gnu-arm-embedded-toolchain/downloads) (currently `gcc-arm-none-eabi-{{ page.version-id }}-linux.tar.bz2`, more than 95 MB)
 
   > Note: DO NOT install the ARM GCC package that comes with your distribution, especially if it is newer than the one provided by Launchpad, since generally it is not supported, and debugging sessions might fail.
 
