@@ -76,13 +76,17 @@ Add an entry with the latest feature & plug-in versions, copied from the publish
 
 Add a new file to the `_drafts` and later moved to `_posts/plugins/releases`.
 
-Name the post like: *Release v2.9.3 201508190739*, title: *Version 2.2.1-201404120702 released*.
+Name the post like: *2017-11-10-plugins-v4.2.1-201711101735-released.md*, title: *GNU MCU Eclipse plug-ins v4.2.1-201711101735 released*.
 
 The structure of the post should contain:
 
-* date, as _Aug 1, 2015_ (italics)
+* the initial `download_url` pointing to the releases page
+```
+download_url: https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/
+```
+
 * one intro paragraph with the summary of the changes
-* a link to `[Binary files »]()`, currently empty, to be filled with the release URL
+* a link to `[Binary files »]({{ page.download_url }})`
 * headers like:
 
 ```
@@ -93,18 +97,11 @@ The structure of the post should contain:
 ## Known problems
 ```
 
-An example would be the [2.9.1](https://github.com/gnu-mcu-eclipse/eclipse-plugins/wiki/Release-v2.9.1-201508011813) announcement.
+An example would be the [4.1.1](https://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/) announcement.
 
-Scan the [GitHub Issues](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues) and the [SourceForge trackers](https://sourceforge.net/p/gnuarmeclipse/_list/tickets) and add references to all tracked issues.
+Scan the [GitHub Issues](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues) and add references to all tracked issues.
 
-Mark all these issues as part of the current version milestone. Refer to them as **[Issue:#22]**. For SourceForge, refer to them as **[bugs:#98]**, **[feature-requests:#60]**, **[support-requests:#81]**.
-
-## Test local version of the Web
-
-* build the local Jekyll **gnuarmeclipse.github.io-source** project
-* test it using the localhost:4000 address
-* Git Push & Sync the **gnuarmeclipse.github.io-source** project; use something like `v3.2.1-201701141320 released` as message
-* Git Push & Sync the **gnuarmeclipse.github.io** project; use something like `v3.2.1-201701141320 released` as message
+Mark all these issues as part of the current version milestone. Refer to them as **[Issue:#22]**. 
 
 ## Publish on the main Bintray updates site
 
@@ -143,9 +140,9 @@ Use the `publish-riscv-v4-neon-updates.command` command.
 
 ## Clean the mess in the local archive folder
 
--   go to **.../GNU MCU Eclipse/archive**
--   move the latest archive to **releases/plug-ins**
--   move the other archives to **internal**
+* go to **.../GNU MCU Eclipse/archive**
+* move the latest archive to **releases/plug-ins**
+* move the other archives to **internal**
 
 ## Merge develop into master
 
@@ -156,15 +153,22 @@ Use the `publish-riscv-v4-neon-updates.command` command.
 * push the **master** branch to GitHub
 * switch to **develop**
 
+## Publish the Web
+
+* Git Push & Sync the **gnu-mcu-eclipse.github.io-source** project; use something like `v3.2.1-201701141320 released` as message
+* wait for the Travis build to complete; occasionally links to not work, and might need to restart the build
+
 ## Create a new GitHub release
 
 * be sure the **develop** branch is up to date and set as default
 * go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases) page
 * click **Draft a new release**
-* name the tag like **v2.9.3-201508190739** (mind the `-` in the middle!)
+* name the tag like **v4.2.1-201711101735** (mind the `-` in the middle!)
 * select the **develop** branch
-* name the release like **GNU MCU Eclipse plug-ins v2.9.3-201508190739**  (mind the `-` in the middle!)
+* name the release like **GNU MCU Eclipse plug-ins v4.2.1-201711101735**  (mind the `-` in the middle!)
 * as description, copy the first paragraph from the Web release page
+* add a link to the Web page `[Continue reading »]()`
+* get the URL from the web [Releases](http://gnu-mcu-eclipse.github.io/developer/releases/) page and update the above link
 * **attach binaries** (drag and drop from the archives folder will do it)
 * click the **Publish Release** button
 
@@ -179,10 +183,10 @@ Note: the release must exist, otherwise Travis will complain and do not publish 
 
 ## Update the release link
 
-In the [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases) page:
 
-* add a link to the Web page `[Continue reading »]()`
-* get URL from web [Releases](http://gnuarmeclipse.github.io/developer/releases/) and update the above link
+From the [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases) page, get the URL
+
+* update `download_url` to the releases page
 
 ## Add the release downloads badge
 
@@ -238,4 +242,5 @@ The Eclipse Packaging Project allows to create complete Eclipse packages for all
 * name the release like **GNU MCU Eclipse IDE for C/C++ Developers Neon.3 20170711**  (mind the `-` in the middle!)
 * **attach binaries** (drag and drop from the archives folder will do it)
 * click the **Publish Release** button
+
 
