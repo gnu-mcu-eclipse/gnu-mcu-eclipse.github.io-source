@@ -31,7 +31,7 @@ The installation details described below assume the selection of the GCC ARM Em
 
 ## Download
 
-Due to portability reasons, the GNU MCU Eclipse plug-ins do not include any toolchain binaries, but they can be downloaded from the [GNU ARM Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-arm-embedded-toolchain/downloads).
+Due to portability reasons, the GNU MCU Eclipse plug-ins do not include any toolchain binaries, but they can be downloaded from the [GNU ARM Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads).
 
 Versions from `4_7` up to `{{ page.version-id }}` were tested and are known to work properly.
 
@@ -184,7 +184,7 @@ $ sudo apt-get -y install lib32ncurses5
 $ sudo apt-get -y install ia32-libs
 ```
 
-* download the latest Linux install tarball file from [ARMDeveloper](https://developer.arm.com/open-source/gnu-toolchain/gnu-arm-embedded-toolchain/downloads) (currently `gcc-arm-none-eabi-{{ page.version-id }}-linux.tar.bz2`, more than 95 MB)
+* download the latest Linux install tarball file from [ARMDeveloper](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads) (currently `gcc-arm-none-eabi-{{ page.version-id }}-linux.tar.bz2`, more than 95 MB)
 
   > Note: DO NOT install the ARM GCC package that comes with your distribution, especially if it is newer than the one provided by Launchpad, since generally it is not supported, and debugging sessions might fail.
 
