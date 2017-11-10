@@ -72,6 +72,52 @@ $ git log --pretty='%cd * %s' --since 2015-06-24 \
 
 Add an entry with the latest feature & plug-in versions, copied from the publish script output. Name it like **version 4.1.1.201707111115 released**.
 
+```console
+repository/features:
+ilg.gnumcueclipse.codered.feature_1.1.2.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink.feature_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd.feature_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature_1.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu.feature_3.2.1.201711101735.jar
+ilg.gnumcueclipse.doc.user.feature_1.1.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.arm.feature_2.5.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv.feature_2.6.1.201711101735.jar
+ilg.gnumcueclipse.packs.feature_2.2.2.201711101735.jar
+ilg.gnumcueclipse.templates.ad.feature_1.1.5.201711101735.jar
+ilg.gnumcueclipse.templates.cortexm.feature_1.4.3.201711101735.jar
+ilg.gnumcueclipse.templates.freescale.feature_2.2.9.201711101735.jar
+ilg.gnumcueclipse.templates.sifive.feature_1.1.1.201711101735.jar
+ilg.gnumcueclipse.templates.stm.feature_2.6.3.201711101735.jar
+
+repository/plugins:
+ilg.gnumcueclipse.codered_1.1.2.201711101735.jar
+ilg.gnumcueclipse.core_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.core_1.2.2.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd_1.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu_3.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.restart_1.3.2.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag_3.2.3.201711101735.jar
+ilg.gnumcueclipse.debug.packs_1.1.2.201711101735.jar
+ilg.gnumcueclipse.doc.user_1.1.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.arm_2.5.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv_2.6.1.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross_1.1.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.packs_1.3.2.201711101735.jar
+ilg.gnumcueclipse.packs.core_1.1.4.201711101735.jar
+ilg.gnumcueclipse.packs.data_1.3.2.201711101735.jar
+ilg.gnumcueclipse.packs.ui_1.2.5.201711101735.jar
+ilg.gnumcueclipse.packs_1.2.5.201711101735.jar
+ilg.gnumcueclipse.templates.ad_1.2.1.201711101735.jar
+ilg.gnumcueclipse.templates.core_2.6.1.201711101735.jar
+ilg.gnumcueclipse.templates.cortexm_1.4.3.201711101735.jar
+ilg.gnumcueclipse.templates.freescale.pe_1.2.2.201711101735.jar
+ilg.gnumcueclipse.templates.freescale_2.2.9.201711101735.jar
+ilg.gnumcueclipse.templates.sifive_1.1.1.201711101735.jar
+ilg.gnumcueclipse.templates.stm_2.6.3.201711101735.jar
+```
+
 ## Prepare a new blog post to announce the release
 
 Add a new file to the `_drafts` and later moved to `_posts/plugins/releases`.
@@ -80,7 +126,8 @@ Name the post like: *2017-11-10-plugins-v4.2.1-201711101735-released.md*, title:
 
 The structure of the post should contain:
 
-* the initial `download_url` pointing to the releases page
+* the initial `download_url` pointing to the releases generic page, not a specific release, since it does not exist, and the htmlproofer will fail.
+
 ```
 download_url: https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/
 ```
@@ -155,7 +202,7 @@ Use the `publish-riscv-v4-neon-updates.command` command.
 
 ## Publish the Web
 
-* Git Push & Sync the **gnu-mcu-eclipse.github.io-source** project; use something like `v3.2.1-201701141320 released` as message
+* Git Push & Sync the **gnu-mcu-eclipse.github.io-source** project; use something like `v4.2.1-201711101735 released` as message
 * wait for the Travis build to complete; occasionally links to not work, and might need to restart the build
 
 ## Create a new GitHub release
@@ -183,10 +230,9 @@ Note: the release must exist, otherwise Travis will complain and do not publish 
 
 ## Update the release link
 
+From the [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases) page, get the URL.
 
-From the [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases) page, get the URL
-
-* update `download_url` to the releases page
+* update `download_url` to the actual release URL.
 
 ## Add the release downloads badge
 
