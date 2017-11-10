@@ -12,11 +12,98 @@ Entries in this file are in reverse chronological order.
 
 ## 2017
 
+### 2017-11-10
+
+* version 4.2.1-201711101735 released
+
+```console
+repository/features:
+ilg.gnumcueclipse.codered.feature_1.1.2.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink.feature_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd.feature_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature_1.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu.feature_3.2.1.201711101735.jar
+ilg.gnumcueclipse.doc.user.feature_1.1.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.arm.feature_2.5.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv.feature_2.6.1.201711101735.jar
+ilg.gnumcueclipse.packs.feature_2.2.2.201711101735.jar
+ilg.gnumcueclipse.templates.ad.feature_1.1.5.201711101735.jar
+ilg.gnumcueclipse.templates.cortexm.feature_1.4.3.201711101735.jar
+ilg.gnumcueclipse.templates.freescale.feature_2.2.9.201711101735.jar
+ilg.gnumcueclipse.templates.sifive.feature_1.1.1.201711101735.jar
+ilg.gnumcueclipse.templates.stm.feature_2.6.3.201711101735.jar
+
+repository/plugins:
+ilg.gnumcueclipse.codered_1.1.2.201711101735.jar
+ilg.gnumcueclipse.core_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.core_1.2.2.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd_1.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu_3.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.restart_1.3.2.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag_3.2.3.201711101735.jar
+ilg.gnumcueclipse.debug.packs_1.1.2.201711101735.jar
+ilg.gnumcueclipse.doc.user_1.1.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.arm_2.5.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv_2.6.1.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross_1.1.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.packs_1.3.2.201711101735.jar
+ilg.gnumcueclipse.packs.core_1.1.4.201711101735.jar
+ilg.gnumcueclipse.packs.data_1.3.2.201711101735.jar
+ilg.gnumcueclipse.packs.ui_1.2.5.201711101735.jar
+ilg.gnumcueclipse.packs_1.2.5.201711101735.jar
+ilg.gnumcueclipse.templates.ad_1.2.1.201711101735.jar
+ilg.gnumcueclipse.templates.core_2.6.1.201711101735.jar
+ilg.gnumcueclipse.templates.cortexm_1.4.3.201711101735.jar
+ilg.gnumcueclipse.templates.freescale.pe_1.2.2.201711101735.jar
+ilg.gnumcueclipse.templates.freescale_2.2.9.201711101735.jar
+ilg.gnumcueclipse.templates.sifive_1.1.1.201711101735.jar
+ilg.gnumcueclipse.templates.stm_2.6.3.201711101735.jar
+```
+
+* [#249] gdbjtag.openocd: configurable TCL port
+* update SiFive template code to v0.1.1
+
+### 2017-11-05
+
+* [#242] gdbjtag.*: validate telnet port;  also server executable, gdb port, client executable
+* [#246] gdbjtag.*: substitute dynamic variables too;  add Actual client executable
+* gdbjtag.*: show Actual executable
+
+### 2017-11-04
+
+* cross.riscv: add riscv-none-embed-
+
+### 2017-10-20
+
+* [#241] packs: add connect & read timeout
+
+### 2017-09-25
+
+* [#223] - refactor of checkServer
+* [#240] - cross.riscv: add linux & rtems toolchains
+
+### 2017-07-19
+
+* [#223] - fix bundle blurbs to reflect bundle name
+* [#222] - fix double -fno-common options
+* [#224] - gdbjtag.openocd: do not wait for the echo
+
+### 2017-07-14
+
+* add SiFive preliminary template
+
+### 2017-07-13
+
+* add **Start GDB session** to OpenOCD GUI, to allow multiple GDB instances attached to the same OpenCOD
+
+
 ### 2017-07-11
 
 * version 4.1.1.201707111115 released
 
-```
+```console
 features:
 ilg.gnumcueclipse.codered.feature_1.1.2.201707111115.jar
 ilg.gnumcueclipse.debug.gdbjtag.jlink.feature_4.1.5.201707111115.jar
@@ -256,7 +343,7 @@ ilg.gnumcueclipse.templates.stm_2.6.3.201707111115.jar
 * pyocd: fix reference to livius.net
 * pyocd: version 1.1.4
 
-2017-05-02 
+### 2017-05-02 
 
 * add first riscv projects
 * version 4.1.1
