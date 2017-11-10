@@ -60,7 +60,37 @@ If the download speed is limited, probably it is faster to rebuild the images lo
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh build-images
 ```
 
+## Development
+
+When preparing official release, follow the following steps.
+
+### Update git repos
+
+The GNU MCU Eclipse OpenOCD is following closely the OpenOCD master and the official [RISC-V OpenOCD](https://github.com/riscv/riscv-openocd).
+
+* into [gnu-mcu-eclipse/riscv-openocd](https://github.com/gnu-mcu-eclipse/riscv-openocd)
+  * merge the [riscv/riscv-openocd](https://github.com/riscv/riscv-openocd) `riscv` branch into the local `riscv` branch
+* into [gnu-mcu-eclipse/openocd](https://github.com/gnu-mcu-eclipse/openocd)
+  * merge the [OpenOCD](http://repo.or.cz/openocd.git) `master` branch into the `gnu-mcu-eclipse-dev` branch
+  * merge the [gnu-mcu-eclipse/riscv-openocd](https://github.com/gnu-mcu-eclipse/riscv-openocd) `riscv` branch into the `gnu-mcu-eclipse-dev` branch
+* compare the `gnu-mcu-eclipse-dev` and `riscv` branches, add `#if BUILD_RISCV == 1` where needed
+
+### Prepare release
+
+Update `gnu-mcu-eclipse/info` files:
+
+* `CHANGES.txt` (add release, scan the log)
+* `INFO.md` (update references to commits)
+* `VERSION`
+
+In the `build.sh` script:
+
+* update the commit id `OPENOCD_GIT_COMMIT` to the desired one
+* commit and push (without push, the inner clone uses an older version)
+
 ## Build all distribution files
+
+Before starting a multi-platform build, check if Docker is started.
 
 ```console
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh --all
