@@ -11,6 +11,15 @@ Entries in this file are in reverse chronological order.
 
 ## 2017
 
+### 2017-11-10
+
+- v0.10.0-5-20171110-dev released
+- update to master from Oct 2
+- update to riscv from Nov 4
+- target.c & riscv/riscv-0[13].c: hide the 4096 CSRs from `monitor reg`
+- update the SiFive board script files
+- revert the risc-v changes in `remote_bitbang.c`, since they break the build on mingw-w64
+
 ### 2017-10-04
 
 - v0.10.0-4-20171004-*-dev released
