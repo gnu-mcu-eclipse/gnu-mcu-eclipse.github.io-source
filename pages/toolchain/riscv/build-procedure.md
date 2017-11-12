@@ -93,16 +93,30 @@ While preparing the release it is important to be able to use live Git versions.
 $ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --use-gits
 ```
 
-When the result is acceptable, commit all repos and tag all with the same tag (like `v7.2.0-1-20171109`).
+When the result is acceptable, commit all repos and tag all with the same tag (like `v7.2.0-1-20171109`):
 
-Update the `RELEASE_VERSION` to use exactly the same tag, but without the initial `v`.
+* the [gnu-mcu-eclipse/riscv-gcc](https://github.com/gnu-mcu-eclipse/riscv-gcc) project
+* the [gnu-mcu-eclipse/riscv-binutils-gdb](https://github.com/gnu-mcu-eclipse/riscv-binutils-gdb) project
+* the [gnu-mcu-eclipse/riscv-newlib](https://github.com/gnu-mcu-eclipse/riscv-newlib) project
+
+## Update the script 
+
+In the [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build), update the `scripts/build.sh` to refer to the latest version number (`RELEASE_VERSION`), but without the initial `v`.
+
+For major releases, Check if the library sources (gmp, mpfr, mpc, isl) did change and possibly update them.
+
+In the riscv-none-gcc-build project, update `RELEASE_VERSION` 
 
 Update `gnu-mcu-eclipse/info` files:
 
 * `CHANGES.txt` (add release)
 * `INFO.md` (update references to commits)
+* `VERSION`
+* commit and push (without push, the inner clone uses an older version)
 
 ## Build all distribution files
+
+Before starting a multi-platform build, check if Docker is started.
 
 ```console
 $ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all

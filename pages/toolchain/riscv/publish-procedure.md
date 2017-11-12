@@ -13,34 +13,14 @@ The RISC-V Embedded GCC binaries are published on GitHub [Releases](https://gith
 
 Generally, apart from packing, there should be no local changes.
 
+Open the `gnu-mcu-eclipse/info/CHANGES.txt` file from the `gnu-mcu-eclipse/riscv-none-gcc-build` project git, and copy its content to the documentation web.
+
 In the documentation git, add new entries to the [Change log]({{ site.baseurl }}/toolchain/riscv/change-log/) (`pages/toolchain/riscv/change-log.md`), grouped by days.
 
-## Update the CHANGES.txt file
-
-In the `gnu-mcu-eclipse/riscv-none-gcc-build` project git, edit the `gnu-mcu-eclipse/info/CHANGES.txt` file (copy the entries from the web change log).
-
-## Add tags to source repos
-
-Check the project [riscv/riscv-gnu-toolchain](https://github.com/riscv/riscv-gnu-toolchain), and determine the specific commits used in the official distribution. Also check if newer stable commits are available
-
-If not present, add tags with the original version number (like `v20170612`).
-
-Add tags with the current version number (like `v7.1.1-2-20170912`), in the following projects:
-
-* the [gnu-mcu-eclipse/riscv-gcc](https://github.com/gnu-mcu-eclipse/riscv-gcc) project
-* the [gnu-mcu-eclipse/riscv-binutils-gdb](https://github.com/gnu-mcu-eclipse/riscv-binutils-gdb) project
-* the [gnu-mcu-eclipse/riscv-newlib](https://github.com/gnu-mcu-eclipse/riscv-newlib) project
-
-## Update the script 
-
-In the [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build), update the `scripts/build.sh` to refer to the latest version number (`RELEASE_VERSION`).
-
-For major releases, Check if the library sources (gmp, mpfr, mpc, isl) did change and possibly update them.
 
 ## Build
 
 Follow the steps in the separate [How to build]({{ site.baseurl }}/toolchain/riscv/build-procedure/) page.
-
 
 ## Prepare a new blog post to announce the release
 
@@ -48,7 +28,8 @@ In the documentation git:
 
 * add a new file to `_posts/riscv-none-gcc/releases`
 * name the file like `2016-01-11-riscv-none-gcc-v7-1-1-2-20160110-released.md`
-* name the post like: **GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released**.
+* name the post like: **GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702 released**.
+* update the `date:` field with the current date
 * in the **Binary files »** link, use the Releases URL, like `https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/` (the page must exist, otherwise publishing will fail)
 
 ## Update the release post with the SHA hashes
