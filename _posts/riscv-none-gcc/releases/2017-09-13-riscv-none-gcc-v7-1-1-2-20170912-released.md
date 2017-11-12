@@ -66,7 +66,7 @@ Compared to the original RISC-V `riscv64-unknown-elf` toolchain, the following i
 
 * a newer `newlib` was included, which supports the 'underscore' syscall functions
 * the mandatory reference to `libgloss` in the linker configuration was removed
-* the `march=rv32imaf/mabi=ilp32f` libary was added to the list of multilibs
+* the `march=rv32imaf/mabi=ilp32f` library was added to the list of multilibs
 * support for `newlib-nano` was added
 * the standard documentation, in PDF and HTML, was added
 
@@ -86,7 +86,7 @@ The latest newlib 2.5.0 for RISC-V fixed this, and switched to the usual newlib 
 
 This change is welcome, since it brings the RISC-V toolchain in line with other toolchains, like `arm-none-eabi`. 
 
-Unfortunatley this change breaks the builds for the initial SiFive SDK samples, which implements the direct function names in the `libwrap` library. To fix them, `libwrap` should no longer be used, the `--wrap` options should no longer be passed to the linker, and several functions (like `_write()`, `_istty()`, ...) must be implemented by the application.
+Unfortunately this change breaks the builds for the initial SiFive SDK samples, which implements the direct function names in the `libwrap` library. To fix them, `libwrap` should no longer be used, the `--wrap` options should no longer be passed to the linker, and several functions (like `_write()`, `_istty()`, ...) must be implemented by the application.
 
 ## libgloss
 
@@ -104,7 +104,7 @@ Binaries for **Windows**, **macOS** and **GNU/Linux** are provided. For Windows 
 
 Instructions on how to install them are available in the [How to install the RISC-V toolchain?](https://gnu-mcu-eclipse.github.io/toolchain/riscv/install/) page.
 
-For better control and repetability, the build scripts use Docker containers; all files required during builds are available as a separate [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build) project. 
+For better control and repeatability, the build scripts use Docker containers; all files required during builds are available as a separate [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build) project. 
 
 ## Checksums
 
