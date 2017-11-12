@@ -6,14 +6,14 @@ author: Liviu Ionescu
 
 date: 2015-09-11 22:49:00 +0300
 
-version-id: 7.1.1-1
-version-date: 20170702-0625
+version-id: 7.2.0-1
+version-date: 20171109-1926
 
 ---
 
 ## Overview
 
-The Eclipse RISC-V build plug-in is highly configurable in terms of toolchain executable names and location, so you can use any 32/64-bits RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for **bare metal** target applications is [**GNU MCU Eclipse RISC-V Embdedded GCC**](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/). This toolchain closely follows the official [RISC-V distribution](https://github.com/riscv/riscv-gcc) maintained by [SiFive](https://www.sifive.com).
+The Eclipse RISC-V build plug-in is highly configurable in terms of toolchain executable names and location, so you can use any 32/64-bits RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for **bare metal** target applications is [**GNU MCU Eclipse RISC-V Embedded GCC**](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/). This toolchain closely follows the official [RISC-V distribution](https://github.com/riscv/riscv-gcc) maintained by [SiFive](https://www.sifive.com).
 
 
 ## Target vs host platform
@@ -23,19 +23,19 @@ Please note the distinction between the **target platform** and the **host/devel
 * the **target** platform defines the environment where the application will be executed, and in general can be either a bare metal (the application sits directly on the hardware and has intimate control of it), and applications that sit on top of an operating system, usually a distribution of GNU/Linux optimised for embedded environments
 * the **host/development** platform is the platform where the development tools are executed, usually as cross compilers, and can be, in our case, any platform that supports Eclipse, for example Windows, macOS, GNU/Linux, etc.
 
-> Note: Be sure you select the proper toolchain for the target platform, otherwise builds will not succeed, or the generated applications will fail to run. **Do not** try to use the RISC-V Embdedded GCC to build GNU/Linux applications, because the executables will not run on anything than bare metal, and **do not try to use the Linux toolchains for bare metal applications**.
+> Note: Be sure you select the proper toolchain for the target platform, otherwise builds will not succeed, or the generated applications will fail to run. **Do not** try to use the RISC-V Embedded GCC to build GNU/Linux applications, because the executables will not run on anything than bare metal, and **do not try to use the Linux toolchains for bare metal applications**.
 
-The installation details described below assume the selection of the GNU MCU Eclipse RISC-V Embdedded GCC toolchain. For other toolchains, please follow the specific installation instructions.
+The installation details described below assume the selection of the GNU MCU Eclipse RISC-V Embedded GCC toolchain. For other toolchains, please follow the specific installation instructions.
 
 ## riscv64-unknown-elf-gcc
 
-After installing the toolchain, you'll end up with lots of programs prefixed by `riscv64-unknown-elf-`. Don't be confused by this unfortunate name, the executables are not as _unknown_ as they pretend to be, and the **64** does not mean it runs only on 64-bits platforms, or that it produces 64-bits only binaries. Actually, the toolchain produces both 32/64-bits binaries, based on `-march` and `-mabi`.
+After installing the toolchain, you'll end up with lots of programs prefixed by `riscv-none-embed-`. For those used to the RISC-V original toolchains, there is no `riscv64-` or `riscv32-` prefix since it is actually not needed, the toolchain produces both 32/64-bits binaries, based on `-march` and `-mabi`.
 
 Be sure you **do** select carefully the proper release file to  match the 32/64-bits platform you are using. 
 
 ## Download
 
-Due to portability reasons, the GNU MCU Eclipse plug-ins do not include any toolchain binaries, but they can be downloaded from [GNU MCU Eclipse RISC-V Embdedded GCC](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases). Alternatively, a slightly less elaborated distribution can be downloaded from the [SiFive Tools](https://www.sifive.com/products/tools/) page (currently less platforms supported and no newlib-nano).
+Due to portability reasons, the GNU MCU Eclipse plug-ins distributions **do not** include any toolchain binaries, but they can be downloaded from [GNU MCU Eclipse RISC-V Embedded GCC](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases).
 
 ![RISC-V Releases]({{ site.baseurl }}/assets/images/2017/riscv-releases.png)
 
@@ -46,7 +46,7 @@ For Windows, the RISC-V Embedded GCC toolchain is released in two versions:
 * a portable archive that can be installed in any location
 * a Windows setup that can install the binaries in the standard system location
 
-Our prefered method is to install the binaries in the user home folder, but your mileage may vary.
+Our preferred method is to install the binaries in the user home folder, but your mileage may vary.
 
 ### Portable archive
 
@@ -99,8 +99,8 @@ If you decide to install the toolchain in a system location, you can use the com
 * test if the compiler is functional; use the actual install path:
 
   ```console
-C:\>"C:\Program Files\GNU MCU Eclipse\RISC-V Embedded GCC\7.1.1-1-20170702-0625\bin\riscv64-unknown-elf-gcc.exe" --version
-riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
+C:\>"C:\Program Files\GNU MCU Eclipse\RISC-V Embedded GCC\{{ page.version-id }}-{{ page.version-date }}\bin\riscv-none-embed-gcc.exe" --version
+riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
 ```
 
 The complete toolchain documentation is available in the `...\share\doc\pdf\` folder.
@@ -116,7 +116,7 @@ For macOS, the RISC-V Embedded GCC toolchain is released in two versions:
 * a portable archive that can be installed in any location
 * an installable package that can install the binaries in the standard system location 
 
-Our prefered method is to install the binaries in the user home folder, but your mileage may vary.
+Our preferred method is to install the binaries in the user home folder, but your mileage may vary.
 
 ### Portable archive
 
@@ -145,15 +145,15 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
   ```console
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
-$ tar xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-osx.tgz
-$ chmod -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625
+$ tar xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-{{ page.version-id }}-{{ page.version-date }}-osx.tgz
+$ chmod -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/{{ page.version-id }}-{{ page.version-date }}
 ```
 
 * test if the compiler is functional; use the actual install path:
 
   ```console
-$ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
-riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
+$ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/{{ page.version-id }}-{{ page.version-date }}/bin/riscv-none-embed-gcc --version
+riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
 ```
 
 ### Install package
@@ -171,15 +171,15 @@ The package is installed in:
 To check if the compiler starts, use:
 
 ```console
-$ /Applications/GNU\ ARM\ Eclipse/RISC-V\ Embedded\ GCC/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
-riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
+$ /Applications/GNU\ ARM\ Eclipse/RISC-V\ Embedded\ GCC/{{ page.version-id }}-{{ page.version-date }}/bin/riscv-none-embed-gcc --version
+riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
 ```
 
 > **DO NOT add the toolchain path to the user or system path!**
 
 The complete toolchain documentation is available in the `.../share/doc/pdf/` folder.
 
-If you'll ever need to remove the toolchain, only remove the `riscv-none-gcc/7.1.1-1-20170702-0625` folder, there are no other components stored in any system folders.
+If you'll ever need to remove the toolchain, only remove the `riscv-none-gcc/{{ page.version-id }}-{{ page.version-date }}` folder, there are no other components stored in any system folders.
 
 ## GNU/Linux
 
@@ -210,22 +210,22 @@ The following steps were performed on **Ubuntu 16.04 LTSx64** (please adjust the
   ```console
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
-$ tar xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian64.tgz
-$ chmod -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625
+$ tar xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-{{ page.version-id }}-{{ page.version-date }}-debian64.tgz
+$ chmod -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/{{ page.version-id }}-{{ page.version-date }}
 ```
 
 * test if the compiler is functional; use the actual install path:
 
   ```console
-$ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
-riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
+$ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/{{ page.version-id }}-{{ page.version-date }}/bin/riscv-none-embed-gcc --version
+riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
 ```
 
 > **DO NOT add the toolchain path to the user or system path!**
 
 The complete toolchain documentation is available in the `.../share/doc/pdf/` folder.
 
-If you'll ever need to remove the toolchain, only remove the `riscv-none-gcc/7.1.1-1-20170702-0625` folder, there are no other components stored in any system folders.
+If you'll ever need to remove the toolchain, only remove the `riscv-none-gcc/{{ page.version-id }}-{{ page.version-date }}` folder, there are no other components stored in any system folders.
 
 ## Toolchain path
 

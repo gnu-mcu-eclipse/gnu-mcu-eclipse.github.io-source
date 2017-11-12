@@ -189,35 +189,35 @@ $ tree -L 2 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 ├── README.md
 ├── bin
-│   ├── riscv64-unknown-elf-addr2line
-│   ├── riscv64-unknown-elf-ar
-│   ├── riscv64-unknown-elf-as
-│   ├── riscv64-unknown-elf-c++
-│   ├── riscv64-unknown-elf-c++filt
-│   ├── riscv64-unknown-elf-cpp
-│   ├── riscv64-unknown-elf-elfedit
-│   ├── riscv64-unknown-elf-g++
-│   ├── riscv64-unknown-elf-gcc
-│   ├── riscv64-unknown-elf-gcc-7.1.1
-│   ├── riscv64-unknown-elf-gcc-ar
-│   ├── riscv64-unknown-elf-gcc-nm
-│   ├── riscv64-unknown-elf-gcc-ranlib
-│   ├── riscv64-unknown-elf-gcov
-│   ├── riscv64-unknown-elf-gcov-dump
-│   ├── riscv64-unknown-elf-gcov-tool
-│   ├── riscv64-unknown-elf-gdb
-│   ├── riscv64-unknown-elf-gprof
-│   ├── riscv64-unknown-elf-ld
-│   ├── riscv64-unknown-elf-ld.bfd
-│   ├── riscv64-unknown-elf-nm
-│   ├── riscv64-unknown-elf-objcopy
-│   ├── riscv64-unknown-elf-objdump
-│   ├── riscv64-unknown-elf-ranlib
-│   ├── riscv64-unknown-elf-readelf
-│   ├── riscv64-unknown-elf-run
-│   ├── riscv64-unknown-elf-size
-│   ├── riscv64-unknown-elf-strings
-│   └── riscv64-unknown-elf-strip
+│   ├── riscv-none-embed-addr2line
+│   ├── riscv-none-embed-ar
+│   ├── riscv-none-embed-as
+│   ├── riscv-none-embed-c++
+│   ├── riscv-none-embed-c++filt
+│   ├── riscv-none-embed-cpp
+│   ├── riscv-none-embed-elfedit
+│   ├── riscv-none-embed-g++
+│   ├── riscv-none-embed-gcc
+│   ├── riscv-none-embed-gcc-7.1.1
+│   ├── riscv-none-embed-gcc-ar
+│   ├── riscv-none-embed-gcc-nm
+│   ├── riscv-none-embed-gcc-ranlib
+│   ├── riscv-none-embed-gcov
+│   ├── riscv-none-embed-gcov-dump
+│   ├── riscv-none-embed-gcov-tool
+│   ├── riscv-none-embed-gdb
+│   ├── riscv-none-embed-gprof
+│   ├── riscv-none-embed-ld
+│   ├── riscv-none-embed-ld.bfd
+│   ├── riscv-none-embed-nm
+│   ├── riscv-none-embed-objcopy
+│   ├── riscv-none-embed-objdump
+│   ├── riscv-none-embed-ranlib
+│   ├── riscv-none-embed-readelf
+│   ├── riscv-none-embed-run
+│   ├── riscv-none-embed-size
+│   ├── riscv-none-embed-strings
+│   └── riscv-none-embed-strip
 ├── gnu-mcu-eclipse
 │   ├── BUILD.md
 │   ├── CHANGES.txt
@@ -233,7 +233,7 @@ $ tree -L 2 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 │   ├── libcc1.0.so
 │   ├── libcc1.la
 │   ├── libcc1.so
-│   └── libriscv64-unknown-elf-sim.a
+│   └── libriscv-none-embed-sim.a
 ├── libexec
 │   └── gcc
 ├── licenses
@@ -244,7 +244,7 @@ $ tree -L 2 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 │   ├── mpc-1.0.3
 │   ├── mpfr-3.1.4
 │   └── newlib
-├── riscv64-unknown-elf
+├── riscv-none-embed
 │   ├── bin
 │   ├── include
 │   └── lib
@@ -271,8 +271,8 @@ A simple test is performed by the script at the end, by launching the executable
 For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:
 
 ```console
-$ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
-riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
+$ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv-none-embed-gcc --version
+riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
 ```
 
 ## More build details

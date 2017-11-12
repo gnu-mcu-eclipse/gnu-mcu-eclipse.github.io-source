@@ -40,7 +40,7 @@ Assembler mnemonics for RISC-V integer and floating-point registers.
 ### 32 bits
 
 ```console
-$ ./riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
+$ ./riscv-none-embed-gcc -march=rv32i -mabi=ilp32 -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
 #define __GXX_ABI_VERSION 1011
 #define __STDC_VERSION__ 201112L
 #define __VERSION__ "7.1.1 20170509"
@@ -49,7 +49,7 @@ $ ./riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -E -dM - < /dev/null | egre
 #define __riscv_float_abi_soft 1
 #define __riscv_xlen 32
 
-$ ./riscv64-unknown-elf-gcc -march=rv32imac -mabi=ilp32 -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
+$ ./riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
 #define __GXX_ABI_VERSION 1011
 #define __STDC_VERSION__ 201112L
 #define __VERSION__ "7.1.1 20170509"
@@ -63,7 +63,7 @@ $ ./riscv64-unknown-elf-gcc -march=rv32imac -mabi=ilp32 -E -dM - < /dev/null | e
 #define __riscv_muldiv 1
 #define __riscv_xlen 32
 
-$ ./riscv64-unknown-elf-gcc -march=rv32imafdc -mabi=ilp32d -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
+$ ./riscv-none-embed-gcc -march=rv32imafdc -mabi=ilp32d -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
 #define __FP_FAST_FMA 1
 #define __FP_FAST_FMAF 1
 #define __GXX_ABI_VERSION 1011
@@ -86,7 +86,7 @@ $ ./riscv64-unknown-elf-gcc -march=rv32imafdc -mabi=ilp32d -E -dM - < /dev/null 
 ### 64 bits
 
 ```console
-$ ./riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
+$ ./riscv-none-embed-gcc -march=rv64i -mabi=lp64 -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
 #define _LP64 1
 #define __GXX_ABI_VERSION 1011
 #define __LP64__ 1
@@ -97,7 +97,7 @@ $ ./riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -E -dM - < /dev/null | egrep
 #define __riscv_float_abi_soft 1
 #define __riscv_xlen 64
 
-$ ./riscv64-unknown-elf-gcc -march=rv64imac -mabi=lp64 -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
+$ ./riscv-none-embed-gcc -march=rv64imac -mabi=lp64 -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
 #define _LP64 1
 #define __GXX_ABI_VERSION 1011
 #define __LP64__ 1
@@ -113,7 +113,7 @@ $ ./riscv64-unknown-elf-gcc -march=rv64imac -mabi=lp64 -E -dM - < /dev/null | eg
 #define __riscv_muldiv 1
 #define __riscv_xlen 64
 
-$ ./riscv64-unknown-elf-gcc -march=rv64imafdc -mabi=lp64d -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
+$ ./riscv-none-embed-gcc -march=rv64imafdc -mabi=lp64d -E -dM - < /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
 #define _LP64 1
 #define __FP_FAST_FMA 1
 #define __FP_FAST_FMAF 1
@@ -167,19 +167,19 @@ int main()
   return i;
 }
 
-$ riscv32-unknown-elf-gcc  main.c --save-temps
+$ riscv-none-embed-gcc  main.c --save-temps
 $ cat main.s
 ...
 	lui	a5,%hi(i)
 	lw	a5,%lo(i)(a5)
 ...
-$ riscv32-unknown-elf-objdump -d a.out
+$ riscv-none-embed-objdump -d a.out
 ...
    101b4:       8341a783                lw      a5,-1996(gp) # 11fdc <i>
 ...
 ```
 
-The gp register should be loaded during startup with the address of the `__global_pointer$` symbol and should not be changed later. 
+The `gp` register should be loaded during startup with the address of the `__global_pointer$` symbol and should not be changed later. 
 
 ```c
 	.section .reset_entry,"ax",@progbits
