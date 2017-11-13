@@ -29,36 +29,40 @@ Install Sun JDK 1.8 or later (required since Eclipse 4.6); JRE is not enough, wi
 *   in a place of you choice, create a folder `GNU MCU Eclipse`
 *   inside it create two more folders, `Eclipses` and `Eclipse Workspaces`
 
-### Install Eclipse IDE for Eclipse Commiters
+### Install Eclipse IDE for Eclipse Committers
 
 This instance of Eclipse will be used for actual development.
 
--   go to [Eclipse download site](http://www.eclipse.org/downloads/) and follow the [download packages](https://www.eclipse.org/downloads/eclipse-packages/) link
--   download **Eclipse IDE for Eclipse Committers**, preferably the 64-bits version (for example eclipse-committers-neon-3-macosx-cocoa-x86_64.tar.gz)
--   unpack the archive
--   rename `Eclipse.app` to `Eclipse-com-cdt-46.app` (`eclipse` to `eclipse-com-cdt-46` on Windows)
--   move it to `.../GNU MCU Eclipse/Eclipses`
-- create shortcut to desktop:
-  -   on Windows, create a shortcut for `eclipse.exe`, rename it `e46-gme.lnk` and copy it to the desktop or a place of your choice
-  -   on macOS, create a Finder alias for `Eclipse.app`, rename it `E46 GME` and move it to a place of your choice
-  -   on GNU/Linux, create a link for `eclipse`, rename it `E46 GME` and move it to a place of your choice
+- go to [Eclipse download site](http://www.eclipse.org/downloads/) and follow the [download packages](https://www.eclipse.org/downloads/eclipse-packages/) link
+- download **Eclipse IDE for Eclipse Committers**, preferably the 64-bits version (for example eclipse-committers-oxygen-1a-macosx-cocoa-x86_64.dmg)
+- unpack the archive
+- on macOS, remove the `com.apple.quarantine` attribute:
+
+```console
+xattr -d com.apple.quarantine Eclipse.app
+```
+- rename `Eclipse.app` to `Eclipse-com-cdt-47.app` (`eclipse` to `eclipse-com-cdt-47` on Windows)
+- move it to `.../GNU MCU Eclipse/Eclipses`
+- create link on the desktop:
+  - on Windows, create a shortcut for `eclipse.exe`, rename it `e47-gme.lnk` and copy it to the desktop or a place of your choice
+  - on macOS, create a Finder alias for `Eclipse.app`, rename it `E47 GME` and move it to a place of your choice
+  - on GNU/Linux, create a soft link for `eclipse`, rename it `E47 GME` and move it to a place of your choice
 
 ###   Start the new Eclipse
 
--   create a new workspace, preferably in a separate folder, like `Eclipse Workspaces/w-gme-46` (note: be sure you create the workspace where you need it to be, since moving later is generally not supported by Eclipse; if you need this, preferably create a new workspace)
--   check if you installed the right Eclipse; go to the _Eclipse_ menu → **Help** (*_Eclipse_* on macOS) → **About Eclipse** and the first line should read **Eclipse IDE for Eclipse Committers**
+-   create a new workspace, preferably in a separate folder, like `Eclipse Workspaces/w-gme-47` (note: be sure you create the workspace where you need it to be, since moving later is generally not supported by Eclipse; if you need this, preferably create a new workspace)
+- check **Use this as default...**
+-   check if you installed the right Eclipse; go to the _Eclipse_ menu → **Help** (**Eclipse** on macOS) → **About Eclipse** and the first line should read **Eclipse IDE for Eclipse Committers**
 -   **Help** → **Install New Software**
-  * Work with: `Neon - http://download.eclipse.org/releases/neon`
+  * Work with: `Oxygen - http://download.eclipse.org/releases/oxygen`
     * In **Programming Languages**
       * select **C/C++ Development Tools**
       * select **C/C++ Development Tools SDK**
-      * optional: Autotools, CMake, Docker, LLVM, Unit Testing, ...
+      * optional: Autotools, LLVM-Family, Unit Testing, Docker Container Launch Support...
     * In **Mobile and Device Development**
       * select **C/C++ GCC Cross Compile Support**
       * select **C/C++ GDB Hardware Debugging**
       * select **C/C++ Memory View Enhancements**
-    * In **General Purpose Tools**
-      * select **m2e - Maven Integration for Eclipse**
     * click the **Next** button
     * accept the terms of the license agreement
     * click the **Finish** button
@@ -76,26 +80,25 @@ Note: without the CDT sources available in the SDK, the extension point schemas 
   * click the **Add...** button
   * select **Nothing: Start with an empty target**
   * Next
-    * Enter name: **9.2.1 Neon**
-    * click **Add** → **Directory**
-    * click **Browse** → `cdt-9.2.1`
+    * Enter name: `9.2.1 Neon`
+    * click **Add...** → **Directory** → **Next >**
+    * click **Browse...** → `cdt-9.2.1`
     * click the **Finish** button
   * click the **Reload** button
   * click the **Finish**
-* select **Running Platform as Active** (mandatory!)
-* OK
+* enable only the **Running Platform as Active** (mandatory!)
+* click **Apply and Close**
 
 Selecting the running platform is required when starting Eclipse to Run or Debug, without it the core plug-ins will not be available.
 
 * in the _Eclipse_ menu → **(Window →) Preferences** → **Plug-in Development** → **API Baselines**
   * click the **Add Baseline...** button
   * select **A target platform**
-    * Enter name: 9.2.1 Neon
-    * select 9.2.1 Neon
+    * Enter name: `9.2.1 Neon`
+    * enable `9.2.1 Neon`
     * click the **Refresh** button
     * click the **Finish** button
-  * click the **OK** button
-* click the **OK** button
+* click **Apply and Close**
 
 ### Create and configure the workspace
 
@@ -115,7 +118,9 @@ Selecting the running platform is required when starting Eclipse to Run or Debug
     * click **Add** and add *.inf, *.sh, *.command, *.ini
     * for each, click the **Add** button in the Associate editors area
     * associate with the Text Editor
-    * click the **OK** button
+    * click the **Apply and Close** button
+
+  * go to the _Eclipse_ menu → **(Window →) Preferences...**
   * **Run/Debug** → **Console**
     * disable Limit console output
     * click the **Apply** button
@@ -133,35 +138,45 @@ Selecting the running platform is required when starting Eclipse to Run or Debug
     * enable **Insert whitespace before closing...**
     * enable **Indent using tabs**
     * click the **Apply** button
-  * click the **OK** button
+  * click the **Apply and Close** button
 
 ### Install several Eclipse CDT instances
 
 These separate instances of Eclipse will be used to test the plug-in.
 
-Go to [Eclipse download site](http://www.eclipse.org/downloads/) and follow the [download packages](https://www.eclipse.org/downloads/eclipse-packages/) link
+Go to [Eclipse download site](http://www.eclipse.org/downloads/) and follow the [download packages](https://www.eclipse.org/downloads/eclipse-packages/) link.
+
+#### Eclipse 4.7 Oxygen
+
+Install **Eclipse IDE for C/C++ Developers**.
+
+-   download **Eclipse IDE for C/C++ Developers** (`eclipse-cpp-oxygen-1a-macosx-cocoa-x86_64.dmg`)
+-   unpack the archive
+-   rename *_Eclipse_* to **Eclipse-cdt-47.app**
+-   on macOS, make a Finder alias of the **Eclipse.app**, rename it **E47 CDT test** and move it to a place of your choice (the Desktop, for example); remove the `com.apple.quarantine` attribute.
 
 #### Eclipse 4.6 Neon.3
 
 -   download **Eclipse IDE for C/C++ Developers** (`eclipse-cpp-neon-3-macosx-cocoa-x86_64.tar.gz`)
 -   unpack the archive
--   rename *_Eclipse_* to **eclipse-cdt-test-46**
--   on macOS, make a Finder alias of the **Eclipse.app**, rename it **E46 CDT test** and move it to a place of your choice (the Desktop, for example)
+-   rename *_Eclipse_* to **Eclipse-cdt-46.app**
+-   on macOS, make a Finder alias of the **Eclipse.app**, rename it **E46 CDT test** and move it to a place of your choice (the Desktop, for example); remove the `com.apple.quarantine` attribute.
 
-## Clone the repository
+## Clone the repositories
 
 On Unix systems, the recommended method is using a command line:
 
 ```console
 $ cd .../GNU\ MCU\ Eclipse
-$ git clone https://github.com/gnu-mcu-eclipse/eclipse-plugins.git eclipse-plugins.git
+$ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/eclipse-plugins.git eclipse-plugins.git
+$ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages.git org.eclipse.epp.packages.git
 ```
 
-On Windows, the `git` command is available in the [Git for Windows](https://git-scm.com/download/win) package.
+On Windows, the `git` command is available in the [Git for Windows](https://git-scm.com/download/win) package, it should have been installed from the first step.
 
 ## Import the projects
 
-Import projects using the Maven importer:
+Import projects using the generic importer:
 
 * _Eclipse_ menu → **File** → **Import**
 * Select
@@ -172,57 +187,72 @@ Import projects using the Maven importer:
   * enable **Search for nested projects**
   * disable **Add project(s) to working set**
   * click **Finish**
+* Import Projects
+  * Root Directory: `.../GNU MCU Eclipse/org.eclipse.epp.packages.git`
+  * enable **Search for nested projects**
+  * disable **Add project(s) to working set**
+  * click **Finish**
 
+(From EPP disable most projects, except cpp & common)
 ## Configure the working sets
 
-Create Workspace Sets (for example one for plug-ins, one for features, one for repositories and one for the parent project).
+In the Java Perspective, create Workspace Sets
 
-In the Package Explorer:
+* **GNU MCU Eclipse bundles**
+* **GNU MCU Eclipse features**
+* **GNU MCU Eclipse plugins root** (with the `gnumcueclipse-plugins` project)
+* **GNU MCU Eclipse repositories** (with the `ilg.gnumcueclipse.repository` and `ilg.gnumcueclipse.riscv.repository` projects)
+* **GNU MCU Eclipse EPP packages root** (with the `org.eclipse.epp*` projects)
 
-* click the down pointing triangle icon and select **Configure Working Sets**.
-  * click the **New** button
+In the Java Perspective, the Package Explorer:
+
+* click the down pointing triangle icon and select **Top Level Elements** → **Working Sets**
+* click the down pointing triangle icon and select  **Configure Working Sets...**
+  * click the **New...** button
   * click the **Resource** category
-  * Give the set a name (for example GNU MCU Eclipse plug-ins)
+  * Give the set a name (for example `GNU MCU Eclipse bundles`)
   * select the desired projects
   * click the **Finish** button
   * repeat for all desires sets
 * click the **OK** button
 
-## Create the Maven run configuration
+## Create the Maven run configurations
 
-To ensure that Maven considers only the desired plugin versions during the build, it is necessary to pass a command line option when starting Maven, to ignore local artifacts:
+To start the plug-ins Maven build from Eclipse
 
-```
--Dtycho.localArtifacts=ignore
-``` 
-
-Without this option, Maven might issue many warnings, like:
-
-```console
-[INFO] Resolving dependencies of MavenProject: ilg.gnumcueclipse:ilg.gnumcueclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/plug-ins.git/ilg.gnumcueclipse.core/pom.xml
-[WARNING] The following locally built units have been used to resolve project dependencies:
-[WARNING]   org.eclipse.cdt.make.core/7.3.0.201702180936
-[WARNING]   org.eclipse.cdt/9.2.0.201702180936
-[WARNING]   org.eclipse.cdt.core.native/5.10.0.201702180936
-[WARNING]   org.eclipse.cdt.managedbuilder.core/8.4.0.201702180936
-[INFO] Resolving class path of MavenProject: ilg.gnumcueclipse:ilg.gnumcueclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/plug-ins.git/ilg.gnumcueclipse.core/pom.xml
-```
-
-Unfortunately I did not find a way to pass this option in the pom files, and it must be passed only on the command line.
-
-To start the Maven build from Eclipse
-
-* select the **gnumcueclipse-plugins** project
+* in the `GNU MCU Eclipse plugins root` set, select the `gnumcueclipse-plugins` project
 * _Eclipse_ menu → **Run** → **Run Configurations...**
-* double click the **Maven Build** enty
+* double click the **Maven Build** entry
 * **Name:** `GME clean verify` 
 * in the Main tab
+  * Base directory: click the Workspace... button and select the `gnumcueclipse-plugins`
   * Goals: `clean verify`
-  * add a new parameter, name `tycho.localArtifacts`, value `ignore`
+  * optionally, if warnings are issued, add a new parameter, name `tycho.localArtifacts`, value `ignore`
 * click the **Apply** button
 * in the JRE tab
   * Execution environment JavaSE-1.8
 * click the **Apply** button  
+
+To start the EPP Maven build from Eclipse
+
+* in the `GNU MCU Eclipse EPP packages root` set, select the `org.eclipse.epp-buildall` project
+* _Eclipse_ menu → **Run** → **Run Configurations...**
+* double click the **Maven Build** entry
+* **Name:** `GME EPP clean verify -Pcpp` 
+* in the Main tab
+  * Base directory: click the Workspace... button and select the `org.eclipse.epp-buildall`
+  * Goals: `clean verify`
+  * Profiles: `epp.package.cpp`
+* click the **Apply** button
+* in the JRE tab
+  * Execution environment JavaSE-1.8
+* click the **Apply** button  
+
+The project `org.eclipse.epp.packages.git` is a fork of [https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git](https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git)
+
+```console
+$ git clone https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git org.eclipse.epp.packages.git
+```
 
 ## CDT Wiki
 
