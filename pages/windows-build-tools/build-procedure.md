@@ -93,7 +93,7 @@ The Docker images are available from [Docker Hub](https://hub.docker.com/u/ilege
 
 ## Download the build scripts repo
 
-The build script is available from GitHub and can be [viewed online](https://github.com/gnu-mcu-eclipse/build-scripts/blob/master/scripts/build-openocd.sh).
+The build script is available from GitHub and can be [viewed online](https://github.com/gnu-mcu-eclipse/build-scripts/blob/master/scripts/build-windows-build-tools.sh).
 
 To download it, clone the [gnuarmeclipse/build-scripts](https://github.com/gnu-mcu-eclipse/build-scripts) Git repo. 
 
