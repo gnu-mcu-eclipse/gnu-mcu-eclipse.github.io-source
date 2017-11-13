@@ -248,7 +248,7 @@ To start the EPP Maven build from Eclipse
   * Execution environment JavaSE-1.8
 * click the **Apply** button  
 
-The project `org.eclipse.epp.packages.git` is a fork of [https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git](https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git)
+The project `org.eclipse.epp.packages.git` is a fork of `https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git`.
 
 ```console
 $ git clone https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git org.eclipse.epp.packages.git
