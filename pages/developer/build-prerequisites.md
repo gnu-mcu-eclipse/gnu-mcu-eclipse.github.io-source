@@ -154,6 +154,12 @@ Install **Eclipse IDE for C/C++ Developers**.
 -   unpack the archive
 -   rename *_Eclipse_* to **Eclipse-cdt-47.app**
 -   on macOS, make a Finder alias of the **Eclipse.app**, rename it **E47 CDT test** and move it to a place of your choice (the Desktop, for example); remove the `com.apple.quarantine` attribute.
+- in the _Eclipse_ menu → **(Window →) Preferences** → **C/C++** → **Appearance**
+  - disable **Show source roots at top of project**
+  - click the **Apply and Close**
+- in Project Explorer, click the down pointing triangle → **Filters and Customizations...**
+  - disable `.*` resources
+  - click the OK button
 
 #### Eclipse 4.6 Neon.3
 
@@ -161,6 +167,7 @@ Install **Eclipse IDE for C/C++ Developers**.
 -   unpack the archive
 -   rename *_Eclipse_* to **Eclipse-cdt-46.app**
 -   on macOS, make a Finder alias of the **Eclipse.app**, rename it **E46 CDT test** and move it to a place of your choice (the Desktop, for example); remove the `com.apple.quarantine` attribute.
+- (workspace prefferences: same as before)
 
 ## Clone the repositories
 
