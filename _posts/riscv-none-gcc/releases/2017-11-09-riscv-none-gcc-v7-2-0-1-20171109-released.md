@@ -108,6 +108,15 @@ Binaries for **Windows**, **macOS** and **GNU/Linux** are provided. For Windows 
 
 Instructions on how to install them are available in the [How to install the RISC-V toolchain?](https://gnu-mcu-eclipse.github.io/toolchain/riscv/install/) page.
 
+The toolchain is also available as an [xPack](https://www.npmjs.com/package/@gnu-mcu-eclipse/riscv-none-gcc) and can be conveniently installed with [`xpm`](https://www.npmjs.com/package/xpm):
+
+```console
+$ xpm install @gnu-mcu-eclipse/riscv-none-gcc --global
+```
+
+This installs the latest available version.
+
+
 For better control and repeatability, the build scripts use Docker containers; all files required during builds are available as a separate [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build) project. 
 
 ## Checksums
