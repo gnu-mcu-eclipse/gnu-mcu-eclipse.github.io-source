@@ -60,12 +60,12 @@ The GNU MCU Eclipse plug-ins define several custom extension points, to facilita
 
 ## Analytics
 
-* eclipse-plugins.git [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/eclipse-plugins/total.svg)](https://github.com/gnu-mcu-eclipse/eclipse-plugins)
-* org.eclipse.epp.packages.git [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/org.eclipse.epp.packages/total.svg)](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages)
-* openocd.git [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/openocd/total.svg)](https://github.com/gnu-mcu-eclipse/openocd)
-* riscv-none-gcc.git [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/riscv-none-gcc/total.svg)](https://github.com/gnu-mcu-eclipse/riscv-none-gcc)
-* windows-build-tools.git [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/windows-build-tools/total.svg)](https://github.com/gnu-mcu-eclipse/windows-build-tools)
-* qemu.git [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/qemu/total.svg)](https://github.com/gnu-mcu-eclipse/qemu)
+* eclipse-plugins.git [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/eclipse-plugins/latest/total.svg)](https://github.com/gnu-mcu-eclipse/eclipse-plugins) [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/eclipse-plugins/total.svg)](https://github.com/gnu-mcu-eclipse/eclipse-plugins) [![Eclipse Marketplace](https://img.shields.io/eclipse-marketplace/dt/gnu-mcu-eclipse.svg?label=marketplace)](https://github.com/gnu-mcu-eclipse/eclipse-plugins)
+* org.eclipse.epp.packages.git [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/org.eclipse.epp.packages/latest/total.svg)](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages) [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/org.eclipse.epp.packages/total.svg)](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages)
+* openocd.git [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/openocd/latest/total.svg)](https://github.com/gnu-mcu-eclipse/openocd) [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/openocd/total.svg)](https://github.com/gnu-mcu-eclipse/openocd)
+* riscv-none-gcc.git [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/riscv-none-gcc/latest/total.svg)](https://github.com/gnu-mcu-eclipse/riscv-none-gcc) [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/riscv-none-gcc/total.svg)](https://github.com/gnu-mcu-eclipse/riscv-none-gcc)
+* windows-build-tools.git [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/windows-build-tools/latest/total.svg)](https://github.com/gnu-mcu-eclipse/windows-build-tools) [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/windows-build-tools/total.svg)](https://github.com/gnu-mcu-eclipse/windows-build-tools)
+* qemu.git [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/qemu/latest/total.svg)](https://github.com/gnu-mcu-eclipse/qemu) [![Github All Releases](https://img.shields.io/github/downloads/gnu-mcu-eclipse/qemu/total.svg)](https://github.com/gnu-mcu-eclipse/qemu)
 
 ## How to build
 
