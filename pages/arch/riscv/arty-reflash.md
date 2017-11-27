@@ -9,7 +9,7 @@ date: 2017-07-07 20:36:00 +0300
 
 ## Vivado
 
-The Xilinx recommended way to re-flash the Arty board is to use the Vivado Design Studio, a huge, Windows-only comercial application.
+The Xilinx recommended way to re-flash the Arty board is to use the Vivado Design Studio, a huge, Windows-only commercial application.
 
 For those in the synthesised hardware business, this might be a perfectly acceptable solution.
 
