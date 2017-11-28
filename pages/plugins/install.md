@@ -21,8 +21,7 @@ If, for any reason, this does not work and you have to do it manually, you only 
 * name: **GNU MCU Eclipse Plug-ins**
 * URL: `http://gnu-mcu-eclipse.netlify.com/v4-neon-updates/`
 
-
-Note: the old URL `http://gnuarmeclipse.sourceforge.net/updates/` is now deprecated, and its content will point to v3.x, that can be used to install the older versions of the plug-ins.
+Note: as the name implies, this URL is only valid for Eclipse **Neon** or later; the old URL `http://gnuarmeclipse.sourceforge.net/updates/` is now deprecated, and its content will point to v3.x, that can be used to install the older versions of the plug-ins on older Eclipses.
 
 It is recommended that you install the plug-ins after installing the [ARM toolchain]({{ site.baseurl }}/toolchain/arm/install) and/or the [RISC-V toolchain]({{ site.baseurl }}/toolchain/riscv/install), the [build tools]({{ site.baseurl }}/windows-build-tools/install/) (on Windows), and the [debugging binaries]({{ site.baseurl }}/debug/install/).
 
@@ -32,7 +31,7 @@ It is recommended that you install the plug-ins after installing the [ARM toolch
 
 ## Prerequisites
 
-Since these are Eclipse plug-ins, they obviously require a functional Eclipse CDT, which requires Java.
+Since these are Eclipse plug-ins, they obviously require a functional Eclipse CDT (Neon or later), which requires Java.
 
 ### Win XP - a word of caution
 
@@ -75,7 +74,7 @@ If you use the Oracle JDK, starting with mid January 2017, attempts to install v
 
 ### Eclipse & CDT
 
-Starting with version 4.x, the oldest Eclipse supported by the plug-ins is Eclipse 4.6 Neon.3 (CDT 9.2), and the recommended version is **4.5 Mars SR2**. Do not try to install them on Mars, Luna, Kepler, Juno, Indigo, or older versions, since the install will fail.
+Starting with version 4.x, the oldest Eclipse supported by the plug-ins is Eclipse 4.6 Neon.3 (CDT 9.2), and the recommended version is **4.7 Oxygen**. Do not try to install them on Mars, Luna, Kepler, Juno, Indigo, or older versions, since the install will fail.
 
 #### The package way
 
@@ -103,7 +102,7 @@ Traditionally Eclipse does not need an installer, Eclipse is distributed as a pl
 
 ### CDT
 
-The minimum CDT version is 9.2.1. Do not try to use earlier versions, since either the install will fail (with something like _... requires 'bundle org.eclipse.cdt 9.2.1' but it could not be found_), or it will not run properly.
+The minimum CDT version is 9.2.1, that came with Eclipse Neon. Do not try to use earlier versions, since either the install will fail (with something like _... requires 'bundle org.eclipse.cdt 9.2.1' but it could not be found_), or it will not run properly.
 
 As mentioned before, the recommended way is to use a fresh **Eclipse IDE for C/C++ Developers** for the cross ARM development projects. Even if you did so, but especially if you did not do so, it is a good idea to check if you really have the latest version available. For this, enter the _Eclipse_ menu and go to **Help** → **Install New Software**
 
