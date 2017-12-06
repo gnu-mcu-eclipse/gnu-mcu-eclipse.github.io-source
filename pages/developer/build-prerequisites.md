@@ -115,7 +115,7 @@ Selecting the running platform is required when starting Eclipse to Run or Debug
     * enable **Show Line Numbers**
     * click the **Apply** button
   * **General** → **Editors** → **File Associations**
-    * click **Add** and add *.inf, *.sh, *.command, *.ini
+    * click **Add** and add *.inf, *.sh, *.command, *.ini, *.liquid
     * for each, click the **Add** button in the Associate editors area
     * associate with the Text Editor
     * click the **Apply and Close** button
@@ -167,7 +167,7 @@ Install **Eclipse IDE for C/C++ Developers**.
 -   unpack the archive
 -   rename *_Eclipse_* to **Eclipse-cdt-46.app**
 -   on macOS, make a Finder alias of the **Eclipse.app**, rename it **E46 CDT test** and move it to a place of your choice (the Desktop, for example); remove the `com.apple.quarantine` attribute.
-- (workspace prefferences: same as before)
+- (workspace preferences: same as before)
 
 ## Clone the repositories
 
