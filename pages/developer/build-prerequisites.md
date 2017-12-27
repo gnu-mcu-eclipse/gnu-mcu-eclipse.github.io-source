@@ -115,7 +115,7 @@ Selecting the running platform is required when starting Eclipse to Run or Debug
     * enable **Show Line Numbers**
     * click the **Apply** button
   * **General** → **Editors** → **File Associations**
-    * click **Add** and add *.inf, *.sh, *.command, *.ini, *.liquid
+    * click **Add** and add *.inf, *.sh, *.command, *.ini, *.liquid, *.launch
     * for each, click the **Add** button in the Associate editors area
     * associate with the Text Editor
     * click the **Apply and Close** button
