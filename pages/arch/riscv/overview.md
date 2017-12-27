@@ -50,3 +50,12 @@ Manuals
 * [The RISC-V Instruction Set Manual, Volume I: User-Level ISA, Document Version 2.2](https://content.riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf) (read [online](https://riscv.org/wp-content/plugins/pdf-viewer/stable/web/viewer.html?file=https://content.riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf#page=1&zoom=auto,-16,798))
 * [The RISC-V Instruction Set Manual, Volume II: Privileged Architecture, Version1.10](https://content.riscv.org/wp-content/uploads/2017/05/riscv-privileged-v1.10.pdf) (read [online](https://riscv.org/wp-content/plugins/pdf-viewer/stable/web/viewer.html?file=https://content.riscv.org/wp-content/uploads/2017/05/riscv-privileged-v1.10.pdf#page=2&zoom=auto,-16,772))
 * [Arty Reference Manual](https://reference.digilentinc.com/reference/programmable-logic/arty/reference-manual)
+
+## Downloads
+
+* [GNU MCU Eclipse IDE for C/C++ Developers](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases)
+* [GNU MCU Eclipse plug-ins](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases)
+* [GNU MCU Eclipse RISC-V Embedded GCC](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases)
+* [GNU MCU Eclipse OpenOCD](https://github.com/gnu-mcu-eclipse/openocd/releases)
+* [GNU MCU Eclipse Windows Build Tools](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases)
+

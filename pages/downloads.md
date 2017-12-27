@@ -8,6 +8,19 @@ date: 2015-09-10 19:54:00 +0300
 
 ---
 
+## Quicklinks
+
+If you know what this is all about, the download pages are:
+
+* [GNU MCU Eclipse IDE for C/C++ Developers](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases)
+* [GNU MCU Eclipse plug-ins](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases)
+* [GNU MCU Eclipse RISC-V Embedded GCC](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases)
+* [GNU MCU Eclipse OpenOCD](https://github.com/gnu-mcu-eclipse/openocd/releases)
+* [GNU MCU Eclipse Windows Build Tools](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases)
+* [GNU ARM Eclipse QEMU](https://github.com/gnu-mcu-eclipse/qemu/releases)
+
+## Overview
+
 During the various install or update steps, it will be necessary to access the binary files with the new releases.
 
 There are two methods:
