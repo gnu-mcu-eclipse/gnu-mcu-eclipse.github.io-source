@@ -83,7 +83,7 @@ function do_script() {
 
   # Mainly to validate the internal & external links.
   # do_run bundle exec htmlproofer --only-4xx "${site}"
-  do_run bundle exec htmlproofer --url-ignore "/img.shields.io/" "${site}"
+  do_run bundle exec htmlproofer --url-ignore "/img.shields.io/,/uk.farnell.com/" "${site}"
 
   # ---------------------------------------------------------------------------
   # The deployment code is present here not in after_success, 
