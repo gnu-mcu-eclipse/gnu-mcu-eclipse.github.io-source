@@ -47,7 +47,7 @@ However please note that no support requests referring to Win XP 64 will be pro
 
 The recommended package is the latest version from the official [Oracle **Java SE** page](http://www.oracle.com/technetwork/java/javase/index.html). The **OpenJDK Java** used in Ubuntu is also fine. The minimum is JDK 1.8, or even JRE 1.8 (the Java Runtime Environment), but, as said before, better use the latest JDK (currently 1.8.151). On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.
 
-Note: please note that Java may be distributed in separate 32/64-bits packages. Unless you have older applications requiring 32-bits Java, on 64-bits systems it is recommended to install the 64-bits JDK. Anyway, Oracle JDK 9 might not even be available for 32-bits. 
+> Important note: Java may be distributed in separate 32/64-bits packages. Unless you have older applications requiring 32-bits Java, on 64-bits systems it is recommended to install the 64-bits JDK. Anyway, Oracle JDK 9 might not even be available for 32-bits. 
 
 On some distributions, for example on Ubuntu 16.04 LTS, Java seems to be already installed in the standard distribution:
 
@@ -84,7 +84,7 @@ The simple way is to download **GNU MCU Eclipse IDE for C/C++ Developers** from 
 
 ![Eclipse EPP]({{ site.baseurl }}/assets/images/2017/epp-releases.png)
 
-Note: Please note that there are different binaries for 32-bits (`_x86`) and 64-bits (`x86-64`). Be sure the Eclipse binary word size matches the Java word size, otherwise the obscure `Java was started but returned exit code=13` message is issued.
+> Important note: there are different binaries for 32-bits (`_x86`) and 64-bits (`x86-64`). Be sure the Eclipse binary word size matches the Java word size, otherwise the obscure `Java was started but returned exit code=13` message is issued.
 
 #### The plug-ins install way
 
