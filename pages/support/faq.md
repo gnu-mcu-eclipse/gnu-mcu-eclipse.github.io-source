@@ -10,6 +10,12 @@ date: 2015-09-11 20:28:00 +0300
 
 <div style="clear: both;"></div>
 
+## Java was started but returned exit code=13
+
+This obscure message is issued by Eclipse when you are trying to use a 64-bits Eclipse on a 32-bits Java (and possibly the other way around).
+
+If you install Java for the first time, be sure you use the 64-bits Java on 64-bits systems, and then the 64-bits version of Eclipse.
+
 ## Receive fatal alert: handshake_failure
 
 ![Handshake failure]({{ site.baseurl }}/assets/images/2017/handshake-failure.png)
