@@ -37,7 +37,7 @@ With SourceTree, push to the GitHub remote, the **gnu-mcu-eclipse** and the **gn
 
 ## Check/clone/pull build scripts
 
-Be sure the scripts in the **openocd/build.git** are up to date.
+Be sure the scripts in the **openocd-build.git** are up to date.
 
 ```console
 $ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/openocd-build.git \
@@ -46,7 +46,7 @@ $ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/openocd-buil
 
 ## Build
 
-Important note: Before starting the build, double check if the repository is clean (all changes were committed), otherwise the build version will be stamped with `-dirty`).
+Important note: Before starting the build, double check if the repository is clean (all changes were committed), otherwise the build version will be stamped with `-dirty`.
 
 ```console
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
@@ -64,7 +64,7 @@ In the documentation git:
 - name the post like: **GNU MCU Eclipse OpenOCD v0.10.0-20160110-dev released**.
 - as `download_url` use the generic `https://github.com/gnu-mcu-eclipse/openocd/releases/` (will be updated later after the release is created)
 
-## Update the release post with the MD5 sums
+## Update the release post with the SHA sums
 
 Copy/paste the build report at the end of the post as
 
@@ -113,7 +113,7 @@ gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win64.zip
 - as description, copy the first paragraph from the Web release page
 - add a link to the Web page **\[Continue reading »\]\(\)**
 - get URL from web and update the above link
-- attach binaries and MD5 (drag and drop from the archives folder will do it)
+- attach binaries and SHA (drag and drop from the archives folder will do it)
 - click the **Publish Release** button
 
 Note: at this moment the system should send a notification to all clients watching this project.
@@ -125,7 +125,7 @@ Note: at this moment the system should send a notification to all clients watchi
 ## Copy binaries to the local archive folder
 
 -   go to `.../GNU MCU Eclipse/archive`
--   move the latest binaries and MD5 to `releases/openocd`
+-   move the latest binaries and SHA to `releases/openocd`
 
 ## Share on Facebook
 

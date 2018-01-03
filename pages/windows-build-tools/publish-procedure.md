@@ -29,14 +29,16 @@ In the **gnuarmeclipse/windows-build-tools** project, commit all changes.
 
 ## Check/clone/pull build scripts
 
-Be sure the scripts in the **build-scripts.git** are up to date.
+Be sure the scripts in the **windows-build-tools.git** are up to date.
 
 ```console
-$ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
-  ~/Downloads/build-scripts.git
+$ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/windows-build-tools.git \
+  ~/Downloads/windows-build-tools.git
 ```
 
 ## Build
+
+Important note: Before starting the build, double check if the repository is clean (all changes were committed), otherwise the build version will be stamped with `-dirty`.
 
 ```console
 $ bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh cleanall
@@ -47,57 +49,59 @@ $ caffeinate bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tool
 
 - add a new file to `_posts/windows-build-tools/releases`
 - name the file like `2016-10-28-windows-build-tools-v2-7-20161028-released.md`
-- name the post like: **GNU MCU Eclipse Windows Build Tools v2.7-20161028* released**.
+- name the post like: **GNU MCU Eclipse Windows Build Tools v2.7-20161028 released**.
 
-## Update the release post with the MD5 sums
+## Update the release post with the SHA sums
 
 Copy/paste the build report at the end of the post as
 
 ```console
-c88f834f14f20b99bda1747ab6a8857b
-gnuarmeclipse-build-tools-win32-2.7-201610281058-setup.exe
+25b495b340d84b971736a5dfc2a639608c19b5d9d30d14e86e870c1ce461b855 ?
+gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win32.zip
 
-e7a34cb1e2ee68acbb41a4e441f75aa1
-gnuarmeclipse-build-tools-win64-2.7-201610281058-setup.exe
+da147a2cd378183af1d19ecb655637b5b1deedb691fac25657d9d0e2a102e1be ?
+gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip
 ```
 
 ## Update the web
 
-- commit the **gnuarmeclipse.github.io-source.git** project; use a message like **Windows Build Tools v2.7-20161028* released**
-- run `jekyll-build.command`
-- commit the **gnuarmeclipse.github.io.git** project; use a message like **Windows Build Tools v2.7-20161028* released**
-- push the **gnuarmeclipse.github.io.git** project
+- commit the **gnuarmeclipse.github.io-source.git** project; use a message like **Windows Build Tools v2.7-20161028 released**
+- push the **gnuarmeclipse.github.io-source.git** project
 
 ## Push the project git
 
-With SourceTree, push to the GitHub remote, the **master** branche.
+With SourceTree, push to the GitHub remote, the **master** branch.
 
 ## Create the release
 
 - for stable releases, be sure the **master** branch is up to date and set as default
 - go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases) page
 - click **Draft a new release**
-- name the tag like **v2.7**
+- name the tag like **v2.7-20161028**
 - select the **master** branch
-- name the release like **GNU MCU Eclipse Windows Build Tools v2.7-201610281058**
+- name the release like **GNU MCU Eclipse Windows Build Tools v2.7-20161028**
 - as description, copy the first paragraph from the Web release page
 - add a link to the Web page **\[Continue reading »\]\(\)**
 - get URL from web and update the above link
-- attach binaries and MD5 (drag and drop from the archives folder will do it)
+- attach binaries and SHA (drag and drop from the archives folder will do it)
 - click the **Publish Release** button
 
 Note: at this moment the system should send a notification to all clients watching this project.
 
+## Update the web link to resources
+
+* `download_url: https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/tag/v2.9-20170629-1013`
+
 ## Copy binaries to the local archive folder
 
--   go to `.../GNU MCU Eclipse/archive`
--   move the latest binaries and MD5 to `releases/build-tools`
+- go to `.../GNU MCU Eclipse/archive`
+- move the latest binaries and SHA to `releases/build-tools`
 
 ## Share on Facebook
 
 - go to the new post and follow the Share link.
 - DO NOT select **On your own Timeline**, but **On a Page you manage**
-- select GNU ARM Eclipse
-- posting as GNU ARM Eclipse
+- select GNU MCU Eclipse
+- posting as GNU MCU Eclipse
 - click **Post to Facebook**
 - check the post in the [Facebook page](https://www.facebook.com/gnu-mcu-eclipse)

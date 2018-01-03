@@ -15,96 +15,22 @@ The script was developed on macOS, but it also runs on any recent GNU/Linux dist
 
 ## Prerequisites
 
-The main trick that made the multi-platform build possible is [Docker](https://www.docker.com).
-
-The Windows build uses MinGW-w64 in a Debian 8 container.
-
-### macOS
-
-#### Install the Command Line Tools
-
-The macOS compiler and other development tools are packed in a separate Xcode add-on. The best place to get it is from the [Developer](http://developer.apple.com/xcode/downloads/) site, although this might require enrolling to the developer program (free of charge).
-
-To test if the compiler is available, use:
-
-```console
-$ gcc --version
-Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
-Apple LLVM version 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
-Target: x86_64-apple-darwin14.3.0
-Thread model: posix
-```
-
-#### Install a custom instance of Homebrew
-
-The build process is quite complex, and requires tools not available in the standard Apple macOS distribution. These tools can be installed with Homebrew. To keep these tools separate, a custom instance of Homebrew is installed in `${HOME}/opt/homebrew-gae`. 
-
-In a separate run, the **[MacTex](http://www.tug.org/mactex/)** tools are also installed in `${HOME}/opt/texlive`. Alternatively you can install MacTex in `/usr/local` using the official distribution, but this will add lots of programs to the system path, and this is a bad thing.
-
-The entire process can be automated with two scripts, available from GitHub:
-
-```console
-$ mkdir -p ${HOME}/opt
-$ git clone https://github.com/ilg-ul/opt-install-scripts \
-    ${HOME}/opt/install-scripts.git
-$ bash ${HOME}/opt/install-scripts.git/install-homebrew-gae.sh
-$ bash ${HOME}/opt/install-scripts.git/install-texlive.sh
-```
-
-The scripts run with user credentials, no `sudo` access is required.
-
-#### Install Docker
-
-On macOS, Docker can be installed by following the official [Install Docker on macOS](https://docs.docker.com/installation/mac/) instructions.
-
-### GNU/Linux
-
-#### Install Docker
-
-For any GNU/Linux distribution, follow the [specific instructions](https://docs.docker.com/installation/#installation).
-
-#### Configure Docker to run as a regular user
-
-To allow Docker to run as a regular user, you need to be a member of the `docker` group.
-
-```console
-$ sudo groupadd docker
-$ sudo gpasswd -a ${USER} docker
-$ sudo service docker restart
-```
-
-To make these changes effective, logout and login.
-
-The above are for Ubuntu and the Debian family. For other distributions, the last line may differ, for example for Arch Linux use:
-
-```console
-$ systemctl restart docker
-```
-
-#### Install required packages
-
-Since most of the build is performed inside the Docker containers, there are not many requirements for the host, and most of the time these programs are in the standard distribution (**curl**, **git**, **automake**, **patch**, **tar**, **unzip**).
-
-The script checks for them; if the script fails, install them and re-run.
-
-### Docker images
-
-The Docker images are available from [Docker Hub](https://hub.docker.com/u/ilegeul/). They were build using the Dockerfiles available from [ilg-ul/docker on GitHub](https://github.com/ilg-ul/docker).
+The prerequisites are common to all binary builds. Please follow the instructions in the separate [Prerequisites for building binaries]({{ site.baseurl }}/developer/build-binaries-prerequisites/) page and return when ready.
 
 ## Download the build scripts repo
 
-The build script is available from GitHub and can be [viewed online](https://github.com/gnu-mcu-eclipse/build-scripts/blob/master/scripts/build-windows-build-tools.sh).
+The build script is available from GitHub and can be [viewed online](https://github.com/gnu-mcu-eclipse/windows-build-tools/blob/master/scripts/build.sh).
 
-To download it, clone the [gnuarmeclipse/build-scripts](https://github.com/gnu-mcu-eclipse/build-scripts) Git repo. 
+To download it, clone the [gnu-mcu-eclipse/windows-build-tools](https://github.com/gnu-mcu-eclipse/windows-build-tools) Git repo. 
 
 ```console
-$ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git  
-  ~/Downloads/build-scripts.git
+$ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/windows-build-tools.git \
+  ~/Downloads/windows-build-tools.git
 ```
 
 ## Check the script
 
-The script creates a temporary build **Work/build-tools** folder in the the user home. Although not recommended, if for any reasons you need to change this, you can redefine WORK_FOLDER variable before invoking the script.
+The script creates a temporary build `Work/openocd` folder in the user home. Although not recommended, if for any reasons you need to change this, you can redefine `WORK_FOLDER` variable before invoking the script.
 
 ## Preload the Docker images
 
@@ -113,45 +39,73 @@ Docker does not require to explicitly download new images, but does this automat
 However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:
 
 ```console
-$ bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh preload-images
+$ bash ~/Downloads/windows-build-tools.git/scripts/build.sh preload-images
 ```
 
 The result should look similar to:
 
 ```console
 $ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-ilegeul/debian      8-gnuarm-mingw      b8261b27add4        3 minutes ago       2.692 GB
+REPOSITORY                  TAG                   IMAGE ID            CREATED             SIZE
+ilegeul/centos32            6-xbb-tex-v1          84e5da687232        3 days ago          4.52GB
+ilegeul/centos              6-xbb-tex-v1          4e96fda659ab        3 days ago          4.71GB
+hello-world                 latest                1815c82652c0        6 months ago        1.84kB
 ```
+
+## Development
+
+When preparing official release, follow the following steps.
+
+* check the [MSYS2](http://sourceforge.net/projects/msys2/files/REPOS/MSYS2/Sources/) for the latest make source archive
+* check [BusyBox](https://github.com/rmyorston/busybox-w32) for the latest commit
+
+### Prepare release
+
+Update `gnu-mcu-eclipse/info` files:
+
+* `CHANGES.txt` (add release, scan the log)
+* `INFO.md` (update references to commits)
+* `VERSION`
+
+In the `build.sh` script:
+
+* update the `MAKE_VERSION`
+* update the commit id `BUSYBOX_COMMIT`
+* commit and push (without push, the inner clone uses an older version)
 
 ## Build all distribution files
 
+Before starting a multi-platform build, check if Docker is started.
+
 ```console
-$ bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh --all
+$ bash ~/Downloads/windows-build-tools.git/scripts/build.sh --all
 ```
 
 On macOS, to prevent entering sleep, use:
 
 ```console
-$ caffeinate bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh --all
+$ caffeinate bash ~/Downloads/windows-build-tools.git/scripts/build.sh --all
 ```
 
-About half an hour later, the output of the build script is a set of 5 files in the output folder:
+After a few good minutes, the output of the build script is a set of files in the output folder:
 
 ```console
-$ ls -l output
-total 3680
--rw-r--r--   1 ilg  staff   685323 May 14 23:30 gnuarmeclipse-build-tools-win32-2.5-201505142015-setup.exe
--rw-r--r--   1 ilg  staff  1194597 May 14 23:23 gnuarmeclipse-build-tools-win64-2.5-201505142015-setup.exe
-drwxr-xr-x  13 ilg  staff      442 May 14 23:24 win32
-drwxr-xr-x  13 ilg  staff      442 May 14 23:17 win64
+$ ls -l deploy 
+total 6600
+-rw-r--r--   1 ilg  staff        1 Jan  3 21:26 empty.sha
+-rw-r--r--   1 ilg  staff  1577768 Jan  3 21:26 gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win32.zip
+-rw-r--r--   1 ilg  staff      123 Jan  3 21:26 gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win32.zip.sha
+-rw-r--r--@  1 ilg  staff  1782202 Jan  3 21:23 gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip
+-rw-r--r--   1 ilg  staff      123 Jan  3 21:23 gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip.sha
+drwxr-xr-x  13 ilg  staff      416 Jan  3 21:23 win32
+drwxr-xr-x  13 ilg  staff      416 Jan  3 21:20 win64
 ```
 
 ## Subsequent runs
 
 ### Separate platform specific builds
 
-Instead of **--all**, you can use any combination of:
+Instead of `--all`, you can use any combination of:
 
 ```
 --win32 --win64
@@ -159,11 +113,18 @@ Instead of **--all**, you can use any combination of:
 
 ### clean
 
-To remove all build files, use:
+To remove most build files, use:
 
 ```console
-$ bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh clean
+$ bash ~/Downloads/windows-build-tools.git/scripts/build.sh clean
 ```
+
+To also remove the repository and the output files, use:
+
+```console
+$ bash ~/Downloads/windows-build-tools.git/scripts/build.sh cleanall
+```
+
 
 ## Install hierarchy
 
@@ -172,7 +133,7 @@ The procedure to install the GNU MCU Eclipse Build Tools is simple. The setup as
 After install, this package should create structure like this (only the first two depth levels are shown):
 
 ```console
-$ tree -L 2 Build\ Tools/bin/version
+$ tree -L 2 Build\ Tools/2.10-20180103-1919/
 ├── COPYING
 ├── INFO.txt
 ├── bin
@@ -200,7 +161,7 @@ No other files are installed in any system folders or other locations.
 
 ## Uninstall
 
-To uninstall the Build Tools from a Windows machine, use the **build-tools-uninstall.exe** program.
+The binaries are distributed as portable archives, that do not need to run a setup and do not require an uninstall.
 
 ## More build details
 

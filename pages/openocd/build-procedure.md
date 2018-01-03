@@ -44,20 +44,10 @@ The result should look similar to:
 
 ```console
 $ docker images
-REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
-ilegeul/debian      9-gnu-mcu-eclipse     ff8a853cf6cb        4 days ago          3.2GB
-ilegeul/debian32    9-gnu-mcu-eclipse     a22ccdf38f1f        4 days ago          3.2GB
-ilegeul/debian32    9                     7348339e67f5        4 days ago          116MB
-debian              9                     a2ff708b7413        2 weeks ago         100MB
-hello-world         latest                1815c82652c0        3 weeks ago         1.84kB
-```
-
-## Rebuild the Docker images
-
-If the download speed is limited, probably it is faster to rebuild the images locally. For this see the `build-images` command:
-
-```console
-$ bash ~/Downloads/openocd-build.git/scripts/build.sh build-images
+REPOSITORY                  TAG                   IMAGE ID            CREATED             SIZE
+ilegeul/centos32            6-xbb-tex-v1          84e5da687232        3 days ago          4.52GB
+ilegeul/centos              6-xbb-tex-v1          4e96fda659ab        3 days ago          4.71GB
+hello-world                 latest                1815c82652c0        6 months ago        1.84kB
 ```
 
 ## Development
@@ -99,8 +89,7 @@ $ bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 On macOS, to prevent entering sleep, use:
 
 ```console
-$ caffeinate bash
-$ exec bash ~/Downloads/openocd-build.git/scripts/build.sh --all
+$ caffeinate bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 ```
 
 About half an hour later, the output of the build script is a set of 5 files in the output folder:
