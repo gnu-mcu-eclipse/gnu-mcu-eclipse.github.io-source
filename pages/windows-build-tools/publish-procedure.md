@@ -80,9 +80,11 @@ With SourceTree, push to the GitHub remote, the **master** branch.
 - name the tag like **v2.7-20161028**
 - select the **master** branch
 - name the release like **GNU MCU Eclipse Windows Build Tools v2.7-20161028**
-- as description, copy the first paragraph from the Web release page
-- add a link to the Web page **\[Continue reading »\]\(\)**
-- get URL from web and update the above link
+- as description
+  - add a downloads badge like `[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/windows-build-tools/v2.10-20180103/total.svg)]()`; use the 
+  - copy the first paragraph from the Web release page
+- add a link to the Web page `[Continue reading »]()`
+- get URL from web and update the above links
 - attach binaries and SHA (drag and drop from the archives folder will do it)
 - click the **Publish Release** button
 
@@ -90,7 +92,7 @@ Note: at this moment the system should send a notification to all clients watchi
 
 ## Update the web link to resources
 
-* `download_url: https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/tag/v2.9-20170629-1013`
+* `download_url: https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/tag/v2.10-20180103/`
 
 ## Copy binaries to the local archive folder
 
