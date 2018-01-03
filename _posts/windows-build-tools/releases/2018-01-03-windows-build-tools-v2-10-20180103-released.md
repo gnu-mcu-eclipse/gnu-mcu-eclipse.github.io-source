@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  GNU MCU Eclipse Windows Build Tools v2.10-20180103 released
-download_url: https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/
+download_url: https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/tag/v2.10-20180103/
 
 author: Liviu Ionescu
 
@@ -42,6 +42,8 @@ Both the make and BusyBox sources were upgraded to the latest available.
 The new Windows Build Tools can be downloaded from the [GitHub Release]({{ page.download_url }}) page.
 
 Separate archive files are provided for Windows 32/64-bits systems.
+
+Note: In preparation for the xPack distribution, only portable archives are provided; Windows setups are no longer supported.
 
 ## Checksums
 
