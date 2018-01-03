@@ -111,8 +111,10 @@ function do_script() {
     exit 0
   fi
 
+  set +e
   do_run git diff
-
+  set -e
+  
   do_run git add --all .
   do_run git commit -m "Travis CI Deploy of ${TRAVIS_COMMIT}" 
 
