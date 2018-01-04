@@ -37,7 +37,7 @@ This method uses the portable tool [xpm](https://www.npmjs.com/package/xpm), the
 $ xpm install @gnu-mcu-eclipse/openocd --global
 ```
 
-This will always install the latest available version, in the central pxPacks repository, which is a platform dependent folder:
+This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:
 
 * Windows: `%APPDATA%\xPacks` (`C:\Users\ilg\AppData\Roaming\xPacks`)
 * macOS: `${HOME}/Library/xPacks`
@@ -54,7 +54,7 @@ The Windows versions of **GNU MCU Eclipse OpenOCD** are packed as ZIP files. Go
 
 Select the `-win64` file for Windows x64 machines and the `-win32` file for Windows x32 machines.
 
-Unpack the archive and copy it into the `%APPDATA%\GNU MCU Eclipse` (`C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse`) folder.
+Unpack the archive and copy it into the `%APPDATA%\GNU MCU Eclipse` (for example `C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse`) folder.
 
 Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.
 
@@ -126,7 +126,7 @@ The GNU/Linux versions of **GNU MCU Eclipse OpenOCD** are packed as TGZ archi
 
 As the name implies, these are Debian `tar.gz` archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-debian64` file for 64-bits machines and the `-debian32` file for 32-bits machines.
 
-To install this package, unpack the archive and copy it to  `/opt/gnuarmeclipse/openocd/${version}`
+To install this package, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/openocd/${version}`
 
 ```console
 $ mkdir -p ${HOME}/opt
