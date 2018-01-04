@@ -96,29 +96,23 @@ About half an hour later, the output of the build script is a set of 5 files in 
 
 ```console
 $ ls -l deploy
-total 41992
-drwxr-xr-x  8 ilg  staff      272 Aug 26 12:57 debian32
-drwxr-xr-x  8 ilg  staff      272 Aug 26 12:45 debian64
--rw-r--r--  1 ilg  staff        1 Aug 26 13:03 empty.sha
--rw-r--r--  1 ilg  staff  2782562 Aug 26 12:57 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-debian32.tgz
--rw-r--r--  1 ilg  staff      130 Aug 26 12:57 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-debian32.tgz.sha
--rw-r--r--  1 ilg  staff  2727918 Aug 26 12:46 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-debian64.tgz
--rw-r--r--  1 ilg  staff      130 Aug 26 12:46 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-debian64.tgz.sha
--rw-r--r--  1 ilg  staff  2552555 Aug 26 12:42 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-osx.pkg
--rw-r--r--  1 ilg  staff      125 Aug 26 12:42 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-osx.pkg.sha
--rw-r--r--  1 ilg  staff  2522421 Aug 26 12:42 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-osx.tgz
--rw-r--r--  1 ilg  staff      125 Aug 26 12:42 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-osx.tgz.sha
--rw-r--r--  1 ilg  staff  2334787 Aug 26 13:03 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win32-setup.exe
--rw-r--r--  1 ilg  staff      133 Aug 26 13:03 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win32-setup.exe.sha
--rw-r--r--  1 ilg  staff  3058854 Aug 26 13:03 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win32.zip
--rw-r--r--  1 ilg  staff      127 Aug 26 13:03 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win32.zip.sha
--rw-r--r--  1 ilg  staff  2369301 Aug 26 12:53 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win64-setup.exe
--rw-r--r--  1 ilg  staff      133 Aug 26 12:53 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win64-setup.exe.sha
--rw-r--r--  1 ilg  staff  3096610 Aug 26 12:53 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win64.zip
--rw-r--r--  1 ilg  staff      127 Aug 26 12:53 gnu-mcu-eclipse-openocd-0.10.0-3-20170826-0939-dev-win64.zip.sha
-drwxr-xr-x  8 ilg  staff      272 Aug 26 12:42 osx
-drwxr-xr-x  8 ilg  staff      272 Aug 26 13:03 win32
-drwxr-xr-x  8 ilg  staff      272 Aug 26 12:52 win64
+total 31088
+drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:41 centos32
+drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:26 centos64
+-rw-r--r--  1 ilg  staff        1 Jan  4 18:50 empty.sha
+-rw-r--r--  1 ilg  staff  2495436 Jan  4 18:41 gnu-mcu-eclipse-openocd-0.10.0-6-20180104-1616-centos32.tgz
+-rw-r--r--  1 ilg  staff      126 Jan  4 18:41 gnu-mcu-eclipse-openocd-0.10.0-6-20180104-1616-centos32.tgz.sha
+-rw-r--r--  1 ilg  staff  2558621 Jan  4 18:26 gnu-mcu-eclipse-openocd-0.10.0-6-20180104-1616-centos64.tgz
+-rw-r--r--  1 ilg  staff      126 Jan  4 18:26 gnu-mcu-eclipse-openocd-0.10.0-6-20180104-1616-centos64.tgz.sha
+-rw-r--r--  1 ilg  staff  2669737 Jan  4 18:22 gnu-mcu-eclipse-openocd-0.10.0-6-20180104-1616-osx.tgz
+-rw-r--r--  1 ilg  staff      121 Jan  4 18:22 gnu-mcu-eclipse-openocd-0.10.0-6-20180104-1616-osx.tgz.sha
+-rw-r--r--  1 ilg  staff  3271104 Jan  4 18:50 gnu-mcu-eclipse-openocd-0.10.0-6-20180104-1616-win32.zip
+-rw-r--r--  1 ilg  staff      123 Jan  4 18:50 gnu-mcu-eclipse-openocd-0.10.0-6-20180104-1616-win32.zip.sha
+-rw-r--r--  1 ilg  staff  3377719 Jan  4 18:37 gnu-mcu-eclipse-openocd-0.10.0-6-20180104-1616-win64.zip
+-rw-r--r--  1 ilg  staff      123 Jan  4 18:37 gnu-mcu-eclipse-openocd-0.10.0-6-20180104-1616-win64.zip.sha
+drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:21 osx
+drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:50 win32
+drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:37 win64
 ```
 
 ## Subsequent runs
@@ -147,24 +141,24 @@ $ bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
 
 ## Native builds
 
-In addition to the Debian 9 binaries, if necessary, the script can be used to build binaries for any Linux distribution.
+In addition to the CentOS binaries, if necessary, the script can be used to build binaries for any Linux distribution.
 
 For such cases, simply start the script without any platform option:
 
 ```console
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh
 ```
+
 It is the responsibility of the user to meet all the prerequisites.
 
 ## Install hierarchy
 
-The procedure to install GNU MCU Eclipse OpenOCD is platform specific, but relatively straight forward (a Windows setup, an macOS install or a TGZ archive on GNU/Linux). The setup/install asks no special questions, and the defaults are generally ok for most installations.
+The procedure to install GNU MCU Eclipse OpenOCD is relatively straight forward and requires to unpack the archive.
 
 After install, this package should create structure like this (only the first two depth levels are shown):
 
 ```console
-$ tree -L 2 /Applications/GNU\ MCU\ Eclipse/OpenOCD
-/Applications/GNU\ MCU\ Eclipse/OpenOCD
+$ tree -L 2 ${HOME}/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117
 ├── bin
 │   └── openocd
 ├── doc
@@ -198,9 +192,7 @@ No other files are installed in any system folders or other locations.
 
 ## Uninstall
 
-To uninstall OpenOCD from a Windows machine, use the `uninstall.exe` program.
-
-On macOS and GNU/Linux, the GNU MCU Eclipse OpenOCD install folder is self-contained and removing it is enough for completely removing the application.
+The binaries are distributed as portable archives, that do not need to run a setup and do not require an uninstall.
 
 ## Test
 
