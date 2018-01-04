@@ -61,6 +61,7 @@ According to Microsoft, this is the recommended location for installing user spe
 In addition, the GNU MCU Eclipse plug-ins also check the following locations (POSIX paths):
 
 ```
+${user.home}/AppData/Roaming/GNU MCU Eclipse/RISC-V Embedded GCC;\
 ${user.home}/AppData/Local/GNU MCU Eclipse/RISC-V Embedded GCC;\
 ${user.home}/opt/GNU MCU Eclipse/RISC-V Embedded GCC;\
 ${user.home}/opt/gnu-mcu-eclipse/riscv-none-gcc;\

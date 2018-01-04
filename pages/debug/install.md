@@ -48,8 +48,10 @@ The GDB client (GDB stands for **G**NU **D**e**b**ugger) is part of the GNU Tool
 
 To check if GDB is functional on your machine, use the following command (adjust the path for your system):
 
-	$ /usr/local/gcc-arm-none-eabi-4_7-2013q3/bin/arm-none-eabi-gdb --version
-	GNU gdb (GNU Tools for ARM Embedded Processors) 7.4.1.20130913-cvs
+```console
+$ /usr/local/gcc-arm-none-eabi-4_7-2013q3/bin/arm-none-eabi-gdb --version
+GNU gdb (GNU Tools for ARM Embedded Processors) 7.4.1.20130913-cvs
+```
 
 The presence of a GDB as part of a GNU toolchain is mandatory, and it is recommended that the version of the GDB client matches the toolchain version. Generally only debugging .ELF applications is possible, and these applications must be compiled to include GNU compatible debugging information (like dwarf).
 

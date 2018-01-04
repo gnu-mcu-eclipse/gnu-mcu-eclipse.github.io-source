@@ -66,7 +66,7 @@ Note 1: when selecting the path, be sure you select the **/bin** folder where th
 
 Note 2: DO NOT SKIP this step, it is mandatory to have a correct toolchain path defined in order for the build to complete correctly.
 
-![Hello Tool chainPath]({{ site.baseurl }}/assets/images/2013/10/HelloToolchainPath.png)
+![Hello Toolchain Path]({{ site.baseurl }}/assets/images/2013/10/HelloToolchainPath.png)
 
 The result of the wizard is a simple project, with a **main()** function printing a greeting on the standard output.
 

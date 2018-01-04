@@ -65,7 +65,7 @@ The result is a structure like:
 To check if OpenOCD starts, use the following command:
 
 ```console
-C:>"C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse\bin\openocd" --version
+C:>"C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse\OpenOCD\0.10.0-5-20171110-1117\bin\openocd" --version
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
 ```
 
@@ -214,9 +214,9 @@ Right after installing OpenOCD, or updating to a new version, it is necessary to
 
 To set the path, first exit Eclipse, and start it again, to allow the autodetect mechanism to give it a try:
 
-- in the _Eclipse_ menu, go to **(Window →) Preferences** → **Run/Debug** → **OpenOCD**
+- in the _Eclipse_ menu, go to **(Window →) Preferences** → **MCU** → **Global OpenOCD Path**
 
-  ![OpenOCD preferences page]({{ site.baseurl }}/assets/images/2015/preferences-run-openocd.png)
+  ![OpenOCD preferences page]({{ site.baseurl }}/assets/images/2018/preferences-mcu-openocd-path.png)
 
 - click the **Restore Defaults** button
 
