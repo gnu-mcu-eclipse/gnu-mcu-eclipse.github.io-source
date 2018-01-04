@@ -17,34 +17,25 @@ Unfortunately, most current toolchains do not provide these two programs in thei
 
 On macOS and GNU/Linux these programs are part of the standard distributions, either directly or in separate Developer packages, so the following steps do not apply.
 
-## Mentor Sourcery CodeBench
+## Download the Windows Build Tools archives
 
-One notable exception is the **[Mentor Sourcery CodeBench Lite](http://www.mentor.com/embedded-software/sourcery-tools/sourcery-codebench/editions/lite-edition/)** toolchain for Windows, which provides two programs, `cs-make` and `cs-rm` (the `cs-` prefix comes from CodeSourcery, the former name of the company that distributed the toolchain).
+The Windows versions of **GNU MCU Eclipse Windows Build Tools** are packed as ZIP files. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases) page and download the latest version named like:
 
-Unfortunately it seems that the CodeSourcery setup is not complete, and the `bin/sh` is not present, so, `make` is using `cmd.exe` to run sub processes, which presents the **old Windows 8191 characters** command line limitation.
+- `gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip`
+- `gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win32.zip`
 
-So, if you use the CodeBench Lite (not recommended anyway), although you already have these two programs in the toolchain path, if you want to use longer lines and a modern make, preferably install these tools and update the names from `cs-make` to `make` and from `cs-rm` to `rm` in the **Toolchains** configuration tab.
+Select the `-win64` file for Windows x64 machines and the `-win32` file for Windows x32 machines.
 
-## Download the Windows Build Tools setup
+Unpack the archive and copy it into the `%APPDATA%\GNU MCU Eclipse` (`C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse`) folder.
 
-Otherwise, if you use other toolchains, like the recommended [**GNU Tools for ARM Embedded Processors**](http://launchpad.net/gcc-arm-embedded), for your convenience we prepared a small package with the required build tools; download the most recent `gnuarmeclipse-build-tools-win[32|64]-*.*-*-setup.exe` file from the [Github Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases) page and proceed with the setup.
-
-## Run the setup
-
-Run the setup with the default settings:
-
-![Windows Build Tools Setup]({{ site.baseurl }}/assets/images/2015/win-build-tools-setup.png)
-
-By default this will install the programs in the `C:\Program Files\GNU MCU Eclipse\Build Tools` folder:
-
-![Default install destination]({{ site.baseurl }}/assets/images/2015/win-build-tools-setup-destination.png)
+Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.
 
 ## Check version
 
 Check if the tool is functional; go to the folder where you installed the tools and run `make --version`.
 
 ```console
-C:\Program Files\GNU MCU Eclipse\Build Tools\bin>make --version
+C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse\Build Tools\2.10-20180103-1919\bin>make --version
 GNU Make 4.1
 Built for i686-w64-mingw32
 Copyright (C) 1988-2014 Free Software Foundation, Inc.
@@ -59,7 +50,7 @@ As recommended when installing the toolchain, it is recommended to keep this set
 
 ## Uninstall
 
-If needed, you can completely remove the package from your system by running the provided uninstall (`build-tools-uninstall.exe`).
+The binaries are distributed as portable archives, that do not need to run a setup and do not require an uninstall.
 
 ## The echo command
 
