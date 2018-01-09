@@ -12,6 +12,104 @@ Entries in this file are in reverse chronological order.
 
 ## 2017
 
+### 2017-12-29 
+
+* SvdUtils: silently ignore missing package.json
+* [#260] DebugUtils.resolveAll substitute project_loc
+
+### 2017-12-28 
+
+* [#259] fix Windows CR LF issue
+* submodule
+
+### 2017-12-27 
+
+* core/EclipseUtils: add getProjectFromConfiguration
+* core/JsonUtils: add get() with default
+* managedbuild.packs: explicit 'Used by debug'
+* packs.data: add xcdl & xpack utils
+* packs.core: add json support & js objects
+* (multi) add Devices tab for Xcdl projects
+* cross.*.feature: add ref to managedbuild.packs
+* submodules
+* packs.core: DurationMonitor with public start/stop
+* debug.gdbjtag: time SVD parsing
+* debug.gdbjtag: move SVD Path to debug launch
+* gdbjtag.*: add TabSvd
+* gdbjtag.{jlink,pyocd,qemu} fix openocd message
+* debug.gdbjtag: improve SVD Path messages
+* debug.gdbjtag: add log line for missing SVD Path
+
+
+### 2017-12-09 
+
+* core: fix PacksStorage
+* core: add JsonUtils
+* core: clean PacksStorage
+* packs.core: add PackTypes
+* debug.gdbjtag: automatically identify xsvd
+
+### 2017-12-08 
+
+* packs.core: Node.getChildren() add doc
+* packs.core: Xsvd process 'enumerations' (plural)
+* debug.gdbjtag: SvdField process 'enumerations'
+* debug.gdbjtag: clean PeripheralsService code
+
+
+### 2017-12-06 
+
+* core: CProjectPacksStorage prefix with CMSIS_
+* debug.gdbjtag: fix finding enum default as value 0
+
+### 2017-12-04 
+
+* debug.gdbjtag: field repetitions functional
+
+### 2017-12-02 
+
+* debug.gdbjtag: peripheral viewer order by addr
+* packs.core: XsvdGenericParser, add enums
+* debug.gdbjtag: implement repetitions and enums
+
+### 2017-11-28 
+
+* debug.gdbjtag: [#249] rename Tcl
+
+### 2017-11-24 
+
+* move classes to packs.core
+* packs.data: reformat comments
+* version 4.3.1
+* packs.core: Leaf properties trimmed
+* packs.core & debug.gdbjtag: arrays & repetitions
+
+### 2017-11-23 
+
+* debug.gdbjtag & core.data: add pack type
+* debug.gdbjtag & core.data: NAME_ DESCRIPTION_
+* packs.core: add KEY_ & [gs]etKeyName()
+* debug.gdbjtag: show reset values for fields
+* packs.core: Json parser add group nodes
+* debug.gdbjtag & core.data: consistent getName()
+* debug.gdbjtag & core.data: reformat comments
+* debug.gdbjtag: show r,w,rw in tooltips
+* debug.gdbjtag(): assert in SvdRegisterDMNode
+
+### 2017-11-22 
+
+* core: add json-simple-1.1.1.jar
+* packs.core: add Json & Xsvd parsers to tree
+* debug.gdbjtag: SvdObjectDMNode cached name & $KEY
+* debug.gdbjtag: parse xsvd too
+* debug.gdbjtag: PeripheralService cleanup
+
+### 2017-11-20
+
+* debug.gdbjtag: add SVD Path property to MCU
+* debug.gdbjtag: PeripheralService with custom SVD
+* debug.gdbjtag: svd key includes debu/release
+
 ### 2017-11-10
 
 * version 4.2.1-201711101735 released
