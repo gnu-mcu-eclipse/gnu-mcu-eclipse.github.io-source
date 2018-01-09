@@ -122,3 +122,5 @@ Many thanks to the following donors (in chronological order):
 * Christopher Parish, USA
 * Mark Bianchi, USA
 * Gerhard Rollinger, Germany
+* Mark Thielen, Germany
+
