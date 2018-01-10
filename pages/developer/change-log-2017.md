@@ -20,7 +20,6 @@ Entries in this file are in reverse chronological order.
 ### 2017-12-28 
 
 * [#259] fix Windows CR LF issue
-* submodule
 
 ### 2017-12-27 
 
@@ -31,7 +30,6 @@ Entries in this file are in reverse chronological order.
 * packs.core: add json support & js objects
 * (multi) add Devices tab for Xcdl projects
 * cross.*.feature: add ref to managedbuild.packs
-* submodules
 * packs.core: DurationMonitor with public start/stop
 * debug.gdbjtag: time SVD parsing
 * debug.gdbjtag: move SVD Path to debug launch
@@ -108,7 +106,7 @@ Entries in this file are in reverse chronological order.
 
 * debug.gdbjtag: add SVD Path property to MCU
 * debug.gdbjtag: PeripheralService with custom SVD
-* debug.gdbjtag: svd key includes debu/release
+* debug.gdbjtag: svd key includes debug/release
 
 ### 2017-11-10
 
