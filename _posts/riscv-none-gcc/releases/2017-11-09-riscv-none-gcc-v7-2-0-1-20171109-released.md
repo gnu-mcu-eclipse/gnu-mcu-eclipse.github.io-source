@@ -116,8 +116,15 @@ $ xpm install @gnu-mcu-eclipse/riscv-none-gcc --global
 
 This installs the latest available version.
 
-
 For better control and repeatability, the build scripts use Docker containers; all files required during builds are available as a separate [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build) project. 
+
+## Known problems
+
+### Running on old processors
+
+[2018-01-10] It was recently discovered that the GNU/Linux binaries do not run on machines equipped with an older processor, even if they run a recent GNU/Linux distribution. Windows binaries seem not affected. macOS binaries may be affected, but Mac machines use more or less recent processors.
+
+The problem was identified to be related to the build configuration, which allowed some optimizations specific to the modern processor used on the build machine. The build script was fixed to avoid specific optimizations, and the new binaries should run on any i686/x86_64 processor or newer.
 
 ## Checksums
 
