@@ -13,23 +13,27 @@ The Windows Build Tools binaries are published on GitHub  [Releases](https://git
 
 ## Update the Change log
 
-Scan the documentation Git log and add new entries to the [Change log]({{ site.baseurl }}/windows-build-tools/change-log/) (`pages/windows-build-tools/change-log.md`), grouped by days.
+Open the `info/CHANGES.txt` file from `gnu-mcu-eclipse/windows-build-tools.git` and copy entries to the web git.
 
-Close issues on the way. Refer to them as:
+In the web git, add new entries to the [Change log]({{ site.baseurl }}/windows-build-tools/change-log/) (`pages/windows-build-tools/change-log.md`), grouped by days.
 
-- **[Issue:\[#22\]\(...\)]**.
+## Update INFO
 
-## Update the CHANGES.txt file
+Edit the `info/INFO.txt` file from `windows-build-tools.git` and update the latest commits.
 
-Edit the `gnuarmeclipse/info/CHANGES.txt` file (copy the entries from the web change log).
+## Commit the project git
 
-## Commit to the project git
+In `gnu-mcu-eclipse/windows-build-tools`, commit all changes.
 
-In the **gnuarmeclipse/windows-build-tools** project, commit all changes.
+## Push the build script git
+
+Push `gnu-mcu-eclipse/openocd-build.git` to GitHub.
+
+Possibly push the helper project too.
 
 ## Check/clone/pull build scripts
 
-Be sure the scripts in the **windows-build-tools.git** are up to date.
+Be sure the scripts in `windows-build-tools.git` are up to date.
 
 ```console
 $ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/windows-build-tools.git \
@@ -41,21 +45,34 @@ $ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/windows-buil
 Important note: Before starting the build, double check if the repository is clean (all changes were committed), otherwise the build version will be stamped with `-dirty`.
 
 ```console
-$ bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh cleanall
-$ caffeinate bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh --all
+$ bash ~/Downloads/windows-build-tools/scripts/build.sh cleanall
+$ caffeinate bash ~/Downloads/windows-build-tools/scripts/build.sh --all
 ```
 
-## Prepare a new blog post to announce the release
+For more details, see the [build]({{ site.baseurl }}/windows-build-tools/build-procedure/) page.
+
+## Prepare a new blog post
+
+In the web git:
 
 - add a new file to `_posts/windows-build-tools/releases`
 - name the file like `2016-10-28-windows-build-tools-v2-7-20161028-released.md`
 - name the post like: **GNU MCU Eclipse Windows Build Tools v2.7-20161028 released**.
+- as `download_url` use the generic `https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/` (will be updated later after the release is created)
+- update the `date:` field with the current date
 
-## Update the release post with the SHA sums
+Close [issues](https://github.com/gnu-mcu-eclipse/openocd/issues) on the way. Refer to them as:
+
+- **[Issue:\[#22\]\(...\)]**.
+
+## Update the SHA sums
 
 Copy/paste the build report at the end of the post as
 
 ```console
+## Checksums
+The SHA-256 hashes for the files are:
+
 25b495b340d84b971736a5dfc2a639608c19b5d9d30d14e86e870c1ce461b855 ?
 gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win32.zip
 
@@ -65,36 +82,36 @@ gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip
 
 ## Update the web
 
-- commit the **gnuarmeclipse.github.io-source.git** project; use a message like **Windows Build Tools v2.7-20161028 released**
-- push the **gnuarmeclipse.github.io-source.git** project
+- commit the `gnu-mcu-eclipse.github.io-source.git` project; use a message like **Windows Build Tools v2.7-20161028 released**
+- push the project
+- wait for the Travis build to complete; occasionally links to not work, and might need to restart the build
+- remember the post URL, since it must be updated in the release page
 
-## Push the project git
-
-With SourceTree, push to the GitHub remote, the **master** branch.
+Note: initially the link to binaries points to the parent releases folder, otherwise Travis will complain and do not publish the site to `gnu-mcu-eclipse.github.io`.
 
 ## Create the release
 
-- for stable releases, be sure the **master** branch is up to date and set as default
+- for stable releases, be sure the `master` branch is up to date and set as default
 - go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases) page
 - click **Draft a new release**
 - name the tag like **v2.7-20161028**
-- select the **master** branch
+- select the `master` branch
 - name the release like **GNU MCU Eclipse Windows Build Tools v2.7-20161028**
 - as description
-  - add a downloads badge like `[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/windows-build-tools/v2.10-20180103/total.svg)]()`; use the 
+  - add a downloads badge like `[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/windows-build-tools/v2.10-20180103/total.svg)]()`; use empty URL for now
   - copy the first paragraph from the Web release page
-- add a link to the Web page `[Continue reading »]()`
+- add a link to the Web page `[Continue reading »]()`; use an empty URL for now
 - get URL from web and update the above links
-- attach binaries and SHA (drag and drop from the archives folder will do it)
+- **attach binaries** and SHA (drag and drop from the archives folder will do it)
 - click the **Publish Release** button
 
 Note: at this moment the system should send a notification to all clients watching this project.
 
-## Update the web link to resources
+## Update the web link
 
 * `download_url: https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/tag/v2.10-20180103/`
 
-## Copy binaries to the local archive folder
+## Copy binaries to the archive
 
 - go to `.../GNU MCU Eclipse/archive`
 - move the latest binaries and SHA to `releases/build-tools`

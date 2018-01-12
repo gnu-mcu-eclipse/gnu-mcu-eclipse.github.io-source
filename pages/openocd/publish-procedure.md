@@ -13,31 +13,42 @@ The OpenOCD binaries are published on GitHub  [Releases](https://github.com/gnu-
 
 ## Update the Change log
 
-Copy entries from the `info/CHANGES.txt` file. In the project git, scan the log.
-In the documentation git, add new entries to the [Change log]({{ site.baseurl }}/openocd/change-log/) (`pages/openocd/change-log.md`), grouped by days.
+Open the `gnu-mcu-eclipse/info/CHANGES.txt` file from `gnu-mcu-eclipse/openocd-build.git` and copy entries to the web git.
 
-Close issues on the way. Refer to them as:
+In the web git, add new entries to the [Change log]({{ site.baseurl }}/openocd/change-log/) (`pages/openocd/change-log.md`), grouped by days.
 
-- **[Issue:\[#22\]\(...\)]**.
+## Update INFO
 
-## Commit to the project git
+Edit the `info/INFO.txt` file from `openocd-build.git` and update the latest commits.
 
-In the **gnu-mcu-eclipse/openocd** project, commit all changes.
+## Commit the project git
+
+In `gnu-mcu-eclipse/openocd.git`, commit all changes. Remember the commit ID.
 
 ## Merge stable release
 
 For **stable releases**, with SourceTree
 
-- change to the **gnu-mcu-eclipse** branch
-- merge **gnu-mcu-eclipse-dev**.
+- change to the `gnu-mcu-eclipse` branch
+- merge `gnu-mcu-eclipse-dev`.
 
 ## Push the project git
 
-With SourceTree, push to the GitHub remote, the **gnu-mcu-eclipse** and the **gnu-mcu-eclipse-dev** branches.
+With SourceTree, push to the GitHub remote, the `gnu-mcu-eclipse` and the `gnu-mcu-eclipse-dev` branches.
+
+## Edit the build script
+
+Edit the `OPENOCD_GIT_COMMIT` variable to point to the actual commit.
+
+## Push the build script git
+
+Push `gnu-mcu-eclipse/openocd-build.git` to GitHub.
+
+Possibly push the helper project too.
 
 ## Check/clone/pull build scripts
 
-Be sure the scripts in the **openocd-build.git** are up to date.
+Be sure the scripts in `gnu-mcu-eclipse/openocd-build.git` are up to date.
 
 ```console
 $ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/openocd-build.git \
@@ -50,79 +61,85 @@ Important note: Before starting the build, double check if the repository is cle
 
 ```console
 $ bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
-$ bash ~/Downloads/openocd-build.git/scripts/build.sh checkout-stable
-$ caffeinate bash 
-$ exec bash ~/Downloads/openocd-build.git/scripts/build.sh --all
+$ caffeinate bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 ```
 
-## Prepare a new blog post to announce the release
+For more details, see the [build]({{ site.baseurl }}/openocd/build-procedure/) page.
 
-In the documentation git:
+## Prepare a new blog post
+
+In the web git:
 
 - add a new file to `_posts/openocd/releases`
-- name the file like `2016-01-11-openocd-v0-10-0-20160110-dev-released.md`
-- name the post like: **GNU MCU Eclipse OpenOCD v0.10.0-20160110-dev released**.
+- name the file like `2016-01-11-openocd-v0-10-0-1-20160110-released.md`
+- name the post like: **GNU MCU Eclipse OpenOCD v0.10.0-1-20160110 released**.
 - as `download_url` use the generic `https://github.com/gnu-mcu-eclipse/openocd/releases/` (will be updated later after the release is created)
+- update the `date:` field with the current date
+- copy commit URLs from the GNU MCU Eclipse fork
 
-## Update the release post with the SHA sums
+Close [issues](https://github.com/gnu-mcu-eclipse/openocd/issues) on the way. Refer to them as:
+
+- **[Issue:\[#22\]\(...\)]**.
+
+## Update the SHA sums
 
 Copy/paste the build report at the end of the post as
 
 ```console
-06e474fe8e5070c84a80c7ffcb697e616a5f2a60f6178cc0c1ccd330c3e052f2 ?
-gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-debian32.tgz
+## Checksums
+The SHA-256 hashes for the files are:
 
-1c96b1e906fcaab55d5e3842049d05f76cb917c4bd5fbe71da9a0838d6519127 ?
-gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-debian64.tgz
+2c9cd4585d7a44cb80dc65fa5e1a46decc3ce2ba1d28ad0da4301c33ee6bcbb3 ?
+gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-centos32.tgz
 
-528722a2da544ed29c390c73ed2027c23f03df8d8ecd363b6f5f32df28ceca06 ?
-gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-osx.pkg
+896f00121cd9df505182266924c7bdbe201b6de85edca58b9144331f3bf75d39 ?
+gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-centos64.tgz
 
-0a8486eecd5b7d1a8d9a9a3d63a8374d918bd4665a617c300f06950791f55b40 ?
-gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-osx.tgz
+8926cb9cc4cd2894f6b5c8da06943569f497313f8e77dcf5641320b7889eb859 ?
+gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-osx.tgz
 
-26bdcec5e696eadd52df8600070f5353f298b26e3dc456015cceb6f54ab367a2 ?
-gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win32-setup.exe
+605e38cd489190ed01d40be130c3be5d70e3370ffc4182f1b561de089a017116 ?
+gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win32.zip
 
-de3550c296611883587483073c3be9597a904e961a85c8e866ea499978eacc04 ?
-gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win32.zip
-
-142ee2936693f16205ba82adf3d0bee90cc4e9e279951c2b18a3929a7552cb8e ?
-gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win64-setup.exe
-
-0ec4539ca660d80f5ad1a6000f41852647ef93afc26a11d01f4bda5847277bfc ?
-gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win64.zip
+b757fb3c838ea82c88adae74043918b552c8ca48de0eb99c3507f321b97db5f5 ?
+gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win64.zip
 ```
 
 ## Update the web
 
-- commit the **gnuarmeclipse.github.io-source.git** project; use a message like **OpenOCD v0.10.0-5-20171110 released**
-- run `jekyll-build.command`
-- commit the **gnuarmeclipse.github.io.git** project; use a message like **OpenOCD v0.10.0-5-20171110 released**
-- push the **gnuarmeclipse.github.io.git** project
+- commit the `gnu-mcu-eclipse.github.io-source.git` project; use a message like **OpenOCD v0.10.0-5-20171110 released**
+- push the web project
+- wait for the Travis build to complete; occasionally links to not work, and might need to restart the build.
+- remember the post URL, since it must be updated in the release page
 
+Note: initially the link to binaries points to the parent releases folder, otherwise Travis will complain and do not publish the site to `gnu-mcu-eclipse.github.io`.
 
-## Create the release
+## Create a new GitHub release
 
-- for stable releases, be sure the **gnuarmeclipse** branch is up to date and set as default
+- for stable releases, be sure the `gnu-mcu-eclipse` branch is up to date and set as default
 - go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/openocd/releases) page
 - click **Draft a new release**
-- name the tag like **v0.10.0-5-20171110**
-- select the**gnuarmeclipse** or **gnuarmeclipse-dev** branch
+- name the tag like **v0.10.0-5-20171110** (mind the dashes in the middle!)
+- select the `gnu-mcu-eclipse` or `gnu-mcu-eclipse-dev` branch
 - name the release like **GNU MCU Eclipse OpenOCD v0.10.0-5-20171110**
-- as description, copy the first paragraph from the Web release page
-- add a link to the Web page **\[Continue reading »\]\(\)**
-- get URL from web and update the above link
-- attach binaries and SHA (drag and drop from the archives folder will do it)
+- as description
+  - add a downloads badge like `[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/openocd/v0.10.0-5-20171110/total.svg)]()`; use empty URL for now
+  - copy the first paragraph from the Web release page
+- add a link to the Web page `[Continue reading »]()`; use an empty URL for now
+- get URL from web and update the above links
+- **attach binaries** and SHA (drag and drop from the archives folder will do it)
 - click the **Publish Release** button
 
 Note: at this moment the system should send a notification to all clients watching this project.
 
-## Update the web link to resources
+## Update the web link 
 
-* `download_url: https://github.com/gnu-mcu-eclipse/openocd/releases/tag/v0.10.0-4-20171004`
+In the web git:
 
-## Copy binaries to the local archive folder
+- `download_url: https://github.com/gnu-mcu-eclipse/openocd/releases/tag/v0.10.0-4-20171004`
+- commit with a message like `v0.10.0-5-20171110 update link`
+
+## Copy binaries to archive
 
 -   go to `.../GNU MCU Eclipse/archive`
 -   move the latest binaries and SHA to `releases/openocd`
