@@ -37,7 +37,7 @@ permalink: /blog/:year/:month/:day/:title/
 #   - jekyll-feed
 # {% feed_meta %} in head.html
 
-gems:
+plugins:
   - jekyll-last-modified-at
   - jekyll-mentions
   - jemoji
