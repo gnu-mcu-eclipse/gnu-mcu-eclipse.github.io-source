@@ -9,6 +9,17 @@ date: 2015-09-04 17:02:00 +0300
 
 Entries in this file are in reverse chronological order.
 
+## 2018
+
+### 2018-01-12
+
+- v0.10.0-6-20180112 released
+- update to master from Dec 20
+- update to riscv from Dec 29
+- remove the patch to hide the CSRs, the new version displays only a limited number of them.
+- remove the `remote_bitbang.c` patch, since it compiles ok on mingw-w64
+- the SiFive board scripts were upstreamed to the RISC-V fork
+
 ## 2017
 
 ### 2017-11-10
