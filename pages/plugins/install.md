@@ -253,7 +253,7 @@ Eclipse is incompatible with the GTK version 3 distributed with Ubuntu (confirme
 
 ```console
 $ export SWT_GTK3=0
-```console
+```
 
 ### macOS com.apple.quarantine
 
