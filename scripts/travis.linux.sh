@@ -49,9 +49,8 @@ function do_before_install() {
   do_run gem install html-proofer
   do_run htmlproofer --version
 
-  cd "${slug}"
-  do_run bundle install
-
+  do_run gem update --system
+  
   return 0
 }
 
