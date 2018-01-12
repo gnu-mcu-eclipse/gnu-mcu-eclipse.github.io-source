@@ -255,6 +255,13 @@ Eclipse is incompatible with the GTK version 3 distributed with Ubuntu (confirme
 $ export SWT_GTK3=0
 ```
 
+If, for any reason, a global setting is not possible, the GTK version can be set in `eclipse.ini`:
+
+```
+--launcher.GTK_version
+2
+```
+
 ### macOS com.apple.quarantine
 
 On macOS Sierra and later, unsigned applications are marked as _quarantined_ and subject to a path randomization, which prevents Eclipse to maintain persistent preferences (for more details see [blog post](https://ilgthegeek.wordpress.com/2017/07/13/macos-com-apple-quarantine/)). To disable this, remove the `com.apple.quarantine` extended attribute from `Eclipse.app`:
