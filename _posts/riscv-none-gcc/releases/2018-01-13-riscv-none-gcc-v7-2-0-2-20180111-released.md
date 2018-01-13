@@ -43,9 +43,9 @@ All architectures, ABIs and libraries supported by the `riscv64-unknown-elf` too
 
 Binaries for **Windows**, **macOS** and **GNU/Linux** are provided.
 
-The GNU/Linux binaries were built on an improved CentOS 6 box, and run on any distribution based on CentOS 6 or later.
+The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bits), and run on any distribution based on CentOS 6 or later.
 
-The Windows binaries were built with mingw-w64, and run on any reasonably **i686** and **x86_64** Windows machines.
+The Windows binaries were built with mingw-w64, and run on any reasonably recent **i686** and **x86_64** Windows machines.
 
 Instructions on how to install the binaries are available in the [How to install the RISC-V toolchain?](https://gnu-mcu-eclipse.github.io/toolchain/riscv/install/) page.
 
