@@ -11,9 +11,7 @@ date: 2015-09-09 19:43:00 +0300
 
 [OpenOCD](http://openocd.org) is an open source project hosted on [SourceForge](https://sourceforge.net/projects/openocd/), and project maintainers insist that all end-users should compile it from the latest version of the source code available from their repository. There are no special stable branches or tags and there are no clear release dates for future versions. On Windows you need to install MSYS2 and use the appropriate package build procedure.
 
-If you are like us and consider that professional solutions should include stable, hassle free binary distributions, you might be interested to know that a custom packed version of OpenOCD, based on the latest public version (0.9.0) was added to GNU MCU Eclipse, as **GNU MCU Eclipse OpenOCD**. It can be downloaded from the [GitHub Releases](https://github.com/gnu-mcu-eclipse/openocd/releases) page.
-
-So, if you are not interested in building from sources, and appreciate a better integration with the Eclipse plug-in, please feel free to use the GNU MCU Eclipse OpenOCD binaries, and preferably install them in the default locations.
+If you are not interested in building from sources, and appreciate a better integration with the Eclipse plug-in, please feel free to use the GNU MCU Eclipse OpenOCD binaries, and preferably install them in the default locations.
 
 **Warning:** OpenOCD is a very complex project, capable of working with many JTAG probes, but support for them must be explicitly included at build time, so be sure that support for your JTAG probe was included in the binaries you plan to use. The **GNU MCU Eclipse OpenOCD** includes support for most existing probes.
 
@@ -23,11 +21,6 @@ If the only reason to run OpenOCD is to use the ST-LINK on-board programmer on S
 
 Please follow the instructions on [Converting ST-LINK on-board into a J-Link](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/).
 
-## Documentation
-
-If you are using the GNU MCU Eclipse OpenOCD, the documentation is part of the installed package.
-
-Slightly older version are also available in the [Files](https://sourceforge.net/projects/openocd/files/openocd/) section of the SourceForge project. For version 0.9.0, the manual is [openocd.pdf](http://sourceforge.net/projects/openocd/files/openocd/0.9.0/openocd.pdf/download).
 
 ## The xPack install 
 
@@ -45,18 +38,24 @@ This will always install the latest available version, in the central xPacks rep
 
 Note: This location is configurable using the environment variable `XPACKS_REPO_FOLDER`; for more details please check the [xpm folders](https://xpack.github.io/xpm/files/folders/) page.
 
-## Windows
+## Manual install
 
-The Windows versions of **GNU MCU Eclipse OpenOCD** are packed as ZIP files. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/openocd/releases) page and download the latest version named like:
+The all platforms, **GNU MCU Eclipse OpenOCD** is released as a portable archive that can be installed in any location.
 
-- `gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win64.zip`
-- `gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win32.zip`
+The archives can be downloaded from [GitHub Releases](https://github.com/gnu-mcu-eclipse/openocd/releases) page.
+
+### Windows
+
+The Windows versions of **GNU MCU Eclipse OpenOCD** are packed as ZIP files. Download the latest version named like:
+
+- `gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win64.zip`
+- `gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win32.zip`
 
 Select the `-win64` file for Windows x64 machines and the `-win32` file for Windows x32 machines.
 
-Unpack the archive and copy it into the `%APPDATA%\GNU MCU Eclipse` (for example `C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse`) folder.
+Unpack the archive and copy it into the `%userprofile%\AppData\Roaming\GNU MCU Eclipse` (for example `C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse`) folder; according to Microsoft, this is the recommended location for installing user specific packages;
 
-Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.
+> Note: although perfectly possible to install OpenOCD in any folder, it is highly recommended to use this path, since by default the plug-in searches for the executable in this location.
 
 The result is a structure like:
 
@@ -69,11 +68,11 @@ C:>"C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse\OpenOCD\0.10.0-5-20171110-1117\
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
 ```
 
-### Drivers
+#### Drivers
 
 As usual on Windows, mastering drivers is a challenge and OpenOCD is no exceptions, so don't be surprised to encounter many incompatible drivers for various JTAG probes. The OpenOCD distribution includes some libusb drivers, and recommends to run the `zadig.exe` tool to activate them. Although this manoeuvre will make OpenOCD happy, it will most probably ruin other USB drivers you might have installed. Our strong recommendation is to **NOT** do this, and instead use the manufacturer drivers, when compatible with OpenOCD.
 
-#### ST-LINK/V2
+##### ST-LINK/V2
 
 One example of compatible drivers are the ST-LINK/V2 USB drivers, from ST, available as part number [STSW-LINK009](http://www.st.com/web/en/catalog/tools/FM147/SC1887/PF260219). Download the `stsw-link009.zip` archive, extract its content to a separate folder, and run the `dpinst_amd64.exe` (or `dpinst_x86.exe`) with administrative privileges.
 
@@ -89,17 +88,17 @@ Note 1: All Windows tests were performed on Windows 10. If, for any reasons, you
 
 Note 2: OpenOCD v0.7.0 does not work with the current J-Link drivers, so on Windows it is not possible to use OpenOCD with J-Link; use the SEGGER supplied software instead.
 
-#### Zadig
+##### Zadig
 
 For some devices, for example [ARM-USB-OCD](https://www.olimex.com/Products/ARM/JTAG/) from [Olimex](https://www.olimex.com/), after installing the vendor drivers, you must also install [Zadig](http://zadig.akeo.ie) and convert the vendor drivers to WinUSB drivers.
 
-## macOS
+### macOS
 
-The macOS version of **GNU MCU Eclipse OpenOCD** is packed as a TGZ archive. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/openocd/releases) page and download the latest version named like:
+The macOS version of **GNU MCU Eclipse OpenOCD** is packed as a TGZ archive. Download the latest version named like:
 
--  `gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-osx.tgz`
+-  `gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-osx.tgz`
 
-To recommended procedure to unpack the archive is:
+To install OpenOCD, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/openocd/`:
 
 ```console
 $ mkdir -p ${HOME}/opt
@@ -108,7 +107,7 @@ $ tar xvf ~/Downloads/gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-osx.tgz
 $ chmod -R -w gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117
 ```
 
-Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.
+> Note: although perfectly possible to install OpenOCD in any folder, it is highly recommended to use this path, since by default the plug-in searches for the executable in this location.
 
 To check if OpenOCD starts, use:
 
@@ -117,16 +116,16 @@ $ ${HOME}/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/bin/openocd --versi
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
 ```
 
-## GNU/Linux
+### GNU/Linux
 
-The GNU/Linux versions of **GNU MCU Eclipse OpenOCD** are packed as TGZ archives. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/openocd/releases) page and download the latest version named like:
+The GNU/Linux versions of **GNU MCU Eclipse OpenOCD** are packed as TGZ archives. Download the latest version named like:
 
-- `gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-debian64.tgz`
-- `gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-debian32.tgz`
+- `gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-centos64.tgz`
+- `gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-centos32.tgz`
 
-As the name implies, these are Debian `tar.gz` archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-debian64` file for 64-bits machines and the `-debian32` file for 32-bits machines.
+As the name implies, these are CentOS `tar.gz` archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-centos64` file for 64-bits machines and the `-centos32` file for 32-bits machines.
 
-To install this package, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/openocd/${version}`
+To install OpenOCD, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/openocd/${version}`:
 
 ```console
 $ mkdir -p ${HOME}/opt
@@ -135,7 +134,7 @@ $ tar xvf ~/Downloads/gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-debian64.tg
 $ chmod -R -w gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117
 ```
 
-Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.
+> Note: although perfectly possible to install OpenOCD in any folder, it is highly recommended to use this path, since by default the plug-in searches for the executable in this location.
 
 To check if OpenOCD starts and is recent, use:
 
@@ -144,7 +143,7 @@ $ ${HOME}/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/bin/openocd --versi
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
 ```
 
-### UDEV
+#### UDEV
 
 For the JTAG probes implemented as USB devices (actually most of them), the last installation step on GNU/Linux is to configure the **UDEV** subsystem. OpenOCD provides an UDEV rules file defining all the supported IDs; to install it, just copy the file to `/etc/udev/rules.d` and eventually notify the daemon:
 
@@ -156,7 +155,7 @@ $ sudo udevadm control --reload-rules
 
 Note: If you previously installed the J-Link binaries, the USB IDs were already added to UDEV. The above OpenOCD rules file also defines the J-Link ID. Apparently UDEV does not complain; if you encounter problems, just comment out the definition in the OpenOCD file.
 
-### USB access rights
+#### USB access rights
 
 On some GNU/Linux distributions, the UDEV definitions are not enough,
 or are not effective, and when trying to access the JTAG probe,
@@ -204,7 +203,7 @@ Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
 
 ## OpenOCD Debugging plug-ins
 
-The OpenOCD debugging **plug-ins are not included** in these packages, and need to be installed [as usual]({{ site.baseurl }}/plugins/install/). Just be sure that the **GNU ARM C/C++ OpenOCD Debugging** plug-ins are selected.
+The OpenOCD debugging **plug-ins are not included** in these packages, and need to be installed [as usual]({{ site.baseurl }}/plugins/install/). Just be sure that the **GNU MCU C/C++ OpenOCD Debugging** plug-ins are selected.
 
 ![Install the OpenOCD plug-ins]({{ site.baseurl }}/assets/images/2015/install-new-software-updates-openocd.png)
 
@@ -212,7 +211,7 @@ The OpenOCD debugging **plug-ins are not included** in these packages, and need 
 
 Right after installing OpenOCD, or updating to a new version, it is necessary to inform Eclipse where the binaries were installed. If OpenOCD was installed in the default location, Eclipse has a mechanism to autodetect the most recent version, but this mechanism sometimes fails, and manual path setting is necessary.
 
-To set the path, first exit Eclipse, and start it again, to allow the autodetect mechanism to give it a try:
+To set the path, first exit Eclipse, and start it again, to allow the autodetect mechanism to give it a try.
 
 - in the _Eclipse_ menu, go to **(Window →) Preferences** → **MCU** → **Global OpenOCD Path**
 
@@ -222,4 +221,9 @@ To set the path, first exit Eclipse, and start it again, to allow the autodetect
 
 For more details please refer to the [OpenOCD plug-in]({{ site.baseurl }}/debug/openocd/#define-the-openocd-folder-location) page, where the entire procedure is explained.
 
+## Documentation
+
+If you are using the GNU MCU Eclipse OpenOCD, the documentation is part of the installed package.
+
+Slightly older version are also available in the [Files](https://sourceforge.net/projects/openocd/files/openocd/) section of the SourceForge project. For version 0.9.0, the manual is [openocd.pdf](http://sourceforge.net/projects/openocd/files/openocd/0.9.0/openocd.pdf/download).
 

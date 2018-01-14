@@ -17,7 +17,25 @@ Unfortunately, most current toolchains do not provide these two programs in thei
 
 On macOS and GNU/Linux these programs are part of the standard distributions, either directly or in separate Developer packages, so the following steps do not apply.
 
-## Download the Windows Build Tools archives
+## The xPack install 
+
+This method uses the portable tool [xpm](https://www.npmjs.com/package/xpm), the **xPack Package Manager**, and can be used on Windows, macOS and GNU/Linux.
+
+```console
+$ xpm install @gnu-mcu-eclipse/windows-build-tools --global
+```
+
+This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:
+
+* Windows: `%APPDATA%\xPacks` (`C:\Users\ilg\AppData\Roaming\xPacks`)
+* macOS: `${HOME}/Library/xPacks`
+* GNU/Linux: `${HOME}/opt/xPacks`
+
+Note: This location is configurable using the environment variable `XPACKS_REPO_FOLDER`; for more details please check the [xpm folders](https://xpack.github.io/xpm/files/folders/) page.
+
+## Manual install
+
+### Download the archive
 
 The Windows versions of **GNU MCU Eclipse Windows Build Tools** are packed as ZIP files. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases) page and download the latest version named like:
 
@@ -26,11 +44,11 @@ The Windows versions of **GNU MCU Eclipse Windows Build Tools** are packed as Z
 
 Select the `-win64` file for Windows x64 machines and the `-win32` file for Windows x32 machines.
 
-Unpack the archive and copy it into the `%APPDATA%\GNU MCU Eclipse` (`C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse`) folder.
+Unpack the archive and copy it into the `%userprofile%\AppData\Roaming\GNU MCU Eclipse` (for example `C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse`) folder.
 
-Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.
+> Note: although perfectly possible to install the build tools in any folder, it is highly recommended to use this path, since by default the plug-in searches for the executable in this location.
 
-## Check version
+### Check version
 
 Check if the tool is functional; go to the folder where you installed the tools and run `make --version`.
 
@@ -44,9 +62,11 @@ This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 ```
 
-## DO NOT update the user or system path!
+## User or system path
 
-As recommended when installing the toolchain, it is recommended to keep this settings outside the user or system path. Microsoft did not provide these programs in their distribution, and it is better to keep it that way, when you need them just explicitly update the build path to use them.
+> **DO NOT update the user or system path!**
+
+As recommended when installing the toolchain, it is also recommended to keep this settings outside the user or system path. Microsoft did not provide these programs in their distribution, and it is better to keep it that way, when you need them just explicitly update the build path to use them.
 
 ## Uninstall
 
