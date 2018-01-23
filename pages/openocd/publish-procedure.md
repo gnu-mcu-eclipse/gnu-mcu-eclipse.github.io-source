@@ -66,6 +66,10 @@ $ caffeinate bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 
 For more details, see the [build]({{ site.baseurl }}/openocd/build-procedure/) page.
 
+## Test
+
+Test the binaries on all platforms.
+
 ## Prepare a new blog post
 
 In the web git:
@@ -105,6 +109,16 @@ b757fb3c838ea82c88adae74043918b552c8ca48de0eb99c3507f321b97db5f5 ?
 gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win64.zip
 ```
 
+## Update the xPack
+
+Update the `gnu-mcu-eclipse/openocd-xpack.git` project to the new version.
+
+* update `baseUrl:`
+* from the blog post, copy the SHA & file names
+* commit all changes, use a message like `0.10.0-5.1` (without `v`)
+* `npm version 0.10.0-5.1`
+* don't publish yet, wait for the release
+
 ## Update the web
 
 - commit the `gnu-mcu-eclipse.github.io-source.git` project; use a message like **OpenOCD v0.10.0-5-20171110 released**
@@ -136,8 +150,14 @@ Note: at this moment the system should send a notification to all clients watchi
 
 In the web git:
 
-- `download_url: https://github.com/gnu-mcu-eclipse/openocd/releases/tag/v0.10.0-4-20171004`
+- `download_url: https://github.com/gnu-mcu-eclipse/openocd/releases/tag/v0.10.0-4-20171004/`
 - commit with a message like `v0.10.0-5-20171110 update link`
+
+## Publish the xPack
+
+In the `gnu-mcu-eclipse/openocd-xpack.git` project:
+
+* `npm publish`
 
 ## Copy binaries to archive
 

@@ -45,14 +45,14 @@ The result should look similar to:
 ```console
 $ docker images
 REPOSITORY                  TAG                   IMAGE ID            CREATED             SIZE
-ilegeul/centos32            6-xbb-tex-v1          84e5da687232        3 days ago          4.52GB
-ilegeul/centos              6-xbb-tex-v1          4e96fda659ab        3 days ago          4.71GB
+ilegeul/centos32            6-xbb-v1              f695dd6cb46e        7 days ago          2.92GB
+ilegeul/centos              6-xbb-v1              294dd5ee82f3        7 days ago          3.09GB
 hello-world                 latest                1815c82652c0        6 months ago        1.84kB
 ```
 
 ## Development
 
-When preparing official release, follow the following steps.
+When preparing official release, observe the following steps.
 
 ### Update git repos
 
@@ -207,6 +207,21 @@ Licensed under GNU GPL v2
 For bug reports, read
 	http://openocd.org/doc/doxygen/bugs.html
 ```
+
+## Debug
+
+To run debug sessions on macOS, it is necessary to build images that include the debugging info:
+
+```console
+$ bash ~/Downloads/openocd-build.git/scripts/build.sh --without-pdf --no-strip --debug
+```
+
+With Xcode, create a new Cross-platform, External Build System project. Select a folder below `xcode`.
+
+In the External Build Tool Configuration, use the `build/osx/openocd` folder.
+
+Add the `openocd.git` folder to the sources.
+
 
 ## More build details
 
