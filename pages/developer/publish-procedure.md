@@ -72,6 +72,8 @@ Install new software from http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-tes
 logout
 ```
 
+Do not close the terminal before copy/paste the list to the ChangeLog page!.
+
 ## Install on a separate Eclipse
 
 Test if the new build can be used as an update site, by installing from `updates-test` on a separate Eclipse (not the one used for development).
@@ -87,7 +89,7 @@ The Eclipse Packaging Project allows to create complete Eclipse packages for all
 * edit `org.eclipse.epp.packages.git/releng/org.eclipse.epp.config/parent/pom.xml`
   * update the latest version `<gnumcueclipse.version>4.3.1</gnumcueclipse.version>`
   * temporarily update the site URL to the test site `<gnumcueclipse.repository>http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test</gnumcueclipse.repository>`
-* remove the `archive` folder
+* **remove** the `archive` folder
 * run the `org.eclipse.epp.packages.git/scripts/build.mac.command` script
 * check if the retrieved plug-ins versions match the expected versions; if not, check if the update site was published correctly and the URL is right;
 * the result should be in the `archive` folder, including the computed `.sha` values.
@@ -217,12 +219,6 @@ When final, don't forget to publish the archive too!
 logout
 ```
 
-Do not close the terminal before copy/paste the list to the ChangeLog page!.
-
-## Publish on the main RISC-V update site
-
-Use the `publish-riscv-v4-neon-updates.command` script.
-
 ## Test the update site
 
 Using a test Eclipse, install the plug-ins from the update site.
@@ -271,13 +267,6 @@ Using a test Eclipse, install the plug-ins from the update site.
 
 Note: at this moment the system should send a notification to all clients watching this project.
 
-## Publish the Web
-
-* Git Push & Sync the **gnu-mcu-eclipse.github.io-source** project; use something like `v3.2.1-201701141320 released` as message
-* wait for the Travis build to complete; occasionally links to not work, and might need to restart the build
-
-Note: the release must exist, otherwise Travis will complain and do not publish the site to **gnu-mcu-eclipse.github.io**.
-
 ## Update the release link
 
 From the [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases) page, get the URL.
@@ -293,7 +282,7 @@ The Eclipse Packaging Project allows to create complete Eclipse packages for all
 * in the `gnu-mcu-eclipse/org.eclipse.epp.packages` project
 * edit `org.eclipse.epp.packages.git/releng/org.eclipse.epp.config/parent/pom.xml`
   * update the site URL to the release site `<gnumcueclipse.repository>http://gnu-mcu-eclipse.netlify.com/v4-neon-updates</gnumcueclipse.repository>`
-* remove the `archive` folder
+* **remove** the `archive` folder
 * run the `org.eclipse.epp.packages.git/scripts/build.mac.command` script
 * check if the retrieved plug-ins versions match the expected versions; if not, check if the update site was published correctly and the URL is right
 * the result should be in the `archive` folder, including the computed `.sha` values
@@ -320,7 +309,9 @@ The Eclipse Packaging Project allows to create complete Eclipse packages for all
 
 ### Update the main release 
 
-Add a reference to the package. Copy from a previous release.
+* go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases) page
+* copy the text related to the EPP package from a previous release
+* paste to the current release, updating the link
 
 ## Share on Facebook
 
