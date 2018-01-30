@@ -13,7 +13,7 @@ version-date: 20170223
 
 ## Overview
 
-The build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits ARM GNU toolchain you prefer, but, for better results, the recommended toolchain for **bare metal** target applications is [**GCC ARM Embedded Toolchain**](https://developer.arm.com/open-source/gnu-toolchain/gnu-arm-embedded-toolchain) (formerly GNU Tools for ARM Embedded Processors); for **GNU/Linux** target applications, the **[Linaro](http://www.linaro.org/downloads/)** family of toolchains provides a large selection of choices, for various specific needs (little/big endian, 32/64-bits, etc).
+The build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits ARM GNU toolchain you prefer, but, for better results, the recommended toolchain for **bare metal** target applications is [**GNU ARM Embedded Toolchain**](https://developer.arm.com/open-source/gnu-toolchain/gnu-arm-embedded-toolchain) (formerly GNU Tools for ARM Embedded Processors); for **GNU/Linux** target applications, the **[Linaro](http://www.linaro.org/downloads/)** family of toolchains provides a large selection of choices, for various specific needs (little/big endian, 32/64-bits, etc).
 
 > Important notes: 
 > GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the suspend and terminate buttons in the debug perspective are not functional. `arm-none-eabi-gdb` 7.12 from the initial `6_2-2016q4-20161216` crashes on macOS; use `6-2017-q1-update` or later.
@@ -25,7 +25,7 @@ Please note the distinction between the **target platform** and the **host/devel
 * the target platform defines the environment where the application will be executed, and in general can be either a bare metal (the application sits directly on the hardware and has intimate control of it), and applications that sit on top of an operating system, usually a distribution of GNU/Linux optimised for embedded environments
 * the host/development platform is the platform where the development tools are executed, usually as cross compilers, and can be, in our case, any platform that supports Eclipse, for example Windows, macOS, GNU/Linux, etc.
 
-> Note: Be sure you select the proper toolchain for the target platform, otherwise builds will not succeed, or the generated applications will fail to run. **Do not** try to use the GCC ARM Embedded to build  GNU/Linux applications, because the executables will not run on anything than bare metal, and **do not try to use the Linaro toolchains for bare metal applications**.
+> Note: Be sure you select the proper toolchain for the target platform, otherwise builds will not succeed, or the generated applications will fail to run. **Do not** try to use the GNU ARM Embedded to build  GNU/Linux applications, because the executables will not run on anything than bare metal, and **do not try to use the Linaro toolchains for bare metal applications**.
 
 The installation details described below assume the selection of the GCC ARM Embedded toolchain. For other toolchains, please follow the specific installation instructions.
 
@@ -44,7 +44,7 @@ For Windows, the GNU ARM Embedded Toolchain is released in two versions:
 * a portable archive that can be installed in any location
 * a Windows setup that can install the binaries in the standard system location
 
-Our prefered method is to install the binaries in the user home folder, but your mileage may vary.
+Our preferred method is to install the binaries in the user home folder, but your mileage may vary.
 
 ### Portable archive
 
@@ -52,65 +52,22 @@ To install the archive, the steps are:
 
 * download the latest `gcc-arm-none-eabi-{{ page.version-id }}-*-win*.zip` file
 * open the archive in the file explorer
-* extract the `GNU MCU Eclipse` folder in `%userprofile%\AppData\Local`
+* extract the `gcc-arm-none-eabi-{{ page.version-id }}` folder in `%userprofile%\AppData\Roaming\GNU Tools ARM Embedded`
 
 According to Microsoft, this is the recommended location for installing user specific packages, and the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.
 
-In addition, the GNU MCU Eclipse plug-ins also check the following locations (POSIX paths):
-
-```console
-${user.home}/AppData/Local/GNU Tools ARM Embedded;\
-${user.home}/opt/GNU Tools ARM Embedded;\
-${user.home}/opt/gnu-tools-arm-embedded;\
-${user.home}/local/GNU Tools ARM Embedded;\
-${user.home}/local/gnu-tools-arm-embedded;\
-C:/opt/GNU Tools ARM Embedded;\
-C:/opt/gnu-tools-arm-embedded;\
-C:/Program Files/GNU Tools ARM Embedded;\
-C:/Program Files (x86)/GNU Tools ARM Embedded;\
-D:/Program Files/GNU Tools ARM Embedded;\
-D:/Program Files (x86)/GNU Tools ARM Embedded
-```
-
-It is recommended to use one of these locations, since the plug-ins will automatically set the default toolchain path to the most recently installed toolchain found in these folders.
-
-### Setup
-
-If you decide to install the toolchain in a system location, you can use the common setup procedure:
-
-* download the latest Windows installer **.exe** file (currently `gcc-arm-none-eabi-{{ page.version-id }}-win32.exe`, about 84 MB)
-* locate the file (usually in the `...\Downloads\`  folder) and double click it to start the installer
-* authenticate with the administrative password, to allow the installer write in system locations
-
-  ![MS_admin]({{ site.baseurl }}/assets/images/2014/01/MS_admin.png)
-
-* select the desired language
-* confirm that you want to install the toolchain
-* accept the terms of the license agreement
-* accept the destination folder, usually a version specific sub-folder of `C:\Program Files\`
-
-  > Note: It is highly recommended to **do not change the install path**
-
-  ![The destination folder]({{ site.baseurl }}/assets/images/2014/01/MS_destination_location.png)
-
-* wait a few moments for the installer to copy files
-* in the final window be sure you **disable adding the toolchain path to the environment**
-
-  ![Disable adding toolchain path to environment]({{ site.baseurl }}/assets/images/2014/01/MS_finish.png)
-
 * read the `readme.txt` file
 * test if the compiler is functional; use the actual install path:
-
   ```console
-C:\>"C:\Program Files\GNU Tools ARM Embedded\4.8 2014q2\bin\arm-none-eabi-gcc.exe" --version
+C:\>"C:\Users\ilg\AppData\Roaming\GNU Tools ARM Embedded\gcc-arm-none-eabi-4.8 2014q2\bin\arm-none-eabi-gcc.exe" --version
 arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-branch revision 211358]
 ```
 
 The complete toolchain documentation is available in the `...\share\doc\pdf\` folder.
 
-If you'll ever need to remove the toolchain, there is an **uninstall.exe** program available in the toolchain root folder.
-
 For Windows, the next step would be to install the [build tools (make & rm)]({{ site.baseurl }}/windows-build-tools/).
+
+If you insist on using the setup version, be sure you **DO NOT add the toolchain path to the user or system path!**
 
 ## macOS
 
