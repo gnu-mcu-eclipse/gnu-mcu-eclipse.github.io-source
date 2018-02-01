@@ -49,7 +49,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 ilegeul/centos32    6-xbb-v1            f695dd6cb46e        2 weeks ago         2.92GB
 ilegeul/centos      6-xbb-v1            294dd5ee82f3        2 weeks ago         3.09GB
 hello-world         latest              f2a91732366c        2 months ago        1.85kB
-bash-3.2$```
+```
 
 ## Development
 
