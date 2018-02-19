@@ -26,6 +26,8 @@ IFS=$'\n\t'
 export slug="${TRAVIS_BUILD_DIR}"
 export site="${HOME}/out/${GITHUB_DEST_REPO}"
 
+do_htmlproof="n"
+
 # -----------------------------------------------------------------------------
 
 function do_run()
@@ -83,9 +85,12 @@ function do_script() {
   # Temporary test the Apple URL, to help diagnose htmlproofer.
   # curl -L --url http://developer.apple.com/xcode/downloads/ --verbose
 
-  # Mainly to validate the internal & external links.
-  # do_run bundle exec htmlproofer --only-4xx "${site}"
-  do_run bundle exec htmlproofer --url-ignore "/img.shields.io/,/uk.farnell.com/,/blogs.msdn.com/,/sourceforge.net/" "${site}"
+  if [ "${do_htmlproof}" == "y" ]
+  then
+    # Mainly to validate the internal & external links.
+    # do_run bundle exec htmlproofer --only-4xx "${site}"
+    do_run bundle exec htmlproofer --url-ignore "/img.shields.io/,/uk.farnell.com/,/blogs.msdn.com/,/sourceforge.net/" "${site}"
+  fi
 
   # ---------------------------------------------------------------------------
   # The deployment code is present here not in after_success, 
