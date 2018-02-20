@@ -28,6 +28,16 @@ There are two methods:
 * **automatic** downloads, via the Eclipse update mechanism, to install and update the Eclipse plug-ins
 * **manual** downloads, to install various tools (like OpenOCD/QEMU/Windows Build Tools/etc)
 
+## Eclipse IDE for C/C++
+
+The simplest way to install the plug-ins is to download **GNU MCU Eclipse IDE for C/C++ Developers** from [GitHub Releases](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/) and you get at once both Eclipse CDT and the MCU plug-ins.
+
+## Eclipse Marketplace
+
+The second option is to use the [Eclipse Marketplace](https://marketplace.eclipse.org/content/gnu-mcu-eclipse).
+
+To access the Marketplace from within Eclipse, use the Eclipse menu **Help** → **Eclipse marketplace...** and search for **GNU MCU**.
+
 ## Eclipse update site
 
 The Eclipse update site is currently hosted on Bintray, to make use of the wide network of mirror sites they provides. The public URL is:

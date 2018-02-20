@@ -26,7 +26,7 @@ IFS=$'\n\t'
 export slug="${TRAVIS_BUILD_DIR}"
 export site="${HOME}/out/${GITHUB_DEST_REPO}"
 
-do_htmlproof="n"
+do_htmlproof="y"
 
 # -----------------------------------------------------------------------------
 

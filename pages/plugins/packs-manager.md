@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /plugins/packs-manager/
-title: Packs manager
+title: The CMSIS Packs manager
 author: Liviu Ionescu
 layout: page
 
@@ -29,7 +29,7 @@ The GNU MCU Eclipse Packs Support plug-in is intended to manage (list/install/in
 
 ## Configuration
 
-Before starting using the packs, it is recommended to check and adjust the folder where packs are downloaded and unarchived, since this cannot be changed later (in fact it can, but by doing this you loose all installed packages and need to download them again).
+Before starting using the packs, it is recommended to check and adjust the folder where packs are downloaded and un-archived, since this cannot be changed later (in fact it can, but by doing this you loose all installed packages and need to download them again).
 
 By default, this folder is called Packages and is located at the same level as the current workspace.
 

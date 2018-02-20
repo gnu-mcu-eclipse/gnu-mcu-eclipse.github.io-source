@@ -114,8 +114,8 @@ Note: at this moment the system should send a notification to all clients watchi
 
 In the web git:
 
-- `download_url: https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v0.10.0-4-20171004`
-- use something like `v0.10.0-4-20171004 update link` as message
+- `download_url: https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.1.1-1-20170702`
+- use something like `v7.1.1-1-20170702 update link` as message
 
 ## Share on Facebook
 

@@ -16,9 +16,9 @@ Note2: this tutorial requires a recent version of the STM32F4 template, not olde
 
 ## Prerequisites
 
-Before creating a new project, please be sure you checked all prerequisites described in the [How to use]({{ site.baseurl }}/plugins/mbs/) page, especially the need to install the [build tools]({{ site.baseurl }}/windows-build-tools/install/) if you use Windows as your development platform.
+Before creating a new project, please be sure you checked all prerequisites described in the [How to install GNU MCU Eclipse?]({{ site.baseurl }}/install/) page, especially the need to install the [build tools]({{ site.baseurl }}/windows-build-tools/install/) if you use Windows as your development platform.
 
-It is also recommended to [set the workspace preferences][1].
+It is also recommended to [set the workspace preferences][1] and to install the desired [CMSIS packs]({{ site.baseurl }}/plugins/packs-manager/).
 
 Note: the multi-LED template is currently available only for ST32F4, and only for C++, since it allows to easily instantiate multiple BlinkLed objects.
 
