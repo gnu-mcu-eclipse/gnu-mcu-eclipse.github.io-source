@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  GNU MCU Eclipse ARM Embedded GCC v6.3.1-1.1 20180331 released
-download_url: https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v6.3.1-1.1/
+download_url: https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v6.3.1-1.1/
 
 author: Liviu Ionescu
 
