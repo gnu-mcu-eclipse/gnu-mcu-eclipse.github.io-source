@@ -86,6 +86,12 @@ The simple way is to download **GNU MCU Eclipse IDE for C/C++ Developers** from 
 
 > Important note: there are different binaries for 32-bits (`_x86`) and 64-bits (`x86-64`). Be sure the Eclipse binary word size matches the Java word size, otherwise the obscure `Java was started but returned exit code=13` message is issued.
 
+On macOS, after un-archiving, remove the `com.apple.quarantine` extended attribute, otherwise the application will run from a randomised path and you won't be able to store persistent changes.
+
+```console
+$ xattr -d com.apple.quarantine Eclipse.app
+```
+
 #### The plug-ins install way
 
 If you prefer to do this in more steps, go to the [Eclipse packages](http://www.eclipse.org/downloads/eclipse-packages) and get the **Eclipse IDE for C/C++ Developers** archive appropriate for your platform, preferably the 64-bits version.
