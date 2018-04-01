@@ -89,7 +89,7 @@ function do_script() {
   then
     # Mainly to validate the internal & external links.
     # do_run bundle exec htmlproofer --only-4xx "${site}"
-    do_run bundle exec htmlproofer --url-ignore "/img.shields.io/,/uk.farnell.com/,/blogs.msdn.com/,/sourceforge.net/" "${site}"
+    do_run bundle exec htmlproofer --url-ignore "/img.shields.io/,/uk.farnell.com/,/blogs.msdn.com/,/sourceforge.net/,/bintray.com/" "${site}"
   fi
 
   # ---------------------------------------------------------------------------
