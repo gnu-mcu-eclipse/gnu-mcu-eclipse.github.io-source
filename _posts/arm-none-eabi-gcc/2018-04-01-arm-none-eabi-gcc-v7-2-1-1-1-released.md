@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  GNU MCU Eclipse ARM Embedded GCC v6.3.1-1.1 20180331 released
-download_url: https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v6.3.1-1.1/
+title:  GNU MCU Eclipse ARM Embedded GCC v7.2.1-1.1 20180401 released
+download_url: https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v7.2.1-1.1/
 
 author: Liviu Ionescu
 
-date:   2018-03-31 12:00:00 +0300
+date:   2018-04-01 21:18:00 +0300
 
 categories:
   - releases
@@ -14,13 +14,13 @@ categories:
 
 ---
 
-Version v6.3.1-1.1 20180331 is the first release of **GNU MCU Eclipse ARM Embedded GCC**.
+Version v7.2.1-1.1 20180401 is a new release of **GNU MCU Eclipse ARM Embedded GCC**.
 
 [Binary files »]({{ page.download_url }})
 
 ## Compliance
 
-This release follows the official [GNU Arm Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm)  **6-2017-q2-update** release from June 28, 2017 and it is based on the `gcc-arm-none-eabi-6-2017-q2-update-src.tar.bz2` source invariant.
+This release follows the official [GNU Arm Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm)  **7-2017-q4-major** release from December 18, 2017 and it is based on the `gcc-arm-none-eabi-7-2017-q4-major-src.tar.bz2` source invariant.
 
 ## Binaries
 
@@ -53,18 +53,19 @@ For better control and repeatability, the build scripts use Docker containers; a
 The SHA-256 hashes for the files are:
 
 ```console
-3c761b2f2016ff8c88ad72f101d5facf9a35f074347a9918a5b6de1dd8c7aec4 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-6.3.1-1.1-20180331-0618-centos32.tar.xz
+4fe99c9122c7f2f84a998640d9b3d3d890a2ae47cbd5469813a3ad015e69bbd7 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-centos32.tar.xz
 
-6a7f9f64eb5cba9b156c9e305e06bff1e88283f1e79d6f23b56dfe6c12023fa6 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-6.3.1-1.1-20180331-0618-centos64.tar.xz
+ed6c727b859eed4fcb55aa14bdafd329f71b087877d2eb7438abfec2bb533227 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-centos64.tar.xz
 
-60c1fc43627b69439ca3cbfc21d613e333da4655246935ff8ddce3c71b094be5 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-6.3.1-1.1-20180331-0618-osx.tar.xz
+71a3108fe11bbce92e9648cd3cf0b9f7a046bd347f6c115f461975a8313e00c6 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-osx.tar.xz
 
-ad23df4fde3cc0153e910e459e5fada5b9b1d4a73d9651b96e21d0be73f8a7e6 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-6.3.1-1.1-20180331-0618-win32.zip
+578c4525187c498ec0b8255ac46d4177ed3b51b115cb6ca4cd379baa6b70db7a 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-win32.zip
 
-37cdad0da139808f62146be9f1860a87883c8a5ec1afb6822db4e7c8dba25f35 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-6.3.1-1.1-20180331-0618-win64.zip
+fd9573d0b9e89d87b9bf7f237955bbeba206a93c6cecc2fc3996458798d7a05b 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-win64.zip
+
 ```
