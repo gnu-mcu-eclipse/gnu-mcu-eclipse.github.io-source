@@ -53,11 +53,20 @@ For better control and repeatability, the build scripts use Docker containers; a
 The SHA-256 hashes for the files are:
 
 ```console
+d5a909d0261733ae172c74ec2d088151273565b12f0b0507418d1458f9b35f39 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-centos32.tar.bz2
+
 4fe99c9122c7f2f84a998640d9b3d3d890a2ae47cbd5469813a3ad015e69bbd7 
 ?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-centos32.tar.xz
 
+7c45437e87a12393743c7a6cdd39df9f0c920a90eb34c2839658b4b74249d97a 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-centos64.tar.bz2
+
 ed6c727b859eed4fcb55aa14bdafd329f71b087877d2eb7438abfec2bb533227 
 ?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-centos64.tar.xz
+
+449763551140da8ec6c1d0b7f48e3ccf6d41f7f872da5d18e9c5d01db40e684b 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-osx.tar.bz2
 
 71a3108fe11bbce92e9648cd3cf0b9f7a046bd347f6c115f461975a8313e00c6 
 ?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-osx.tar.xz
