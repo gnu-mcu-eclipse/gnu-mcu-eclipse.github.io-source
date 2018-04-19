@@ -62,7 +62,7 @@ ilg.gnumcueclipse.templates.sifive_1.3.2.201804191501.jar
 ilg.gnumcueclipse.templates.stm_2.6.4.201804191501.jar
 ```
 
-* 6a2ff4bb - template.stm: version 1.3.2
+* 6a2ff4bb - template.sifive: version 1.3.2
 * af56536e - template.sifive: update submodules
 
 ### 2018-04-05 
