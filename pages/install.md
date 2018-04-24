@@ -18,19 +18,23 @@ The recommended sequence is described below.
 
 ## xpm - the xPack Manager
 
-`xpm` is a new tool, currently under development, intended to manage software packages (xPacks) including to install binary distributions.
+`xpm` is a new tool, currently under development, intended to manage software packages (xPacks), including to install binary distributions. It is built on top of [Node.js](https://nodejs.org/) and is highly portable; the install steps are described in [the xpm page](https://www.npmjs.com/package/xpm).
 
-Currently `xpm` is not mandatory, but it is a useful addition since it provides a convenient way to install and later update the RISC-V toolchain, OpenOCD and the Windows Build Tools.
-
-`xpm` is built on top of [node.js](https://nodejs.org/) and is highly portable; the install steps are described in the [xpm](https://www.npmjs.com/package/xpm) page.
+Currently `xpm` is not mandatory, but it is a useful addition since it provides a convenient way to install and later upgrade the ARM and RISC-V toolchains, OpenOCD and the Windows Build Tools.
 
 ## Toolchain(s)
 
-This is generally a mandatory step for all platforms, since most platforms do not come by default with an embedded GCC toolchain (ARM or RISC-V).
+This is generally mandatory, since most platforms do not come by default with an embedded GCC toolchain (ARM or RISC-V).
 
 Please follow the steps in the [ARM Toolchain install]({{ site.baseurl }}/toolchain/arm/install) or [RISC-V Toolchain install]({{ site.baseurl }}/toolchain/riscv/install) page.
 
-For RISC-V, the shortcut is:
+For ARM, the easy install method is:
+
+```console
+$ xpm install @gnu-mcu-eclipse/arm-none-eabi-gcc --global
+```
+
+For RISC-V, the easy install method is:
 
 ```console
 $ xpm install @gnu-mcu-eclipse/riscv-none-gcc --global
@@ -42,7 +46,7 @@ This step is Windows specific, and it is highly recommended to use the GNU MCU E
 
 Please follow the steps in the [How to install the Windows Build Tools]({{ site.baseurl }}/windows-build-tools/install/) page.
 
-The shortcut is:
+The easy install method is:
 
 ```console
 $ xpm install @gnu-mcu-eclipse/windows-build-tools --global
@@ -57,6 +61,8 @@ SEGGER J-Link is the recommended debugger and, if available, please follow the s
 ## OpenOCD
 
 For the unfortunate developers who do not have a J-Link available, the alternative is to follow the steps in the [How to install the OpenOCD binaries]({{ site.baseurl }}/openocd/install) page.
+
+The easy install method is:
 
 ```console
 $ xpm install @gnu-mcu-eclipse/openocd --global
