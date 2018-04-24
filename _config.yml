@@ -73,6 +73,7 @@ google-analytics-id: UA-16767008-16
 google-site-verification: NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c
 
 # jekyll-toc-generator
+# https://github.com/dafi/jekyll-toc-generator
 tocTopTag: h2
 minItemsToShowToc: 3
 useExistingAnchors: true
