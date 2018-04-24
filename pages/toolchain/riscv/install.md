@@ -43,9 +43,11 @@ $ xpm install @gnu-mcu-eclipse/riscv-none-gcc --global
 
 This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:
 
-* Windows: `%APPDATA%\xPacks` (`C:\Users\ilg\AppData\Roaming\xPacks`)
+* Windows: `%APPDATA%\xPacks` (or `%userprofile%\AppData\Roaming\xPacks`, `C:\Users\ilg\AppData\Roaming\xPacks`)
 * macOS: `${HOME}/Library/xPacks`
 * GNU/Linux: `${HOME}/opt/xPacks`
+
+This location is also known by Eclipse, so it can automatically identify the installed toolchains.
 
 Note: This location is configurable using the environment variable `XPACKS_REPO_FOLDER`; for more details please check the [xpm folders](https://xpack.github.io/xpm/files/folders/) page.
 
@@ -59,7 +61,7 @@ The archives can be downloaded from [GitHub Releases](https://github.com/gnu-mcu
 
 ### Windows
 
-The Windows versions of **RISC-V Embedded GCC** are packed as ZIP files. Download the latest version named like:
+The Windows versions of **RISC-V Embedded GCC** are packed as .zip files. Download the latest version named like:
 
 - `gnu-mcu-eclipse-riscv-none-gcc-{{ page.version-id }}-{{ page.version-date }}-win64.zip`
 - `gnu-mcu-eclipse-riscv-none-gcc-{{ page.version-id }}-{{ page.version-date }}-win32.zip`
@@ -74,9 +76,9 @@ For Windows, the next step would be to install the [build tools (make & rm)]({{ 
 
 ### macOS
 
-The macOS version of **RISC-V Embedded GCC** is packed as a TGZ archive. Download the latest version named like:
+The macOS version of **RISC-V Embedded GCC** is packed as a .tgz archive. Download the latest version named like:
 
--  `gnu-mcu-eclipse-riscv-none-gcc-{{ page.version-id }}-20180111-2230-osx.tgz`
+-  `gnu-mcu-eclipse-riscv-none-gcc-{{ page.version-id }}-{{ page.version-date }}-osx.tgz`
 
 To install the toolchain, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/`:
 
@@ -98,12 +100,12 @@ riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
 
 ### GNU/Linux
 
-The GNU/Linux versions of **RISC-V Embedded GCC** are packed as TGZ archives. Download the latest version named like:
+The GNU/Linux versions of **RISC-V Embedded GCC** are packed as .tgz archives. Download the latest version named like:
 
-- `gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-centos64.tgz`
-- `gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-centos32.tgz`
+- `gnu-mcu-eclipse-riscv-none-gcc-{{ page.version-id }}-{{ page.version-date }}-centos64.tgz`
+- `gnu-mcu-eclipse-riscv-none-gcc-{{ page.version-id }}-{{ page.version-date }}-centos32.tgz`
 
-As the name implies, these are CentOS `tar.gz` archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-centos64` file for 64-bits machines and the `-centos32` file for 32-bits machines.
+As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-centos64` file for 64-bits machines and the `-centos32` file for 32-bits machines.
 
 To install the toolchain, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/`:
 
