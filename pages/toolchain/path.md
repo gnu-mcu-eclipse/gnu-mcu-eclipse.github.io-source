@@ -60,11 +60,17 @@ To achieve this, the GNU MCU Eclipse cross build plug-in provides a large select
 
 The default (and the recommended) setting, is to use the global toolchain path.
 
-![Toolchains Properties]({{ site.baseurl }}/assets/images/2017/toolchain-properties.png)
+![Toolchains Properties]({{ site.baseurl }}/assets/images/2018/toolchain-properties.png)
 
 The displayed path is associated with the selected toolchain. To change the toolchain path use the hyperlinks; it is recommended to use the global page, but, if needed, the toolchain path can also be configured per workspace or even per project.
 
-![Global Tools Paths]({{ site.baseurl }}/assets/images/2017/global-arm-toolchains-paths.png)
+![Global Tools Paths]({{ site.baseurl }}/assets/images/2018/global-arm-toolchains-paths.png)
+
+Clicking the **xPack...** button allows to enter the path by selecting the xPack version. (The button is enabled only for toolchains that are distributed as xPacks).
+
+![Global Tools Paths]({{ site.baseurl }}/assets/images/2018/global-arm-toolchains-paths-xpack.png)
+
+> macOS note: due to a weird decision of the Eclipse macOS developers, the file system browser does not show file/folders starting with a dot; thus, the `.content/bin` final part of the path must be entered manually.
 
 Using the global toolchain path does not store any data in the project configuration files, but in the Eclipse folders, so the project portability is not affected.
 

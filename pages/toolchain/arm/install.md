@@ -7,6 +7,7 @@ author: Liviu Ionescu
 date: 2015-09-11 22:49:00 +0300
 
 arm-version-id: 7-2017-q4-major
+
 gme-version-id: 7.2.1-1.1
 gme-version-date: 20180401-0515
 
@@ -298,9 +299,53 @@ If there would be only one single version of one single toolchain in existence, 
 
 The GNU MCU Eclipse plug-in has an advanced [toolchain path management]({{ site.baseurl }}/toolchain/path/) (presented in more detail in the separate page). Use it!
 
+## Select the xPack version
+
+The recommended method for selecting the toolchain path is via the **xPack...** button, and selecting the xPack version.
+
+![Global Tools Paths]({{ site.baseurl }}/assets/images/2018/global-arm-toolchains-paths-xpack.png)
+
+## Uninstall
+
+Should you ever need to remove the toolchain, only remove the xPack folder, there are no other components stored in any system folders.
+
+If installed manually, remove the `arm-none-eabi-gcc/{{ page.arm-version-id }}-{{ page.arm-version-date }}` folder.
+
+## Documentation
+
+The GNU MCU Eclipse ARM Embedded GCC distribution includes the standard documentation, in info, man and pdf format. 
+
+The documentation is located in the `share/doc` folder, for example the pdf files are:
+
+```console
+$ tree share/doc/pdf
+share/doc/pdf
+├── annotate.pdf
+├── as.pdf
+├── bfd.pdf
+├── binutils.pdf
+├── gcc
+│   ├── cpp.pdf
+│   ├── cppinternals.pdf
+│   ├── gcc.pdf
+│   ├── gccinstall.pdf
+│   └── gccint.pdf
+├── gdb.pdf
+├── gprof.pdf
+├── ld.pdf
+├── libc.pdf
+├── libiberty.pdf
+├── libm.pdf
+├── porting.pdf
+├── refcard.pdf
+└── stabs.pdf
+
+1 directory, 18 files
+```
+
 ## GDB 7.12
 
 GDB 7.12 distributed with the initial GCC 6.2 (`gcc-arm-none-eabi-6_2-2016q4-20161216`) has several issues (crashes on macOS and is incompatible with Neon.2).
 
-The recommendation is to use the update version `gcc-arm-none-eabi-6-2017-q1-update`, or later. 
+The recommendation is to use the update version `gcc-arm-none-eabi-6-2017-q1-update`, or later (the current version is 8.x). 
 

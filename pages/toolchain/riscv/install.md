@@ -11,6 +11,14 @@ version-date: 20180111-2230
 
 ---
 
+## Easy install
+
+For RISC-V, the recommended method to install the latest version of the toolchain is:
+
+```console
+$ xpm install @gnu-mcu-eclipse/riscv-none-gcc --global
+```
+
 ## Overview
 
 The Eclipse RISC-V build plug-in is highly configurable in terms of toolchain executable names and location, so you can use any 32/64-bits RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for **bare metal** target applications is [**GNU MCU Eclipse RISC-V Embedded GCC**](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/). This toolchain closely follows the official [RISC-V distribution](https://github.com/riscv/riscv-gcc) maintained by [SiFive](https://www.sifive.com).
@@ -133,13 +141,21 @@ If there would be only one single version of one single toolchain in existence, 
 
 The GNU MCU Eclipse plug-in has an advanced [toolchain path management]({{ site.baseurl }}/toolchain/path/) (presented in more detail in the separate page). Use it!
 
+## Select the xPack version
+
+The recommended method for selecting the toolchain path is via the **xPack...** button, and selecting the xPack version.
+
+![Global Tools Paths]({{ site.baseurl }}/assets/images/2018/global-riscv-toolchains-paths-xpack.png)
+
 ## Uninstall
 
-If you'll ever need to remove the toolchain, only remove the `riscv-none-gcc/{{ page.version-id }}-{{ page.version-date }}` folder, there are no other components stored in any system folders.
+Should you ever need to remove the toolchain, only remove the xPack folder, there are no other components stored in any system folders.
+
+If installed manually, remove the `riscv-none-gcc/{{ page.version-id }}-{{ page.version-date }}` folder.
 
 ## Documentation
 
-The GNU MCU Eclipse RISC-V Embedded GCC includes the standard documentation, in html, info, man and pdf format. 
+The GNU MCU Eclipse RISC-V Embedded GCC distribution includes the standard documentation, in info, man and pdf format. 
 
 The documentation is located in the `share/doc` folder, for example the pdf files are:
 
