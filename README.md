@@ -36,6 +36,12 @@ In addition, the several specific gems are required:
 $ sudo gem install redcarpet jekyll-mentions jemoji jekyll-redirect-from jekyll-feed jekyll-sitemap jekyll-last-modified-at
 ```
 
+To update the bundled gems:
+
+```console
+$ bundle install
+```
+
 ## Clone Git
 
 To manage the web site, a local copy of this repository is required.

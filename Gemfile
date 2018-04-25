@@ -14,4 +14,5 @@ group :jekyll_plugins do
   # gem 'jekyll-multiple-languages'
   
   gem 'html-proofer'
+  gem 'nokogiri', '>=1.8.2'
 end
