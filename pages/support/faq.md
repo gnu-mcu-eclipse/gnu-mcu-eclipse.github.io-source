@@ -10,6 +10,18 @@ date: 2015-09-11 20:28:00 +0300
 
 <div style="clear: both;"></div>
 
+## Cannot find the bin folder on macOS
+
+When installing binary packages as xPacks, the install location is a folder that ends in `.content/bin`, like 
+
+```
+/Users/ilg/Library/xPacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/7.2.1-1.1.3/.content/bin
+```
+
+Unfortunately, due to a weird decision of the Eclipse macOS developers, the file system browser does not show file/folders starting with a dot; thus, on macOS, the `.content/bin` final part of the path must be entered manually.
+
+This is one more reason to use the **xPack...** button, and select the xPack version in the drop down box.
+
 ## Cannot find the tools path preferences page
 
 > The JLink/QEMU/OpenOCD plug-in doesn't appear to be installing correctly, or at all, there is no JLink/QEMU/OpenOCD page in the Run/Debug group.
