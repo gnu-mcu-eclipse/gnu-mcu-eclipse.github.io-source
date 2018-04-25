@@ -54,7 +54,7 @@ Setting `tab.main.checkProgram` to true will check the program name field and di
 
 ## Install defaults
 
-Defining these two properties will provide default values to the corresponding fields in the **Run/Debug** → **QEMU** preferences page. The same variables are visible in the **Run/Debug** → **String Substitution** page.
+Defining these two properties will provide default values to the corresponding fields in the **MCU** → **Global QEMU Path** preferences page. The same variables are visible in the **Run/Debug** → **String Substitution** page.
 
 ### The executable name
 
@@ -84,6 +84,6 @@ Otherwise the plug-in will try a folder search.
 
 If this preference is defined, the plug-in will use it as search path, otherwise the specific platform defaults available in the `preferences.ini` file are used.
 
-For each folder in the path, the plug-in tries to identify subfolders which look like `folder/\*/bin/${qemu_executable}`; if multiple such subfolders are found (in case multiple versions), the list of names is ordered lexicographically and the last one is used.
+For each folder in the path, the plug-in tries to identify subfolders which look like `folder/bin/${qemu_executable}`; if multiple such subfolders are found (in case multiple versions), the list of names is ordered lexicographically and the last one is used.
 
 If not found, another test for `folder/bin/${qemu_executable}` is made.

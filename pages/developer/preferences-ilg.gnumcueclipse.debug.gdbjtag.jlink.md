@@ -72,7 +72,7 @@ Setting `tab.main.checkProgram` to true will check the program name field and di
 
 ## Install defaults
 
-Defining these two properties will provide default values to the corresponding fields in the **Run/Debug** → **SEGGER J-Link** preferences page. The same variables are visible in the **Run/Debug** → **String Substitution** page.
+Defining these two properties will provide default values to the corresponding fields in the **MCU** → **Global SEGGER J-Link Path** preferences page. The same variables are visible in the **Run/Debug** → **String Substitution** page.
 
 ### The executable name
 

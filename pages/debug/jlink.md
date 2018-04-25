@@ -98,7 +98,7 @@ Being a standard debugger, this plug-in also uses the Eclipse standard method of
 * the only field that usually requires attention is the **Device name**, which must identify the processor family; if you assigned the device to the project, this field is automatically filled-in; usually this name is the family name; if you do not know it for your processor, follow the link at the right and copy/paste the string from the [SEGGER web page](http://www.segger.com/supported-devices.html);
 * for portability reasons, the GDB server and GDB client executables are defined using variables; it is highly recommended to keep these definitions;
 * the `${cross_prefix}` and the `${cross_suffix}` variables are defined automatically using the toolchain definitions; unless you are debugging a project-less ELF, leave them as is;
-* the values of the `${jlink_path}` and `${jlink_gdbserver}` can be manually edited in the _Eclipse_ menu → **(Window →) Preferences** → **Run/Debug** **→** **SEGGER J-Link** configuration page (if you do not find this page, upgrade the plug-ins);
+* the values of the `${jlink_path}` and `${jlink_gdbserver}` can be manually edited in the _Eclipse_ menu → **(Window →) Preferences** → **MCU** → **Global SEGGER J-Link Path** configuration page (if you do not find this page, upgrade the plug-ins);
 * the **Connect to running target** option allow to start a debug session without performing any reset or program download, so that the target will continue to run unaffected, until explicitly halted by the debugger (Note: this option requires the latest plug-in and SEGGER versions);
 * click the third tab, named **Startup**, which contains specific J-Link options used to configure the debug session.
 
