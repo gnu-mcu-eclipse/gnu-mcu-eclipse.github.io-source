@@ -162,12 +162,10 @@ The usual sources for build failures are:
 
 Set the toolchain path for all projects and workspaces.
 
-* missing build tools (make & rm) on Windows; install the [build tools]();
-* a wrong or missing QEMU path; go to the project *Properties* → *Run/Debug* → *QEMU* and define the correct path;
+* missing build tools (make & rm) on Windows; install the [build tools]({{ site.baseurl }}/windows-build-tools/);
+* a wrong or missing QEMU path; go to the project **(Window →) Preferences** → **MCU** → **Global QEMU Path** (or **Workspace QEMU Path**) and define the correct path;
 
-
-![The QEMU path]({{ site.baseurl }}/assets/images/2015/08/QEMUPath.png)
-
+![The QEMU path]({{ site.baseurl }}/assets/images/2018/qemu-preferences.png)
 
 ## Support
 

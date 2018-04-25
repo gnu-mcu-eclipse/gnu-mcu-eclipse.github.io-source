@@ -150,9 +150,9 @@ Right after installing QEMU, or updating to a new version, it is necessary to in
 
 To set the path, first exit Eclipse, and start it again, to allow the autodetect mechanism to give it a try:
 
-* in the _Eclipse_ menu, go to **(Window →) Preferences** → **Run/Debug** → **QEMU**
+* in the _Eclipse_ menu, go to **(Window →) Preferences** → **MCU** → **Global QEMU Path** (or **Workspace QEMU Path**)
 
-  ![The QEMU preferences page]({{ site.baseurl }}/assets/images/2015/04/QEMU_Preferences.png)
+  ![The QEMU preferences page]({{ site.baseurl }}/assets/images/2018/qemu-preferences.png)
 
 * click the **Restore Defaults** button
 

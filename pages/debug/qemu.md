@@ -37,14 +37,14 @@ The presence of a GDB as part of a GNU toolchain is mandatory, and it is recomm
 
 Before starting work with QEMU, it is required to define the path to the QEMU folder.
 
-* in the _Eclipse_ menu, go to **(Window →) Preferences** → **Run/Debug** → **QEMU**
+* in the _Eclipse_ menu, go to **(Window →) Preferences** → **MCU** → **Global QEMU Path** (or **Workspace QEMU Path**)
 
-  ![The QEMU preferences page]({{ site.baseurl }}/assets/images/2015/04/QEMU_Preferences.png)
+  ![The QEMU preferences page]({{ site.baseurl }}/assets/images/2018/qemu-preferences.png)
 
 * click the **Restore Defaults** button
 * the plug-in will suggest the default values computed when Eclipse started; if a new version of GNU MCU Eclipse QEMU was installed while Eclipse was active, restart Eclipse and click again the Restore Defaults button
 * check the *Executable:* field; it must define the name of the QEMU executable; in most cases it should be already set correctly; if not, edit it to match the correct name;
-* check the *Folder:* field; it must point to the actual folder where the GNU MCU Eclipse QEMU was installed on your system, for example `/Applications/GNU MCU Eclipse/QEMU` on macOS
+* check the *Folder:* field; it must point to the actual folder where the GNU MCU Eclipse QEMU was installed on your system, for example `/Users/ilg/opt/gnu-mcu-eclipse/qemu/2.8.0-201703012029-head/bin` on macOS
 * click the **OK** button
 
 By default, the GDB server is defined as `${qemu_path}/${qemu_executable}`; these two macros are automatically set by the above preference page; for portability reasons, it is recommended to keep this definition in all your debug configurations, and also to have a single place to update the path when a new version of the GNU MCU Eclipse QEMU is released.
