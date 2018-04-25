@@ -12,7 +12,7 @@ date: 2015-09-10 19:59:00 +0300
 
 The main features of the GNU MCU Eclipse family of plug-ins are:
 
-  * create/build/manage embedded ARM and AArch64 applications, using the managed project features of Eclipse CDT, i.e. without having to manually create and maintain makefiles
+  * create/build/manage embedded ARM/AArch64/RISC-V applications, using the managed project features of Eclipse CDT, i.e. without having to manually create and maintain makefiles
   * provide ready to run templates for some ARM Cortex-M processors
   * provide debugging support via JTAG/SWD
   * provide a special view to examine and modify peripheral registers during debug sessions
@@ -31,11 +31,12 @@ Other features of the cross build plug-in are:
 
 ## Supported toolchains
 
-The build plug-in supports most existing toolchains currently available for both 32 and 64-bits ARM processors.
+The build plug-in supports most existing toolchains currently available for both 32 and 64-bits ARM and RISC-V processors.
 
 ### ARM toolchains
 
-* [**GNU Tools for ARM Embedded Processors**][1] (arm-none-eabi-*)
+* [**GNU MCU Eclipse ARM Embedded GCC**](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc) (arm-none-eabi-*)
+* [**GNU ARM Embedded Toolchain**](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm) (arm-none-eabi-*)
 * **[Linaro][2] **ARMv7 **bare-metal EABI** (arm-none-eabi-*)
 * **[Linaro][2] **ARMv7 **big-endian bare-metal EABI** (armeb-none-eabi-*)
 * **[Linaro][2] **ARMv7 **Linux GNU EABI HF** (arm-linux-gnueabihf-*)
