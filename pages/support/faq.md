@@ -10,6 +10,14 @@ date: 2015-09-11 20:28:00 +0300
 
 <div style="clear: both;"></div>
 
+## Cannot find the tools path preferences page
+
+> The JLink/QEMU/OpenOCD plug-in doesn't appear to be installing correctly, or at all, there is no JLink/QEMU/OpenOCD page in the Run/Debug group.
+
+Starting with version 4.x, the Preferences were moved under the new **MCU** group:
+
+![MCU]({{ site.baseurl }}/assets/images/2017/preferences-mcu.png)
+
 ## Java was started but returned exit code=13
 
 This obscure message is issued by Eclipse when you are trying to use a 64-bits Eclipse on a 32-bits Java (and possibly the other way around).
