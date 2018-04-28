@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The 2016 Windows Build Tools Change Log
+title: The 2018 Windows Build Tools Change Log
 permalink: /windows-build-tools/change-log/
 
 author: Liviu Ionescu
@@ -10,6 +10,34 @@ date: 2015-09-04 17:02:00 +0300
 ---
 
 Entries in this file are in reverse chronological order.
+
+## 2018
+
+### 2018-04-28
+
+- v2.11 released
+- build with the latest XBB scripts
+- update to latest busybox rmyorston commit 6f7d1af269eed4b42daeb9c6dfd2ba62f9cd47e4
+
+### 2018-01-03
+
+- v2.10 released
+- update to make 4.2.1
+- update to latest busybox rmyorston commit 096aee2bb468d1ab044de36e176ed1f6c7e3674d
+- no more setup.exe files
+
+## 2017
+
+### 2017-06-29
+
+- v2.9-20170629 released
+- updated to rebranded helper
+
+### 2017-06-07
+
+- v2.9-20170607 released
+- rebranded GNU MCU Eclipse
+- use busybox rmyorston commit c2002eae394c230d6b89073c9ff71bc86a7875e8
 
 ## 2016
 
