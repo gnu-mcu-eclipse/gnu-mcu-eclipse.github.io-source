@@ -11,23 +11,19 @@ date: 2016-10-28 12:28:00 +0300
 
 The Windows Build Tools binaries are published on GitHub  [Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases)).
 
-## Update the Change log
+## Update CHANGELOG
 
-Open the `info/CHANGES.txt` file from `gnu-mcu-eclipse/windows-build-tools.git` and copy entries to the web git.
+Open the `CHANGELOG.txt` file from `gnu-mcu-eclipse/windows-build-tools.git` and copy entries to the web git.
 
 In the web git, add new entries to the [Change log]({{ site.baseurl }}/windows-build-tools/change-log/) (`pages/windows-build-tools/change-log.md`), grouped by days.
 
-## Update INFO
-
-Edit the `info/INFO.txt` file from `windows-build-tools.git` and update the latest commits.
-
 ## Commit the project git
 
-In `gnu-mcu-eclipse/windows-build-tools`, commit all changes.
+In `gnu-mcu-eclipse/windows-build-tools.git`, commit all changes.
 
 ## Push the build script git
 
-Push `gnu-mcu-eclipse/openocd-build.git` to GitHub.
+Push `gnu-mcu-eclipse/windows-build-tools.git` to GitHub.
 
 Possibly push the helper project too.
 
@@ -115,6 +111,10 @@ Note: at this moment the system should send a notification to all clients watchi
 
 - go to `.../GNU MCU Eclipse/archive`
 - move the latest binaries and SHA to `releases/build-tools`
+
+## Update the xPack
+
+See the [Maintainer info](https://github.com/gnu-mcu-eclipse/windows-build-tools-xpack#how-to-publish) in the separate project.
 
 ## Share on Facebook
 
