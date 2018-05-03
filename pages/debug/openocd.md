@@ -72,7 +72,7 @@ Being a standard debugger, this plug-in also uses the Eclipse standard method of
 
 * click the second tab, named **Debugger**, which contains the configuration options required to start the GDB server and the GDB client
 
-  ![OpenOCD Debugger tab]({{ site.baseurl }}/assets/images/2013/12/OpenOCDDebuggerTab.png)
+  ![OpenOCD Debugger tab]({{ site.baseurl }}/assets/images/2018/openocd-debugger-tab.png)
 
 * the only field that usually requires attention is the OpenOCD Setup **Other options:**, where you should add one or more configuration scripts; for example, for the STM32F4DISCOVERY board, the field should read `-f board/stm32f4discovery.cfg`
 
