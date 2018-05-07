@@ -11,6 +11,21 @@ Entries in this file are in reverse chronological order.
 
 ## 2017
 
+### 2018-05-06
+
+- v7.2.0-3-20180506 released
+- update to latest SiFive commits from the following branches:
+  - riscv-binutils-2.29
+  - riscv-gcc-7.2.0
+  - riscv-newlib-2.5.0
+- update the build scripts to follow the ARM XBB structure 
+
+### 2018-01-10
+
+- v7.2.0-2-20180110 released
+- update to latest SiFive commits from 2018-01-10
+- dismiss the `data-list-register-names` patch, no longer needed
+
 ### 2017-11-09
 
 - v7.2.0-1-20171109 released
