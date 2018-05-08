@@ -14,13 +14,18 @@ categories:
 
 ---
 
-Version v7.2.0-3-20180506 is a maintenance release of **GNU MCU Eclipse RISC-V Embedded GCC**; it updates to the latest RISC-V sources and the build process was improved, to support even older GNU/Linux machines and processors.
+Version v7.2.0-3-20180506 is a maintenance release of **GNU MCU Eclipse 
+RISC-V Embedded GCC**; it updates to the latest RISC-V sources and the 
+build process was improved, to add `gdb-py` and to support even older 
+GNU/Linux machines and processors.
 
 [Binary files »]({{ page.download_url }})
 
 ## Compliance
 
-All **GNU MCU Eclipse RISC-V Embedded GCC** releases are based on the official [RISC-V source files](https://github.com/riscv/riscv-gcc) maintained by [SiFive](https://www.sifive.com).
+All **GNU MCU Eclipse RISC-V Embedded GCC** releases are based on the 
+official [RISC-V source files](https://github.com/riscv/riscv-gcc) 
+maintained by [SiFive](https://www.sifive.com).
 
 By the date of this release, the `riscv-gcc-7.3.0` branch is not yet 
 stable, thus the current version is still based on GCC 7.2, using the 
@@ -40,7 +45,8 @@ from Feb 27th, 2018
 
 ## Improvements
 
-All architectures, ABIs and libraries supported by the `riscv64-unknown-elf` toolchain are also supported, with the following improvements:
+All architectures, ABIs and libraries supported by the `riscv64-unknown-elf` 
+toolchain are also supported, with the following improvements:
 
 * a newer `newlib` was included, which supports the 'underscore' syscall functions
 * the mandatory reference to `libgloss` in the linker configuration was removed
@@ -52,13 +58,20 @@ All architectures, ABIs and libraries supported by the `riscv64-unknown-elf` too
 
 Binaries for **Windows**, **macOS** and **GNU/Linux** are provided.
 
-The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bits), and run on any distribution based on CentOS 6 or later.
+The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bits), 
+and run on any distribution based on CentOS 6 or later.
 
-The Windows binaries were built with mingw-w64, and run on any reasonably recent **i686** and **x86_64** Windows machines.
+The Windows binaries were built with mingw-w64, and run on any reasonably 
+recent **i686** and **x86_64** Windows machines.
 
-Instructions on how to install the binaries are available in the [How to install the RISC-V toolchain?](https://gnu-mcu-eclipse.github.io/toolchain/riscv/install/) page.
+Instructions on how to install the binaries are available in the 
+[How to install the RISC-V toolchain?](https://gnu-mcu-eclipse.github.io/toolchain/riscv/install/) 
+page.
 
-The toolchain is also available as an [xPack](https://www.npmjs.com/package/@gnu-mcu-eclipse/riscv-none-gcc) and can be conveniently installed with [`xpm`](https://www.npmjs.com/package/xpm):
+The toolchain is also available as an 
+[xPack](https://www.npmjs.com/package/@gnu-mcu-eclipse/riscv-none-gcc) 
+and can be conveniently installed with 
+[`xpm`](https://www.npmjs.com/package/xpm):
 
 ```console
 $ xpm install @gnu-mcu-eclipse/riscv-none-gcc --global
@@ -66,7 +79,10 @@ $ xpm install @gnu-mcu-eclipse/riscv-none-gcc --global
 
 This installs the latest available version.
 
-For better control and repeatability, the build scripts use Docker containers; all files required during builds are available as a separate [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build) project. 
+For better control and repeatability, the build scripts use Docker 
+containers; all files required during builds are available as a separate 
+[gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build) 
+project. 
 
 ## Known problems
 
