@@ -9,7 +9,7 @@ date: 2015-09-04 17:03:00 +0300
 
 ## Overview
 
-The **GNU MCU Eclipse QEMU** is a fork of the public open-source [QEMU](http://wiki.qemu.org/Main_Page) project, customised for more support of Cortex-M cores, and a better integration with the **GNU ARM QEMU Debugging** plug-in.
+The **GNU MCU Eclipse QEMU** is a fork of the public open-source [QEMU](https://www.qemu.org) project, customised for more support of Cortex-M cores, and a better integration with the **GNU MCU QEMU Debugging** plug-in.
 
 ## Download
 
@@ -19,28 +19,22 @@ All **GNU MCU Eclipse QEMU** versions are available from the [GitHub Releases](h
 
 ## Install
 
-The details of installing the **GNU MCU Eclipse QEMU** on various platforms are presented below, for each platform.
+The all platforms, **GNU MCU Eclipse QEMU** is released as a portable archive that can be installed in any location.
+
+The archives can be downloaded from [GitHub Releases](https://github.com/gnu-mcu-eclipse/qemu/releases) page.
 
 ### Windows
 
-For user convenience, the Windows versions of **GNU MCU Eclipse QEMU** are packed as Windows setup wizards. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/qemu/releases) page and download the latest version named like:
+The Windows versions of **GNU MCU Eclipse QEMU** are packed as ZIP files. Download the latest version named like:
 
-* `gnuarmeclipse-qemu-win32-2.2.92-201504041652-dev-setup.exe`
-* `gnuarmeclipse-qemu-win64-2.2.92-201504041652-dev-setup.exe`
+- `gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-win32.zip`
+- `gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-win64.zip`
 
-Select the `-win64-` file for 64-bits machines and the `-win32-` file for 32-bits machines.
+Select the `-win64` file for Windows x64 machines and the `-win32` file for Windows x32 machines.
 
-Run the setup as usual.
+Unpack the archive and copy it into the `%userprofile%\AppData\Roaming\GNU MCU Eclipse` (for example `C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse`) folder; according to Microsoft, this is the recommended location for installing user specific packages;
 
-![QEMU Windows setup]({{ site.baseurl }}/assets/images/2015/windows-setup.png)
-
-It is recommended to keep the default install location:
-
-![The QEMU Windows default install folder]({{ site.baseurl }}/assets/images/2015/windows-folder.png)
-
-The default install location is:
-
-* `C:\Program Files\GNU MCU Eclipse\QEMU\${version}`
+> Note: although perfectly possible to install QEMU in any folder, it is highly recommended to use this path, since by default the plug-in searches for the executable in this location.
 
 The result is a structure like:
 
@@ -49,8 +43,8 @@ The result is a structure like:
 To check if QEMU starts, use the following command:
 
 ```console
-C:\>"\Program Files\GNU MCU Eclipse\QEMU\2.2.92-201504041652-dev\bin\qemu-system-gnuarmeclipse.exe" --version
-GNU MCU Eclipse 32-bits QEMU emulator version 2.2.92
+C:\>"\Program Files\GNU MCU Eclipse\QEMU\2.8.0-3-20180523\bin\qemu-system-gnuarmeclipse.exe" --version
+GNU MCU Eclipse 32-bits QEMU emulator version 2.8.0-3
 Copyright (c) 2003-2008 Fabrice Bellard
 ```
 
@@ -60,78 +54,55 @@ For usual Cortex-M emulation, there are no special drivers required.
 
 ### macOS
 
-For user convenience, the macOS version of GNU MCU Eclipse QEMU is packed in two variants: a simple .tgz archive and a macOS install package. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/qemu/releases) page and download the latest version named like:
+The macOS version of **GNU MCU Eclipse QEMU** is packed as a TGZ archive. Download the latest version named like:
 
-* `gnuarmeclipse-qemu-osx-2.8.0-201703012029.tgz`
-* `gnuarmeclipse-qemu-osx-2.8.0-201703012029.pkg`
+-  `gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-osx.tgz`
 
-The recommended way is to unpack the archive in your home folder:
+To install QEMU, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/qemu/`:
 
 ```console
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
-$ tar xvf ~/Downloads/gnuarmeclipse-qemu-osx-2.8.0-201703012029-head.tgz
-$ chmod -R -w ${HOME}/opt/gnuarmeclipse/qemu
+$ tar xvf ~/Downloads/gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-osx.tgz
+$ chmod -R -w gnu-mcu-eclipse/qemu/2.8.0-3-20180523-0703
 ```
+
+> Note: although perfectly possible to install QEMU in any folder, it is highly recommended to use this path, since by default the plug-in searches for the executable in this location.
 
 To check if QEMU starts, use:
 
 ```console
-$ ${HOME}/opt/gnuarmeclipse/qemu/2.8.0-201703012029-head/bin/qemu-system-gnuarmeclipse --version
-GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0 (v2.8.0-644-ge45e0e1)
+$ ${HOME}/opt/gnuarmeclipse/qemu/2.8.0-3-20180523-0703/bin/qemu-system-gnuarmeclipse --version
+GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0-3
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
-```
-
-Another version, deprecated now, is to use the package installer, that installs QEMU in the `/Applications` folder.
-
-After downloading the .pkg file, run the install as usual.
-
-![The QEMU macOS Install page]({{ site.baseurl }}/assets/images/2015/mac-install.png)
-
-The package is installed in:
-
-* `/Applications/GNU MCU Eclipse/QEMU/${version}`
-
-and the result is a folder structure similar to:
-
-![The QEMU macOS install folders]({{ site.baseurl }}/assets/images/2015/mac-install-folders.png)
-
-To check if QEMU starts, use:
-
-```console
-$ /Applications/GNU\ ARM\ Eclipse/QEMU/2.2.92-201504041609-dev/bin/qemu-system-gnuarmeclipse --version
-GNU MCU Eclipse 64-bits QEMU emulator version 2.2.92
-Copyright (c) 2003-2008 Fabrice Bellard
 ```
 
 ### GNU/Linux
 
-The GNU/Linux versions of GNU MCU Eclipse QEMU are packed as TGZ archives. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/qemu/releases) page and download the latest version named like:
+The GNU/Linux versions of **GNU MCU Eclipse QEMU** are packed as TGZ archives. Download the latest version named like:
 
-* `gnuarmeclipse-qemu-debian64-2.2.92-201504041716-dev.tgz`
-* `gnuarmeclipse-qemu-debian32-2.2.92-201504041746-dev.tgz`
+- `gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-centos64.tgz`
+- `gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-centos32.tgz`
 
-As the name implies, these are Debian `tar.gz` archives, but can be executed on most recent GNU/Linux distributions (they were built on Debian 8 and were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-debian64-` file for 64-bits machines and the `-debian32-` file for 32-bits machines.
+As the name implies, these are CentOS `tar.gz` archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-centos64` file for 64-bits machines and the `-centos32` file for 32-bits machines.
 
-Note: if your distribution already provides ready to run QEMU binaries, they currently cannot be used with the GNU MCU Eclipse plug-ins, because they lack the Cortex-M support; you need to install the **GNU MCU Eclipse QEMU**.
-
-To install this package, unpack the distribution archive and copy it to `/opt/gnuarmeclipse/qemu/${version}`
+To install QEMU, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/qemu/${version}`:
 
 ```console
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
-$ tar xvf ~/Downloads/gnuarmeclipse-qemu-debian64-2.4.50-201510290935-dev.tgz
-$ chmod -R -w ${HOME}/opt/gnuarmeclipse/qemu
+$ tar xvf ~/Downloads/gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-debian64.tgz
+$ chmod -R -w gnu-mcu-eclipse/qemu/2.8.0-3-20180523-0703
 ```
 
-Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.
+> Note: although perfectly possible to install QEMU in any folder, it is highly recommended to use this path, since by default the plug-in searches for the executable in this location.
 
 To check if QEMU starts and is recent, use:
 
 ```console
-$ ${HOME}/opt/gnuarmeclipse/qemu/2.2.92-201504041716-dev/bin/qemu-system-gnuarmeclipse --version
-GNU MCU Eclipse 64-bits QEMU emulator version 2.2.92
-Copyright (c) 2003-2008 Fabrice Bellard
+$ ${HOME}/opt/gnuarmeclipse/qemu/2.8.0-3-20180523-0703/bin/qemu-system-gnuarmeclipse --version
+GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0-3
+Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 ```
 
 #### UDEV & Drivers
@@ -140,7 +111,7 @@ For usual Cortex-M emulation, there are no special UDEV definitions or drivers r
 
 ## QEMU Debugging plug-ins
 
-The QEMU debugging **plug-ins are not included** in these packages, and need to be installed [as usual]({{ site.baseurl }}/plugins/install/). Be sure that the **GNU ARM C/C++ QEMU Debugging** plug-ins are selected.
+The QEMU debugging **plug-ins are not included** in these packages, and need to be installed [as usual]({{ site.baseurl }}/plugins/install/). Be sure that the **GNU MCU C/C++ QEMU Debugging** plug-ins are selected.
 
 ![Install the QEMU plug-ins]({{ site.baseurl }}/assets/images/2015/install-new-software-updates-qemu.png)
 
