@@ -32,7 +32,7 @@ $ xpm install @gnu-mcu-eclipse/openocd --global
 
 This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:
 
-* Windows: `%APPDATA%\xPacks` (`C:\Users\ilg\AppData\Roaming\xPacks`)
+* Windows: `%APPDATA%\xPacks` (like `C:\Users\ilg\AppData\Roaming\xPacks`)
 * macOS: `${HOME}/Library/xPacks`
 * GNU/Linux: `${HOME}/opt/xPacks`
 
