@@ -58,7 +58,7 @@ toolchain are also supported, with the following improvements:
 
 Binaries for **Windows**, **macOS** and **GNU/Linux** are provided.
 
-The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bits), 
+The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), 
 and run on any distribution based on CentOS 6 or later.
 
 The Windows binaries were built with mingw-w64, and run on any reasonably 

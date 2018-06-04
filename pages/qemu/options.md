@@ -108,7 +108,7 @@ By default, `qemu` is very quiet, it barely complains for errors.
 To make it minimally social, add one `--verbose`, and it'll tell what is going on:
 
 ```
-GNU MCU Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
+GNU MCU Eclipse 64-bit QEMU v2.4.50 (qemu-system-gnuarmeclipse).
 Board: 'STM32F4-Discovery' (ST Discovery kit for STM32F407/417 lines).
 Device: 'STM32F407VG' (Cortex-M4 r0p0, MPU), Flash: 1024 kB, RAM: 128 kB.
 Command line: 'blinky' (6 bytes).
@@ -126,7 +126,7 @@ Cortex-M4 r0p0 core reset.
 Adding one more `--verbose`  will make QEMU extra verbose and it'll display details about the board hardware configuration and the memory sections loaded by GDB:
 
 ```console
-GNU MCU Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
+GNU MCU Eclipse 64-bit QEMU v2.4.50 (qemu-system-gnuarmeclipse).
 Board: 'STM32F4-Discovery' (ST Discovery kit for STM32F407/417 lines).
 Device: 'STM32F407VG' (Cortex-M4 r0p0, MPU), Flash: 1024 kB, RAM: 128 kB.
 Command line: 'blinky' (6 bytes).

@@ -36,14 +36,14 @@ For the SiFive configuration files, future OpenOCD are expected to include them 
 
 The second mandatory setting is the architecture, in the **GDB** → **Commands** field. 
 
-For 32-bits devices, use:
+For 32-bit devices, use:
 
 ```
 set arch riscv:rv32
 set remotetimeout 250
 ```
 
-For 64-bits devices, use:
+For 64-bit devices, use:
 
 ```
 set arch riscv:rv64

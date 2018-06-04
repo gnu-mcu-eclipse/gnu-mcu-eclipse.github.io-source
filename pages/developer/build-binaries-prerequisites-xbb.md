@@ -9,7 +9,7 @@ date: 2017-07-06 20:55:00 +0300
 
 The main trick that makes the multi-platform build possible is [Docker](https://www.docker.com).
 
-The second generation of the build scripts use the [xPack Build Box (XBB)](https://github.com/xpack/xpack-build-box), a set of Docker containers based on CentOS 6 (separate 32/64-bits containers). The more conservative CentOS 6 was preferred to avoid problems when attempting to run the executables on older versions.
+The second generation of the build scripts use the [xPack Build Box (XBB)](https://github.com/xpack/xpack-build-box), a set of Docker containers based on CentOS 6 (separate 32/64-bit containers). The more conservative CentOS 6 was preferred to avoid problems when attempting to run the executables on older versions.
 
 The Windows binaries are also generated on the same Docker containers, using [mingw-w64](http://mingw-w64.org).
 

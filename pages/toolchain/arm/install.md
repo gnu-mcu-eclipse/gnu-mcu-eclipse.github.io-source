@@ -25,8 +25,8 @@ $ xpm install @gnu-mcu-eclipse/arm-none-eabi-gcc --global
 
 ## Overview
 
-The GNU MCU Eclipse ARM build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits ARM GNU toolchain you prefer, but, for better results, the recommended toolchains for **bare metal** target applications are [**GNU MCU Eclipse ARM Embedded GCC**](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc) and
-[**GNU ARM Embedded Toolchain**](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm) (formerly GNU Tools for ARM Embedded Processors); for **GNU/Linux** target applications, the **[Linaro](http://www.linaro.org/downloads/)** toolchains provide a large selection of choices, for various specific needs (little/big endian, 32/64-bits, etc).
+The GNU MCU Eclipse ARM build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bit ARM GNU toolchain you prefer, but, for better results, the recommended toolchains for **bare metal** target applications are [**GNU MCU Eclipse ARM Embedded GCC**](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc) and
+[**GNU ARM Embedded Toolchain**](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm) (formerly GNU Tools for ARM Embedded Processors); for **GNU/Linux** target applications, the **[Linaro](http://www.linaro.org/downloads/)** toolchains provide a large selection of choices, for various specific needs (little/big endian, 32/64-bit, etc).
 
 > Important notes: 
 > GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the suspend and terminate buttons in the debug perspective are not functional. `arm-none-eabi-gdb` 7.12 from the initial `6_2-2016q4-20161216` crashes on macOS; use `6-2017-q1-update` or later.
@@ -48,7 +48,7 @@ The installation details described below assume the selection of the GCC ARM Em
 
 The main benefits for the users are:
 
-- convenience: binaries for **all** major platforms are provided (Windows 64/32-bits, GNU/Linux 64/32-bits, macOS);
+- convenience: binaries for **all** major platforms are provided (Windows 64/32-bit, GNU/Linux 64/32-bit, macOS);
 - uniform and portable install: the toolchain is also available as a binary xPack, and can be easily installed with `xpm`;
 - improved support for **Continuous Integration** usage: as for any xPack, the toolchain can be easily used in test environments.
 
@@ -114,7 +114,7 @@ Test if the compiler is functional; use the actual install path:
 
 ```console
 $ "${HOME}"/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/{{ page.gme-version-id }}-{{ page.gme-version-date }}/bin/arm-none-eabi-gcc --version
-arm-none-eabi-gcc (GNU MCU Eclipse ARM Embedded GCC, 64-bits)
+arm-none-eabi-gcc (GNU MCU Eclipse ARM Embedded GCC, 64-bit)
 ```
 
 #### GNU/Linux
@@ -124,7 +124,7 @@ The GNU/Linux versions of **GNU MCU Eclipse ARM Embedded GCC** are packed as 
 - `gnu-mcu-eclipse-arm-none-eabi-gcc-{{ page.gme-version-id }}-{{ page.gme-version-date }}-centos64.tgz`
 - `gnu-mcu-eclipse-arm-none-eabi-gcc-{{ page.gme-version-id }}-{{ page.gme-version-date }}-centos32.tgz`
 
-As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-centos64` file for 64-bits machines and the `-centos32` file for 32-bits machines.
+As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-centos64` file for 64-bit machines and the `-centos32` file for 32-bit machines.
 
 To install the toolchain, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/`:
 
@@ -141,7 +141,7 @@ Test if the compiler is functional; use the actual install path:
 
 ```console
 $ "${HOME}"/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/{{ page.gme-version-id }}-{{ page.gme-version-date }}/bin/arm-none-eabi-gcc --version
-arm-none-eabi-gcc (GNU MCU Eclipse ARM Embedded GCC, 64-bits)
+arm-none-eabi-gcc (GNU MCU Eclipse ARM Embedded GCC, 64-bit)
 ```
 
 ## GNU ARM Embedded Toolchain
@@ -238,9 +238,9 @@ For GNU/Linux, the GNU ARM Embedded Toolchain is released as a portable archive,
 
 The following steps were performed on **Ubuntu 14.04 LTSx64** (please adjust them accordingly for other distributions):
 
-* starting with version 6.x, GNU/Linux toolchains are 64-bits applications, and should work directly on most modern distributions;
+* starting with version 6.x, GNU/Linux toolchains are 64-bit applications, and should work directly on most modern distributions;
 
-* in older versions, the toolchain executables are 32-bits apps; when running on 64-bits machines, be sure you install the following 32-bits libraries (for different versions check the toolchain README for the actual list):
+* in older versions, the toolchain executables are 32-bit apps; when running on 64-bit machines, be sure you install the following 32-bit libraries (for different versions check the toolchain README for the actual list):
 
   ```console
 $ sudo apt-get -y install lib32z1 lib32ncurses5 lib32bz2-1.0
@@ -252,7 +252,7 @@ $ sudo apt-get -y install lib32z1 lib32ncurses5 lib32bz2-1.0
 $ sudo apt-get -y install lib32ncurses5
 ```
 
-* on Ubuntu 12 LTSx64 all 32-bits libraries were packed in ia32-libs, so you can also use, but be prepared to get a lot of useless libraries:
+* on Ubuntu 12 LTSx64 all 32-bit libraries were packed in ia32-libs, so you can also use, but be prepared to get a lot of useless libraries:
 
   ```console
 $ sudo apt-get -y install ia32-libs

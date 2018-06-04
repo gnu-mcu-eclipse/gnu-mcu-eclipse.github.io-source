@@ -21,9 +21,9 @@ In contrast to most ISAs, the RISC-V ISA can be freely used for any purpose, per
 
 The GNU MCU Eclipse currently supports the following devices:
 
-* SiFive [Freedom E310](https://www.sifive.com/products/freedom-e310/), RV32IMAC, a 32-bits embedded processor
-* SiFive [E31 Coreplex](https://www.sifive.com/products/coreplex-risc-v-ip/e31/), RV32IMAC, a Verilog synthesised 32-bits embedded processor
-* SiFive [E51 Coreplex](https://www.sifive.com/products/coreplex-risc-v-ip/e51/), RV64IMAC, a a Verilog synthesised 64-bits embedded processor
+* SiFive [Freedom E310](https://www.sifive.com/products/freedom-e310/), RV32IMAC, a 32-bit embedded processor
+* SiFive [E31 Coreplex](https://www.sifive.com/products/coreplex-risc-v-ip/e31/), RV32IMAC, a Verilog synthesised 32-bit embedded processor
+* SiFive [E51 Coreplex](https://www.sifive.com/products/coreplex-risc-v-ip/e51/), RV64IMAC, a a Verilog synthesised 64-bit embedded processor
 
 The following boards are supported:
 

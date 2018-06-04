@@ -9,7 +9,7 @@ date: 2017-07-06 20:55:00 +0300
 
 The main trick that makes the multi-platform build possible is [Docker](https://www.docker.com).
 
-Containers based on two Debian 9 Docker images are used (separate 32/64-bits containers). The more conservative Debian was preferred to generate the GNU/Linux versions, to avoid problems when attempting to run the executables on older versions.
+Containers based on two Debian 9 Docker images are used (separate 32/64-bit containers). The more conservative Debian was preferred to generate the GNU/Linux versions, to avoid problems when attempting to run the executables on older versions.
 
 The Windows binaries are also generated on GNU/Linux, using [mingw-w64](http://mingw-w64.org).
 

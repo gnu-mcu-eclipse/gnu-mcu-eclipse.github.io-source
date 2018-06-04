@@ -24,7 +24,7 @@ With lots of architectures and systems supported, GCC recommends prefixing the b
 
 The current RISC-V prefixes for the Linux toolchains are `riscv64-unknown-linux-gnu-` and `riscv32-unknown-linux-gnu-` and for the non-Linux toolchains are `riscv64-unknown-elf-` and `riscv32-unknown-elf-`.
 
-Well, don't be confused by this unfortunate names. The **64** or **32** prefix attached to the architecture does not mean that the toolchain runs on 64-bits or 32-bits platforms only. It does not mean either that the compiler produces 64-bits or 32-bits RISC-V binaries. Actually, the compilers produce both 32/64-bits binaries, based on `-march` and `-mabi`. The only difference are defaults, when the compiler are invoked without the `-march` and `-mabi` explicitly set on the command line.
+Well, don't be confused by this unfortunate names. The **64** or **32** prefix attached to the architecture does not mean that the toolchain runs on 64-bit or 32-bit platforms only. It does not mean either that the compiler produces 64-bit or 32-bit RISC-V binaries. Actually, the compilers produce both 32/64-bit binaries, based on `-march` and `-mabi`. The only difference are defaults, when the compiler are invoked without the `-march` and `-mabi` explicitly set on the command line.
 
 The **unknown** part of the tuple also does not bring any useful information. If it refers to the OS, it could have been easily skipped. Not to mention that for bare metal toolchains, **none** would have been a shorter and more usual name.
 
@@ -46,7 +46,7 @@ RISC-V ISA strings begin with either RV32I, RV32E, RV64I, or RV128I indicating t
 
 * RV32I: A load-store ISA with 32, 32-bit general-purpose integer registers. 
 * RV32E: An embedded flavor of RV32I with only 16 integer registers. 
-* RV64I: A 64-bit flavor of RV32I where the general-purpose integer registers are 64-bits wide. 
+* RV64I: A 64-bit flavor of RV32I where the general-purpose integer registers are 64-bit wide. 
 
 In addition to these base ISAs, a handful of extensions have been 
 specified. The extensions that have both been specified and are supported by the toolchain are: 
@@ -78,9 +78,9 @@ RISC-V defines two integer ABIs and three floating-point ABIs, which
 together are treated as a single ABI string. The integer ABIs follow the 
 standard ABI naming scheme: 
 
-* `ilp32`: "int", "long", and pointers are all 32-bits long. "long long" is 
+* `ilp32`: "int", "long", and pointers are all 32-bit long. "long long" is 
 a 64-bit type, "char" is 8-bit, and "short" is 16-bit. 
-* `lp64`: "long" and pointers are 64-bits long, while "int" is a 32-bit type. 
+* `lp64`: "long" and pointers are 64-bit long, while "int" is a 32-bit type. 
 The other types remain the same as ilp32. 
 
 while the floating-point ABIs are a RISC-V specific addition: 

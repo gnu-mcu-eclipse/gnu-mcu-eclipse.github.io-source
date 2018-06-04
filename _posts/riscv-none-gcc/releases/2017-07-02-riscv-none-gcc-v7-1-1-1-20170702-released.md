@@ -36,12 +36,12 @@ The supported architectures (`-march=`) are:
 
 The supported ABIs (`-mabi=`) are:
 
-* ilp32 (32-bits, soft-float)
-* ilp32f (32-bits with single-precision in registers and double in memory, niche use only)
-* ilp32d (32-bits, hard-float)
-* lp64 (64-bits long and pointers, soft-float)
-* lp64f (64-bits long and pointers, with single-precision in registers and double in memory, niche use only)
-* lp64d (64-bits long and pointers, hard-float).
+* ilp32 (32-bit, soft-float)
+* ilp32f (32-bit with single-precision in registers and double in memory, niche use only)
+* ilp32d (32-bit, hard-float)
+* lp64 (64-bit long and pointers, soft-float)
+* lp64f (64-bit long and pointers, with single-precision in registers and double in memory, niche use only)
+* lp64d (64-bit long and pointers, hard-float).
 
 The supported libraries are:
 
@@ -75,7 +75,7 @@ Another addition compared to the SiFive distribution is the presence of the docu
 
 ## Binaries
 
-Binaries for **Windows**, **macOS** and **GNU/Linux** are provided. For Windows and macOS, separate installable and plain archives are provided. For Windows and GNU/Linux, both 32/64-bits binaries are provided.
+Binaries for **Windows**, **macOS** and **GNU/Linux** are provided. For Windows and macOS, separate installable and plain archives are provided. For Windows and GNU/Linux, both 32/64-bit binaries are provided.
 
 Instructions on how to install them are available in the [How to install the RISC-V toolchain?](https://gnu-mcu-eclipse.github.io/toolchain/riscv/install/) page.
 

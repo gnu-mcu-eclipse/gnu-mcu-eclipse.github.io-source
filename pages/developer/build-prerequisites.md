@@ -34,7 +34,7 @@ Install Sun JDK 1.8 or later (required since Eclipse 4.6); JRE is not enough, wi
 This instance of Eclipse will be used for actual development.
 
 - go to [Eclipse download site](http://www.eclipse.org/downloads/) and follow the [download packages](https://www.eclipse.org/downloads/eclipse-packages/) link
-- download **Eclipse IDE for Eclipse Committers**, preferably the 64-bits version (for example eclipse-committers-oxygen-1a-macosx-cocoa-x86_64.dmg)
+- download **Eclipse IDE for Eclipse Committers**, preferably the 64-bit version (for example eclipse-committers-oxygen-1a-macosx-cocoa-x86_64.dmg)
 - unpack the archive
 - on macOS, remove the `com.apple.quarantine` attribute:
 

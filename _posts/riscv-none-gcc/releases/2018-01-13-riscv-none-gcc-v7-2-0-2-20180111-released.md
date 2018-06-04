@@ -43,7 +43,7 @@ All architectures, ABIs and libraries supported by the `riscv64-unknown-elf` too
 
 Binaries for **Windows**, **macOS** and **GNU/Linux** are provided.
 
-The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bits), and run on any distribution based on CentOS 6 or later.
+The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), and run on any distribution based on CentOS 6 or later.
 
 The Windows binaries were built with mingw-w64, and run on any reasonably recent **i686** and **x86_64** Windows machines.
 

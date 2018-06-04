@@ -31,7 +31,7 @@ J-Link comes not only with a GDB server, but with a complete set of drivers and 
 
 There are different sections, grouped by platform (Windows, macOS, Linux, Linux ARM); go to the platform of your choice.
 
-Click the **Download** button close to the **Software and documentation pack** appropriate for your development platform. For Linux there are separate 32/64-bits versions, packed with different tools (DEB, RPM, TGZ); select the package that better matches your system.
+Click the **Download** button close to the **Software and documentation pack** appropriate for your development platform. For Linux there are separate 32/64-bit versions, packed with different tools (DEB, RPM, TGZ); select the package that better matches your system.
 
 Accept the terms of the software agreement and download the software.
 
@@ -77,7 +77,7 @@ On macOS, the USB subsystem automatically identifies and allows access to USB de
 
 ## GNU/Linux
 
-As already mentioned, there are multiple packages available for GNU/Linux on the SEGGER download site, built as Debian/Red Hat packages, in 32/64-bits versions, or plain TGZ archives. Select the one appropriate for you system and use the specific tools to install the package. For example, on Ubuntu, to install the 64-bits .deb file, use the following command:
+As already mentioned, there are multiple packages available for GNU/Linux on the SEGGER download site, built as Debian/Red Hat packages, in 32/64-bit versions, or plain TGZ archives. Select the one appropriate for you system and use the specific tools to install the package. For example, on Ubuntu, to install the 64-bit .deb file, use the following command:
 
 ```console
 $ sudo dpkg -i ~/Downloads/jlink_5.2.7_x86_64.deb
@@ -85,7 +85,7 @@ $ sudo dpkg -i ~/Downloads/jlink_5.2.7_x86_64.deb
 
 The J-Link executables are installed in `/usr/bin`.
 
-In case you have a 64-bits machine and install the 32-bits SEGGER package, you might need several 32-bits libraries, depending on distribution.
+In case you have a 64-bit machine and install the 32-bit SEGGER package, you might need several 32-bit libraries, depending on distribution.
 
 ### UDEV
 

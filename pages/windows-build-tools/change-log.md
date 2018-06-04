@@ -69,7 +69,7 @@ Entries in this file are in reverse chronological order.
 ### 2015-07-16
 
 - v2.6-201507152002 released
-- support for 64-bits windows added (build scripts)
+- support for 64-bit windows added (build scripts)
 
 ### 2015-05-14
 

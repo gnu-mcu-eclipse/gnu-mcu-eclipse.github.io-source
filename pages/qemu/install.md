@@ -78,7 +78,7 @@ To check if QEMU starts, use the following command:
 
 ```console
 C:\>"\Program Files\GNU MCU Eclipse\QEMU\2.8.0-3-20180523\bin\qemu-system-gnuarmeclipse.exe" --version
-GNU MCU Eclipse 32-bits QEMU emulator version 2.8.0-3
+GNU MCU Eclipse 32-bit QEMU emulator version 2.8.0-3
 Copyright (c) 2003-2008 Fabrice Bellard
 ```
 
@@ -111,7 +111,7 @@ To check if QEMU starts, use:
 
 ```console
 $ ${HOME}/opt/gnuarmeclipse/qemu/2.8.0-3-20180523-0703/bin/qemu-system-gnuarmeclipse --version
-GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0-3
+GNU MCU Eclipse 64-bit QEMU emulator version 2.8.0-3
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 ```
 
@@ -126,7 +126,7 @@ archives. Download the latest version named like:
 As the name implies, these are CentOS `tar.gz` archives, but can be 
 executed on most recent GNU/Linux distributions (they were tested on 
 Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-centos64` file 
-for 64-bits machines and the `-centos32` file for 32-bits machines.
+for 64-bit machines and the `-centos32` file for 32-bit machines.
 
 To install QEMU, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/qemu/${version}`:
 
@@ -145,7 +145,7 @@ To check if QEMU starts and is recent, use:
 
 ```console
 $ ${HOME}/opt/gnuarmeclipse/qemu/2.8.0-3-20180523-0703/bin/qemu-system-gnuarmeclipse --version
-GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0-3
+GNU MCU Eclipse 64-bit QEMU emulator version 2.8.0-3
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 ```
 

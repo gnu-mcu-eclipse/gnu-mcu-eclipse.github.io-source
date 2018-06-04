@@ -26,7 +26,7 @@ This release follows the official [GNU Arm Embedded Toolchain](https://developer
 
 Binaries for **Windows**, **macOS** and **GNU/Linux** are provided.
 
-The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bits), and run on any distribution based on CentOS 6 or later.
+The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), and run on any distribution based on CentOS 6 or later.
 
 The macOS binary was built on a macOS 10.10.5 and must run on any newer macOS system.
 

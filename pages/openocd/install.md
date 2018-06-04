@@ -65,7 +65,7 @@ To check if OpenOCD starts, use the following command:
 
 ```console
 C:>"C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse\OpenOCD\0.10.0-5-20171110-1117\bin\openocd" --version
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
+GNU MCU Eclipse 64-bit Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
 ```
 
 #### Drivers
@@ -113,7 +113,7 @@ To check if OpenOCD starts, use:
 
 ```console
 $ ${HOME}/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/bin/openocd --version
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
+GNU MCU Eclipse 64-bit Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
 ```
 
 ### GNU/Linux
@@ -123,7 +123,7 @@ The GNU/Linux versions of **GNU MCU Eclipse OpenOCD** are packed as TGZ archi
 - `gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-centos64.tgz`
 - `gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-centos32.tgz`
 
-As the name implies, these are CentOS `tar.gz` archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-centos64` file for 64-bits machines and the `-centos32` file for 32-bits machines.
+As the name implies, these are CentOS `tar.gz` archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-centos64` file for 64-bit machines and the `-centos32` file for 32-bit machines.
 
 To install OpenOCD, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/openocd/${version}`:
 
@@ -140,7 +140,7 @@ To check if OpenOCD starts and is recent, use:
 
 ```console
 $ ${HOME}/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/bin/openocd --version
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
+GNU MCU Eclipse 64-bit Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
 ```
 
 #### UDEV
@@ -186,7 +186,7 @@ To test if OpenOCD is able to connect to a specific board, you generally need to
 ```console
 $ ${HOME}/opt/gnu-mcu-eclipse/openocd/0.8.0-201501181257/bin/openocd \
   -f board/stm32f4discovery.cfg
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036-gb7535dd (2015-01-18-12:57)
+GNU MCU Eclipse 64-bit Open On-Chip Debugger 0.8.0-00036-gb7535dd (2015-01-18-12:57)
 Licensed under GNU GPL v2
 For bug reports, read
 

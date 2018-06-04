@@ -253,7 +253,7 @@ For a true test you need to first install the package and then run the program f
 
 ```console
 $ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv-none-embed-gcc --version
-riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
+riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 7.1.1 20170509
 ```
 
 ## More build details

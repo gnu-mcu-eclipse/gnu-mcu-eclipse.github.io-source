@@ -19,7 +19,7 @@ The main features of the GNU MCU Eclipse family of plug-ins are:
 
 Other features of the cross build plug-in are:
 
-  * supports a wide range of 32 and 64-bits toolchains
+  * supports a wide range of 32 and 64-bit toolchains
   * provides extra build steps to generate the binary files required to write the controller flash memory
   * supports the automatic discovery of system paths and macro definitions for accurate indexing and auto-completion
   * provides common options for all toolchains
@@ -31,7 +31,7 @@ Other features of the cross build plug-in are:
 
 ## Supported toolchains
 
-The build plug-in supports most existing toolchains currently available for both 32 and 64-bits ARM and RISC-V processors.
+The build plug-in supports most existing toolchains currently available for both 32 and 64-bit ARM and RISC-V processors.
 
 ### ARM toolchains
 

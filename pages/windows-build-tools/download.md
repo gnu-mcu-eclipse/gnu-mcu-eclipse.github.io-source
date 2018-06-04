@@ -15,7 +15,7 @@ All versions of the GNU MCU Eclipse Windows Build Tools are available via the [G
 
 ![Windows Build Tools Releases]({{ site.baseurl }}/assets/images/2015/github-gae-build-tools-releases.png)
 
-## 64/32-bits
+## 64/32-bit
 
-Starting with version v2.6 there are separate 64/32-bits binaries. If running a modern 64-bits Windows, it is highly recommended to download the 64-bits version, since it not only reduces the risk of 32-bits DLL rebases, but also the 64-bits `make` seems to run slightly faster.
+Starting with version v2.6 there are separate 64/32-bit binaries. If running a modern 64-bit Windows, it is highly recommended to download the 64-bit version, since it not only reduces the risk of 32-bit DLL rebases, but also the 64-bit `make` seems to run slightly faster.
 

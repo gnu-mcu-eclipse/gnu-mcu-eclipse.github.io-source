@@ -32,9 +32,9 @@ Starting with version 4.x, the Preferences were moved under the new **MCU** grou
 
 ## Java was started but returned exit code=13
 
-This obscure message is issued by Eclipse when you are trying to use a 64-bits Eclipse on a 32-bits Java (and possibly the other way around).
+This obscure message is issued by Eclipse when you are trying to use a 64-bit Eclipse on a 32-bit Java (and possibly the other way around).
 
-If you install Java for the first time, be sure you use the 64-bits Java on 64-bits systems, and then the 64-bits version of Eclipse.
+If you install Java for the first time, be sure you use the 64-bit Java on 64-bit systems, and then the 64-bit version of Eclipse.
 
 ## Receive fatal alert: handshake_failure
 
@@ -79,7 +79,7 @@ If you try to connect via the SEGGER J-Link debug plug-in to a stock ST DISCOVER
 
 On GNU/Linux, **DO NOT** install Eclipse with the system package manager, because usually it installs an older version, and CDT is not include.
 
-Instead, go to the [Eclipse download site](http://www.eclipse.org/downloads/) and get the proper **Eclipse IDE for C/C++ Developers**, preferably the 64-bits version.
+Instead, go to the [Eclipse download site](http://www.eclipse.org/downloads/) and get the proper **Eclipse IDE for C/C++ Developers**, preferably the 64-bit version.
 
 ## OpenOCD fails to start with `-c echo "Started by GNU ARM Eclipse"`
 

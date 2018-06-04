@@ -37,11 +37,11 @@ For user convenience, an usual Windows setup wizard is provided.
 
 ![Build Tools setup]({{ site.baseurl }}/assets/images/2015/win-build-tools-setup.png)
 
-After running the setup, the tools are installed in the `C:\Program Files\GNU ARM Eclipse\Build Tools` folder (for 32-bits machines), or in the `C:\Program Files (x86)\GNU ARM Eclipse\Build Tools` folder (for 64-bits machines).
+After running the setup, the tools are installed in the `C:\Program Files\GNU ARM Eclipse\Build Tools` folder (for 32-bit machines), or in the `C:\Program Files (x86)\GNU ARM Eclipse\Build Tools` folder (for 64-bit machines).
 
 Be sure you update the C/C++ → Build → Environment to refer to the actual path.
 
-All executables are 32-bits applications, statically linked, so there should be no DLL problems when using them.
+All executables are 32-bit applications, statically linked, so there should be no DLL problems when using them.
 
 ## Uninstall
 

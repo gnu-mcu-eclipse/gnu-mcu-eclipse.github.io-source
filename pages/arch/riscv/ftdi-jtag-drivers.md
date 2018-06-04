@@ -101,7 +101,7 @@ Attempts to open the HiFive1 board with OpenOCD fail with:
 
 ```console
 $ openocd -f board/sifive-freedom-e300-hifive1.cfg 
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00135-g80299198 (2017-06-22-18:37)
+GNU MCU Eclipse 64-bit Open On-Chip Debugger 0.10.0+dev-00135-g80299198 (2017-06-22-18:37)
 Licensed under GNU GPL v2
 For bug reports, read
 	http://openocd.org/doc/doxygen/bugs.html
@@ -123,7 +123,7 @@ In the HiFive1 case, the first interface should no longer be available as a tty 
 
 ```console
 $ openocd -f board/sifive-freedom-e300-hifive1.cfg 
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00135-g80299198 (2017-06-22-18:37)
+GNU MCU Eclipse 64-bit Open On-Chip Debugger 0.10.0+dev-00135-g80299198 (2017-06-22-18:37)
 Licensed under GNU GPL v2
 For bug reports, read
 	http://openocd.org/doc/doxygen/bugs.html

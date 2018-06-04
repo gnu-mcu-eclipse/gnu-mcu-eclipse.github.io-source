@@ -21,7 +21,7 @@ $ xpm install @gnu-mcu-eclipse/riscv-none-gcc --global
 
 ## Overview
 
-The Eclipse RISC-V build plug-in is highly configurable in terms of toolchain executable names and location, so you can use any 32/64-bits RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for **bare metal** target applications is [**GNU MCU Eclipse RISC-V Embedded GCC**](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/). This toolchain closely follows the official [RISC-V distribution](https://github.com/riscv/riscv-gcc) maintained by [SiFive](https://www.sifive.com).
+The Eclipse RISC-V build plug-in is highly configurable in terms of toolchain executable names and location, so you can use any 32/64-bit RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for **bare metal** target applications is [**GNU MCU Eclipse RISC-V Embedded GCC**](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/). This toolchain closely follows the official [RISC-V distribution](https://github.com/riscv/riscv-gcc) maintained by [SiFive](https://www.sifive.com).
 
 
 ## Target vs host platform
@@ -37,9 +37,9 @@ The installation details described below assume the selection of the GNU MCU Ec
 
 ## riscv64-unknown-elf-gcc
 
-After installing the toolchain, you'll end up with lots of programs prefixed by `riscv-none-embed-`. For those used to the RISC-V original toolchains, there is no `riscv64-` or `riscv32-` prefix since it is actually not needed, the toolchain produces both 32/64-bits binaries, based on `-march` and `-mabi`.
+After installing the toolchain, you'll end up with lots of programs prefixed by `riscv-none-embed-`. For those used to the RISC-V original toolchains, there is no `riscv64-` or `riscv32-` prefix since it is actually not needed, the toolchain produces both 32/64-bit binaries, based on `-march` and `-mabi`.
 
-Be sure you **do** select carefully the proper release file to  match the 32/64-bits platform you are using. 
+Be sure you **do** select carefully the proper release file to  match the 32/64-bit platform you are using. 
 
 ## The xPack install 
 
@@ -103,7 +103,7 @@ Test if the compiler is functional; use the actual install path:
 
 ```console
 $ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/{{ page.version-id }}-{{ page.version-date }}/bin/riscv-none-embed-gcc --version
-riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
+riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit)
 ```
 
 ### GNU/Linux
@@ -113,7 +113,7 @@ The GNU/Linux versions of **RISC-V Embedded GCC** are packed as .tgz archives
 - `gnu-mcu-eclipse-riscv-none-gcc-{{ page.version-id }}-{{ page.version-date }}-centos64.tgz`
 - `gnu-mcu-eclipse-riscv-none-gcc-{{ page.version-id }}-{{ page.version-date }}-centos32.tgz`
 
-As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-centos64` file for 64-bits machines and the `-centos32` file for 32-bits machines.
+As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-centos64` file for 64-bit machines and the `-centos32` file for 32-bit machines.
 
 To install the toolchain, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/`:
 
@@ -130,7 +130,7 @@ Test if the compiler is functional; use the actual install path:
 
 ```console
 $ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/{{ page.version-id }}-{{ page.version-date }}/bin/riscv-none-embed-gcc --version
-riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
+riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit)
 ```
 
 ## Toolchain path

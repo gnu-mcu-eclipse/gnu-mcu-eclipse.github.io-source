@@ -35,11 +35,11 @@ Since these are Eclipse plug-ins, they obviously require a functional Eclipse CD
 
 ### Win XP - a word of caution
 
-For the old-timers, a word of caution about Windows XP: recent Java distributions (from 7 up) are [no longer certified for XP](http://www.oracle.com/technetwork/java/javase/config-417990.html), so, even if they might seem to work, you are on thin ice. If possible, avoid using XP at all; otherwise use only the 32-bits version, with 32-bits Java and Eclipse.
+For the old-timers, a word of caution about Windows XP: recent Java distributions (from 7 up) are [no longer certified for XP](http://www.oracle.com/technetwork/java/javase/config-417990.html), so, even if they might seem to work, you are on thin ice. If possible, avoid using XP at all; otherwise use only the 32-bit version, with 32-bit Java and Eclipse.
 
 ### Win XP 64
 
-The warning is even more important for Win XP 64, which, in certain configurations, has difficulties to start 32-bits applications (like the JLink GDB Server or OpenOCD). Although generally Win XP 64 is not recommended at all, if you really need to use it, preferably experiment with a 32-bits Java and a 32-bits Eclipse.
+The warning is even more important for Win XP 64, which, in certain configurations, has difficulties to start 32-bit applications (like the JLink GDB Server or OpenOCD). Although generally Win XP 64 is not recommended at all, if you really need to use it, preferably experiment with a 32-bit Java and a 32-bit Eclipse.
 
 However please note that no support requests referring to Win XP 64 will be processed.
 
@@ -47,7 +47,7 @@ However please note that no support requests referring to Win XP 64 will be pro
 
 The recommended package is the latest version from the official [Oracle **Java SE** page](http://www.oracle.com/technetwork/java/javase/index.html). The **OpenJDK Java** used in Ubuntu is also fine. The minimum is JDK 1.8, or even JRE 1.8 (the Java Runtime Environment), but, as said before, better use the latest JDK (currently 1.8.151). On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.
 
-> Important note: Java may be distributed in separate 32/64-bits packages. Unless you have older applications requiring 32-bits Java, on 64-bits systems it is recommended to install the 64-bits JDK. Anyway, Oracle JDK 9 might not even be available for 32-bits. 
+> Important note: Java may be distributed in separate 32/64-bit packages. Unless you have older applications requiring 32-bit Java, on 64-bit systems it is recommended to install the 64-bit JDK. Anyway, Oracle JDK 9 might not even be available for 32-bit. 
 
 On some distributions, for example on Ubuntu 16.04 LTS, Java seems to be already installed in the standard distribution:
 
@@ -65,7 +65,7 @@ $ sudo apt-get -y install default-jdk
 $ java -version
 java version "1.7.0_85"
 OpenJDK Runtime Environment (IcedTea 2.6.1) (7u85-2.6.1-5ubuntu0.14.04.1)
-OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
+OpenJDK 64-bit Server VM (build 24.85-b03, mixed mode)
 ```
 
 If you are behind a firewall, older Java virtual machines [fail to connect to SourceForge]({{ site.baseurl }}/blog/2016/12/02/plugins-install-issue/). Update your Java JDK to **8u101 or later** and retry to install the plug-ins.
@@ -84,7 +84,7 @@ The simple way is to download **GNU MCU Eclipse IDE for C/C++ Developers** from 
 
 ![Eclipse EPP]({{ site.baseurl }}/assets/images/2017/epp-releases.png)
 
-> Important note: there are different binaries for 32-bits (`_x86`) and 64-bits (`x86-64`). Be sure the Eclipse binary word size matches the Java word size, otherwise the obscure `Java was started but returned exit code=13` message is issued.
+> Important note: there are different binaries for 32-bit (`_x86`) and 64-bit (`x86-64`). Be sure the Eclipse binary word size matches the Java word size, otherwise the obscure `Java was started but returned exit code=13` message is issued.
 
 On macOS, after un-archiving, remove the `com.apple.quarantine` extended attribute, otherwise the application will run from a randomised path and you won't be able to store persistent changes.
 
@@ -94,7 +94,7 @@ $ xattr -d com.apple.quarantine Eclipse.app
 
 #### The plug-ins install way
 
-If you prefer to do this in more steps, go to the [Eclipse packages](http://www.eclipse.org/downloads/eclipse-packages) and get the **Eclipse IDE for C/C++ Developers** archive appropriate for your platform, preferably the 64-bits version.
+If you prefer to do this in more steps, go to the [Eclipse packages](http://www.eclipse.org/downloads/eclipse-packages) and get the **Eclipse IDE for C/C++ Developers** archive appropriate for your platform, preferably the 64-bit version.
 
 Links to older versions are available in the **More Downloads** section, at the bottom.
 

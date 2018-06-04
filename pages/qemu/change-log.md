@@ -666,7 +666,7 @@ Entries in this file are in reverse chronological order.
 ### 2015-03-26
 * osx build ok
 * kinetis header redundancy fixed
-* debian 64/32-bits build ok
+* debian 64/32-bit build ok
 * add CONFIG_GNU_ARM_ECLIPSE
 
 ### 2015-01-25
