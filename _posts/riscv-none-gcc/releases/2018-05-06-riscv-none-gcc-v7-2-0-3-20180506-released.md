@@ -86,7 +86,15 @@ project.
 
 ## Known problems
 
-* none
+* due to a missing option in the build script, the libraries are not
+functional for 64-bit devices, the build fails (fixed in 7.2.0-4):
+
+```
+locale.c:(.text.__locale_ctype_ptr+0x8): relocation truncated to fit: R_RISCV_HI20 against `.LANCHOR0'
+```
+
+* the `libnosys` library does not export the correct underscore symbols.
+
 
 ## Checksums
 
