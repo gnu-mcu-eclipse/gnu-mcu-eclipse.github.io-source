@@ -85,7 +85,7 @@ The Eclipse Packaging Project allows to create complete Eclipse packages for all
 * clone the `gnu-mcu-eclipse/org.eclipse.epp.packages` project
 * select the latest original branch (like `OXYGEN`)
 * merge from upstream
-* merge into the corresponding local branch (like `ogygen-gme`)
+* merge into the corresponding local branch (like `oxygen-gme`)
 * edit `org.eclipse.epp.packages.git/releng/org.eclipse.epp.config/parent/pom.xml`
   * update the latest version `<gnumcueclipse.version>4.3.1</gnumcueclipse.version>`
   * temporarily update the site URL to the test site `<gnumcueclipse.repository>http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test</gnumcueclipse.repository>`
@@ -227,7 +227,7 @@ Using a test Eclipse, install the plug-ins from the update site.
 
 * go to **.../GNU MCU Eclipse/archive**
 * move the latest archive from **internal** to **releases/plug-ins**
-* move the other relevant archives from **internal** to **internal**
+* prune the **internal** folder
 
 ## Merge develop into master
 
