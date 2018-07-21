@@ -79,7 +79,8 @@ function do_script() {
 
   cd "${slug}"
 
-  # Be sure the 'vendor/' folder is excluded, otherwise a strage error occurs.
+  # Be sure the 'vendor/' folder is excluded
+  # otherwise a strage error occurs.
   do_run bundle exec jekyll build --destination "${site}"
 
   # Temporary test the Apple URL, to help diagnose htmlproofer.

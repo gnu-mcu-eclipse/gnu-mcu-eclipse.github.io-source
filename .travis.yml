@@ -1,5 +1,5 @@
 # Travis CI configuration file to validate and deploy 
-# the GNU ARM Eclipse Jekyll site.
+# the GNU MCU Eclipse Jekyll site.
 # https://docs.travis-ci.com/user/getting-started/
 
 # https://docs.travis-ci.com/user/multi-os/
