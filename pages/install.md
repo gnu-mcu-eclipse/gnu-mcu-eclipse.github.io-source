@@ -78,6 +78,15 @@ QEMU is a hardware emulator that can be successfully used to run simple _blinky_
 
 Please follow the steps in the [How to install the QEMU binaries]({{ site.baseurl }}/qemu/install/) page.
 
+## Jumper Virtual Lab
+
+[Jumper Virtual lab](https://jumper.io) is an emulator that provides a fast an easy way to run firmware files. It works in a matter of minutes. Jumper's eclipse plug-in works with GNU MCU Eclipse's plug-in and enables you to easily run your firmware one a virtual device.
+
+To install the Jumper Virtual Lab, use the following links:
+
+* [Create an account](https://vlab.jumper.io)
+* [Jumper Virtual Lab Install](https://docs.jumper.io/docs/install.html)
+
 ## Java
 
 As a prerequisite for Eclipse, Java is required.
