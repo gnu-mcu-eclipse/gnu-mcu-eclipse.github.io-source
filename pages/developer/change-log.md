@@ -12,6 +12,82 @@ Entries in this file are in reverse chronological order.
 
 ## 2018
 
+### 2018-07-21
+
+* version 4.4.1.201807211108 released
+
+```console
+repository/features:
+ilg.gnumcueclipse.codered.feature_1.1.2.201807211108.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink.feature_4.3.3.201807211108.jar
+ilg.gnumcueclipse.debug.gdbjtag.jumper.feature_1.1.1.201807211108.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd.feature_4.3.3.201807211108.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature_1.3.3.201807211108.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu.feature_3.3.3.201807211108.jar
+ilg.gnumcueclipse.doc.user.feature_1.1.2.201807211108.jar
+ilg.gnumcueclipse.managedbuild.cross.arm.feature_2.6.3.201807211108.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv.feature_2.8.2.201807211108.jar
+ilg.gnumcueclipse.packs.feature_2.2.2.201807211108.jar
+ilg.gnumcueclipse.templates.ad.feature_1.1.5.201807211108.jar
+ilg.gnumcueclipse.templates.cortexm.feature_1.4.4.201807211108.jar
+ilg.gnumcueclipse.templates.freescale.feature_2.2.9.201807211108.jar
+ilg.gnumcueclipse.templates.sifive.feature_1.3.2.201807211108.jar
+ilg.gnumcueclipse.templates.stm.feature_2.6.5.201807211108.jar
+
+repository/plugins:
+ilg.gnumcueclipse.codered_1.1.2.201807211108.jar
+ilg.gnumcueclipse.core_4.4.1.201807211108.jar
+ilg.gnumcueclipse.debug.core_1.2.2.201807211108.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink_4.3.3.201807211108.jar
+ilg.gnumcueclipse.debug.gdbjtag.jumper_1.1.1.201807211108.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd_4.3.3.201807211108.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd_1.3.3.201807211108.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu_3.3.3.201807211108.jar
+ilg.gnumcueclipse.debug.gdbjtag.restart_1.3.2.201807211108.jar
+ilg.gnumcueclipse.debug.gdbjtag_4.1.2.201807211108.jar
+ilg.gnumcueclipse.debug.packs_1.1.2.201807211108.jar
+ilg.gnumcueclipse.doc.user_1.1.2.201807211108.jar
+ilg.gnumcueclipse.managedbuild.cross.arm_2.6.3.201807211108.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv_2.8.2.201807211108.jar
+ilg.gnumcueclipse.managedbuild.cross_1.2.3.201807211108.jar
+ilg.gnumcueclipse.managedbuild.packs_1.3.4.201807211108.jar
+ilg.gnumcueclipse.packs.core_2.2.2.201807211108.jar
+ilg.gnumcueclipse.packs.data_2.2.2.201807211108.jar
+ilg.gnumcueclipse.packs.ui_1.3.2.201807211108.jar
+ilg.gnumcueclipse.packs_1.3.1.201807211108.jar
+ilg.gnumcueclipse.templates.ad_1.2.1.201807211108.jar
+ilg.gnumcueclipse.templates.core_2.6.2.201807211108.jar
+ilg.gnumcueclipse.templates.cortexm_1.4.4.201807211108.jar
+ilg.gnumcueclipse.templates.freescale.pe_1.2.2.201807211108.jar
+ilg.gnumcueclipse.templates.freescale_2.2.9.201807211108.jar
+ilg.gnumcueclipse.templates.sifive_1.3.2.201807211108.jar
+ilg.gnumcueclipse.templates.stm_2.6.5.201807211108.jar
+```
+
+* 995e3992 - version 4.4.1
+* a3003478 - bump versions for 4.4.1 (was 4.3.4)
+* d97036d7 - [#310] add license info to linker scripts
+
+### 2018-06-12 
+
+* e32a28a4 - [#306] Add information about other update sites 
+
+### 2018-06-03 
+
+* 2f7822d6 - [#296] integrate jumper into maven build
+* 6a8d2319 - [#296] Add support for the Jumper Virtual Lab
+
+### 2018-05-31 
+
+* 4822665d - [#291] re-enable tab Toolchain for non managed
+* f79e2f4a - [#290] re-enable tab Devices for non managed
+* 701fe9da - [#304] improve test for GME toolchain
+
+### 2018-05-24 
+
+* 744ac641 - gdbjtag.qemu: version 3.3.3
+* 8b756983 - [#300] add xPack support for QEMU
+
 ### 2018-04-19
 
 * version 4.3.3.201804191501 released
