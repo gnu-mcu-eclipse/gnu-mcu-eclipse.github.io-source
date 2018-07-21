@@ -76,7 +76,13 @@ OpenOCD is also needed when using RISC-V boards with integrated debuggers.
 
 QEMU is a hardware emulator that can be successfully used to run simple _blinky_ applications, and the default tutorial requires QEMU, so it is highly recommended to install it.
 
-Please follow the steps in the [How to install the QEMU binaries]({{ site.baseurl }}/qemu/install/) page.
+The easy install method is:
+
+```console
+$ xpm install @gnu-mcu-eclipse/qemu --global
+```
+
+For more details, please follow the steps in the [How to install the QEMU binaries]({{ site.baseurl }}/qemu/install/) page.
 
 ## Jumper Virtual Lab
 
