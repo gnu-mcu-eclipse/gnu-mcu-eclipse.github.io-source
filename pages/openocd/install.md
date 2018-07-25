@@ -27,7 +27,7 @@ Please follow the instructions on [Converting ST-LINK on-board into a J-Link](ht
 This method uses the portable tool [xpm](https://www.npmjs.com/package/xpm), the **xPack Package Manager**, and can be used on Windows, macOS and GNU/Linux.
 
 ```console
-$ xpm install @gnu-mcu-eclipse/openocd --global
+$ xpm install --global @gnu-mcu-eclipse/openocd
 ```
 
 This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:

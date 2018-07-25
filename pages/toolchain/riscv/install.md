@@ -16,7 +16,7 @@ version-date: 20180111-2230
 For RISC-V, the recommended method to install the latest version of the toolchain is:
 
 ```console
-$ xpm install @gnu-mcu-eclipse/riscv-none-gcc --global
+$ xpm install --global @gnu-mcu-eclipse/riscv-none-gcc
 ```
 
 ## Overview
@@ -46,7 +46,7 @@ Be sure you **do** select carefully the proper release file to  match the 32/64-
 This method uses the portable tool [xpm](https://www.npmjs.com/package/xpm), the **xPack Package Manager**, and can be used on Windows, macOS and GNU/Linux.
 
 ```console
-$ xpm install @gnu-mcu-eclipse/riscv-none-gcc --global
+$ xpm install --global @gnu-mcu-eclipse/riscv-none-gcc
 ```
 
 This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:

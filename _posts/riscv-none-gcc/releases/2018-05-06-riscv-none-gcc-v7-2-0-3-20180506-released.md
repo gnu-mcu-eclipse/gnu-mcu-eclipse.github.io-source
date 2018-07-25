@@ -74,7 +74,7 @@ and can be conveniently installed with
 [`xpm`](https://www.npmjs.com/package/xpm):
 
 ```console
-$ xpm install @gnu-mcu-eclipse/riscv-none-gcc --global
+$ xpm install --global @gnu-mcu-eclipse/riscv-none-gcc
 ```
 
 This installs the latest available version.

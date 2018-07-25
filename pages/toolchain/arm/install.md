@@ -20,7 +20,7 @@ For ARM, the recommended method to install the latest version of the toolchain i
 <div style="clear: both;"></div>
 
 ```console
-$ xpm install @gnu-mcu-eclipse/arm-none-eabi-gcc --global
+$ xpm install --global @gnu-mcu-eclipse/arm-none-eabi-gcc
 ```
 
 ## Overview
@@ -57,7 +57,7 @@ The main benefits for the users are:
 This method uses the portable tool [xpm](https://www.npmjs.com/package/xpm), the **xPack Package Manager**, and can be used on Windows, macOS and GNU/Linux.
 
 ```console
-$ xpm install @gnu-mcu-eclipse/arm-none-eabi-gcc --global
+$ xpm install --global @gnu-mcu-eclipse/arm-none-eabi-gcc
 ```
 
 This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder in the user home:

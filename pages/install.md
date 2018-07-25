@@ -31,13 +31,13 @@ Please follow the steps in the [ARM Toolchain install]({{ site.baseurl }}/toolch
 For ARM, the easy install method is:
 
 ```console
-$ xpm install @gnu-mcu-eclipse/arm-none-eabi-gcc --global
+$ xpm install --global @gnu-mcu-eclipse/arm-none-eabi-gcc
 ```
 
 For RISC-V, the easy install method is:
 
 ```console
-$ xpm install @gnu-mcu-eclipse/riscv-none-gcc --global
+$ xpm install --global @gnu-mcu-eclipse/riscv-none-gcc
 ```
 
 ## Windows Build Tools
@@ -49,7 +49,7 @@ Please follow the steps in the [How to install the Windows Build Tools]({{ site.
 The easy install method is:
 
 ```console
-$ xpm install @gnu-mcu-eclipse/windows-build-tools --global
+$ xpm install --global @gnu-mcu-eclipse/windows-build-tools
 ```
 
 POSIX platforms generally include `make` in the system distribution, or might require to install some developer packages (for example on macOS you need to install the Xcode Command Line Tools).
@@ -65,7 +65,7 @@ For the unfortunate developers who do not have a J-Link available, the alternati
 The easy install method is:
 
 ```console
-$ xpm install @gnu-mcu-eclipse/openocd --global
+$ xpm install --global @gnu-mcu-eclipse/openocd
 ```
 
 OpenOCD might be needed when using development boards with integrated debuggers, like STM32F4-DISCOVERY boards, although the recommended solution is to prepare a [custom cable]({{ site.baseurl }}/developer/j-link-stm32-boards) and connect them to J-Link.
@@ -79,7 +79,7 @@ QEMU is a hardware emulator that can be successfully used to run simple _blinky_
 The easy install method is:
 
 ```console
-$ xpm install @gnu-mcu-eclipse/qemu --global
+$ xpm install --global @gnu-mcu-eclipse/qemu
 ```
 
 For more details, please follow the steps in the [How to install the QEMU binaries]({{ site.baseurl }}/qemu/install/) page.

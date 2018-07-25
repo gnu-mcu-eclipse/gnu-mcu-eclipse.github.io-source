@@ -22,7 +22,7 @@ On macOS and GNU/Linux these programs are part of the standard distributions, ei
 This method uses the portable tool [xpm](https://www.npmjs.com/package/xpm), the **xPack Package Manager**, and can be used on Windows, macOS and GNU/Linux.
 
 ```console
-$ xpm install @gnu-mcu-eclipse/windows-build-tools --global
+$ xpm install --global @gnu-mcu-eclipse/windows-build-tools
 ```
 
 This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:
