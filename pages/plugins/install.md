@@ -268,6 +268,15 @@ If, for any reason, a global setting is not possible, the GTK version can be set
 2
 ```
 
+You might need to place this definition before:
+
+```
+--launcher.appendVmargs
+```
+
+This requirement is anecdotal and appears on some forums; the Eclipse 
+documentation does not mention it.
+
 ### macOS com.apple.quarantine
 
 On macOS Sierra and later, unsigned applications are marked as _quarantined_ and subject to a path randomization, which prevents Eclipse to maintain persistent preferences (for more details see [blog post](https://ilgthegeek.wordpress.com/2017/07/13/macos-com-apple-quarantine/)). To disable this, remove the `com.apple.quarantine` extended attribute from `Eclipse.app`:
