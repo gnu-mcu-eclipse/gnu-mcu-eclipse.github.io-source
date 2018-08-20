@@ -91,7 +91,7 @@ For usual Cortex-M emulation, there are no special drivers required.
 The macOS version of **GNU MCU Eclipse QEMU** is packed as a TGZ archive. 
 Download the latest version named like:
 
--  `gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-osx.tgz`
+-  `gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-macos.tgz`
 
 To install QEMU, unpack the archive and copy it to 
 `/${HOME}/opt/gnu-mcu-eclipse/qemu/`:
@@ -99,7 +99,7 @@ To install QEMU, unpack the archive and copy it to
 ```console
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
-$ tar xvf ~/Downloads/gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-osx.tgz
+$ tar xvf ~/Downloads/gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-macos.tgz
 $ chmod -R -w gnu-mcu-eclipse/qemu/2.8.0-3-20180523-0703
 ```
 
