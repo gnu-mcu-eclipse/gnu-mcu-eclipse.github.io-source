@@ -46,7 +46,12 @@ For better control and repeatability, the build scripts use Docker containers; a
 
 ## Known problems
 
-* none
+* due to some changes in newlib, the definition of the `_EXFUN` macro changed 
+and the semihosting projects fail to build with a compile error in 
+`system/src/newlib/_syscalls.c`. The problem is in the project template, and
+a fix will be available in the next release of GNU MCU Eclipse plug-ins
+[#317](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/317).
+
 
 ## Checksums
 
