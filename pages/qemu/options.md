@@ -30,7 +30,7 @@ $ qemu-system-gnuarmeclipse --verbose --verbose --board STM32F4-Discovery \
 
 ## Command line options
 
-QEMU has lots, lots of options. The official QEMU documentation (available in the distribution `doc` folder) is the autoritative source for information about them.
+QEMU has lots, lots of options. The official QEMU documentation (available in the distribution `doc` folder) is the authoritative source for information about them.
 
 Unfortunately most of these options were designed for the larger versions of QEMU, intended to emulate Linux systems, and are of little use for Cortex-M emulation.
 
