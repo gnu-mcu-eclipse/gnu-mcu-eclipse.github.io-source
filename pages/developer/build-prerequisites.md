@@ -203,7 +203,7 @@ Import projects using the generic importer:
 (From EPP disable most projects, except cpp & common)
 ## Configure the working sets
 
-In the Java Perspective, create Workspace Sets
+In the Java Perspective, create Working Sets
 
 * **GNU MCU Eclipse bundles**
 * **GNU MCU Eclipse features**
