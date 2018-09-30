@@ -37,6 +37,8 @@ After each new build, to allow testing on various platforms, the plug-ins should
 
 For this, run the `scripts/publish-v4-neon-updates-experimental.command` (this is a script that can be executed directly in the macOS Finder).
 
+Install from `http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-experimental`.
+
 ## Publish pre-release on the Bintray test site
 
 If the new release has no problems, publish it on the test site, and allow some time for testers to use it.
@@ -76,16 +78,16 @@ Do not close the terminal before copy/paste the list to the ChangeLog page!.
 
 ## Install on a separate Eclipse
 
-Test if the new build can be used as an update site, by installing from `updates-test` on a separate Eclipse (not the one used for development).
+Test if the new build can be used as an update site, by installing from `v4-neon-updates-test` on a separate Eclipse (not the one used for development).
 
 ## Build a test version of the Eclipse packages
 
 The Eclipse Packaging Project allows to create complete Eclipse packages for all relevant platforms.
 
 * clone the `gnu-mcu-eclipse/org.eclipse.epp.packages` project
-* select the latest original branch (like `OXYGEN`)
+* select the `master` branch
 * merge from upstream
-* merge into the corresponding local branch (like `oxygen-gme`)
+* merge into the local GME branch (like `master-gme`)
 * edit `org.eclipse.epp.packages.git/releng/org.eclipse.epp.config/parent/pom.xml`
   * update the latest version `<gnumcueclipse.version>4.3.1</gnumcueclipse.version>`
   * temporarily update the site URL to the test site `<gnumcueclipse.repository>http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test</gnumcueclipse.repository>`
@@ -293,14 +295,13 @@ The Eclipse Packaging Project allows to create complete Eclipse packages for all
 * be sure the `org.eclipse.epp.packages.git` is up to date and pushed
 * go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases) page
 * click **Draft a new release**
-* name the tag like **v4.3.1-20180110-o2**; mind the `-` in the middle, the short date and the o2 which is a shortcut for Oxygen.2 
-* select the corresponding GME branch, like **oxygen-gme**
-* name the release like **GNU MCU Eclipse IDE for C/C++ Developers Oxygen.2 20170711**; mind the short date
+* name the tag like **v4.4.2-20180930-2018-09**; mind the `-` in the middle, the short date and the 2018-09 which is is the official Eclipse release name 
+* select the corresponding GME branch, like **master-gme**
+* name the release like **GNU MCU Eclipse IDE for C/C++ Developers 2018-09 20180930**; mind the short date
 * as first line of the description, copy the download badge
 ```
 [![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/org.eclipse.epp.packages/v4.3.1-20180110-o2/total.svg)](https://gnu-mcu-eclipse.github.io/blog/2018/01/10/plugins-v4.3.1-201801092051-released/)
 ```
-* update the tag (v4.3.1-20180110-o2)
 * update the URL to the actual release post
 * copy the description from a previous release, and update 
 * copy the SHA numbers from the maven console
