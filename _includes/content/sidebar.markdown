@@ -57,7 +57,7 @@
 * [The QEMU plug-in]({{ site.baseurl }}/debug/qemu/)
 * [The peripheral registers view (CMSIS)]({{ site.baseurl }}/debug/peripheral-registers/)
 
-#### [GNU MCU ARM GCC]({{ site.baseurl }}/toolchain/riscv/)
+#### [GNU MCU ARM GCC]({{ site.baseurl }}/toolchain/arm/)
 
 * [Overview]({{ site.baseurl }}/toolchain/arm/)
 * [ARM Toolchain(s) install]({{ site.baseurl }}/toolchain/arm/install/)
