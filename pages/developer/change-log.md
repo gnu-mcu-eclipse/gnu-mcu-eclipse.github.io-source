@@ -12,6 +12,75 @@ Entries in this file are in reverse chronological order.
 
 ## 2018
 
+### 2018-09-30
+
+* version 4.4.2.201809300659 released
+
+```console
+repository/features:
+ilg.gnumcueclipse.codered.feature_1.1.2.201809300659.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink.feature_4.3.4.201809300659.jar
+ilg.gnumcueclipse.debug.gdbjtag.jumper.feature_1.1.1.201809300659.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd.feature_4.3.3.201809300659.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature_1.3.3.201809300659.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu.feature_3.3.3.201809300659.jar
+ilg.gnumcueclipse.doc.user.feature_1.1.2.201809300659.jar
+ilg.gnumcueclipse.managedbuild.cross.arm.feature_2.6.4.201809300659.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv.feature_2.8.2.201809300659.jar
+ilg.gnumcueclipse.packs.feature_2.2.2.201809300659.jar
+ilg.gnumcueclipse.templates.ad.feature_1.1.5.201809300659.jar
+ilg.gnumcueclipse.templates.cortexm.feature_1.4.4.201809300659.jar
+ilg.gnumcueclipse.templates.freescale.feature_2.2.9.201809300659.jar
+ilg.gnumcueclipse.templates.sifive.feature_1.3.2.201809300659.jar
+ilg.gnumcueclipse.templates.stm.feature_2.6.5.201809300659.jar
+
+repository/plugins:
+ilg.gnumcueclipse.codered_1.1.2.201809300659.jar
+ilg.gnumcueclipse.core_4.4.2.201809300659.jar
+ilg.gnumcueclipse.debug.core_1.2.2.201809300659.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink_4.3.4.201809300659.jar
+ilg.gnumcueclipse.debug.gdbjtag.jumper_1.1.1.201809300659.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd_4.3.3.201809300659.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd_1.3.3.201809300659.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu_3.3.3.201809300659.jar
+ilg.gnumcueclipse.debug.gdbjtag.restart_1.3.2.201809300659.jar
+ilg.gnumcueclipse.debug.gdbjtag_4.1.2.201809300659.jar
+ilg.gnumcueclipse.debug.packs_1.1.2.201809300659.jar
+ilg.gnumcueclipse.doc.user_1.1.2.201809300659.jar
+ilg.gnumcueclipse.managedbuild.cross.arm_2.6.4.201809300659.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv_2.8.2.201809300659.jar
+ilg.gnumcueclipse.managedbuild.cross_1.2.3.201809300659.jar
+ilg.gnumcueclipse.managedbuild.packs_1.3.4.201809300659.jar
+ilg.gnumcueclipse.packs.core_2.2.2.201809300659.jar
+ilg.gnumcueclipse.packs.data_2.2.2.201809300659.jar
+ilg.gnumcueclipse.packs.ui_1.3.2.201809300659.jar
+ilg.gnumcueclipse.packs_1.3.1.201809300659.jar
+ilg.gnumcueclipse.templates.ad_1.2.1.201809300659.jar
+ilg.gnumcueclipse.templates.core_2.6.3.201809300659.jar
+ilg.gnumcueclipse.templates.cortexm_1.4.4.201809300659.jar
+ilg.gnumcueclipse.templates.freescale.pe_1.2.2.201809300659.jar
+ilg.gnumcueclipse.templates.freescale_2.2.9.201809300659.jar
+ilg.gnumcueclipse.templates.sifive_1.3.2.201809300659.jar
+ilg.gnumcueclipse.templates.stm_2.6.5.201809300659.jar
+```
+
+### 2018-08-27
+
+2018-08-27 * f036ed1f - version: templates.core 2.6.3
+2018-08-27 * 41d23831 - [#317] template.core: remove _EXFUN reference
+
+### 2018-08-15
+
+2018-08-15 * 39c03ba8 - README: remove reference to RISC-V repo
+2018-08-15 * 67e8cdb6 - version: cross.arm 2.6.4
+2018-08-15 * f7944003 - [#315] cross.arm: resolveMacros() debug message
+
+### 2018-07-25
+
+2018-07-25 * f4e070f3 - version 4.4.2
+2018-07-25 * 70447019 - version: jlink 4.3.4
+2018-07-25 * 3a7f1675 - [#312] temporary workaround, disable button
+
 ### 2018-07-21
 
 * version 4.4.1.201807211108 released
