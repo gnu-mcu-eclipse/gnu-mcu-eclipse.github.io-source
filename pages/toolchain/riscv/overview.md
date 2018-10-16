@@ -66,7 +66,7 @@ be denoted as "RV32IM". Users can control the set of instructions that GCC
 uses when generating assembly code by passing the lower-case ISA string to 
 the `-march` GCC option: for example `-march=rv32im`. 
 
-For more details, please see [The RISC-V Instruction Set Manual, Volume I: User-Level ISA, Document Version 2.2](https://content.riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf).
+For more details, please see [The RISC-V Instruction Set Manual, Volume I: User-Level ISA, Document Version 2.2](https://riscv.org/specifications/).
 
 In addition to controlling the instructions available to GCC during code 
 generating (which defines the set of implementations the generated code 
