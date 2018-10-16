@@ -47,8 +47,10 @@ The following boards are supported:
 
 Manuals
 
-* [The RISC-V Instruction Set Manual, Volume I: User-Level ISA, Document Version 2.2](https://content.riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf) (read [online](https://riscv.org/wp-content/plugins/pdf-viewer/stable/web/viewer.html?file=https://content.riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf#page=1&zoom=auto,-16,798))
-* [The RISC-V Instruction Set Manual, Volume II: Privileged Architecture, Version1.10](https://content.riscv.org/wp-content/uploads/2017/05/riscv-privileged-v1.10.pdf) (read [online](https://riscv.org/wp-content/plugins/pdf-viewer/stable/web/viewer.html?file=https://content.riscv.org/wp-content/uploads/2017/05/riscv-privileged-v1.10.pdf#page=2&zoom=auto,-16,772))
+* The RISC-V Instruction Set Manual, Volume I: User-Level ISA, Document Version 2.2 
+(read [online](https://riscv.org/specifications/)
+* The RISC-V Instruction Set Manual, Volume II: Privileged Architecture, Version1.10 
+(read [online](https://riscv.org/specifications/privileged-isa)
 * [Arty Reference Manual](https://reference.digilentinc.com/reference/programmable-logic/arty/reference-manual)
 
 ## Downloads
