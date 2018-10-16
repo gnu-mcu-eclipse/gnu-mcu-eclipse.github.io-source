@@ -11,6 +11,35 @@ Entries in this file are in reverse chronological order.
 
 ## 2018
 
+### 2018-10-16
+
+- v0.10.0-9-20181016 released
+- update to master from Oct 16th, 2018
+- update to RISC-V from Sep 18th, 2018
+- revert some of the RISC-V patches in the common files
+
+### 2018-06-19
+
+- update to latest RISC-V commits, including semihosting
+
+### 2018-06-12
+
+- use separate README-*.md files
+- update to latest commits, which include new semihosting (OpenOCD June 6th, RISC-V June 12th)
+
+### 2018-05-12
+
+- v0.10.0-8-20180512 released
+- use new build scripts based on XBB
+- update to latest commits (OpenOCD April 27th, RISC-V May 8th)
+
+### 2018-01-23
+
+- v0.10.0-7-20180123 released
+- move semihosting code to separate files
+- use them in RISC-V and ARM
+- add 'arm semihosting_resexit enable' to allow exit() to return
+
 ### 2018-01-12
 
 - v0.10.0-6-20180112 released
