@@ -90,7 +90,7 @@ Note 2: OpenOCD v0.7.0 does not work with the current J-Link drivers, so on Wind
 
 ##### Zadig
 
-For some devices, for example [ARM-USB-OCD](https://www.olimex.com/Products/ARM/JTAG/) from [Olimex](https://www.olimex.com/), after installing the vendor drivers, you must also install [Zadig](http://zadig.akeo.ie) and convert the vendor drivers to WinUSB drivers.
+For some devices, for example [ARM-USB-OCD](https://www.olimex.com/Products/ARM/JTAG/) from [Olimex](https://www.olimex.com/), after installing the vendor drivers, you must also install Zadig and convert the vendor drivers to WinUSB drivers.
 
 ### macOS
 

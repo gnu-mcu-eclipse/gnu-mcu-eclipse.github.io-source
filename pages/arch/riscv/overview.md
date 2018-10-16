@@ -11,7 +11,7 @@ date: 2017-07-07 19:46:00 +0300
 
 ![RISC-V logo]({{ site.baseurl }}/assets/images/2017/riscv-64x64.png){:class="right-align-image"}RISC-V (pronounced "risk-five") is an open instruction set architecture (ISA) based on established reduced instruction set computing (RISC) principles.
 
-![SiFive logo]({{ site.baseurl }}/assets/images/2017/sifive-logo-v1-64.png){:class="right-align-image"}RISC-V is governed by the non-profit RISC-V foundation and it’s member companies after being originally developed at the University of California, Berkeley. SiFive, a significant contributor to the RISC-V foundation, manufactured the first commercially available RISC-V SoC, the [Freedom E310](https://www.sifive.com/products/freedom-e310/).
+![SiFive logo]({{ site.baseurl }}/assets/images/2017/sifive-logo-v1-64.png){:class="right-align-image"}RISC-V is governed by the non-profit RISC-V foundation and it’s member companies after being originally developed at the University of California, Berkeley. SiFive, a significant contributor to the RISC-V foundation, manufactured the first commercially available RISC-V SoC, the Freedom E310.
 
 ## License
 
@@ -21,13 +21,13 @@ In contrast to most ISAs, the RISC-V ISA can be freely used for any purpose, per
 
 The GNU MCU Eclipse currently supports the following devices:
 
-* SiFive [Freedom E310](https://www.sifive.com/products/freedom-e310/), RV32IMAC, a 32-bit embedded processor
-* SiFive [E31 Coreplex](https://www.sifive.com/products/coreplex-risc-v-ip/e31/), RV32IMAC, a Verilog synthesised 32-bit embedded processor
-* SiFive [E51 Coreplex](https://www.sifive.com/products/coreplex-risc-v-ip/e51/), RV64IMAC, a a Verilog synthesised 64-bit embedded processor
+* SiFive Freedom E310, RV32IMAC, a 32-bit embedded processor
+* SiFive E31 Coreplex, RV32IMAC, a Verilog synthesised 32-bit embedded processor
+* SiFive E51 Coreplex, RV64IMAC, a a Verilog synthesised 64-bit embedded processor
 
 The following boards are supported:
 
-* SiFive [HiFive1](https://www.sifive.com/products/hifive1/), an Arduino-compatible development kit featuring the Freedom E310
+* SiFive HiFive1, an Arduino-compatible development kit featuring the Freedom E310
 
 ![HiFive1]({{ site.baseurl }}/assets/images/2017/hifive1-top-view.png)
 
