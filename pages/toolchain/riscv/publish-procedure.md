@@ -9,18 +9,6 @@ date: 2017-07-07 10:09:00 +0300
 
 The RISC-V Embedded GCC binaries are published on GitHub [Releases](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/).
 
-## Update the Change log
-
-Generally, apart from packing, there should be no local changes.
-
-Open the `gnu-mcu-eclipse/info/CHANGES.txt` file from  `gnu-mcu-eclipse/riscv-none-gcc-build.git` project git, and copy entries to the web git.
-
-In the web git, add new entries to the [Change log]({{ site.baseurl }}/toolchain/riscv/change-log/) (`pages/toolchain/riscv/change-log.md`), grouped by days.
-
-## Update INFO
-
-Edit the `info/INFO.txt` file from `openocd-build.git` and update the latest commits.
-
 ## Commit all project git
 
 Commit all
@@ -31,7 +19,7 @@ Commit all
 
 ## Edit the build script
 
-Edit the `RELEASE_VERSION` variable to point to the actual release.
+Edit the `VERSION` variable to point to the actual release.
 
 ## Push the build script git
 
@@ -55,7 +43,8 @@ $ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh cleanall
 $ caffeinate bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
 ```
 
-For more details, see the [build]({{ site.baseurl }}/toolchain/riscv/build-procedure/) page.
+For more details, see the 
+[build]({{ site.baseurl }}/toolchain/riscv/build-procedure/) page.
 
 ## Prepare a new blog post 
 
@@ -67,7 +56,8 @@ In the web git:
 - as `download_url` use the generic `https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/` 
 - update the `date:` field with the current date
 
-Close [issues](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/issues) on the way. Refer to them as:
+Close [issues](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/issues) on 
+the way. Refer to them as:
 
 - **[Issue:\[#22\]\(...\)]**.
 
@@ -87,11 +77,15 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
 
 ## Update the Web
 
-- commit the `gnu-mcu-eclipse.github.io-source` project; use a message like **RISC-V Embedded GCC v7.1.1-1-20170702-0625 released**
-- wait for the Travis build to complete; occasionally links to not work, and might need to restart the build.
+- commit the `gnu-mcu-eclipse.github.io-source` project; use a message 
+like **RISC-V Embedded GCC v7.1.1-1-20170702-0625 released**
+- wait for the Travis build to complete; occasionally links to not work, 
+and might need to restart the build.
 - remember the post URL, since it must be updated in the release page
 
-Note: initially the link to binaries points to the parent releases folder, otherwise Travis will complain and do not publish the site to `gnu-mcu-eclipse.github.io`.
+Note: initially the link to binaries points to the parent releases folder, 
+otherwise Travis will complain and do not publish the site to 
+`gnu-mcu-eclipse.github.io`.
 
 ## Create a new GitHub release
 
@@ -108,7 +102,8 @@ Note: initially the link to binaries points to the parent releases folder, other
 - **attach binaries** and SHA (drag and drop from the archives folder will do it)
 - click the **Publish Release** button
 
-Note: at this moment the system should send a notification to all clients watching this project.
+Note: at this moment the system should send a notification to all clients 
+watching this project.
 
 ## Update the web link 
 
