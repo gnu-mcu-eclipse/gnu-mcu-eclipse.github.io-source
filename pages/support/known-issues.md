@@ -16,6 +16,16 @@ In certain conditions, **changing the toolchain** for a project in the **C/C++ 
 
 ## Annoying bugs
 
+### Eclipse 4.8 Photon on Linux is unresponsive
+
+This is a Linux specific issue. Due to some GTK issues, the long ARM 
+dropdown controls sometimes take 30 
+seconds to initialise. On previous Eclipse versions it was possible to 
+force the use of GTK2, but on Eclipse 4.8 Photon this does not work as 
+expected.
+
+The workaround is to downgrade to Eclipse 4.7 or upgrade to 4.9.
+
 ### Win XP 64 global path ignored for debugging sessions
 
 If you are using Win XP 64 and, while starting a debug session, the launcher complains that arm-none-eabi-gdb cannot be found in the current path, you are facing an Eclipse+Java bug, not able to properly process the exec() environment on Win XP 64.
@@ -97,11 +107,12 @@ Due to some bugs in Eclipse, the implementation of his simple button has encount
 
 Not really a bug, but sometimes perceived like an unusual behaviour, enabling/disabling the secondary tools in the **C/C++ Build** → **Settings → Toolchains** page and immediately switching to the **Tool Settings** tab does not show/hide the new tools. It is necessary to press the **Apply** button for this change to be effective.
 
-![Press Apply after enablin/disabling tools]({{ site.baseurl }}/assets/images/2013/10/ToolsSelection.png)
+![Press Apply after enabling/disabling tools]({{ site.baseurl }}/assets/images/2013/10/ToolsSelection.png)
 
 ### Map and listing not removed by Clean
 
 The linker **.map** and the assembler **.lst** files are not removed when running the project **Clean** process. Since these are specific tool options and not makefile targets, the build process does not know about them and is not able to remove them when executing the clean target. Usually these files are generated during each build, so after successful builds they should always be up to date. If the build does not complete, it is possible to still have some of these files around, from the previous build, and this may be confusing. In such cases it is recommended to manually remove them, or, even better, to completely remove the Debug/Release build folder and start a clean build.
+
 
 ## Advices (to avoid problems)
 
