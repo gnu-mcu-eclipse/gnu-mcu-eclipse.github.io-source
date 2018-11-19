@@ -16,6 +16,19 @@ In certain conditions, **changing the toolchain** for a project in the **C/C++ 
 
 ## Annoying bugs
 
+### CDT 9.5 and the empty Debugger Console
+
+CDT 9.5 introduced a [bug](https://bugs.eclipse.org/bugs/show_bug.cgi?id=541069) 
+in the code processing macros, affecting the 
+Debugger Console, which always shown as empty.
+
+The bug was fixed and CDT 9.5.5 issued on Nov 19th, 2018.
+
+If you installed any of the initial Photon or 2018-09 releases, including 
+[GNU MCU Eclipse IDE for C/C++ Developers 2018-09 20180930](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/tag/v4.4.2-20180930-2018-09),
+please perform **Help** → **Check for Updates** and be sure you update to 
+CDT 9.5.5 or later.
+
 ### Eclipse 4.8 Photon on Linux is unresponsive
 
 This is a Linux specific issue. Due to some GTK issues, the long ARM 
