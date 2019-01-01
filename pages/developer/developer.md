@@ -112,7 +112,7 @@ How to build the plug-ins from sources and publish them.
 ### Sites for articles
 
 * [ARMConnected Community](https://community.arm.com/welcome) - login, Create a new Blog Post, A place's blog, Software Development Tools, copy/paste markup from site, H2, update links, enter tags
-* [Element14](http://www.element14.com/community/groups/open-source-software) - login, the Open Source Software; Write a blog post, copy/paste from ARM, load images, enter tags
+* [Element14](http://www.element14.com/community/groups/gnu-arm-eclipse) - login, the Open Source Software; Write a blog post, copy/paste from ARM, load images, enter tags
 * [EmbDev](https://embdev.net/user/login) - New Topic to [Forum: ARM programming with GCC/GNU tools](https://embdev.net/forum/arm-gcc); no pictures; underline headers (no BBCs)
 * [EEVblog](http://www.eevblog.com/forum/login/) - [Microcontrollers & FPGAs](http://www.eevblog.com/forum/microcontrollers/); New topic, BBC codes (bold titles, image links to web article), Notify
 * [Arduino](http://stm32duino.com/viewforum.php?f=41) - New Topic, copy/paste content from EEVblog; disable signature, enable notifications
