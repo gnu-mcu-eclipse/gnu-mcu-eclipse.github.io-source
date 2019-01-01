@@ -14,7 +14,7 @@ sudo: false
 # https://docs.travis-ci.com/user/languages/ruby/
 language: ruby
 rvm:
-  - 2.5.0
+  - 2.5.3
 
 addons:
   apt:
