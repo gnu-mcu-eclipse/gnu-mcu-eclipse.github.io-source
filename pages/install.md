@@ -20,7 +20,12 @@ The recommended sequence is described below.
 
 `xpm` is a new tool, currently under development, intended to manage software packages (xPacks), including to install binary distributions. It is built on top of [Node.js](https://nodejs.org/) and is highly portable; the install steps are described in [the xpm page](https://www.npmjs.com/package/xpm).
 
-Currently `xpm` is not mandatory, but it is a useful addition since it provides a convenient way to install and later upgrade the ARM and RISC-V toolchains, OpenOCD and the Windows Build Tools.
+> Warning for GNU/Linux users: your distribution may already have a `node` binary installed; if
+it is not >= 8.x, `xpm` will complain and do not start; anyway, we strongly
+recommend to avoid the distribution binary and install at least 
+the LTS package from Node.js.
+
+Currently `xpm` is not mandatory, but it is a useful addition since it provides a convenient way to install and later upgrade the ARM and RISC-V toolchains, OpenOCD, QEMU and the Windows Build Tools.
 
 ## Toolchain(s)
 
