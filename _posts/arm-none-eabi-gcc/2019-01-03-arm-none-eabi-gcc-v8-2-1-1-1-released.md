@@ -62,7 +62,9 @@ project.
 
 ## Known problems
 
-* none
+The latest Binutils, also used in Arm Embedded GCC, have a problem when running on 32-bit machines, and `objdump` fails to generate .hex files. The bug affects both Windows and GNU/Linux machines. 64-bit builds are not affected. The bug is documented as [1810274](https://bugs.launchpad.net/gcc-arm-embedded/+bug/1810274).
+
+The current workaround is to override `arm-none-eabi-objdump` with an older binary.
 
 ## Checksums
 
