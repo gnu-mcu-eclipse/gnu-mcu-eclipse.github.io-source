@@ -72,18 +72,18 @@ a fix will be available in the next release of GNU MCU Eclipse plug-ins
 The SHA-256 hashes for the files are:
 
 ```console
-ecb558466dc75ed61ec6bf223eceea726a03d4a647577e04991820a4d96415cc 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-centos32.tgz
+ecb558466dc75ed61ec6bf223eceea726a03d4a647577e04991820a4d96415cc ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-centos32.tgz
 
-d521ec54ac79e7abcdf1a88b7e74cea2155e355e9b3d2eacaa915c5827687af3 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-centos64.tgz
+d521ec54ac79e7abcdf1a88b7e74cea2155e355e9b3d2eacaa915c5827687af3 ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-centos64.tgz
 
-0e6d07f8c01cd95d1ac0f19a4e362d0598ad879cc6a22da02809f4d9249b9dc1 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-macos.tgz
+0e6d07f8c01cd95d1ac0f19a4e362d0598ad879cc6a22da02809f4d9249b9dc1 ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-macos.tgz
 
-c742d58e498928e5209d905d33c1778e7fb482d87ce7e1b214334d2313e51bf7 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-win32.zip
+c742d58e498928e5209d905d33c1778e7fb482d87ce7e1b214334d2313e51bf7 ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-win32.zip
 
-92cebc992bea624f19f17246bd496b35db1d8dccf4baa1b7f786f2b6e2c3b17d 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-win64.zip
+92cebc992bea624f19f17246bd496b35db1d8dccf4baa1b7f786f2b6e2c3b17d ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-win64.zip
 ```

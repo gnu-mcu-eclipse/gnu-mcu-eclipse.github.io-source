@@ -71,18 +71,18 @@ The current workaround is to override `arm-none-eabi-objdump` with an older bina
 The SHA-256 hashes for the files are:
 
 ```console
-aa15729b8cd8e44a528e16b2119a6ad26c8dd55aa88c514570ecbb38bfcb0f9e 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-centos32.tgz
+aa15729b8cd8e44a528e16b2119a6ad26c8dd55aa88c514570ecbb38bfcb0f9e ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-centos32.tgz
 
-1922394f8055d10d13288c233ae89a970c0e5f5ba307274e01c7d07ba916efe9 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-centos64.tgz
+1922394f8055d10d13288c233ae89a970c0e5f5ba307274e01c7d07ba916efe9 ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-centos64.tgz
 
-9ca37228d8bf200505ffddd82111b8a444f9825720a14738dabb71bf3aa59c9f 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-macos.tgz
+9ca37228d8bf200505ffddd82111b8a444f9825720a14738dabb71bf3aa59c9f ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-macos.tgz
 
-610f1d659cdd9ec27afc881736fcc60dc37dbdc25585a00ce0118630dc9d550e 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-win32.zip
+610f1d659cdd9ec27afc881736fcc60dc37dbdc25585a00ce0118630dc9d550e ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-win32.zip
 
-c89031994b14840567a4c6cff31f10d5b51c2999a674fa75c8d09d1fe8c47d1b 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-win64.zip
+c89031994b14840567a4c6cff31f10d5b51c2999a674fa75c8d09d1fe8c47d1b ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-win64.zip
 ```

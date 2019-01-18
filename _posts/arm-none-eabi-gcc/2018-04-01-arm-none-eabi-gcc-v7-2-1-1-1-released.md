@@ -53,18 +53,18 @@ For better control and repeatability, the build scripts use Docker containers; a
 The SHA-256 hashes for the files are:
 
 ```console
-1d9f4bfcae98681c13791781a3c30272fecf316d0e63dd560f9df437bde34a55 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-centos32.tgz
+1d9f4bfcae98681c13791781a3c30272fecf316d0e63dd560f9df437bde34a55 ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-centos32.tgz
 
-47d1f10375b7ff6b0a8129f2cccf17193b967a3803b2896db55cffb7766678fe 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-centos64.tgz
+47d1f10375b7ff6b0a8129f2cccf17193b967a3803b2896db55cffb7766678fe ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-centos64.tgz
 
-a41ea58d5e2ec632af80f9e2600d43c582f0cb422e06852475c05642694b51c8 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-osx.tgz
+a41ea58d5e2ec632af80f9e2600d43c582f0cb422e06852475c05642694b51c8 ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-osx.tgz
 
-578c4525187c498ec0b8255ac46d4177ed3b51b115cb6ca4cd379baa6b70db7a 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-win32.zip
+578c4525187c498ec0b8255ac46d4177ed3b51b115cb6ca4cd379baa6b70db7a ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-win32.zip
 
-fd9573d0b9e89d87b9bf7f237955bbeba206a93c6cecc2fc3996458798d7a05b 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-win64.zip
+fd9573d0b9e89d87b9bf7f237955bbeba206a93c6cecc2fc3996458798d7a05b ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-win64.zip
 ```

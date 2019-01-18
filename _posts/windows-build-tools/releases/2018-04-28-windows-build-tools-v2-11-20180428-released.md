@@ -50,9 +50,9 @@ Note: by design, installing the xPack binaries does not require administrative r
 The SHA-256 hashes for the files are:
 
 ```console
-810aabd776724ba54195807f0421932dab0809c15741a2076b8b6b1275463fd3 
-?gnu-mcu-eclipse-build-tools-2.11-20180428-1604-win32.zip
+810aabd776724ba54195807f0421932dab0809c15741a2076b8b6b1275463fd3 ?
+gnu-mcu-eclipse-build-tools-2.11-20180428-1604-win32.zip
 
-9995e4a15a4893ca4ccca1bccafcd9783cbac9a94ceedc59b3f11137d3e3b0f8 
-?gnu-mcu-eclipse-build-tools-2.11-20180428-1604-win64.zip
+9995e4a15a4893ca4ccca1bccafcd9783cbac9a94ceedc59b3f11137d3e3b0f8 ?
+gnu-mcu-eclipse-build-tools-2.11-20180428-1604-win64.zip
 ```
