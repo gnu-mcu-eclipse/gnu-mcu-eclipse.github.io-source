@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.1 20190102 released
-download_url: https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v8.2.1-1.1/
+title:  GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.2 20190119 released
+download_url: https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v8.2.1-1.2/
 
 author: Liviu Ionescu
 
-date:   2019-01-03 20:39:00 +0300
+date:   2019-01-19 21:46:00 +0300
 
 categories:
   - releases
@@ -16,7 +16,9 @@ categories:
 
 ---
 
-Version v8.2.1-1.1 20190102 is a new release of **GNU MCU Eclipse ARM Embedded GCC**.
+Version v8.2.1-1.2 20190119 is a maintenance release of 
+**GNU MCU Eclipse ARM Embedded GCC** that fixes the 32-bit objcopy bug 
+present in the previous release.
 
 [Binary files »]({{ page.download_url }})
 
@@ -26,6 +28,8 @@ This release follows the official
 [GNU Arm Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm) 
 **8-2018-q4-major** release from December 20, 2018 and it is based on the 
 `gcc-arm-none-eabi-8-2018-q4-major-src.tar.bz2` source invariant.
+
+The patch to fix `objcopy` is from [git](https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;a=commitdiff;h=a9859e01726d085db79cff88550fdb38e2434e42;hp=171b8e19575654ab32321eb99f3fd112663ae7fa).
 
 ## Binaries
 
@@ -62,28 +66,25 @@ project.
 
 ## Known problems
 
-The latest Binutils, also used in Arm Embedded GCC, have a problem when running on 32-bit machines, and `objdump` fails to generate .hex files. The bug affects both Windows and GNU/Linux machines. 64-bit builds are not affected. The bug is documented as [1810274](https://bugs.launchpad.net/gcc-arm-embedded/+bug/1810274).
-
-The current solution is to upgrade to 8.2.1-1.2; the workaround is to 
-override `arm-none-eabi-objdump` with an older binary.
+* none.
 
 ## Checksums
 
 The SHA-256 hashes for the files are:
 
 ```console
-aa15729b8cd8e44a528e16b2119a6ad26c8dd55aa88c514570ecbb38bfcb0f9e ?
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-centos32.tgz
+b52328f55ac1477c09dfb9132f2763b5c449560bfbfbeed7c0e5071bcd938def ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.2-20190119-1237-centos32.tgz
 
-1922394f8055d10d13288c233ae89a970c0e5f5ba307274e01c7d07ba916efe9 ?
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-centos64.tgz
+2e3b920552fcebe65c56013e36e479e225079842f284522a8bedac7eaea19435 ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.2-20190119-1237-centos64.tgz
 
-9ca37228d8bf200505ffddd82111b8a444f9825720a14738dabb71bf3aa59c9f ?
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-macos.tgz
+b6c38190f3e8769eaf3a95668e7664138516e4695df81b252605b94c112680d1 ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.2-20190119-1237-macos.tgz
 
-610f1d659cdd9ec27afc881736fcc60dc37dbdc25585a00ce0118630dc9d550e ?
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-win32.zip
+5867fe4874f028b79b22d39a32b8db71b2fae7f2c7087d641404b1b8840ae891 ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.2-20190119-1237-win32.zip
 
-c89031994b14840567a4c6cff31f10d5b51c2999a674fa75c8d09d1fe8c47d1b ?
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-win64.zip
+f9c2653801319ec8156aca2fd6fa3462206959f421e672d29488878e9370799e ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.2-20190119-1237-win64.zip
 ```
