@@ -317,21 +317,30 @@ The Eclipse Packaging Project allows to create complete Eclipse packages for all
 * copy the text related to the EPP package from a previous release
 * paste to the current release, updating the link
 
-## Share on Facebook
-
-* go to the new post and follow the Share link.
-* DO NOT select **On your own Timeline**, but **On a Page you manage**
-* select GNU MCU Eclipse
-* posting as GNU MCU Eclipse
-* click **Post to Facebook**
-* check the post in the [Facebook page](https://www.facebook.com/gnu-mcu-eclipse)
-
 ## Update the Eclipse Marketplace records
 
 * go to [Eclipse Marketplace](https://marketplace.eclipse.org/content/gnu-mcu-eclipse)
 * log in
 * click **Edit**
 * update version number, minimum Eclipse versions.
+
+## Share on Facebook
+
+* go to the new post and follow the Share link
+* DO NOT select **On your own Timeline**, but **On a Page you manage**
+* select GNU MCU Eclipse
+* posting as GNU MCU Eclipse
+* click **Post to Facebook**
+* check the post in the [Facebook page](https://www.facebook.com/gnu-mcu-eclipse)
+
+## Share on Twitter
+
+* go to the new post and follow the Tweet link
+* copy the content to the clipboard
+* DO NOT click the Tweet button here, it'll not use the right account
+* in a separate browser windows, open [TweetDeck](https://tweetdeck.twitter.com/)
+* using the `@gnu_mcu_eclipse` account, paste the content
+* click the Tweet button
 
 
 
