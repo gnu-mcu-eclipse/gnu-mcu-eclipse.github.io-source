@@ -69,6 +69,9 @@ sourceforge-project-url: http://sourceforge.net/projects/gnuarmeclipse
 
 facebook-page: https://facebook.com/gnu-mcu-eclipse/
 
+twitter-id: gnu_mcu_eclipse
+twitter-url: http://twitter.com/gnu_mcu_eclipse
+
 google-analytics-id: UA-16767008-16
 google-site-verification: NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c
 
@@ -79,7 +82,7 @@ minItemsToShowToc: 3
 useExistingAnchors: true
 
 # UTC time, YYYYMMDDHHmm (minutes)
-css-date: 201807041643
+css-date: 201901210928
 
 # Content copyright. Update it to your needs.
-copyright-message: "© 2018 Liviu Ionescu"
+copyright-message: "© 2019 Liviu Ionescu"
