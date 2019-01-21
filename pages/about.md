@@ -40,7 +40,7 @@ The project [PAD file](http://en.wikipedia.org/wiki/Portable_Application_Descri
 
 Note: the current limitation of 120 characters for URLs prevents the GitHub release URLs to be published in PAD files.
 
-## Credits
+## Credit
 
 Many thanks to:
 
