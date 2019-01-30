@@ -124,4 +124,12 @@ Once the Java & Eclipse are functional, please proceed with plug-ins install, as
 
 ## Workspace preferences
 
-As the last install step, but actually a step to be performed after creating each and any Eclipse workspace, it is highly recommended to follow the steps in the [Workspace preferences]({{ site.baseurl }}/eclipse/workspace/preferences) page.
+It is highly recommended that this step be performed after creating each and any Eclipse workspace; for this please follow the steps in the [Workspace preferences]({{ site.baseurl }}/eclipse/workspace/preferences) page.
+
+## CMSIS packages
+
+To assist the debugger in finding the peripheral registers definitions, 
+please check the 
+[The CMSIS Packs manager](https://gnu-mcu-eclipse.github.io/plugins/packs-manager/)
+page, and install the CMSIS packs for the family of devices used by your 
+projects.
