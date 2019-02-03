@@ -88,7 +88,7 @@ The Arm 8-2018-q4-major release introduced a problem on Windows, enabling
 debugging information (`-g`/`-g3`) prevents `-flto` to properly link. 
 For Release configurations it is not a problem to remove the debug
 options, but for Debug configurations this is unusable. The workaround 
-is to revert to the previous 7-2018-q2-update release.
+is to revert to the previous 7-2018-q2-update release, or to temporarily disable `-flto`.
 
 ## Checksums
 
