@@ -9,6 +9,27 @@ date: 2015-09-04 17:02:00 +0300
 
 Entries in this file are in reverse chronological order.
 
+## 2019
+
+### 2019-02-11
+
+- v2.8.0-4-20190211 released
+- [#62] fix the GPIO persistence issue
+- the greeting shows 32-bit or 64-bit (singular).
+
+## 2018
+
+### 2018-05-23
+
+- v2.8.0-3-20180523 released
+- use new build scripts based on XBB
+
+## 2017
+
+### 2017-06-15
+
+- rebranded as GNU MCU Eclipse QEMU
+
 ## 2016
 
 ### 2016-12-27
