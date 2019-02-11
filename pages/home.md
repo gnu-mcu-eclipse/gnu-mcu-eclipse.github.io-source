@@ -44,12 +44,19 @@ Apart from the main Eclipse plug-ins, this project also includes several additio
 
 ## Let us know if you enjoyed it!
 
-We definitely enjoyed working on the project! If you successfully installed **GNU MCU Eclipse** and enjoyed using it, please let us know; here are some advices:
+We definitely enjoyed working on the project! If you successfully 
+installed **GNU MCU Eclipse** and enjoyed using it, please let us know; 
+here are some advices:
 
-* the best way to praise us would be to **donate** - if you want to speed up development and future versions to include more and more great features, please consider donating; any contribution, small or generous, will be highly appreciated;
-* go to the project [Facebook page](https://www.facebook.com/gnu-mcu-eclipse) and click the **Like** button, write your opinion on the visitor posts wall, or share any of the web posts and pages with your friends;
-* star the project using the [GitHub Stars](https://github.com/gnu-mcu-eclipse/eclipse-plugins/stargazers);
-* write a short review in the main [SourceForge Project](http://sourceforge.net/projects/gnuarmeclipse) page.
+* the best way to praise us would be to **donate** - if you want to speed 
+  up development and future versions to include more and more great 
+  features, please consider donating; any contribution, small or 
+  generous, will be highly appreciated;
+* **star** the project using the 
+  [GitHub Stars](https://github.com/gnu-mcu-eclipse/eclipse-plugins/stargazers);
+* **follow** the project on [Twitter](https://twitter.com/gnu_mcu_eclipse), to
+  get notifications on new releases;
+* **like** the project on [Facebook](https://www.facebook.com/gnu-mcu-eclipse).
 
 Thank you,
 
