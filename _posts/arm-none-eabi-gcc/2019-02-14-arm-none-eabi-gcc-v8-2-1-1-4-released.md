@@ -18,8 +18,8 @@ categories:
 ---
 
 Version v8.2.1-1.4 20190214 is a maintenance release of 
-**GNU MCU Eclipse ARM Embedded GCC** that fixes the LTO & debugging on Windows
-bug present in the previous release.
+**GNU MCU Eclipse ARM Embedded GCC** that fixes the bugs affecting Windows 
+LTO builds, present in the previous release.
 
 [Binary files »]({{ page.download_url }})
 
