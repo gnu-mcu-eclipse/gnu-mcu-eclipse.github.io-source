@@ -5,7 +5,7 @@ download_url: https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/
 
 author: Liviu Ionescu
 
-date:   2019-02-05 17:13:00 +0300
+date:   2019-02-14 10:48:00 +0300
 
 categories:
   - releases
