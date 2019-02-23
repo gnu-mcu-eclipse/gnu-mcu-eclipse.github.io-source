@@ -34,11 +34,6 @@ Note: This location is configurable using the environment variable
 `XPACKS_REPO_FOLDER`; for more details please check the 
 [xpm folders](https://xpack.github.io/xpm/files/folders/) page.
 
-Note 2: The method to select the path based on the xPack version was 
-already added to the Eclipse plug-in, but for now is only available 
-in the version published on the test site
-(http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test/).
-
 ## Manual install
 
 The all platforms, **GNU MCU Eclipse QEMU** is released as a portable 
@@ -47,15 +42,15 @@ archive that can be installed in any location.
 The archives can be downloaded from 
 [GitHub Releases](https://github.com/gnu-mcu-eclipse/qemu/releases) page.
 
-![The QEMU Releases page]({{ site.baseurl }}/assets/images/2015/github-gae-qemu-release-2-3.png)
+![The QEMU Releases page]({{ site.baseurl }}/assets/images/2019/github-qemu-release.png)
 
 ### Windows
 
 The Windows versions of **GNU MCU Eclipse QEMU** are packed as ZIP files. 
 Download the latest version named like:
 
-- `gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-win32.zip`
-- `gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-win64.zip`
+- `gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win32.zip`
+- `gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip`
 
 Select the `-win64` file for Windows x64 machines and the `-win32` file 
 for Windows x32 machines.
@@ -63,8 +58,8 @@ for Windows x32 machines.
 Unpack the archive and copy it into the 
 `%userprofile%\AppData\Roaming\GNU MCU Eclipse` (for example 
 `C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse`) folder; according 
-to Microsoft, this is the recommended location for installing user 
-specific packages;
+to Microsoft, `AppData\Roaming` is the recommended location for installing 
+user specific packages;
 
 > Note: although perfectly possible to install QEMU in any folder, it 
 is highly recommended to use this path, since by default the plug-in 
@@ -72,14 +67,14 @@ searches for the executable in this location.
 
 The result is a structure like:
 
-![QEMU Windows folders layout]({{ site.baseurl }}/assets/images/2015/windows-install-folders.png)
+![QEMU Windows folders layout]({{ site.baseurl }}/assets/images/2019/windows-qemu-install-folders.png)
 
 To check if QEMU starts, use the following command:
 
 ```console
-C:\>"\Program Files\GNU MCU Eclipse\QEMU\2.8.0-3-20180523\bin\qemu-system-gnuarmeclipse.exe" --version
-GNU MCU Eclipse 32-bit QEMU emulator version 2.8.0-3
-Copyright (c) 2003-2008 Fabrice Bellard
+C:\Users\ilg>"C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse\QEMU\2.8.0-4-20190211-0633\bin\qemu-system-gnuarmeclipse.exe" --version
+GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0-4 (v2.8.0-3-20180523-6-gee07085299-dirty)
+Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 ```
 
 #### Drivers
@@ -91,16 +86,16 @@ For usual Cortex-M emulation, there are no special drivers required.
 The macOS version of **GNU MCU Eclipse QEMU** is packed as a TGZ archive. 
 Download the latest version named like:
 
--  `gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-macos.tgz`
+-  `gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-macos.tgz`
 
 To install QEMU, unpack the archive and copy it to 
-`/${HOME}/opt/gnu-mcu-eclipse/qemu/`:
+`/${HOME}/opt/gnu-mcu-eclipse/qemu/${version}`:
 
 ```console
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
-$ tar xvf ~/Downloads/gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-macos.tgz
-$ chmod -R -w gnu-mcu-eclipse/qemu/2.8.0-3-20180523-0703
+$ tar xvf ~/Downloads/gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-macos.tgz
+$ chmod -R -w gnu-mcu-eclipse/qemu/2.8.0-4-20190211-0633
 ```
 
 > Note: although perfectly possible to install QEMU in any folder, it is 
@@ -110,8 +105,8 @@ for the executable in this location.
 To check if QEMU starts, use:
 
 ```console
-$ ${HOME}/opt/gnuarmeclipse/qemu/2.8.0-3-20180523-0703/bin/qemu-system-gnuarmeclipse --version
-GNU MCU Eclipse 64-bit QEMU emulator version 2.8.0-3
+$ ${HOME}/opt/gnu-mcu-eclipse/qemu/2.8.0-4-20190211-0633/bin/qemu-system-gnuarmeclipse --version
+GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0-4 (v2.8.0-3-20180523-6-gee07085299-dirty)
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 ```
 
@@ -120,8 +115,8 @@ Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 The GNU/Linux versions of **GNU MCU Eclipse QEMU** are packed as TGZ 
 archives. Download the latest version named like:
 
-- `gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-centos64.tgz`
-- `gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-centos32.tgz`
+- `gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-centos32.tgz`
+- `gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-centos64.tgz`
 
 As the name implies, these are CentOS `tar.gz` archives, but can be 
 executed on most recent GNU/Linux distributions (they were tested on 
@@ -133,8 +128,8 @@ To install QEMU, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclips
 ```console
 $ mkdir -p ${HOME}/opt
 $ cd ${HOME}/opt
-$ tar xvf ~/Downloads/gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-debian64.tgz
-$ chmod -R -w gnu-mcu-eclipse/qemu/2.8.0-3-20180523-0703
+$ tar xvf ~/Downloads/gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-centos64.tgz
+$ chmod -R -w gnu-mcu-eclipse/qemu/2.8.0-4-20190211-0633
 ```
 
 > Note: although perfectly possible to install QEMU in any folder, it is 
@@ -144,8 +139,8 @@ for the executable in this location.
 To check if QEMU starts and is recent, use:
 
 ```console
-$ ${HOME}/opt/gnuarmeclipse/qemu/2.8.0-3-20180523-0703/bin/qemu-system-gnuarmeclipse --version
-GNU MCU Eclipse 64-bit QEMU emulator version 2.8.0-3
+$ ${HOME}/opt/gnu-mcu-eclipse/qemu/2.8.0-4-20190211-0633/bin/qemu-system-gnuarmeclipse --version
+GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0-4 (v2.8.0-3-20180523-6-gee07085299-dirty)
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 ```
 
@@ -160,7 +155,7 @@ The QEMU debugging **plug-ins are not included** in these packages, and
 need to be installed [as usual]({{ site.baseurl }}/plugins/install/). 
 Be sure that the **GNU MCU C/C++ QEMU Debugging** plug-ins are selected.
 
-![Install the QEMU plug-ins]({{ site.baseurl }}/assets/images/2015/install-new-software-updates-qemu.png)
+![Install the QEMU plug-ins]({{ site.baseurl }}/assets/images/2019/install-new-software-updates-qemu.png)
 
 ## Update QEMU path
 
