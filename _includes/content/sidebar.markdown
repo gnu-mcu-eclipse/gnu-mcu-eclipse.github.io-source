@@ -75,7 +75,7 @@
 * [Releases]({{ site.baseurl }}/toolchain/riscv/releases/)
 * [Support]({{ site.baseurl }}/toolchain/riscv/support/)
 
-#### [GNU ARM QEMU Home]({{ site.baseurl }}/qemu/)
+#### [GNU MCU QEMU Home]({{ site.baseurl }}/qemu/)
 
 * [Overview]({{ site.baseurl }}/qemu/) (read me first!)
 * [QEMU Install]({{ site.baseurl }}/qemu/install/)
