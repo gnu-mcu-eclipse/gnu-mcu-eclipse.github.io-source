@@ -38,6 +38,9 @@ This will always install the latest available version, in the central xPacks rep
 
 Note: This location is configurable using the environment variable `XPACKS_REPO_FOLDER`; for more details please check the [xpm folders](https://xpack.github.io/xpm/files/folders/) page.
 
+> Windows antivirus warning: aggressive antiviruses may prevent
+  xpm to install binary xPacks; see [FAQ]({{ site.baseurl }}/support/faq/)
+
 ## Manual install
 
 The all platforms, **GNU MCU Eclipse OpenOCD** is released as a portable archive that can be installed in any location.

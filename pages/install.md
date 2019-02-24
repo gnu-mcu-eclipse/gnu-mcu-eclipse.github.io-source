@@ -25,6 +25,8 @@ it is not >= 8.x, `xpm` will complain and do not start; anyway, we strongly
 recommend to avoid the distribution binary and install at least 
 the LTS package from Node.js.
 
+> Warning for Windows users: binary packages are .zip files containing .exe files; some aggressive antivirus programs may quarantine those files, or even modify the content of the archives, thus changing the checksum and thus preventing the packages to be installed; either configure or temporarily disable the antivirus if necessary.
+
 Currently `xpm` is not mandatory, but it is a useful addition since it provides a convenient way to install and later upgrade the ARM and RISC-V toolchains, OpenOCD, QEMU and the Windows Build Tools.
 
 ## Toolchain(s)

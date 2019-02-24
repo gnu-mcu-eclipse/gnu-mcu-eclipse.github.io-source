@@ -28,10 +28,11 @@ $ xpm install --global @gnu-mcu-eclipse/windows-build-tools
 This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:
 
 * Windows: `%APPDATA%\xPacks` (`C:\Users\ilg\AppData\Roaming\xPacks`)
-* macOS: `${HOME}/Library/xPacks`
-* GNU/Linux: `${HOME}/opt/xPacks`
 
 Note: This location is configurable using the environment variable `XPACKS_REPO_FOLDER`; for more details please check the [xpm folders](https://xpack.github.io/xpm/files/folders/) page.
+
+> Windows antivirus warning: aggressive antiviruses may prevent
+  xpm to install binary xPacks; see [FAQ]({{ site.baseurl }}/support/faq/)
 
 ## Manual install
 

@@ -70,6 +70,9 @@ This location is also known by Eclipse, so it can automatically identify the ins
 
 Note: This location is configurable using the environment variable `XPACKS_REPO_FOLDER`; for more details please check the [xpm folders](https://xpack.github.io/xpm/files/folders/) page.
 
+> Windows antivirus warning: aggressive antiviruses may prevent
+  xpm to install binary xPacks; see [FAQ]({{ site.baseurl }}/support/faq/)
+
 ### Manual install
 
 For all platforms, the **GNU MCU Eclipse ARM Embedded GCC** toolchain is released as a portable archive that can be installed in any location.
