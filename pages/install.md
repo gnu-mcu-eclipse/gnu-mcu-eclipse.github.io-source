@@ -91,12 +91,14 @@ For more details, please follow the steps in the [How to install the QEMU binari
 
 ## Jumper Virtual Lab
 
-[Jumper Virtual lab](https://jumper.io) is an emulator that provides a fast an easy way to run firmware files. It works in a matter of minutes. Jumper's eclipse plug-in works with GNU MCU Eclipse's plug-in and enables you to easily run your firmware on a virtual device.
+[Jumper Virtual lab](https://jumper.io) is an emulator that provides a fast and easy way to execute firmware files on a virtual device running on the development machine. Jumper's Eclipse plug-in uses the debug framework provided by the GNU MCU Eclipse plug-ins.
 
 To install the Jumper Virtual Lab, use the following links:
 
 * [Create an account](https://vlab.jumper.io)
-* [Jumper Virtual Lab Install](https://docs.jumper.io/docs/install.html)
+* [How to install](https://docs.jumper.io/docs/install.html)
+
+_Jumper Virtual lab_ is a product of Jumper Labs Ltd, a third party company not directly related to GNU MCU Eclipse. For questions and further info, please contact Jumper Labs via their support channels.
 
 ## Java
 
