@@ -43,21 +43,26 @@ Be sure you **do** select carefully the proper release file to  match the 32/64-
 
 ## The xPack install 
 
-This method uses the portable tool [xpm](https://www.npmjs.com/package/xpm), the **xPack Package Manager**, and can be used on Windows, macOS and GNU/Linux.
+This method uses the portable tool [xpm](https://www.npmjs.com/package/xpm), 
+the **xPack Package Manager**, and can be used on Windows, macOS and GNU/Linux.
 
 ```console
 $ xpm install --global @gnu-mcu-eclipse/riscv-none-gcc
 ```
 
-This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:
+This will always install the latest available version, in the central 
+xPacks repository, which is a platform dependent folder:
 
 * Windows: `%APPDATA%\xPacks` (or `%userprofile%\AppData\Roaming\xPacks`, `C:\Users\ilg\AppData\Roaming\xPacks`)
 * macOS: `${HOME}/Library/xPacks`
 * GNU/Linux: `${HOME}/opt/xPacks`
 
-This location is also known by Eclipse, so it can automatically identify the installed toolchains.
+This location is also known by Eclipse, so it can automatically identify 
+the installed toolchains.
 
-Note: This location is configurable using the environment variable `XPACKS_REPO_FOLDER`; for more details please check the [xpm folders](https://xpack.github.io/xpm/files/folders/) page.
+Note: This location is configurable using the environment variable 
+`XPACKS_REPO_FOLDER`; for more details please check the 
+[xpm folders](https://xpack.github.io/xpm/files/folders/) page.
 
 The actual binaries are extracted from the distribution archive in a 
 folder named `.content`, located in the versioned xPack folder. On some
@@ -69,11 +74,16 @@ require additional settings to make them visible.
 
 ## Manual install
 
-For all platforms, the **RISC-V Embedded GCC** toolchain is released as a portable archive that can be installed in any location.
+For all platforms, the **RISC-V Embedded GCC** toolchain is released as 
+a portable archive that can be installed in any location.
 
-The archives can be downloaded from [GitHub Releases](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases).
+The archives can be downloaded from 
+[GitHub Releases](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases).
 
 ![RISC-V Releases]({{ site.baseurl }}/assets/images/2017/riscv-releases.png)
+
+Note: For manual installs, the recommended install location is different from
+the xPack install folder.
 
 ### Windows
 

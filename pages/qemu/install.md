@@ -52,6 +52,9 @@ The archives can be downloaded from 
 
 ![The QEMU Releases page]({{ site.baseurl }}/assets/images/2019/github-qemu-release.png)
 
+Note: For manual installs, the recommended install location is different from
+the xPack install folder.
+
 ### Windows
 
 The Windows versions of **GNU MCU Eclipse QEMU** are packed as ZIP files. 

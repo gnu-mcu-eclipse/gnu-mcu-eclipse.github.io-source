@@ -11,25 +11,34 @@ date: 2015-09-04 12:00:00 +0300
 
 ## Overview
 
-If your development platform is Windows, you need to install two additional command line programs, `make` and `rm`, required by the Eclipse external builder.
+If your development platform is Windows, you need to install two 
+additional command line programs, `make` and `rm`, required by the 
+Eclipse external builder.
 
-Unfortunately, most current toolchains do not provide these two programs in their windows distribution.
+Unfortunately, most current toolchains do not provide these two 
+programs in their windows distribution.
 
-On macOS and GNU/Linux these programs are part of the standard distributions, either directly or in separate Developer packages, so the following steps do not apply.
+On macOS and GNU/Linux these programs are part of the standard 
+distributions, either directly or in separate Developer packages, 
+so the following steps do not apply.
 
 ## The xPack install 
 
-This method uses the portable tool [xpm](https://www.npmjs.com/package/xpm), the **xPack Package Manager**, and can be used on Windows, macOS and GNU/Linux.
+This method uses the portable tool [xpm](https://www.npmjs.com/package/xpm), 
+the **xPack Package Manager**, and can be used on Windows, macOS and GNU/Linux.
 
 ```console
 $ xpm install --global @gnu-mcu-eclipse/windows-build-tools
 ```
 
-This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:
+This will always install the latest available version, in the central 
+xPacks repository, which is a platform dependent folder:
 
 * Windows: `%APPDATA%\xPacks` (`C:\Users\ilg\AppData\Roaming\xPacks`)
 
-Note: This location is configurable using the environment variable `XPACKS_REPO_FOLDER`; for more details please check the [xpm folders](https://xpack.github.io/xpm/files/folders/) page.
+Note: This location is configurable using the environment variable 
+`XPACKS_REPO_FOLDER`; for more details please check the 
+[xpm folders](https://xpack.github.io/xpm/files/folders/) page.
 
 The actual binaries are extracted from the distribution archive in a 
 folder named `.content`, located in the versioned xPack folder. On some
@@ -43,7 +52,10 @@ require additional settings to make them visible.
 
 ### Download the archive
 
-The Windows versions of **GNU MCU Eclipse Windows Build Tools** are packed as ZIP files. Go to the [GitHub Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases) page and download the latest version named like:
+The Windows versions of **GNU MCU Eclipse Windows Build Tools** are packed 
+as ZIP files. Go to the 
+[GitHub Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases) 
+page and download the latest version named like:
 
 - `gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip`
 - `gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win32.zip`
@@ -52,7 +64,12 @@ Select the `-win64` file for Windows x64 machines and the `-win32` file for Win
 
 Unpack the archive and copy it into the `%userprofile%\AppData\Roaming\GNU MCU Eclipse` (for example `C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse`) folder.
 
-> Note: although perfectly possible to install the build tools in any folder, it is highly recommended to use this path, since by default the plug-in searches for the executable in this location.
+Note: although perfectly possible to install the build tools in any folder, 
+it is highly recommended to use this path, since by default the plug-in 
+searches for the executable in this location.
+
+Note: For manual installs, the recommended install location is different from
+the xPack install folder.
 
 ### Check version
 

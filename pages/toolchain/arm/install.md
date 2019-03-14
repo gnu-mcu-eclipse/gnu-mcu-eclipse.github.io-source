@@ -54,21 +54,24 @@ The main benefits for the users are:
 
 ### The xPack install 
 
-This method uses the portable tool [xpm](https://www.npmjs.com/package/xpm), the **xPack Package Manager**, and can be used on Windows, macOS and GNU/Linux.
+This method uses the portable tool [xpm](https://www.npmjs.com/package/xpm), 
+the **xPack Package Manager**, and can be used on Windows, macOS and GNU/Linux.
 
 ```console
 $ xpm install --global @gnu-mcu-eclipse/arm-none-eabi-gcc
 ```
 
-This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder in the user home:
+This will always install the latest available version, in the central 
+xPacks repository, which is a platform dependent folder in the user home:
 
 * Windows: `%APPDATA%\xPacks` (or `%userprofile%\AppData\Roaming\xPacks`, like `C:\Users\ilg\AppData\Roaming\xPacks`)
 * macOS: `${HOME}/Library/xPacks`
 * GNU/Linux: `${HOME}/opt/xPacks`
 
-This location is also known by Eclipse, so it can automatically identify the installed toolchains.
+This location is also known by Eclipse, so it can automatically identify the 
+installed toolchains.
 
-Note 1: This location is configurable using the environment variable 
+Note: This location is configurable using the environment variable 
 `XPACKS_REPO_FOLDER`; for more details please check the 
 [xpm folders](https://xpack.github.io/xpm/files/folders/) page.
 
@@ -82,11 +85,16 @@ require additional settings to make them visible.
 
 ### Manual install
 
-For all platforms, the **GNU MCU Eclipse ARM Embedded GCC** toolchain is released as a portable archive that can be installed in any location.
+For all platforms, the **GNU MCU Eclipse ARM Embedded GCC** toolchain is 
+released as a portable archive that can be installed in any location.
 
-The archives can be downloaded from [GitHub Releases](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases).
+The archives can be downloaded from 
+[GitHub Releases](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases).
 
 ![ARM toolchain releases]({{ site.baseurl }}/assets/images/2018/arm-toolchain-releases.png)
+
+Note: For manual installs, the recommended install location is different from
+the xPack install folder.
 
 #### Windows
 
