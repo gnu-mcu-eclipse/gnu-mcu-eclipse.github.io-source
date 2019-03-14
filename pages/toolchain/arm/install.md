@@ -68,7 +68,14 @@ This will always install the latest available version, in the central xPacks rep
 
 This location is also known by Eclipse, so it can automatically identify the installed toolchains.
 
-Note: This location is configurable using the environment variable `XPACKS_REPO_FOLDER`; for more details please check the [xpm folders](https://xpack.github.io/xpm/files/folders/) page.
+Note 1: This location is configurable using the environment variable 
+`XPACKS_REPO_FOLDER`; for more details please check the 
+[xpm folders](https://xpack.github.io/xpm/files/folders/) page.
+
+The actual binaries are extracted from the distribution archive in a 
+folder named `.content`, located in the versioned xPack folder. On some
+platforms, dotted files are hidden by default, so the file explorer might
+require additional settings to make them visible.
 
 > Windows antivirus warning: aggressive antiviruses may prevent
   xpm to install binary xPacks; see [FAQ]({{ site.baseurl }}/support/faq/)
