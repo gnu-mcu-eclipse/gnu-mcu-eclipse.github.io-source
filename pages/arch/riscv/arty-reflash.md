@@ -34,9 +34,15 @@ $ make
 $ make install
 ```
 
-#### macOS 
+#### macOS
 
-TODO: explain how to do this on macOS.
+On macOS, the following Homebrew packages are required to build `xc3sprog`:
+ - `cmake`
+ - `libftdi`
+ - `libusb`
+ - `pkg-config`
+
+You can then build using the steps described for GNU/Linux.
 
 ### How to use
 
