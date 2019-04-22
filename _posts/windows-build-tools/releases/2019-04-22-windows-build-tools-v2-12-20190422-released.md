@@ -37,13 +37,32 @@ Both the make and BusyBox sources were upgraded to the latest available.
 
 * none so far
 
-## Download
+## Binaries
 
-The new Windows Build Tools can be downloaded from the [GitHub Release]({{ page.download_url }}) page.
+Only binaries for **Windows** are provided.
 
-Separate archive files are provided for Windows 32/64-bit systems.
+They were built with mingw-w64, and run on any reasonably 
+recent **i686** and **x86_64** Windows machines.
 
-Note: by design, installing the xPack binaries does not require administrative rights, thus only portable archives are provided; Windows setups are no longer supported.
+Instructions on how to install the binaries are available in the 
+[How to install the Windows Build Tools?](https://gnu-mcu-eclipse.github.io/windows-build-tools/install/)
+page.
+
+The build tools are also available as an 
+[xPack](https://www.npmjs.com/package/@gnu-mcu-eclipse/windows-build-tools) 
+and can be conveniently installed with 
+[`xpm`](https://www.npmjs.com/package/xpm):
+
+```console
+$ xpm install --global @gnu-mcu-eclipse/windows-build-tools
+```
+
+This installs the latest available version.
+
+For better control and repeatability, the build scripts use Docker containers; 
+all files required during builds are available as a separate 
+[gnu-mcu-eclipse/windows-build-tools](https://github.com/gnu-mcu-eclipse/windows-build-tools)
+project. 
 
 ## Checksums
 
