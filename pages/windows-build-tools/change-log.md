@@ -11,6 +11,15 @@ date: 2015-09-04 17:02:00 +0300
 
 Entries in this file are in reverse chronological order.
 
+## 2019
+
+### 2019-04-22
+
+- v2.12 released
+- update build for XBB v2.1
+- update to latest busybox rmyorston commit 65ae5b24cc08f898e81b36421b616fc7fc25d2b1
+- fix the 32-bit build bug
+
 ## 2018
 
 ### 2018-04-28
