@@ -77,7 +77,7 @@ Another addition compared to the SiFive distribution is the presence of the docu
 
 Binaries for **Windows**, **macOS** and **GNU/Linux** are provided. For Windows and macOS, separate installable and plain archives are provided. For Windows and GNU/Linux, both 32/64-bit binaries are provided.
 
-Instructions on how to install them are available in the [How to install the RISC-V toolchain?](https://gnu-mcu-eclipse.github.io/toolchain/riscv/install/) page.
+Instructions on how to install them are available in the [How to install the RISC-V toolchain?]({{ site.baseurl }}/toolchain/riscv/install/) page.
 
 For better control and repetability, the build scripts use Docker containers; all files required during builds are available as a separate [gnu-mcu-eclipse/riscv-none-gcc-build](https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build) project. 
 
@@ -88,7 +88,7 @@ For better control and repetability, the build scripts use Docker containers; al
 * the `newlib` configuration does not use the `underscore` syscall function, but the direct names (like `write()` instead of `_write()`), calls that are always forwarded to `libgloss`
 * the compiler configuration always links `libgloss` to the application; `libgloss` implements all system calls via traps to a unix like kernel.
 
-Both problems were fixed in the [v7.1.1-2-20170912](https://gnu-mcu-eclipse.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/) release.
+Both problems were fixed in the [v7.1.1-2-20170912]({{ site.baseurl }}/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/) release.
 
 ## Checksums
 

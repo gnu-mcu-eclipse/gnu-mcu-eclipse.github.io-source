@@ -61,7 +61,7 @@ The Windows binaries were built with mingw-w64, and run on any reasonably
 recent **i686** and **x86_64** Windows machines.
 
 Instructions on how to install the binaries are available in the 
-[How to install the ARM toolchain?](https://gnu-mcu-eclipse.github.io/toolchain/arm/install/)
+[How to install the ARM toolchain?]({{ site.baseurl }}/toolchain/arm/install/)
 page.
 
 The toolchain is also available as an 

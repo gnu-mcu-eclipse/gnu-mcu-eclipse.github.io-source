@@ -32,7 +32,7 @@ The macOS binary was built on a macOS 10.10.5 and must run on any newer macOS sy
 
 The Windows binaries were built with mingw-w64, and run on any reasonably recent **i686** and **x86_64** Windows machines.
 
-Instructions on how to install the binaries are available in the [How to install the ARM toolchain?](https://gnu-mcu-eclipse.github.io/toolchain/arm/install/) page.
+Instructions on how to install the binaries are available in the [How to install the ARM toolchain?]({{ site.baseurl }}/toolchain/arm/install/) page.
 
 The toolchain is also available as an [xPack](https://www.npmjs.com/package/@gnu-mcu-eclipse/arm-none-eabi-gcc) and can be conveniently installed with [`xpm`](https://www.npmjs.com/package/xpm):
 

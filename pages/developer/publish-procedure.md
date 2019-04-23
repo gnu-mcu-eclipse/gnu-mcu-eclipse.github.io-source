@@ -188,7 +188,7 @@ download_url: https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/
 ## Known problems
 ```
 
-An example would be the [4.1.1](https://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/) announcement.
+An example would be the [4.1.1]({{ site.baseurl }}/blog/2017/07/11/plugins-v4.1.1-201707111115-released/) announcement.
 
 * scan the [GitHub Issues](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues) for the issues tagged with the current milestone and add references to all tracked issues. Refer to them as **[Issue:#22]**.
 
@@ -261,7 +261,7 @@ Using a test Eclipse, install the plug-ins from the update site
 * as first line of the description, copy the download badge
 
 ```
-[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/plug-ins/v4.1.1-201707111115/total.svg)](https://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/)
+[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/plug-ins/v4.1.1-201707111115/total.svg)]({{ site.baseurl }}/blog/2017/07/11/plugins-v4.1.1-201707111115-released/)
 ```
 * update the tag (v4.1.1-201707111115)
 * also in the description, copy the first paragraph from the Web release page
@@ -303,7 +303,7 @@ The Eclipse Packaging Project allows to create complete Eclipse packages for all
 * name the release like **GNU MCU Eclipse IDE for C/C++ Developers 2018-09 20180930**; mind the short date
 * as first line of the description, copy the download badge
 ```
-[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/org.eclipse.epp.packages/v4.3.1-20180110-o2/total.svg)](https://gnu-mcu-eclipse.github.io/blog/2018/01/10/plugins-v4.3.1-201801092051-released/)
+[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/org.eclipse.epp.packages/v4.3.1-20180110-o2/total.svg)]({{ site.baseurl }}/blog/2018/01/10/plugins-v4.3.1-201801092051-released/)
 ```
 * update the URL to the actual release post
 * copy the description from a previous release, and update 

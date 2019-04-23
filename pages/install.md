@@ -134,6 +134,6 @@ It is highly recommended that this step be performed after creating each and any
 
 To assist the debugger in finding the peripheral registers definitions, 
 please check the 
-[The CMSIS Packs manager](https://gnu-mcu-eclipse.github.io/plugins/packs-manager/)
+[The CMSIS Packs manager]({{ site.baseurl }}/plugins/packs-manager/)
 page, and install the CMSIS packs for the family of devices used by your 
 projects.
