@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.4 20190214 released
-download_url: https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v8.2.1-1.4/
+title:  GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.5 20190426 released
+download_url: https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v8.2.1-1.5/
 
 author: Liviu Ionescu
 
-date:   2019-02-14 10:48:00 +0300
+date:   2019-04-26 23:43:00 +0300
 
 categories:
   - releases
@@ -17,7 +17,7 @@ categories:
 
 ---
 
-Version v8.2.1-1.4 20190214 is a maintenance release of 
+Version v8.2.1-1.5 20190426 is a maintenance release of 
 **GNU MCU Eclipse ARM Embedded GCC** that fixes the bugs affecting Windows 
 LTO builds, present in the previous release.
 
@@ -36,6 +36,11 @@ Compared to the ARM distribution, the build procedure is more or less the
 same and there should be no functional differences, except the following 
 bug fixes:
 
+- [Issue:[#3](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/issues/3)]
+  due to a problem in the GCC configure script and the specifics of the static
+  build, LTO was not effective on Windows, and the initial workaround proved 
+  not effective either; in the new build environment the configure script is
+  enables LTO and it is functional on windows too;
 - a patch was applied to binutils to fix the 32-bit objcopy bug 
   [24065](https://sourceware.org/bugzilla/show_bug.cgi?id=24065)
 - GDB was built the Git commit ad0f979c9 from 2019-01-29, to fix the bugs
@@ -51,6 +56,14 @@ bug fixes:
   [89183](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89183)
 - a patch was applied to gcc to fix the Windows paths with spaces bug
   [89249](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89249)
+
+## Python 3
+
+Experimental support was added for Python 3 in GDB. Unfortunately compiling
+GDB with mingw-w64 requires an update to the new Python 3
+API, not yet available at the moment of this release.
+
+Also support for 32-bit machines might not be fully functional.
 
 ## Binaries
 
@@ -87,25 +100,25 @@ project.
 
 ## Known problems
 
-* LTO is still not functional on Windows.
+* none (so far)
 
 ## Checksums
 
 The SHA-256 hashes for the files are:
 
 ```console
-4d45ca08ba613f0f7d3ffe908adf3374c284216d39b31cb91fd9248a3f0f26e1 ?
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.4-20190214-0604-centos32.tgz
+63f959858a1a1907797ea7f17e20048d559281f77c3742015617ebff2e71a501
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.5-20190426-0353-centos32.tgz
 
-41277cb5fd2107f2f5b273d04ec2d9f2d923caf25e14a80e4fbea9de5a5f07e1 ?
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.4-20190214-0604-centos64.tgz
+a42eb8e5be1979e5e73d2d3c3832e617fc7415387aa47cc8c3eb197b12e2d38c
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.5-20190426-0353-centos64.tgz
 
-845274a50fa7b0c6e4af7641ece4aba33c1fec447cb32537f68fda389998a6af ?
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.4-20190214-0604-macos.tgz
+8d56318b51508adffceb7f62829a93136021c1f49357c94fc82046824213620d
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.5-20190426-0353-macos.tgz
 
-f9f517082540f13e0803ac8eaf64a7f3a8c54bfc5b5ad4e6589c31e2289d617e ?
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.4-20190214-0604-win32.zip
+a953c13529df786c6d52d978f31a60e75275a2830fe5e24bc908b6665d9badc8
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.5-20190426-0353-win32.zip
 
-fbdbdf46ca35201bc3330eda659b3aeb8f77003ebc26e930c1f2535429e0e3be ?
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.4-20190214-0604-win64.zip
+f62649688c1e68d0fcb2eea126688cbeae9e1b7b24a8e81afefe8519d45b7680
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.5-20190426-0353-win64.zip
 ```
