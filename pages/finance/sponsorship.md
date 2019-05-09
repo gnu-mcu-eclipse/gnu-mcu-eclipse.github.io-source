@@ -125,3 +125,4 @@ Many thanks to the following donors (in chronological order):
 * Mark Thielen, Germany
 * Ztl Armink, China
 * Kamil Rogozinski, Australia
+* Niklas Nold, Germany
