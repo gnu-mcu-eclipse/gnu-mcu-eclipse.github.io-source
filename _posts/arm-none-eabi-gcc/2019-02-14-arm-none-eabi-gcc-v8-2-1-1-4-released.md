@@ -23,6 +23,10 @@ LTO builds, present in the previous release.
 
 [Binary files »]({{ page.download_url }})
 
+## Deprecated
+
+Use v8.2.1-1.6.
+
 ## Compliance
 
 This release follows the official 

@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.5 20190426 released
-download_url: https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v8.2.1-1.5/
+title:  GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released
+download_url: https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v8.2.1-1.6/
 
 author: Liviu Ionescu
 
-date:   2019-04-26 23:43:00 +0300
+date:   2019-05-10 06:05:00 +0300
 
 categories:
   - releases
@@ -17,15 +17,11 @@ categories:
 
 ---
 
-Version v8.2.1-1.5 20190426 is a maintenance release of 
+Version v8.2.1-1.6 20190510 is a maintenance release of 
 **GNU MCU Eclipse ARM Embedded GCC** that fixes the bugs affecting Windows 
-LTO builds, present in the previous release. 
+LTO builds, present in the previous release.
 
 [Binary files »]({{ page.download_url }})
-
-## Deprecated
-
-Use v8.2.1-1.6.
 
 ## Compliance
 
@@ -40,26 +36,28 @@ Compared to the ARM distribution, the build procedure is more or less the
 same and there should be no functional differences, except the following 
 bug fixes:
 
+- [Issue:[#4](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/issues/4)]
+  the Windows paths with spaces bug apparently was caused by an old version of 
+  and with the new version (5.0.4) the 
+  [89249](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89249) 
+  `gcc.c` patch is no longer needed;
 - [Issue:[#3](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/issues/3)]
   due to a problem in the GCC configure script and the specifics of the static
   build, LTO was not effective on Windows, and the initial workaround proved 
   not effective either; in the new build environment the configure script is
   enables LTO and it is functional on windows too;
-- a patch was applied to binutils to fix the 32-bit objcopy bug 
-  [24065](https://sourceware.org/bugzilla/show_bug.cgi?id=24065)
-- GDB was built the Git commit ad0f979c9 from 2019-01-29, to fix the bugs
-  affecting C++ LTO projects
-  [24145](https://sourceware.org/bugzilla/show_bug.cgi?id=24145)
-- [Issue:[#3](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/issues/3)] 
-  by default, the GCC build script fails to create `liblto_plugin-0.dll`
-  for static builds with mingw; builds are now using shared libraries
 - [Issue:[#1](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/issues/1)]
   the `liblto_plugin` copied/linked to the `lib/bdf-plugins` for `ar`
   to find it and be able to process archives with LTO objects
+- a patch was applied to binutils to fix the 32-bit objcopy bug 
+  [24065](https://sourceware.org/bugzilla/show_bug.cgi?id=24065)
 - a patch was applied to gcc to fix the Windows LTO with -g bug
   [89183](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89183)
-- a patch was applied to gcc to fix the Windows paths with spaces bug
-  [89249](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89249)
+
+GDB was built with the latest Git commit bda678b9 from 2019-05-09, 
+corresponding to GDB 8.3.50, to fix
+the bugs affecting C++ LTO projects
+[24145](https://sourceware.org/bugzilla/show_bug.cgi?id=24145)
 
 ## Python 3
 
@@ -102,31 +100,36 @@ all files required during builds are available as a separate
 [gnu-mcu-eclipse/arm-none-eabi-gcc-build](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build)
 project. 
 
+## Tests
+
+The binaries were testes on Windows 10 32/64-bit, Ubuntu 18 LTS 64-bit,
+Xubuntu 18 LTS 32-bit and macOS 10.13.
+
+The tests consist in building and debugging some  
+[simple Eclipse projects](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/tree/master/tests/eclipse)
+available in the build project.
+
 ## Known problems
 
-### Windows paths with spaces
-
-Installing the toolchain in locations which use spaces in the path is still problematic.
-
-Temporarily move the toolchain to paths which do not use spaces, or, even better, install it via `xpm`, which uses safe paths.
+* none (so far)
 
 ## Checksums
 
 The SHA-256 hashes for the files are:
 
 ```console
-63f959858a1a1907797ea7f17e20048d559281f77c3742015617ebff2e71a501
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.5-20190426-0353-centos32.tgz
+a4fc37f897ff50a3e3807e87db60ccb0844f37eb618f0935ece94a581fd98eec 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-centos32.tgz
 
-a42eb8e5be1979e5e73d2d3c3832e617fc7415387aa47cc8c3eb197b12e2d38c
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.5-20190426-0353-centos64.tgz
+e85df3bdc9b8e9c91e00924feb6f7f9909c94af08bd7e097d4ab857e0facc316 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-centos64.tgz
 
-8d56318b51508adffceb7f62829a93136021c1f49357c94fc82046824213620d
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.5-20190426-0353-macos.tgz
+63cdda07c539d2a43df89d7ec17b2ab4119ebfe4a5c46295c2bc1821755b093b 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-macos.tgz
 
-a953c13529df786c6d52d978f31a60e75275a2830fe5e24bc908b6665d9badc8
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.5-20190426-0353-win32.zip
+780cda157454dd073132c52aa46f2d43b1f325a1f38a82c3283de76492899fb1 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-win32.zip
 
-f62649688c1e68d0fcb2eea126688cbeae9e1b7b24a8e81afefe8519d45b7680
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.5-20190426-0353-win64.zip
+a88823b4cbb9e060975f14e1e839eace1cf0cb26386f99d52e692b15455ec3dd 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-win64.zip
 ```

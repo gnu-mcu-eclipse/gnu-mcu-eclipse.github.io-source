@@ -20,6 +20,10 @@ Version v8.2.1-1.1 20190102 is a new release of **GNU MCU Eclipse ARM Embedded G
 
 [Binary files »]({{ page.download_url }})
 
+## Deprecated
+
+Use v8.2.1-1.6.
+
 ## Compliance
 
 This release follows the official 
