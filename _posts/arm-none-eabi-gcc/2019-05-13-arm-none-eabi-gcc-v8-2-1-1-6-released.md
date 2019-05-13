@@ -18,8 +18,8 @@ categories:
 ---
 
 Version v8.2.1-1.6 20190510 is a maintenance release of 
-**GNU MCU Eclipse ARM Embedded GCC** that fixes the bugs affecting Windows 
-LTO builds, present in the previous release.
+**GNU MCU Eclipse ARM Embedded GCC** that (finally) fixes the bugs 
+affecting Windows LTO builds, present in the previous release.
 
 [Binary files »]({{ page.download_url }})
 
@@ -28,7 +28,9 @@ LTO builds, present in the previous release.
 This release follows the official 
 [GNU Arm Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm) 
 **8-2018-q4-major** release from December 20, 2018 and it is based on the 
-`gcc-arm-none-eabi-8-2018-q4-major-src.tar.bz2` source invariant.
+`gcc-arm-none-eabi-8-2018-q4-major-src.tar.bz2` source invariant,
+which include GCC 8.2.1. GDB was built with the latest available 
+sources (8.3.50).
 
 ## Changes
 
@@ -54,10 +56,11 @@ bug fixes:
 - a patch was applied to gcc to fix the Windows LTO with -g bug
   [89183](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89183)
 
-GDB was built with the latest Git commit bda678b9 from 2019-05-09, 
+Due to a large number of fixes needed, GDB was built with the 
+latest Git commit bda678b9 from 2019-05-09, 
 corresponding to GDB 8.3.50, to fix
 the bugs affecting C++ LTO projects
-[24145](https://sourceware.org/bugzilla/show_bug.cgi?id=24145)
+[24145](https://sourceware.org/bugzilla/show_bug.cgi?id=24145).
 
 ## Python 3
 
@@ -102,12 +105,16 @@ project.
 
 ## Tests
 
-The binaries were testes on Windows 10 32/64-bit, Ubuntu 18 LTS 64-bit,
+The binaries were testes on Windows 10 Pro 32/64-bit, Ubuntu 18 LTS 64-bit,
 Xubuntu 18 LTS 32-bit and macOS 10.13.
 
-The tests consist in building and debugging some  
+The tests consist in building and debugging some 
 [simple Eclipse projects](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/tree/master/tests/eclipse)
 available in the build project.
+
+Since the source code used for GCC is identical to the one used by ARM, the
+long and complex tests performed by ARM to validate their release were not
+executed again.
 
 ## Known problems
 
