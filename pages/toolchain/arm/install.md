@@ -255,6 +255,12 @@ If you'll ever need to remove the toolchain, only remove the `${HOME}/opt/gcc-a
 
 In case you have MacPorts installed, be sure you remove the MacPorts path from the user path (edit the **.profile** in your home folder and comment out the line where `/opt/local/` is added in front of the PATH), especially if you installed any toolchain inside MacPorts, since this will be a serious source of confusion.
 
+#### Homebrew
+
+In case you have Homebrew installed in the system location, be sure you do
+not have another version of the toolchain installed there, since
+this will be a serious source of confusion.
+
 ### GNU/Linux
 
 For GNU/Linux, the GNU ARM Embedded Toolchain is released as a portable archive, that can be installed in any location.
