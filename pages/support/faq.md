@@ -18,7 +18,7 @@ date: 2015-09-11 20:28:00 +0300
 
 This button is enabled only for the **GNU MCU Eclipse ARM Embedded GCC**
 toolchain; check the toolchain name, you might have
-selected a toolchain which has no xPack available,
+selected a toolchain which has no xPacks available,
 like the old **GNU ARM Embedded Toolchain**.
 
 ## xpm: integrity checksum failed
