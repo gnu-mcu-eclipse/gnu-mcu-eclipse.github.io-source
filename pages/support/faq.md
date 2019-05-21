@@ -10,10 +10,23 @@ date: 2015-09-11 20:28:00 +0300
 
 <div style="clear: both;"></div>
 
+## Why the **xPack...** button is not enabled?
+
+> I correctly installed the `@gnu-mcu-eclipse/arm-none-eabi-gcc` xPack,
+  but the **xPack...** button is still disabled and I cannot select the
+  desired version.
+
+This button is enabled only for the **GNU MCU Eclipse ARM Embedded GCC**
+toolchain; check the toolchain name, you might have
+selected a toolchain which has no xPack available,
+like the old **GNU ARM Embedded Toolchain**.
+
 ## xpm: integrity checksum failed
 
 On Windows, binary packages are .zip archives containing .exe files; 
-some aggressive antivirus programs may quarantine those files, or even modify the content of the archives, affecting the checksum and thus preventing the packages to be installed.
+some aggressive antivirus programs may quarantine those files, or even 
+modify the content of the archives, affecting the checksum and thus 
+preventing the packages to be installed.
 
 Errors may look like:
 

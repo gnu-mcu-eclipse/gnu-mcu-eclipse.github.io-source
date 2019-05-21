@@ -6,7 +6,7 @@ author: Liviu Ionescu
 
 date: 2015-09-11 22:49:00 +0300
 
-arm-version-id: 7-2017-q4-major
+arm-version-id: 8-2018-q4-major
 
 gme-version-id: 7.2.1-1.1
 gme-version-date: 20180401-0515
@@ -52,6 +52,11 @@ The main benefits for the users are:
 - uniform and portable install: the toolchain is also available as a binary xPack, and can be easily installed with `xpm`;
 - improved support for **Continuous Integration** usage: as for any xPack, the toolchain can be easily used in test environments.
 
+> Note: to benefit of the new toolchain advantages,
+  it is recommended that old projects, which were configured to use the 
+  **GNU ARM Embedded Toolchain**, to be reconfigured to use
+  **GNU MCU Eclipse ARM Embedded GCC**.
+
 ### The xPack install 
 
 This method uses the portable tool [xpm](https://www.npmjs.com/package/xpm), 
@@ -93,7 +98,7 @@ The archives can be downloaded from
 
 ![ARM toolchain releases]({{ site.baseurl }}/assets/images/2018/arm-toolchain-releases.png)
 
-Note: For manual installs, the recommended install location is different from
+> Note: For manual installs, the recommended install location is different from
 the xPack install folder.
 
 #### Windows
@@ -142,14 +147,14 @@ The GNU/Linux versions of **GNU MCU Eclipse ARM Embedded GCC** are packed as 
 - `gnu-mcu-eclipse-arm-none-eabi-gcc-{{ page.gme-version-id }}-{{ page.gme-version-date }}-centos64.tgz`
 - `gnu-mcu-eclipse-arm-none-eabi-gcc-{{ page.gme-version-id }}-{{ page.gme-version-date }}-centos32.tgz`
 
-As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the `-centos64` file for 64-bit machines and the `-centos32` file for 32-bit machines.
+As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions. Select the `-centos64` file for 64-bit machines and the `-centos32` file for 32-bit machines.
 
 To install the toolchain, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/`:
 
 ```console
 $ mkdir -p "${HOME}"/opt
 $ cd "${HOME}"/opt
-$ tar xf ~/Downloads/gnu-mcu-eclipse-arm-none-eabi-gcc-{{ page.gme-version-id }}-{{ page.gme-version-date }}-debian64.tgz
+$ tar xf ~/Downloads/gnu-mcu-eclipse-arm-none-eabi-gcc-{{ page.gme-version-id }}-{{ page.gme-version-date }}-centos64.tgz
 $ chmod -R -w "${HOME}"/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/{{ page.gme-version-id }}-{{ page.gme-version-date }}
 ```
 
@@ -166,7 +171,7 @@ arm-none-eabi-gcc (GNU MCU Eclipse ARM Embedded GCC, 64-bit)
 
 ### Download
 
-The toolchain can also be downloaded from [GNU ARM Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads).
+The toolchain can also be downloaded from [GNU ARM Embedded Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads).
 
 Versions from `4_7` up to `{{ page.arm-version-id }}` were tested and are known to work properly.
 
@@ -194,8 +199,8 @@ According to Microsoft, this is the recommended location for installing user spe
 * read the `readme.txt` file
 * test if the compiler is functional; use the actual install path:
   ```console
-C:\>"%APPDATA%\GNU Tools ARM Embedded\gcc-arm-none-eabi-7-2017-q4-major-win32\bin\arm-none-eabi-gcc.exe" --version
-arm-none-eabi-gcc.exe (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM/embedded-7-branch revision 255204]
+C:\>"%APPDATA%\GNU Tools ARM Embedded\gcc-arm-none-eabi-8-2018-q4-major-win32\bin\arm-none-eabi-gcc.exe" --version
+arm-none-eabi-gcc.exe (GNU Tools for Arm Embedded Processors 8-2018-q4-major) 8.2.1 20181213 (release) [gcc-8-branch revision 267074]
 ```
 
 The complete toolchain documentation is available in the `...\share\doc\pdf\` folder.
@@ -208,7 +213,7 @@ If you insist on using the setup version, be sure you **DO NOT add the toolchain
 
 For macOS, the GNU ARM Embedded Toolchain is released as a portable archive, that can be installed in any location.
 
-* download the latest macOS install tarball file from [ARMDeveloper](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)  (currently `gcc-arm-none-eabi-{{ page.arm-version-id }}-mac.tar.bz2`, about 99 MB)
+* download the latest macOS install tarball file from [ARMDeveloper](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)  (currently `gcc-arm-none-eabi-{{ page.arm-version-id }}-mac.tar.bz2`, about 99 MB)
 * locate the file (usually in the `${HOME}/Downloads` folder)
 * decide on a location to install the toolchain; the recommended folder is `${HOME}/opt/`
 
@@ -236,8 +241,8 @@ $ chmod -R -w "${HOME}"/opt/gcc-arm-none-eabi-{{ page.arm-version-id }}
 * test if the compiler is functional; use the actual install path:
 
   ```console
-$ "${HOME}"/opt/gcc-arm-none-eabi-7-2017-q4-major/bin/arm-none-eabi-gcc --version
-arm-none-eabi-gcc (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM/embedded-7-branch revision 255204]
+$ "${HOME}"/opt/gcc-arm-none-eabi-8-2018-q4-major/bin/arm-none-eabi-gcc --version
+arm-none-eabi-gcc (GNU Tools for Arm Embedded Processors 8-2018-q4-major) 8.2.1 20181213 (release) [gcc-8-branch revision 267074]
 ```
 
   > **DO NOT add the toolchain path to the user or system path!**
@@ -297,8 +302,8 @@ $ chmod -R -w "${HOME}"/opt/gcc-arm-none-eabi-{{ page.arm-version-id }}
 * test if the compiler is functional; use the actual install path:
 
   ```console
-$ "${HOME}"/opt/gcc-arm-none-eabi-7-2017-q4-major/bin/arm-none-eabi-gcc --version
-arm-none-eabi-gcc (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM/embedded-7-branch revision 255204]
+$ "${HOME}"/opt/gcc-arm-none-eabi-8-2018-q4-major/bin/arm-none-eabi-gcc --version
+arm-none-eabi-gcc (GNU Tools for Arm Embedded Processors 8-2018-q4-major) 8.2.1 20181213 (release) [gcc-8-branch revision 267074]
 ```
 
   > **DO NOT add the toolchain path to the user or system path!**
@@ -323,11 +328,16 @@ The recommended method for selecting the toolchain path is via the **xPack...** 
 
 ![Global Tools Paths]({{ site.baseurl }}/assets/images/2018/global-arm-toolchains-paths-xpack.png)
 
+> Note: this button is enabled only for the **GNU MCU Eclipse ARM Embedded GCC**
+  toolchain; if you are certain that the xPack was installed, but the
+  button is disabled, check for the toolchain name, you might have
+  selected the old **GNU ARM Embedded Toolchain**, which has no xPack available.
+
 ## Uninstall
 
 Should you ever need to remove the toolchain, only remove the xPack folder, there are no other components stored in any system folders.
 
-If installed manually, remove the `arm-none-eabi-gcc/{{ page.arm-version-id }}-{{ page.arm-version-date }}` folder.
+If installed manually, remove the `arm-none-eabi-gcc/{{ page.gme-version-id }}-{{ page.gme-version-date }}` folder.
 
 ## Documentation
 
