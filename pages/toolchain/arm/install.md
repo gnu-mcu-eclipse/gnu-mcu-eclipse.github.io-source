@@ -35,8 +35,8 @@ The GNU MCU Eclipse ARM build plug-in is highly configurable in terms of executa
 
 Please note the distinction between the **target platform** and the **host/development platform**.
 
-* the target platform defines the environment where the application will be executed, and in general can be either a bare metal (the application sits directly on the hardware and has intimate control of it), and applications that sit on top of an operating system, usually a distribution of GNU/Linux optimised for embedded environments
-* the host/development platform is the platform where the development tools are executed, usually as cross compilers, and can be, in our case, any platform that supports Eclipse, for example Windows, macOS, GNU/Linux, etc.
+* the **target platform** defines the environment where the application will be executed, and in general can be either a bare metal (the application sits directly on the hardware and has intimate control of it), and applications that sit on top of an operating system, usually a distribution of GNU/Linux optimised for embedded environments
+* the **host/development platform** is the platform where the development tools are executed, usually as cross compilers, and can be, in our case, any platform that supports Eclipse, for example Windows, macOS, GNU/Linux, etc.
 
 > Note: Be sure you select the proper toolchain for the target platform, otherwise builds will not succeed, or the generated applications will fail to run. **Do not** try to use the GNU ARM Embedded to build  GNU/Linux applications, because the executables will not run on anything than bare metal, and **do not try to use the Linaro toolchains for bare metal applications**.
 
@@ -86,7 +86,7 @@ platforms, dotted files are hidden by default, so the file explorer might
 require additional settings to make them visible.
 
 > Windows antivirus warning: aggressive antiviruses may prevent
-  xpm to install binary xPacks; see [FAQ]({{ site.baseurl }}/support/faq/)
+  xpm to install binary xPacks; see [FAQ]({{ site.baseurl }}/support/faq/).
 
 ### Manual install
 
@@ -125,10 +125,10 @@ The macOS version of **GNU MCU Eclipse ARM Embedded GCC** is packed as a .tgz
 To install the toolchain, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/`:
 
 ```console
-$ mkdir -p "${HOME}"/opt
-$ cd "${HOME}"/opt
+$ mkdir -p "${HOME}/opt"
+$ cd "${HOME}/opt"
 $ tar xf ~/Downloads/gnu-mcu-eclipse-arm-none-eabi-gcc-{{ page.gme-version-id }}-{{ page.gme-version-date }}-osx.tgz
-$ chmod -R -w "${HOME}"/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/{{ page.gme-version-id }}-{{ page.gme-version-date }}
+$ chmod -R -w "${HOME}/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/{{ page.gme-version-id }}-{{ page.gme-version-date }}"
 ```
 
 > Note: although perfectly possible to install the toolchain in any folder, it is highly recommended to use this path, since the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.
@@ -136,7 +136,7 @@ $ chmod -R -w "${HOME}"/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/{{ page.gme-versio
 Test if the compiler is functional; use the actual install path:
 
 ```console
-$ "${HOME}"/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/{{ page.gme-version-id }}-{{ page.gme-version-date }}/bin/arm-none-eabi-gcc --version
+$ "${HOME}/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/{{ page.gme-version-id }}-{{ page.gme-version-date }}/bin/arm-none-eabi-gcc" --version
 arm-none-eabi-gcc (GNU MCU Eclipse ARM Embedded GCC, 64-bit)
 ```
 
@@ -152,10 +152,10 @@ As the name implies, the binaries were created on CentOS, but can be executed on
 To install the toolchain, unpack the archive and copy it to  `/${HOME}/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/`:
 
 ```console
-$ mkdir -p "${HOME}"/opt
-$ cd "${HOME}"/opt
+$ mkdir -p "${HOME}/opt"
+$ cd "${HOME}/opt"
 $ tar xf ~/Downloads/gnu-mcu-eclipse-arm-none-eabi-gcc-{{ page.gme-version-id }}-{{ page.gme-version-date }}-centos64.tgz
-$ chmod -R -w "${HOME}"/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/{{ page.gme-version-id }}-{{ page.gme-version-date }}
+$ chmod -R -w "${HOME}/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/{{ page.gme-version-id }}-{{ page.gme-version-date }}"
 ```
 
 > Note: although perfectly possible to install the toolchain in any folder, it is highly recommended to use this path, since the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.
@@ -163,7 +163,7 @@ $ chmod -R -w "${HOME}"/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/{{ page.gme-versio
 Test if the compiler is functional; use the actual install path:
 
 ```console
-$ "${HOME}"/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/{{ page.gme-version-id }}-{{ page.gme-version-date }}/bin/arm-none-eabi-gcc --version
+$ "${HOME}/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/{{ page.gme-version-id }}-{{ page.gme-version-date }}/bin/arm-none-eabi-gcc" --version
 arm-none-eabi-gcc (GNU MCU Eclipse ARM Embedded GCC, 64-bit)
 ```
 
@@ -232,16 +232,16 @@ ${user.home}/local:\
 * the result should be a folder like `${HOME}/opt/gcc-arm-none-eabi-{{ page.arm-version-id }}`
 
   ```console
-$ mkdir -p "${HOME}"/opt
-$ cd "${HOME}"/opt
+$ mkdir -p "${HOME}/opt"
+$ cd "${HOME}/opt"
 $ tar xjf ~/Downloads/gcc-arm-none-eabi-{{ page.arm-version-id }}-mac.tar.bz2
-$ chmod -R -w "${HOME}"/opt/gcc-arm-none-eabi-{{ page.arm-version-id }}
+$ chmod -R -w "${HOME}/opt/gcc-arm-none-eabi-{{ page.arm-version-id }}"
 ```
 
 * test if the compiler is functional; use the actual install path:
 
   ```console
-$ "${HOME}"/opt/gcc-arm-none-eabi-8-2018-q4-major/bin/arm-none-eabi-gcc --version
+$ "${HOME}/opt/gcc-arm-none-eabi-8-2018-q4-major/bin/arm-none-eabi-gcc" --version
 arm-none-eabi-gcc (GNU Tools for Arm Embedded Processors 8-2018-q4-major) 8.2.1 20181213 (release) [gcc-8-branch revision 267074]
 ```
 
@@ -287,7 +287,7 @@ $ sudo apt-get -y install lib32ncurses5
 $ sudo apt-get -y install ia32-libs
 ```
 
-* download the latest Linux install tarball file from [ARMDeveloper](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads) (currently `gcc-arm-none-eabi-{{ page.arm-version-id }}-linux.tar.bz2`, more than 95 MB)
+* download the latest Linux install tarball file from [ARMDeveloper](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads) (currently `gcc-arm-none-eabi-{{ page.arm-version-id }}-linux.tar.bz2`, more than 100 MB)
 
   > Note: DO NOT install the ARM GCC package that comes with your distribution, especially if it is newer than the one provided by Launchpad, since generally it is not supported, and debugging sessions might fail.
 
@@ -298,17 +298,17 @@ $ sudo apt-get -y install ia32-libs
   > Note: It is highly recommended to **do not change the install path**, since the plug-in tries to automatically discover the toolchain by searching only a limited set of possible locations (`${HOME}/local`, `${HOME}/opt`, `/usr/local`).
 
   ```console
-$ mkdir -p "${HOME}"/opt
-$ cd "${HOME}"/opt
+$ mkdir -p "${HOME}/opt"
+$ cd "${HOME}/opt"
 $ tar xjf ~/Downloads/gcc-arm-none-eabi-{{ page.arm-version-id }}-linux.tar.bz2
-$ chmod -R -w "${HOME}"/opt/gcc-arm-none-eabi-{{ page.arm-version-id }}
+$ chmod -R -w "${HOME}/opt/gcc-arm-none-eabi-{{ page.arm-version-id }}"
 ```
 
 * the result should be a folder like `${HOME}/opt/gcc-arm-none-eabi-{{ page.arm-version-id }}`
 * test if the compiler is functional; use the actual install path:
 
   ```console
-$ "${HOME}"/opt/gcc-arm-none-eabi-8-2018-q4-major/bin/arm-none-eabi-gcc --version
+$ "${HOME}/opt/gcc-arm-none-eabi-8-2018-q4-major/bin/arm-none-eabi-gcc" --version
 arm-none-eabi-gcc (GNU Tools for Arm Embedded Processors 8-2018-q4-major) 8.2.1 20181213 (release) [gcc-8-branch revision 267074]
 ```
 
