@@ -118,7 +118,7 @@ executed again.
 
 ## Known problems
 
-* none (so far)
+* none (so far).
 
 ## Checksums
 
