@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released
-download_url: https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v8.2.1-1.6/
+title:  GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.7 20190524 released
+download_url: https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v8.2.1-1.7/
 
 author: Liviu Ionescu
 
@@ -17,9 +17,9 @@ categories:
 
 ---
 
-Version v8.2.1-1.6 20190510 is a maintenance release of 
-**GNU MCU Eclipse ARM Embedded GCC** that (finally) fixes the bugs 
-affecting Windows LTO builds, present in the previous release.
+Version v8.2.1-1.7 20190524 is a maintenance release of 
+**GNU MCU Eclipse ARM Embedded GCC** that that removes the illegal links 
+present in the previous releases.
 
 [Binary files »]({{ page.download_url }})
 
@@ -118,31 +118,25 @@ executed again.
 
 ## Known problems
 
-### Illegal links in `libexec` for Linux
-
-Although the current release is fully functional, due to a problem with 
-the GCC make, the build created links with illegal names in the `libexec` 
-folders. The current code used to unpack the archives does not complain, 
-but future versions may include more thorough checks and fail. A new 
-release to fix this issue will be available soon.
+* none (so far).
 
 ## Checksums
 
 The SHA-256 hashes for the files are:
 
 ```console
-a4fc37f897ff50a3e3807e87db60ccb0844f37eb618f0935ece94a581fd98eec 
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-centos32.tgz
+c832d4b8d7b91b6702f7188f0be30643b41991ce9ec91f4e67d821628898b564 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.7-20190524-0603-centos32.tgz
 
-e85df3bdc9b8e9c91e00924feb6f7f9909c94af08bd7e097d4ab857e0facc316 
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-centos64.tgz
+f15d9dd829262c0947a417da2626c2d4d6bd5ca7628ad7f3277d350b7986fa6c 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.7-20190524-0603-centos64.tgz
 
-63cdda07c539d2a43df89d7ec17b2ab4119ebfe4a5c46295c2bc1821755b093b 
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-macos.tgz
+d6a162d33449282757573adab2aca8cc615d3e67a79c414dd2f6ee0c250d3a3a
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.7-20190524-0603-macos.tgz
 
-780cda157454dd073132c52aa46f2d43b1f325a1f38a82c3283de76492899fb1 
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-win32.zip
+9aa2da08fe265d31fd8291b8f4c7f20dbc3b1599d2d0c37a62c1ff28f637e43c 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.7-20190524-0603-win32.zip
 
-a88823b4cbb9e060975f14e1e839eace1cf0cb26386f99d52e692b15455ec3dd 
-gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-win64.zip
+7200a0d4a5bb99f6ee51b37c56716b83ffc9eb03ae5355e4a464f2d59910d214 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.7-20190524-0603-win64.zip
 ```
