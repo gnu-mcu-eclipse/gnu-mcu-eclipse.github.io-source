@@ -88,13 +88,21 @@ The result is a p2 repository:
 
 To run a debug session using the GNU MCU Eclipse plug-ins:
 
--   **Run** → **Debug Configurations...**
+- **Run** → **Debug Configurations...**
   * double-click **Eclipse Application**
-  * **Name:** `Eclipse GNU MCU Plug-ins`
-  * Location: `${workspace_loc}/../runtime-e47`
+  * **Name:** `GME Plug-ins`
+  * Location: `${workspace_loc}/../runtime-GMEPlug-ins-2018-12`
   * Tab: **Plug-ins**
-    * Launch with: **plug-ins selected below**; the Workspace list should include all `ilg.gnumcueclipse.*` plug-ins; the Target Platform list should include all Eclipse, not only CDT, plug-ins; if the Eclipse plug-ins are not in the list, then the Preferences → Plug-in Development -> Target Platform is not Running Platform, and must be changed. The alternative to use **all workspace and enabled plug-ins** might work in some configurations, and can also be used, but if dependencies are not met, manual selection is required.
-    * click the **Validate Plug-ins** button; most probably the `org.apache.xmlrpc` plug-in will complain about `javax.xml.bind`; either install it, or disable the plug-in; validate again and disable a few more plug-ins (`org.eclipse.mylyn.bugzilla.core`, `org.eclipse.mylyn.bugzilla.ui`, `org.eclipse.mylyn.builds.ui`, `org.eclipse.mylyn.commons.xmlrpc`, `org.eclipse.mylyn.hudson.ui`).
+    * Launch with: **plug-ins selected below**; the Workspace list should
+      include all `ilg.gnumcueclipse.*` plug-ins, not the EPP ones; the
+      Target Platform list should include all Eclipse, not only CDT,
+      plug-ins; if the Eclipse plug-ins are not in the list, then the
+      Preferences → Plug-in Development → Target Platform is not Running
+      Platform, and must be changed. The alternative to use **all workspace
+      and enabled plug-ins** might work in some configurations, and can also
+      be used, but if dependencies are not met, manual selection is required.
+    * click the **Validate Plug-ins** button; disable the offending 
+      plug-ins; validate again and repeat until success.
   * click **Apply**
   * Tab: **Arguments**
     * Program arguments:
@@ -110,32 +118,40 @@ To run a debug session using the GNU MCU Eclipse plug-ins:
 
 Clear all errors in the **Problems** tab.
 
-Be sure the target platform is the Running Platform, otherwise starting the debug session fails.
+Be sure the target platform is the Running Platform, otherwise starting
+the debug session fails.
 
 ## Debug options
 
-As seen before, the debug options are grouped in a file and passed to Eclipse using the `-debug <file>` option.
+As seen before, the debug options are grouped in a file and passed to
+Eclipse using the `-debug <file>` option.
 
 ## Plug-ins cache
 
-When starting debug sessions from within Eclipse, a copy of the run-time is kept under 
+When starting debug sessions from within Eclipse, a copy of the run-time
+is kept under
 
 ```
 ${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/Eclipse GNU MCU Plug-ins
 ```
 
-For unknown reasons, some changes in the source code (like changing properties files) do not trigger a rebuild, and it is normally not possible to test these changes.
+For unknown reasons, some changes in the source code (like changing
+properties files) do not trigger a rebuild, and it is normally not
+possible to test these changes.
 
-The workaround I found was to remove this folder, and Eclipse will recreate it before the next run.
+The workaround I found was to remove this folder, and Eclipse will
+recreate it before the next run.
 
 ## Debug with CDT sources
 
-A more elaborated configuration is required when willing to run debug sessions using CDT source files from the Git repository, for example to debug issues inside CDT.
+A more elaborated configuration is required when willing to run debug
+sessions using CDT source files from the Git repository, for example
+to debug issues inside CDT.
 
 Clone the CDT repository:
 
 ```console
-$ cd .../"GNU MCU Eclipse"
+$ cd .../gnu-mcu-eclipse.github
 $ mkdir -p originals
 $ git clone git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git originals/org.eclipse.cdt.git
 ```
@@ -163,7 +179,7 @@ Import all CDT projects
 Create a new debug configuration
 
 * in the _Eclipse_ menu → **Run** → **Debug Configurations...**
-* duplicate `Eclipse GNU MCU Plug-ins` into `Eclipse GNU MCU Plug-ins with CDT`
+* duplicate `GME Plug-ins` into `GME Plug-ins with CDT`
 * in teh **Plug-ins** tab, click the **Add Working Sets..** button
   * select the `CDT` set
   * click the **OK** button
