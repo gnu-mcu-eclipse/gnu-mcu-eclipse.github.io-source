@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  The new GNU MCU Eclipse forums
+title:  The GNU MCU Eclipse project has new forums
 author: Liviu Ionescu
 
 date:   2019-09-25 23:08:00 +0300
