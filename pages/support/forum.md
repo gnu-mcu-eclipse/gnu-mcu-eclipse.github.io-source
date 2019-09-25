@@ -10,7 +10,7 @@ date: 2015-09-12 13:43:00 +0300
 
 ## Overview
 
-The GNU MCU Eclipse project has a dedicated section in the 
+The GNU MCU Eclipse project has a dedicated section in the
 [xPack forum](https://www.tapatalk.com/groups/xpack/).
 
 ![GNU MCU Eclipse forum]({{ site.baseurl }}/assets/images/2019/forum-home.png)
@@ -25,12 +25,15 @@ corresponding
 
 ## Access
 
-The forum URL is:
+The new URL is:
 
 `https://www.tapatalk.com/groups/xpack/`
 
 The forum type is open, and anyone can contribute. Access is free, 
 based on registration.
+
+All those who appreciated the discussions on the old forum are invited
+to register to the Tapatalk server and join the new forums.
 
 ## Groups
 
