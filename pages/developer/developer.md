@@ -85,42 +85,42 @@ How to build the plug-ins from sources and publish them.
 
 ### Eclipse
 
-*   [Eclipse.org Wiki](http://wiki.eclipse.org/Main_Page)
-*   [Eclipse User Interface Guidelines](http://wiki.eclipse.org/User_Interface_Guidelines)
-*   [SWT Widgets](http://www.eclipse.org/swt/widgets/)
-*   [Eclipse Luna documentation](http://help.eclipse.org/luna/index.jsp)
-*   [Introduction to Programming with DSF](http://help.eclipse.org/luna/topic/org.eclipse.cdt.doc.isv/guide/dsf/intro/dsf_programming_intro.html)
-*   [CDT DSF debug](http://wiki.eclipse.org/CDT/cdt-debug-dsf-gdb-extensibility)
+* [Eclipse.org Wiki](http://wiki.eclipse.org/Main_Page)
+* [Eclipse User Interface Guidelines](http://wiki.eclipse.org/User_Interface_Guidelines)
+* [SWT Widgets](http://www.eclipse.org/swt/widgets/)
+* [Eclipse Luna documentation](http://help.eclipse.org/luna/index.jsp)
+* [Introduction to Programming with DSF](http://help.eclipse.org/luna/topic/org.eclipse.cdt.doc.isv/guide/dsf/intro/dsf_programming_intro.html)
+* [CDT DSF debug](http://wiki.eclipse.org/CDT/cdt-debug-dsf-gdb-extensibility)
 
 ### Other
 
-*   [ARM CMSIS](http://www.keil.com/pack/doc/cmsis/General/html/index.html)
-*   [ARM Connected Community: ARM & Keil Tools](http://community.arm.com/groups/tools/blog)
-*   [Google Groups: CMSIS](https://groups.google.com/forum/#!forum/cmsis)
-*   [Forge site support \#6343 Project description not propagated to all tools](https://sourceforge.net/p/forge/site-support/6343/)
+* [ARM CMSIS](http://www.keil.com/pack/doc/cmsis/General/html/index.html)
+* [ARM Connected Community: ARM & Keil Tools](http://community.arm.com/groups/tools/blog)
+* [Google Groups: CMSIS](https://groups.google.com/forum/#!forum/cmsis)
+* [Forge site support \#6343 Project description not propagated to all tools](https://sourceforge.net/p/forge/site-support/6343/)
 
 ### Installers
 
-*   [NSIS](https://sourceforge.net/projects/nsis/)
-*   [Single Package](http://blogs.msdn.com/b/windows_installer_team/archive/2009/09/02/authoring-a-single-package-for-per-user-or-per-machine-installation-context-in-windows-7.aspx)
-
+* [NSIS](https://sourceforge.net/projects/nsis/)
+* [Single Package](http://blogs.msdn.com/b/windows_installer_team/archive/2009/09/02/authoring-a-single-package-for-per-user-or-per-machine-installation-context-in-windows-7.aspx)
 
 ### References to GNU MCU Eclipse
 
-- [Getting Started With STM32 Nucleo Development](http://www.amazon.com/Getting-Started-STM32-Nucleo-Development-ebook/dp/B00WBU4BPW)
+* [Getting Started With STM32 Nucleo Development](http://www.amazon.com/Getting-Started-STM32-Nucleo-Development-ebook/dp/B00WBU4BPW)
 
 ### Sites for articles
 
 * [ARMConnected Community](https://community.arm.com/welcome) - login, Create a new Blog Post, A place's blog, Software Development Tools, copy/paste markup from site, H2, update links, enter tags
-* [Element14](http://www.element14.com/community/groups/gnu-arm-eclipse) - login, the Open Source Software; Write a blog post, copy/paste from ARM, load images, enter tags
+* [Element14](http://www.element14.com/community/groups/gnu-arm-eclipse) - the initial forum, now deprecated
 * [EmbDev](https://embdev.net/user/login) - New Topic to [Forum: ARM programming with GCC/GNU tools](https://embdev.net/forum/arm-gcc); no pictures; underline headers (no BBCs)
 * [EEVblog](http://www.eevblog.com/forum/login/) - [Microcontrollers & FPGAs](http://www.eevblog.com/forum/microcontrollers/); New topic, BBC codes (bold titles, image links to web article), Notify
 * [Arduino](http://stm32duino.com/viewforum.php?f=41) - New Topic, copy/paste content from EEVblog; disable signature, enable notifications
 * [STM32 MCUs Community](https://community.st.com/community/stm32-community) - Sign in to forum, New Discussion, copy/paste HTML from Arduino (a real mess)
 
 BBC codes:
-- `[img width=30]http:⁄⁄wiki.simplemachines.org/smf/images/1/19/Button_media.png[/img]`
-- `[url=http://simplemachines.org]text or more BB Code[/url]`
+
+* `[img width=30]http:⁄⁄wiki.simplemachines.org/smf/images/1/19/Button_media.png[/img]`
+* `[url=http://simplemachines.org]text or more BB Code[/url]`
 
 ## Releases
 
