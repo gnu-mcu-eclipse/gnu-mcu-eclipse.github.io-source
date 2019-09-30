@@ -1,11 +1,23 @@
 ---
 layout: page
-title: How to build the OpenOCD binaries?
+title: DEPRECATED > How to build the OpenOCD binaries?
 permalink: /openocd/build-procedure/
 
 date: 2015-09-04 17:02:00 +0300
 
 ---
+
+## Deprecation notice
+
+In mid-2019, the OpenOCD binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new home page is:
+
+* [https://xpack.github.io/openocd/](https://xpack.github.io/openocd/)
+
+All previous releases are still available in the `@gnu-mcu-eclipse` scope,
+but were deprecated and are not recommended for new projects.
+
+___
 
 The GNU MCU Eclipse OpenOCD build scripts provide a single tool to create multi-platform binaries, generating the Windows 32, Windows 64, GNU/Linux 32, GNU/Linux 64 and macOS distribution packages.
 

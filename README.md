@@ -58,7 +58,11 @@ The build can be performed automatically by Jekyll when started in server mode.
 
 ```console
 $ cd gnu-mcu-eclipse.github.io-source.git
-$ jekyll serve --baseurl "" --trace
+
+$ bundle install
+$ bundle exec jekyll --version
+
+$ bundle exec jekyll serve --baseurl "" --trace
 ```
 
 To view the result, point the browser to `localhost:4000`.

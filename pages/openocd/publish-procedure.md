@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How to publish the OpenOCD binaries?
+title: DEPRECATED > How to publish the OpenOCD binaries?
 permalink: /openocd/publish-procedure/
 
 author: Liviu Ionescu
@@ -8,6 +8,18 @@ author: Liviu Ionescu
 date: 2016-10-28 18:09:00 +0300
 
 ---
+
+## Deprecation notice
+
+In mid-2019, the OpenOCD binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new home page is:
+
+* [https://xpack.github.io/openocd/](https://xpack.github.io/openocd/)
+
+All previous releases are still available in the `@gnu-mcu-eclipse` scope,
+but were deprecated and are not recommended for new projects.
+
+___
 
 The OpenOCD binaries are published on GitHub  [Releases](https://github.com/gnu-mcu-eclipse/openocd/releases).
 

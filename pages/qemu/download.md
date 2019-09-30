@@ -1,12 +1,23 @@
 ---
 layout: page
 permalink: /qemu/download/
-title: How to download the GNU MCU Eclipse QEMU?
+title: DEPRECATED > How to download the GNU MCU Eclipse QEMU?
 author: Liviu Ionescu
 
 date: 2015-09-16 20:15:00 +0300
 
 ---
+
+## Deprecation notice
+
+In mid-2019, the QEMU binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new home page is:
+
+* [https://xpack.github.io/qemu-arm/](https://xpack.github.io/qemu-arm/)
+
+All previous releases are still available in the `@gnu-mcu-eclipse` scope,
+but were deprecated and are not recommended for new projects.
+___
 
 ## GitHub Releases
 

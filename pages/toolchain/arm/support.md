@@ -1,12 +1,24 @@
 ---
 layout: page
 permalink: /toolchain/arm/support/
-title: ARM toolchain support
+title: DEPRECATED > ARM toolchain support
 author: Liviu Ionescu
 
 date: 2017-07-06 22:47:00 +0300
 
 ---
+
+## Deprecation notice
+
+In mid-2019, the ARM toolchain binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new home page is:
+
+* [https://xpack.github.io/arm-none-eabi-gcc/](https://xpack.github.io/arm-none-eabi-gcc/)
+
+All previous releases are still available in the `@gnu-mcu-eclipse` scope,
+but were deprecated and are not recommended for new projects.
+
+___
 
 The **GNU MCU Eclipse ARM Embedded GCC** toolchain closely follows the official [GNU Arm Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm) maintained by ARM.
 

@@ -1,11 +1,23 @@
 ---
 layout: page
-title: The ARM Embedded GCC Change Log
+title: DEPRECATED > The ARM Embedded GCC Change Log
 permalink: /toolchain/arm/change-log/
 
 date: 2018-02-16 14:06:00 +0300
 
 ---
+
+## Deprecation notice
+
+In mid-2019, the ARM toolchain binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new home page is:
+
+* [https://xpack.github.io/arm-none-eabi-gcc/](https://xpack.github.io/arm-none-eabi-gcc/)
+
+All previous releases are still available in the `@gnu-mcu-eclipse` scope,
+but were deprecated and are not recommended for new projects.
+
+___
 
 Entries in this file are in reverse chronological order.
 

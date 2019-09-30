@@ -7,6 +7,17 @@ date: 2015-11-10 19:27:00 +0300
 
 ---
 
+## Deprecation notice
+
+In mid-2019, the QEMU binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new home page is:
+
+* [https://xpack.github.io/qemu-arm/](https://xpack.github.io/qemu-arm/)
+
+All previous releases are still available in the `@gnu-mcu-eclipse` scope,
+but were deprecated and are not recommended for new projects.
+___
+
 ## For the impacient
 
 The command line used by the QEMU plug-in to start a debug session looks like this:

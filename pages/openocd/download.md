@@ -1,12 +1,24 @@
 ---
 layout: page
 permalink: /openocd/download/
-title: How to download the GNU MCU Eclipse OpenOCD?
+title: DEPRECATED > How to download the GNU MCU Eclipse OpenOCD?
 author: Liviu Ionescu
 
 date: 2015-09-16 20:39:00 +0300
 
 ---
+
+## Deprecation notice
+
+In mid-2019, the OpenOCD binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new home page is:
+
+* [https://xpack.github.io/openocd/](https://xpack.github.io/openocd/)
+
+All previous releases are still available in the `@gnu-mcu-eclipse` scope,
+but were deprecated and are not recommended for new projects.
+
+___
 
 ## GitHub Releases
 

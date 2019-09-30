@@ -1,11 +1,23 @@
 ---
 layout: page
-title: How to install the QEMU binaries?
+title: DEPRECATED > How to install the QEMU binaries?
 permalink: /qemu/install/
 
 date: 2015-09-04 17:03:00 +0300
 
 ---
+
+## Deprecation notice
+
+In mid-2019, the QEMU binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new install page is:
+
+* [https://xpack.github.io/qemu-arm/install/](https://xpack.github.io/qemu-arm/install/)
+
+All previous releases are still available in the `@gnu-mcu-eclipse` scope,
+but were deprecated and are not recommended for new projects.
+
+___
 
 ## Overview
 

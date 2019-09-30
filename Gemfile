@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+# https://pages.github.com/versions/
 gem 'jekyll', '=3.8.5', :platforms => [:ruby, :x64_mingw, :mswin]
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 

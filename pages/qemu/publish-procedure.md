@@ -1,12 +1,23 @@
 ---
 layout: page
 permalink: /qemu/publish-procedure/
-title: How to publish the QEMU binaries?
+title: DEPRECATED > How to publish the QEMU binaries?
 author: Liviu Ionescu
 
 date: 2016-07-28 02:58:00 +0300
 
 ---
+
+## Deprecation notice
+
+In mid-2019, the QEMU binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new home page is:
+
+* [https://xpack.github.io/qemu-arm/](https://xpack.github.io/qemu-arm/)
+
+All previous releases are still available in the `@gnu-mcu-eclipse` scope,
+but were deprecated and are not recommended for new projects.
+___
 
 The QEMU binaries are published on GitHub  [Releases](https://github.com/gnu-mcu-eclipse/qemu/releases).
 

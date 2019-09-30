@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /toolchain/arm/install/
-title: How to install the ARM toolchain?
+title: DEPRECATED > How to install the ARM toolchain?
 author: Liviu Ionescu
 
 date: 2015-09-11 22:49:00 +0300
@@ -13,11 +13,21 @@ gme-version-date: 20180401-0515
 
 ---
 
+## Deprecation notice
+
+In mid-2019, the ARM toolchain binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new install page is:
+
+* [https://xpack.github.io/arm-none-eabi-gcc/install/](https://xpack.github.io/arm-none-eabi-gcc/install/)
+
+All previous releases are still available in the `@gnu-mcu-eclipse` scope,
+but were deprecated and are not recommended for new projects.
+
+___
+
 ## Easy install
 
 For ARM, the recommended method to install the latest version of the toolchain is:
-
-<div style="clear: both;"></div>
 
 ```console
 $ xpm install --global @gnu-mcu-eclipse/arm-none-eabi-gcc

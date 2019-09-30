@@ -1,12 +1,24 @@
 ---
 layout: page
 permalink: /toolchain/riscv/
-title: The RISC-V Embedded GCC
+title: DEPRECATED > The RISC-V Embedded GCC
 author: Liviu Ionescu
 
 date: 2017-07-06 22:58:00 +0300
 
 ---
+
+## Deprecation notice
+
+In mid-2019, the RISC-V toolchain binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new page is:
+
+* [https://xpack.github.io/riscv-none-embed-gcc/](https://xpack.github.io/riscv-none-embed-gcc/)
+
+All previous releases are still available in the `@gnu-mcu-eclipse` scope,
+but were deprecated and are not recommended for new projects.
+
+___
 
 ## Overview
 

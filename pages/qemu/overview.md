@@ -1,11 +1,22 @@
 ---
 layout: page
-title: The GNU MCU Eclipse QEMU
+title: DEPRECATED > The GNU MCU Eclipse QEMU
 permalink: /qemu/
 
 date: 2015-09-07 21:31:00 +0300
 
 ---
+
+## Deprecation notice
+
+In mid-2019, the QEMU binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new home page is:
+
+* [https://xpack.github.io/qemu-arm/](https://xpack.github.io/qemu-arm/)
+
+All previous releases are still available in the `@gnu-mcu-eclipse` scope,
+but were deprecated and are not recommended for new projects.
+___
 
 ## Quicklinks
 

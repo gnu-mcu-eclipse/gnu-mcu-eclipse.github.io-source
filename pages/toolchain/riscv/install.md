@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /toolchain/riscv/install/
-title: How to install the RISC-V toolchain?
+title: DEPRECATED > How to install the RISC-V toolchain?
 author: Liviu Ionescu
 
 date: 2015-09-11 22:49:00 +0300
@@ -10,6 +10,18 @@ version-id: 7.2.0-2
 version-date: 20180111-2230
 
 ---
+
+## Deprecation notice
+
+In mid-2019, the RISC-V toolchain binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new install page is:
+
+* [https://xpack.github.io/riscv-none-embed-gcc/install/](https://xpack.github.io/riscv-none-embed-gcc/install/)
+
+All previous releases are still available in the `@gnu-mcu-eclipse` scope,
+but were deprecated and are not recommended for new projects.
+
+___
 
 ## Easy install
 
