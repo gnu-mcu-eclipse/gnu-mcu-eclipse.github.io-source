@@ -56,7 +56,6 @@ here are some advices:
   [GitHub Stars](https://github.com/gnu-mcu-eclipse/eclipse-plugins/stargazers);
 * **follow** the project on [Twitter](https://twitter.com/gnu_mcu_eclipse), to
   get notifications on new releases;
-* **like** the project on [Facebook](https://www.facebook.com/gnu-mcu-eclipse).
 
 Thank you,
 
