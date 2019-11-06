@@ -12,6 +12,67 @@ Entries in this file are in reverse chronological order.
 
 ## 2019
 
+### 2019-11-06
+
+* version 4.7.1.201911052135 released
+
+```
+repository/features:
+ilg.gnumcueclipse.codered.feature_1.1.2.201911052135.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink.feature_4.4.1.201911052135.jar
+ilg.gnumcueclipse.debug.gdbjtag.jumper.feature_1.2.1.201911052135.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd.feature_4.4.1.201911052135.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature_1.4.1.201911052135.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu.feature_3.4.1.201911052135.jar
+ilg.gnumcueclipse.doc.user.feature_1.1.2.201911052135.jar
+ilg.gnumcueclipse.managedbuild.cross.arm.feature_2.7.1.201911052135.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv.feature_2.9.1.201911052135.jar
+ilg.gnumcueclipse.packs.feature_2.4.1.201911052135.jar
+ilg.gnumcueclipse.templates.ad.feature_1.3.1.201911052135.jar
+ilg.gnumcueclipse.templates.cortexm.feature_1.5.1.201911052135.jar
+ilg.gnumcueclipse.templates.freescale.feature_2.3.1.201911052135.jar
+ilg.gnumcueclipse.templates.sifive.feature_1.4.1.201911052135.jar
+ilg.gnumcueclipse.templates.stm.feature_2.7.1.201911052135.jar
+
+repository/plugins:
+ilg.gnumcueclipse.codered_1.1.2.201911052135.jar
+ilg.gnumcueclipse.core_4.7.1.201911052135.jar
+ilg.gnumcueclipse.debug.core_1.2.2.201911052135.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink_4.4.1.201911052135.jar
+ilg.gnumcueclipse.debug.gdbjtag.jumper_1.2.1.201911052135.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd_4.4.1.201911052135.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd_1.4.1.201911052135.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu_3.4.1.201911052135.jar
+ilg.gnumcueclipse.debug.gdbjtag.restart_1.3.2.201911052135.jar
+ilg.gnumcueclipse.debug.gdbjtag_4.2.1.201911052135.jar
+ilg.gnumcueclipse.debug.packs_1.1.2.201911052135.jar
+ilg.gnumcueclipse.doc.user_1.1.2.201911052135.jar
+ilg.gnumcueclipse.managedbuild.cross.arm_2.7.1.201911052135.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv_2.9.1.201911052135.jar
+ilg.gnumcueclipse.managedbuild.cross_1.3.1.201911052135.jar
+ilg.gnumcueclipse.managedbuild.packs_1.3.4.201911052135.jar
+ilg.gnumcueclipse.packs.core_2.4.1.201911052135.jar
+ilg.gnumcueclipse.packs.data_2.4.1.201911052135.jar
+ilg.gnumcueclipse.packs.ui_1.4.2.201911052135.jar
+ilg.gnumcueclipse.packs_1.4.2.201911052135.jar
+ilg.gnumcueclipse.templates.ad_1.3.1.201911052135.jar
+ilg.gnumcueclipse.templates.core_2.6.3.201911052135.jar
+ilg.gnumcueclipse.templates.cortexm_1.5.1.201911052135.jar
+ilg.gnumcueclipse.templates.freescale.pe_1.3.1.201911052135.jar
+ilg.gnumcueclipse.templates.freescale_2.3.1.201911052135.jar
+ilg.gnumcueclipse.templates.sifive_1.4.1.201911052135.jar
+ilg.gnumcueclipse.templates.stm_2.7.1.201911052135.jar
+```
+
+### 2019-11-05
+
+* 78817670 - more canonical paths
+* b1915b84 - fix exception in getCanonicalPath()
+* dbed6da4 - version: packs.ui 1.4.2
+* 23d7ae8f - Use file.getCanonicalPath()
+* 08b6b2d2 - versions: core 4.7.1, packs: 1.4.2, packs.core: 2.4.1, packs.data: 2.4.1
+* c2bc99ce - [#364] optimise packs update by caching sizes
+
 ### 2019-09-23
 
 * version 4.6.1.201909231407 released
