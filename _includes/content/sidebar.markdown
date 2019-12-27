@@ -8,8 +8,8 @@
 * [Overview]({{ site.baseurl }}/downloads/)
 * [Plug-ins]({{ site.baseurl }}/plugins/download/) ([releases]({{ site.baseurl }}/developer/releases/))
 * [Windows Build Tools]({{ site.baseurl }}/windows-build-tools/download/) ([releases]({{ site.baseurl }}/windows-build-tools/releases/))
-* [QEMU]({{ site.baseurl }}/qemu/download/) ([releases]({{ site.baseurl }}/qemu/releases/))
-* [OpenOCD]({{ site.baseurl }}/openocd/download/) ([releases]({{ site.baseurl }}/openocd/releases/))
+* [xPack QEMU Arm]({{ site.baseurl }}/qemu/download/) ([releases](https://xpack.github.io/qemu-arm/releases/))
+* [xPack OpenOCD]({{ site.baseurl }}/openocd/download/) ([releases](https://xpack.github.io/openocd/releases/))
 
 #### [Install]({{ site.baseurl }}/install/)
 
@@ -20,8 +20,8 @@
 * [Debugging binaries]({{ site.baseurl }}/debug/install/)
   * [Overview]({{ site.baseurl }}/debug/install/)
   * [SEGGER J-Link install]({{ site.baseurl }}/debug/jlink/install/)
-  * [OpenOCD install]({{ site.baseurl }}/openocd/install/)
-  * [QEMU install]({{ site.baseurl }}/qemu/install/)
+  * [xPack OpenOCD install](https://xpack.github.io/openocd/install/)
+  * [xPack QEMU Arm install](https://xpack.github.io/qemu-arm/install/)
 * [Eclipse plug-ins install]({{ site.baseurl }}/plugins/install/)
 
 #### Important
@@ -57,45 +57,13 @@
 * [The QEMU plug-in]({{ site.baseurl }}/debug/qemu/)
 * [The peripheral registers view (CMSIS)]({{ site.baseurl }}/debug/peripheral-registers/)
 
-#### [GNU MCU ARM GCC]({{ site.baseurl }}/toolchain/arm/)
+#### [xPack GNU Arm Embedded GCC](https://xpack.github.io/arm-none-eabi-gcc/)
 
-* [Overview]({{ site.baseurl }}/toolchain/arm/)
-* [ARM Toolchain(s) install]({{ site.baseurl }}/toolchain/arm/install/)
-* [How to build]({{ site.baseurl }}/toolchain/arm/build-procedure/)
-* [How to publish]({{ site.baseurl }}/toolchain/arm/publish-procedure/)
-* [Releases]({{ site.baseurl }}/toolchain/arm/releases/)
-* [Support]({{ site.baseurl }}/toolchain/arm/support/)
+#### [xPack GNU RISC-V Embedded GCC](https://xpack.github.io/riscv-none-embed-gcc/)
 
-#### [GNU MCU RISC-V GCC]({{ site.baseurl }}/toolchain/riscv/)
+#### [xPack QEMU Arm](https://xpack.github.io/qemu-arm/)
 
-* [Overview]({{ site.baseurl }}/toolchain/riscv/)
-* [RISC-V Toolchain(s) install]({{ site.baseurl }}/toolchain/riscv/install/)
-* [How to build]({{ site.baseurl }}/toolchain/riscv/build-procedure/)
-* [How to publish]({{ site.baseurl }}/toolchain/riscv/publish-procedure/)
-* [Releases]({{ site.baseurl }}/toolchain/riscv/releases/)
-* [Support]({{ site.baseurl }}/toolchain/riscv/support/)
-
-#### [GNU MCU QEMU Home]({{ site.baseurl }}/qemu/)
-
-* [Overview]({{ site.baseurl }}/qemu/) (read me first!)
-* [QEMU Install]({{ site.baseurl }}/qemu/install/)
-* [Eclipse plug-in]({{ site.baseurl }}/debug/qemu/)
-* [Command line options]({{ site.baseurl }}/qemu/options/)
-* [How to build]({{ site.baseurl }}/qemu/build-procedure/)
-* [How to publish]({{ site.baseurl }}/qemu/publish-procedure/)
-* [Releases]({{ site.baseurl }}/qemu/releases/)
-* [Support](https://github.com/gnu-mcu-eclipse/qemu/issues/1/) (report issue)
-
-#### [GNU MCU OpenOCD Home]({{ site.baseurl }}/openocd/)
-
-* [Overview]({{ site.baseurl }}/openocd/) (read me first!)
-* [OpenOCD Install]({{ site.baseurl }}/openocd/install/)
-* [The OpenOCD plug-in]({{ site.baseurl }}/debug/openocd/)
-* [RISC-V specifics]({{ site.baseurl }}/debug/openocd/riscv/)
-* [How to build]({{ site.baseurl }}/openocd/build-procedure/)
-* [How to publish]({{ site.baseurl }}/openocd/publish-procedure/)
-* [Releases]({{ site.baseurl }}/openocd/releases/)
-* [Support](https://github.com/gnu-mcu-eclipse/openocd/issues/1/)  (report issue)
+#### [xPack OpenOCD](https://xpack.github.io/openocd/)
 
 #### [Windows Build Tools Home]({{ site.baseurl }}/windows-build-tools/)
 
@@ -124,7 +92,6 @@
 * [SourceForge tickets]({{ site.baseurl }}/support/sourceforge/)
 * [Forum]({{ site.baseurl }}/support/forum/)
 * [Report plug-ins issue](https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/)
-
 
 #### [Developer]({{ site.baseurl }}/developer/)
 
