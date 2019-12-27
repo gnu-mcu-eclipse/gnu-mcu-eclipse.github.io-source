@@ -45,7 +45,7 @@ However please note that no support requests referring to Win XP 64 will be pro
 
 ### Java
 
-The recommended package is the latest version from the official [Oracle **Java SE** page](http://www.oracle.com/technetwork/java/javase/index.html). The **OpenJDK Java** used in Ubuntu is also fine. The minimum is JDK 1.8, or even JRE 1.8 (the Java Runtime Environment), but, as said before, better use the latest JDK (currently 1.8.151). On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.
+The recommended package is the latest version from the official [Oracle **OpenJDK** page](https://openjdk.java.net). The **OpenJDK Java** used in Ubuntu is also fine. The minimum is JDK 1.8, or even JRE 1.8 (the Java Runtime Environment), but, as said before, better use the latest JDK (currently 1.8.151). On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.
 
 > Important note: Java may be distributed in separate 32/64-bit packages. Unless you have older applications requiring 32-bit Java, on 64-bit systems it is recommended to install the 64-bit JDK. Anyway, Oracle JDK 9 might not even be available for 32-bit. 
 
