@@ -57,13 +57,12 @@
 * [The QEMU plug-in]({{ site.baseurl }}/debug/qemu/)
 * [The peripheral registers view (CMSIS)]({{ site.baseurl }}/debug/peripheral-registers/)
 
-#### [xPack GNU Arm Embedded GCC](https://xpack.github.io/arm-none-eabi-gcc/)
+#### xPack Dev tools
 
-#### [xPack GNU RISC-V Embedded GCC](https://xpack.github.io/riscv-none-embed-gcc/)
-
-#### [xPack QEMU Arm](https://xpack.github.io/qemu-arm/)
-
-#### [xPack OpenOCD](https://xpack.github.io/openocd/)
+- [xPack GNU Arm Embedded GCC](https://xpack.github.io/arm-none-eabi-gcc/)
+- [xPack GNU RISC-V Embedded GCC](https://xpack.github.io/riscv-none-embed-gcc/)
+- [xPack QEMU Arm](https://xpack.github.io/qemu-arm/)
+- [xPack OpenOCD](https://xpack.github.io/openocd/)
 
 #### [Windows Build Tools Home]({{ site.baseurl }}/windows-build-tools/)
 
