@@ -18,7 +18,7 @@ If you know what this is all about, the download pages are:
 * [xPack GNU Arm Embedded GCC](https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/)
 * [xPack GNU RISC-V Embedded GCC](https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases/)
 * [xPack OpenOCD](https://github.com/xpack-dev-tools/openocd-xpack/releases/)
-* [xPack QEMU Arm](https://github.com/xpack-dev-tools/qemu-arm/releases/)
+* [xPack QEMU Arm](https://github.com/xpack-dev-tools/qemu-arm-xpack/releases/)
 
 ## Overview
 
@@ -53,9 +53,9 @@ For all other manual downloads, the binary files are published as **GitHub Relea
 
 For example, to access the QEMU binaries:
 
-- go to the **xPack QEMU Arm** project at [xpack-dev-tools/qemu-arm](https://github.com/xpack-dev-tools/qemu-arm)
+- go to the **xPack QEMU Arm** project at [xpack-dev-tools/qemu-arm](https://github.com/xpack-dev-tools/qemu-arm-xpack/)
 - be sure you are in the **Code** view; if not, select the right side `<>` code icon
-- identify the [releases](https://github.com/xpack-dev-tools/qemu-arm/releases) link in the upper line:
+- identify the [releases](https://github.com/xpack-dev-tools/qemu-arm-xpack/releases) link in the upper line:
   ![Code releases link]({{ site.baseurl }}/assets/images/2015/github-qemu-code-tab-releases.png)
 - click the releases link; this will show the Releases view, with the **Latest release** at the top of the page:
   ![The Latest release view. ]({{ site.baseurl }}/assets/images/2015/github-qemu-code-tab-latest-release.png)
