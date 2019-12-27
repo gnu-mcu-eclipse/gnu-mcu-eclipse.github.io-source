@@ -66,7 +66,7 @@ In the web git:
 - as `download_url` use the generic `https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/` (will be updated later after the release is created)
 - update the `date:` field with the current date
 
-Close [issues](https://github.com/gnu-mcu-eclipse/openocd/issues) on the way. Refer to them as:
+Close [issues](https://github.com/gnu-mcu-eclipse/windows-build-tools/issues) on the way. Refer to them as:
 
 - **[Issue:\[#22\]\(...\)]**.
 

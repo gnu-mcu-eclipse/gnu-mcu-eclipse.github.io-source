@@ -40,8 +40,8 @@ and add a new ticket.
 
 Similarly, each tool project has a separate GitHub Issue tracker.
 
-* [QEMU Issues](https://github.com/gnu-mcu-eclipse/qemu/issues/)
-* [OpenOCD Issues](https://github.com/gnu-mcu-eclipse/openocd/issues/)
+* [xPack QEMU Arm Issues](https://github.com/xpack-dev-tools/qemu-arm/issues/)
+* [xPack OpenOCD Issues](https://github.com/xpack-dev-tools/openocd/issues/)
 * [Windows Build Tools Issues](https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/)
 
 Please note that these trackers are mostly intended to the GNU MCU Eclipse

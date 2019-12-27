@@ -12,12 +12,13 @@ date: 2015-09-10 19:54:00 +0300
 
 If you know what this is all about, the download pages are:
 
-* [GNU MCU Eclipse IDE for C/C++ Developers](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases)
-* [GNU MCU Eclipse plug-ins](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases)
-* [GNU MCU Eclipse RISC-V Embedded GCC](https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases)
-* [GNU MCU Eclipse OpenOCD](https://github.com/gnu-mcu-eclipse/openocd/releases)
-* [GNU MCU Eclipse Windows Build Tools](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases)
-* [GNU ARM Eclipse QEMU](https://github.com/gnu-mcu-eclipse/qemu/releases)
+* [GNU MCU Eclipse IDE for C/C++ Developers](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/)
+* [GNU MCU Eclipse plug-ins](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/)
+* [GNU MCU Eclipse Windows Build Tools](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/)
+* [xPack GNU Arm Embedded GCC](https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/releases/)
+* [xPack GNU RISC-V Embedded GCC](https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases/)
+* [xPack OpenOCD](https://github.com/xpack-dev-tools/openocd-xpack/releases/)
+* [xPack QEMU Arm](https://github.com/xpack-dev-tools/qemu-arm/releases/)
 
 ## Overview
 
@@ -52,9 +53,9 @@ For all other manual downloads, the binary files are published as **GitHub Relea
 
 For example, to access the QEMU binaries:
 
-- go to the **GNU MCU Eclipse QEMU** project at [gnuarmeclipse/qemu](https://github.com/gnu-mcu-eclipse/qemu)
+- go to the **xPack QEMU Arm** project at [xpack-dev-tools/qemu-arm](https://github.com/xpack-dev-tools/qemu-arm)
 - be sure you are in the **Code** view; if not, select the right side `<>` code icon
-- identify the [releases](https://github.com/gnu-mcu-eclipse/qemu/releases) link in the upper line:
+- identify the [releases](https://github.com/xpack-dev-tools/qemu-arm/releases) link in the upper line:
   ![Code releases link]({{ site.baseurl }}/assets/images/2015/github-qemu-code-tab-releases.png)
 - click the releases link; this will show the Releases view, with the **Latest release** at the top of the page:
   ![The Latest release view. ]({{ site.baseurl }}/assets/images/2015/github-qemu-code-tab-latest-release.png)

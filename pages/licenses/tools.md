@@ -16,8 +16,8 @@ The other programs (`sh.exe`, `rm.exe`, ...) are actually copyes of BusyBox, rel
 
 ## OpenOCD
 
-GNU MCU Eclipse OpenOCD is released under exactly the same license as the original OpenOCD, GPLv2.
+xPack OpenOCD is released under exactly the same license as the original OpenOCD, GPLv2.
 
 ## QEMU
 
-GNU MCU Eclipse QEMU is released under exactly the same license as the original QEMU, GPLv2.
+The xPack QEMU Arm is released under exactly the same license as the original QEMU, GPLv2.

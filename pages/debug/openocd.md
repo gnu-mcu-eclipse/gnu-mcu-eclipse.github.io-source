@@ -14,7 +14,7 @@ By default, Eclipse supports OpenOCD via the GDB Hardware Debugging plug-in, whi
 
 Based on the experience with the J-Link plug-in, we decided to add a separate OpenOCD plug-in, with full configuration pages.
 
-In early 2015, a step further was performed, with the addition of the [GNU MCU Eclipse OpenOCD]({{ site.baseurl }}/openocd/) subproject, a new distribution of OpenOCD.
+In early 2015, a step further was performed, with the addition of the [GNU MCU Eclipse OpenOCD]({{ site.baseurl }}/openocd/) subproject, a new distribution of OpenOCD. In 2019 it was migrated to the xPack project.
 
 Unfortunately SWD support in the current OpenOCD version (0.8.x) is not that great, and we could not yet figure out a way to get the SWO tracing info out of OpenOCD, so currently there is no special tracing window available.
 
@@ -22,7 +22,7 @@ Unfortunately SWD support in the current OpenOCD version (0.8.x) is not that gr
 
 Before being able to use any JTAG probe with OpenOCD, you must separately install:
 
-* the [GNU MCU Eclipse OpenOCD]({{ site.baseurl }}/openocd/) debugging plug-in
+* the [xPack OpenOCD]({{ site.baseurl }}/openocd/) debugging plug-in
 * the GDB debugger (client) application, as part of a GNU toolchain
 * the OpenOCD as a GDB server
 * any drivers required for the JTAG probe (for example FTDI drivers).
@@ -48,7 +48,7 @@ Before starting work with OpenOCD, it is recommended to define the path to the f
 * click the **Restore Defaults** button
 * the plug-in will suggest the default values computed when Eclipse started; if a new version of OpenOCD was installed while Eclipse was active, restart Eclipse and click again the Restore Defaults button
 * check the **Executable** field; it must define the name of the command line OpenOCD executable; in most cases it should be set correctly; if not, edit it to match the correct name;
-* check the **Folder** field; it must point to the actual folder where the OpenOCD tools were installed on your platform, for example `C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse\OpenOCD\<version>\bin` on Windows, `/Users/ilg/opt/gnu-mcu-eclipse/openocd/<version>/bin` on macOS and GNU/Linux
+* check the **Folder** field; it must point to the actual folder where the OpenOCD tools were installed on your platform, for example `C:\Users\ilg\AppData\Roaming\xPacks\OpenOCD\<version>\bin` on Windows, `/Users/ilg/opt/xPacks/openocd/<version>/bin` on macOS and GNU/Linux
 * click the **OK** button
 
 By default, the GDB server is defined as `${openocd_path}/${openocd_executable}`; these two macros are automatically set by the above preference page; for portability reasons, it is recommended to define the path to the OpenOCD relative to this variable in all your debug configurations, to have a single place to update the path when you want to use another version of the OpenOCD tools installed in a different location.
