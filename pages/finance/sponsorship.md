@@ -127,3 +127,5 @@ Many thanks to the following donors (in chronological order):
 * Kamil Rogozinski, Australia
 * Niklas Nold, Germany
 * the employees of ARRI Cine & Video GmbH, Vienna, Austria
+* Kamil Rogozinski, Australia
+* Kristof Mulier / Chipdesk, Belgium
