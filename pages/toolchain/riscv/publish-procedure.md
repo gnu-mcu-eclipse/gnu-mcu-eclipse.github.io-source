@@ -124,12 +124,3 @@ In the web git:
 - `download_url: https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.1.1-1-20170702`
 - use something like `v7.1.1-1-20170702 update link` as message
 
-## Share on Facebook
-
-- go to the new post and follow the Share link.
-- DO NOT select **On your own Timeline**, but **On a Page you manage**
-- select GNU MCU Eclipse
-- posting as GNU MCU Eclipse
-- click **Post to Facebook**
-- check the post in the [Facebook page](https://www.facebook.com/gnu-mcu-eclipse)
-
