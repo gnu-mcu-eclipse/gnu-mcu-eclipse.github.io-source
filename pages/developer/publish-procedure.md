@@ -324,15 +324,6 @@ The Eclipse Packaging Project allows to create complete Eclipse packages for all
 * click **Edit**
 * update version number, minimum Eclipse versions.
 
-## Share on Facebook
-
-* go to the new post and follow the Share link
-* DO NOT select **On your own Timeline**, but **On a Page you manage**
-* select GNU MCU Eclipse
-* posting as GNU MCU Eclipse
-* click **Post to Facebook**
-* check the post in the [Facebook page](https://www.facebook.com/gnu-mcu-eclipse)
-
 ## Share on Twitter
 
 * go to the new post and follow the Tweet link

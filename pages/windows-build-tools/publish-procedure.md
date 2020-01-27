@@ -124,12 +124,3 @@ Note: at this moment the system should send a notification to all clients watchi
 ## Update the xPack
 
 See the [Maintainer info](https://github.com/gnu-mcu-eclipse/windows-build-tools-xpack#how-to-publish) in the separate project.
-
-## Share on Facebook
-
-- go to the new post and follow the Share link.
-- DO NOT select **On your own Timeline**, but **On a Page you manage**
-- select GNU MCU Eclipse
-- posting as GNU MCU Eclipse
-- click **Post to Facebook**
-- check the post in the [Facebook page](https://www.facebook.com/gnu-mcu-eclipse)
