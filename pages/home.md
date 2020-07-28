@@ -1,7 +1,7 @@
 ---
 layout: main
 permalink: /
-title: GNU ARM → GNU MCU Eclipse!
+title: GNU MCU → Eclipse Embedded CDT!
 author: Liviu Ionescu
 
 date: 2015-09-07 18:31:00 +0300
