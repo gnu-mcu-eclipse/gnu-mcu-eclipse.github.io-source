@@ -9,7 +9,7 @@ date: 2015-09-07 18:31:00 +0300
 ---
 
 The GNU MCU/ARM Eclipse project is currently under migration to the Eclipse Foundation as
-[Eclipse Embedded CDT (C/C++ Development Tools)](https://projects.eclipse.org/projects/iot.ecdt).
+[Eclipse Embedded CDT (C/C++ Development Tools)](https://projects.eclipse.org/projects/iot.embed-cdt).
 
 ![RISC-V logo]({{ site.baseurl }}/assets/images/2017/riscv-64x64.png){:class="right-align-image"}Starting with Eclipse plug-ins v4.x, the project was enhanced with support for [RISC-V](https://riscv.org) devices, thus the new **MCU** name, more appropriate for a multi-platform project. For more details, see the [RISC-V Corner]({{ site.baseurl }}/arch/riscv/) and [xPack GNU RISC-V Embedded GCC](https://xpack.github.io/riscv-none-embed-gcc/) page.
 
@@ -27,9 +27,9 @@ In short, the GNU MCU Eclipse plug-ins allow to create, build, debug and in gene
 
 Apart from the main Eclipse plug-ins, this project is accompanied by several other tools, distributed as separate packages.
 
-* **GNU MCU Eclipse Windows Build Tools**
+* **xPack Windows Build Tools**
 
-  The **GNU MCU Eclipse Windows Build Tools** project includes the additional tools required to perform builds on Windows (**make** & **rm**).
+  The **xPack Windows Build Tools** project includes the additional tools required to perform builds on Windows (**make** & **rm**).
 
 * **xPack GNU Arm Embedded GCC**
 
@@ -59,8 +59,8 @@ here are some advices:
   up development and future versions to include more and more great 
   features, please consider donating; any contribution, small or 
   generous, will be highly appreciated;
-* **star** the project using the 
-  [GitHub Stars](https://github.com/gnu-mcu-eclipse/eclipse-plugins/stargazers);
+* **star** the project using the
+  [GitHub Stars]https://github.com/eclipse-embed-cdt/eclipse-plugins/stargazers);
 * **follow** the project on [Twitter](https://twitter.com/gnu_mcu_eclipse), to
   get notifications on new releases;
 
