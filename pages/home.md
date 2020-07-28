@@ -8,12 +8,26 @@ date: 2015-09-07 18:31:00 +0300
 
 ---
 
-The GNU MCU/ARM Eclipse project is currently under migration to the Eclipse Foundation as
+> The GNU MCU/ARM Eclipse project is currently under migration to the Eclipse
+Foundation as
 [Eclipse Embedded CDT (C/C++ Development Tools)](https://projects.eclipse.org/projects/iot.embed-cdt).
 
-![RISC-V logo]({{ site.baseurl }}/assets/images/2017/riscv-64x64.png){:class="right-align-image"}Starting with Eclipse plug-ins v4.x, the project was enhanced with support for [RISC-V](https://riscv.org) devices, thus the new **MCU** name, more appropriate for a multi-platform project. For more details, see the [RISC-V Corner]({{ site.baseurl }}/arch/riscv/) and [xPack GNU RISC-V Embedded GCC](https://xpack.github.io/riscv-none-embed-gcc/) page.
+**GNU MCU Eclipse** is an open source project that includes a family
+of Eclipse plug-ins and tools for multi-platform embedded ARM and RISC-V
+development, based on GNU toolchains. This project is hosted on
+[GitHub](https://github.com/gnu-mcu-eclipse). The former project was
+hosted on [GitHub](https://github.com/gnuarmeclipse) and
+[SourceForge](http://sourceforge.net/projects/gnuarmeclipse/).
 
-**GNU MCU Eclipse** is an open source project that includes a family of Eclipse plug-ins and tools for multi-platform embedded ARM and RISC-V development, based on GNU toolchains. This project is hosted on [GitHub](https://github.com/gnu-mcu-eclipse). The former project was hosted on [GitHub](https://github.com/gnuarmeclipse) and [SourceForge](http://sourceforge.net/projects/gnuarmeclipse/).
+## RISC-V
+
+![RISC-V logo]({{ site.baseurl }}/assets/images/2017/riscv-64x64.png)
+{:class="right-align-image"}Starting with Eclipse plug-ins v4.x, the project
+was enhanced with support for [RISC-V](https://riscv.org) devices, thus
+the new **MCU** name, more appropriate for a multi-platform project. For
+more details, see the [RISC-V Corner]({{ site.baseurl }}/arch/riscv/) and
+[xPack GNU RISC-V Embedded GCC](https://xpack.github.io/riscv-none-embed-gcc/)
+page.
 
 ## The GNU MCU Eclipse plug-ins
 
