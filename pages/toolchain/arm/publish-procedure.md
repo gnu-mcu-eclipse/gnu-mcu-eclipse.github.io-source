@@ -21,4 +21,4 @@ ___
 
 The ARM Embedded GCC binaries are published on GitHub [Releases](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/).
 
-The procedure used to publish those binaries is documented on the [PUBLISH](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/blob/xpack/README-PUBLISH.md) page in the same project.
+The procedure used to publish those binaries is documented on the [PUBLISH](https://github.com/xpack-dev-tools/arm-none-eabi-gcc/blob/xpack/README-PUBLISH.md) page in the same project.
