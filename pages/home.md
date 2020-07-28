@@ -10,7 +10,7 @@ date: 2015-09-07 18:31:00 +0300
 
 > In 2020, the GNU MCU/ARM Eclipse project was migrated to the Eclipse Foundation as
 [Eclipse Embedded CDT (C/C++ Development Tools)](https://projects.eclipse.org/projects/iot.embed-cdt);
-starting with **v5.1.1**, all
+starting with **v5.1.1**, all future
 [releases](https://projects.eclipse.org/projects/iot.embed-cdt/governance)
 will be available from the Eclipse Foundation.
 
