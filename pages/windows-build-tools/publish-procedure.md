@@ -13,10 +13,8 @@ The Windows Build Tools binaries are published on GitHub
 [Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/).
 
 The procedure used to publish those binaries is documented on the 
-[PUBLISH](https://github.com/gnu-mcu-eclipse/windows-build-tools/blob/master/PUBLISH.md) 
+[README-PUBLISH](https://github.com/gnu-mcu-eclipse/windows-build-tools/blob/master/README-PUBLISH.md)
 page in the same project.
-
-
 
 The Windows Build Tools binaries are published on GitHub  [Releases](https://github.com/gnu-mcu-eclipse/windows-build-tools/releases)).
 
