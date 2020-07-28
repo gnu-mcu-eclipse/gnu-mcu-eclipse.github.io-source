@@ -23,8 +23,8 @@ hosted on [GitHub](https://github.com/gnuarmeclipse) and
 
 ## RISC-V
 
-![RISC-V logo]({{ site.baseurl }}/assets/images/2017/riscv-64x64.png)
-{:class="right-align-image"}Starting with Eclipse plug-ins v4.x, the project
+![RISC-V logo]({{ site.baseurl }}/assets/images/2017/riscv-64x64.png){:class="right-align-image"}
+Starting with Eclipse plug-ins v4.x, the project
 was enhanced with support for [RISC-V](https://riscv.org) devices, thus
 the new **MCU** name, more appropriate for a multi-platform project. For
 more details, see the [RISC-V Corner]({{ site.baseurl }}/arch/riscv/) and
