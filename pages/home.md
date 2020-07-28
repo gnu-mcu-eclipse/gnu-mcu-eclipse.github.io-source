@@ -8,9 +8,11 @@ date: 2015-09-07 18:31:00 +0300
 
 ---
 
-> The GNU MCU/ARM Eclipse project is currently under migration to the Eclipse
-Foundation as
-[Eclipse Embedded CDT (C/C++ Development Tools)](https://projects.eclipse.org/projects/iot.embed-cdt).
+> In 2020, the GNU MCU/ARM Eclipse project was migrated to the Eclipse Foundation as
+[Eclipse Embedded CDT (C/C++ Development Tools)](https://projects.eclipse.org/projects/iot.embed-cdt);
+starting with **v5.1.1**, all
+[releases](https://projects.eclipse.org/projects/iot.embed-cdt/governance)
+will be available from the Eclipse Foundation.
 
 **GNU MCU Eclipse** is an open source project that includes a family
 of Eclipse plug-ins and tools for multi-platform embedded ARM and RISC-V
