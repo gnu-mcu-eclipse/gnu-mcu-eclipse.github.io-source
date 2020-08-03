@@ -203,7 +203,7 @@ Once you define the update site URL, further updates are greatly simplified (**H
 
 ### The local archive way
 
-If, for any reason, you need to install a specific version of the plug-in, the solution is to download the archive from [Eclipse servers](https://projects.eclipse.org/projects/iot.embed-cdt/governance/); for releases pre v5.1.1 use [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases), or, for even older releases, from [SourceForge Files](http://sourceforge.net/projects/gnuarmeclipse/files/Current%20Releases/) and to point the Eclipse update mechanism to the local archive: In the* Eclipse* menu → **Help** → **Install New Software...**
+If, for any reason, you need to install a specific version of the plug-in, the solution is to download the archive from [Eclipse servers](https://projects.eclipse.org/projects/iot.embed-cdt/governance/); for releases pre v5.1.1 use [GitHub Releases](https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases), or, for even older releases, from [SourceForge Files](http://sourceforge.net/projects/gnuarmeclipse/files/Current%20Releases/) and to point the Eclipse update mechanism to the local archive: In the _Eclipse_ menu → **Help** → **Install New Software...**
 
 * in the *Install* window, click the **Add...** button
 * in the *Add Repository* window, click the **Archive...** button
