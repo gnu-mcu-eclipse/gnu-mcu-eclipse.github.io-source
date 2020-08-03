@@ -1,8 +1,8 @@
 # Site Jekyll settings.
 
 # Without a clear rule enforced, both title and name are used.
-title: GNU MCU Eclipse
-name: GNU MCU Eclipse
+title: Eclipse Embedded CDT
+name: Eclipse Embedded CDT
 description: A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development
 
 email: il@livius.net
@@ -85,4 +85,4 @@ useExistingAnchors: true
 css-date: 201901210928
 
 # Content copyright. Update it to your needs.
-copyright-message: "© 2019 Liviu Ionescu"
+copyright-message: "© 2020 Liviu Ionescu"

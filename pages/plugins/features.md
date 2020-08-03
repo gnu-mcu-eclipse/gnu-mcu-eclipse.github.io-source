@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /plugins/features/
-title: GNU MCU Eclipse Plug-ins Features
+title: Eclipse Embedded CDT Plug-ins Features
 author: Liviu Ionescu
 
 date: 2015-09-10 19:59:00 +0300
@@ -10,7 +10,7 @@ date: 2015-09-10 19:59:00 +0300
 
 ## Main features
 
-The main features of the GNU MCU Eclipse family of plug-ins are:
+The main features of the Eclipse Embedded CDT family of plug-ins are:
 
   * create/build/manage embedded ARM/AArch64/RISC-V applications, using the managed project features of Eclipse CDT, i.e. without having to manually create and maintain makefiles
   * provide ready to run templates for some ARM Cortex-M processors
@@ -35,8 +35,8 @@ The build plug-in supports most existing toolchains currently available for both
 
 ### ARM toolchains
 
-* [**GNU MCU Eclipse ARM Embedded GCC**](https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc) (arm-none-eabi-*)
-* [**GNU ARM Embedded Toolchain**](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm) (arm-none-eabi-*)
+* [**xPack GNU Arm Embedded GCC**](https://xpack.github.io/arm-none-eabi-gcc/) (arm-none-eabi-*)
+* [**GNU Arm Embedded Toolchain**](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm) (arm-none-eabi-*)
 * **[Linaro][2] **ARMv7 **bare-metal EABI** (arm-none-eabi-*)
 * **[Linaro][2] **ARMv7 **big-endian bare-metal EABI** (armeb-none-eabi-*)
 * **[Linaro][2] **ARMv7 **Linux GNU EABI HF** (arm-linux-gnueabihf-*)
@@ -91,7 +91,7 @@ Toolchain definitions include most of the configurable details, not only the pre
 
 The traditional way of accessing the toolchain components was to add the toolchain path to the system PATH and later do nothing special inside Eclipse. Unfortunately this model does not scale; serious development often requires multiple toolchains (either different versions of the same toolchain, or even toolchains from different sources) on the same machine, and polluting the system PATH is a source of major headaches.
 
-The GNU MCU Eclipse cross build plug-in provides advanced toolchain path management; for more details, please read the separate [Toolchain path management][4] page
+The Eclipse Embedded CDT cross build plug-in provides advanced toolchain path management; for more details, please read the separate [Toolchain path management][4] page
 
 ## Improved project portability
 

@@ -14,7 +14,7 @@ After successfully installing the cross build plug-in, before being able to star
 
 ### Toolchain
 
-For embedded ARM projects, it is recommended to use the [GNU Tools for ARM Embedded Processors][1] (arm-none-eabi-*). For all other projects, a good point to start the search for toolchains is the [Linaro][2] project**.**
+For embedded ARM projects, it is recommended to use the [xPack GNU Arm Embedded GCC][1] (arm-none-eabi-*). For all other projects, a good point to start the search for toolchains is the [Linaro][2] project**.**
 
 ### Build tools (make & rm)
 
@@ -77,7 +77,7 @@ When selecting AArch64 processors in the toolchain setting page, the ARM configu
 
 ### Configure the toolchain path
 
-When the new projects are created with the GNU MCU Eclipse templates, the toolchain path is already configured. Only when importing projects into a fresh workspace, the toolchain path needs to be configured manually for the first build.
+When the new projects are created with the Eclipse Embedded CDT templates, the toolchain path is already configured. Only when importing projects into a fresh workspace, the toolchain path needs to be configured manually for the first build.
 
 ![Toolchain properties]({{ site.baseurl }}/assets/images/2014/02/ToolchainsProperties.png)
 

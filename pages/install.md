@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /install/
-title: How to install GNU MCU Eclipse?
+title: How to install Eclipse Embedded CDT
 author: Liviu Ionescu
 
 date: 2015-09-16 20:56:00 +0300
@@ -10,7 +10,7 @@ date: 2015-09-16 20:56:00 +0300
 
 ## Overview
 
-For more flexibility and upgradeability, GNU MCU Eclipse is not packed
+For more flexibility and upgradeability, Eclipse Embedded CDT is not packed
 as a all-inclusive suite to be installed in a single step. However,
 the separate steps are relatively easy to perform, and installing
 the plug-ins and the tools can be successfully completed even by
@@ -62,7 +62,7 @@ This is generally mandatory, since most platforms do not come by default
 with an embedded GCC toolchain (ARM or RISC-V).
 
 Please follow the steps in the 
-[ARM Toolchain install](https://xpack.github.io/arm-none-eabi-gcc/install/) or
+[Arm Toolchain install](https://xpack.github.io/arm-none-eabi-gcc/install/) or
 [RISC-V Toolchain install](https://xpack.github.io/riscv-none-embed-gcc/install/) page.
 
 For ARM, the easy install method is:
@@ -80,17 +80,17 @@ $ xpm install --global @xpack-dev-tools/riscv-none-embed-gcc@latest
 ## Windows Build Tools
 
 This step is Windows specific, and it is highly recommended to use the
-GNU MCU Eclipse Windows Build Tools, and avoid other `make.exe` programs,
+xPack Windows Build Tools, and avoid other `make.exe` programs,
 even if they apparently work, since subtle differences in path processing
 exists between different versions of `make`.
 
 Please follow the steps in the
-[How to install the Windows Build Tools]({{ site.baseurl }}/windows-build-tools/install/) page.
+[How to install the Windows Build Tools](https://xpack.github.io/windows-build-tools/install/) page.
 
 The easy install method is:
 
 ```console
-$ xpm install --global @gnu-mcu-eclipse/windows-build-tools
+$ xpm install --global @xpack-dev-tools/windows-build-tools@latest
 ```
 
 POSIX platforms generally include `make` in the system distribution,
@@ -143,7 +143,7 @@ For more details, please follow the steps in the
 [Jumper Virtual lab](https://jumper.io) is an emulator that provides a
 fast and easy way to execute firmware files on a virtual device running
 on the development machine. Jumper's Eclipse plug-in uses the debug
-framework provided by the GNU MCU Eclipse plug-ins.
+framework provided by the Eclipse Embedded CDT plug-ins.
 
 To install the Jumper Virtual Lab, use the following links:
 
@@ -151,7 +151,7 @@ To install the Jumper Virtual Lab, use the following links:
 * [How to install](https://docs.jumper.io/docs/install.html)
 
 _Jumper Virtual lab_ is a product of Jumper Labs Ltd, a third party
-company not directly related to GNU MCU Eclipse. For questions and
+company not directly related to Eclipse Embedded CDT. For questions and
 further info, please contact Jumper Labs via their support channels.
 
 ## Java
@@ -162,15 +162,15 @@ Java is no longer a very _hot_ technology, so it is generally not available
 by default on most platforms and requires separate installation.
 
 More details are available in the 
-[How to install the GNU MCU Eclipse plug-ins]({{ site.baseurl }}/plugins/install/) page.
+[How to install the Eclipse Embedded CDT plug-ins]({{ site.baseurl }}/plugins/install/) page.
 
 ## Eclipse & CDT
 
-Eclipse is the development platform where the GNU MCU Eclipse plug-ins run.
+Eclipse is the development platform where the Eclipse Embedded CDT plug-ins run.
 Generally it is not available by default on most platforms and requires
 separate installation.
 
-The simple way is to download **GNU MCU Eclipse IDE for C/C++ Developers**
+The simple way is to download **Eclipse IDE for Embedded C/C++ Developers**
 from [GitHub Releases](https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/)
 and you get at once both Eclipse CDT and the MCU plug-ins.
 
@@ -179,7 +179,7 @@ If you prefer the manual way, be sure you install the
 you'll have to manually install CDT.
 
 More details are available in the
-[How to install the GNU MCU Eclipse plug-ins]({{ site.baseurl }}/plugins/install/) page.
+[How to install the Eclipse Embedded CDT plug-ins]({{ site.baseurl }}/plugins/install/) page.
 
 > Note: on GNU/Linux be sure you manually install the Eclipse;
 **DO NOT** try to install it via the Synaptics package manager, or
@@ -190,7 +190,7 @@ are not included.
 
 Once the Java & Eclipse are functional, please proceed with plug-ins
 install, as explains in the
-[How to install the GNU MCU Eclipse plug-ins]({{ site.baseurl }}/plugins/install/) page.
+[How to install the Eclipse Embedded CDT plug-ins]({{ site.baseurl }}/plugins/install/) page.
 
 ## Workspace preferences
 
