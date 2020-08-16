@@ -30,6 +30,10 @@ Starting with v5.1.1, the update site URL was migrated to Eclipse
 
 `https://download.eclipse.org/embed-cdt/updates/neon/`
 
+> Java 11 notice: Starting with 2020, Eclipse requires Java 11; trying to
+update the plug-ins while using Java 8 is unsuccessful, sometimes
+without any message or warning.
+
 More details are available in the [Install](/plugins/install/) page.
 
 ### Pre-release versions

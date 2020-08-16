@@ -72,32 +72,37 @@ will be processed.
 
 The recommended package is the latest version from the official
 [Oracle **OpenJDK** page](https://openjdk.java.net). The **OpenJDK Java**
-used in Ubuntu is also fine. The minimum is JDK 1.8, or even JRE 1.8
+used in Ubuntu is also fine. Starting with 2020, the minimum is JDK 11,
+or even JRE 11
 (the Java Runtime Environment), but, as said before, better use the
-latest JDK (currently 1.8.151). On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.
+latest JDK. On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.
 
 > Important note: Java may be distributed in separate 32/64-bit packages. Unless you have older applications requiring 32-bit Java, on 64-bit systems it is recommended to install the 64-bit JDK. Anyway, Oracle JDK 9 might not even be available for 32-bit. 
 
-On some distributions, for example on Ubuntu 16.04 LTS, Java seems to be already installed in the standard distribution:
+On some distributions, for example on Ubuntu 18.04 LTS, Java seems to be already installed in the standard distribution:
 
 ```console
 $ java -version
-openjdk version "1.8.0_121"
-OpenJDK Runtime Environment (build 1.8.0_121-8u121-b13-0ubuntu1.16.04.2-b13)
-OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode)
+openjdk version "11.0.7" 2020-04-14
+OpenJDK Runtime Environment (build 11.0.7+10-post-Ubuntu-2ubuntu218.04)
+OpenJDK 64-Bit Server VM (build 11.0.7+10-post-Ubuntu-2ubuntu218.04, mixed mode, sharing)
 ```
 
-On other distributions, for example on Ubuntu 14.04 LTS, you can install the OpenJDK run-time and test if it was properly installed with the following commands:
+On other distributions, you can install the OpenJDK run-time and test if it was properly installed with the following commands:
 
 ```console
-$ sudo apt-get -y install default-jdk
+$ sudo apt-get -y install openjdk-11-jdk
 $ java -version
-java version "1.7.0_85"
-OpenJDK Runtime Environment (IcedTea 2.6.1) (7u85-2.6.1-5ubuntu0.14.04.1)
-OpenJDK 64-bit Server VM (build 24.85-b03, mixed mode)
+openjdk version "11.0.7" 2020-04-14
+OpenJDK Runtime Environment (build 11.0.7+10-post-Ubuntu-2ubuntu218.04)
+OpenJDK 64-Bit Server VM (build 11.0.7+10-post-Ubuntu-2ubuntu218.04, mixed mode, sharing)
 ```
 
-If you are behind a firewall, older Java virtual machines [fail to connect to SourceForge]({{ site.baseurl }}/blog/2016/12/02/plugins-install-issue/). Update your Java JDK to **8u101 or later** and retry to install the plug-ins.
+> Java 11 notice: Starting with 2020, Eclipse requires Java 11; trying to
+update the plug-ins while using Java 8 is unsuccessful, sometimes
+without any message or warning.
+
+If you are behind a firewall, older Java virtual machines [fail to connect to SourceForge]({{ site.baseurl }}/blog/2016/12/02/plugins-install-issue/). Update your Java JDK to **11 or later** and retry to install the plug-ins.
 
 ### Java Cryptography Extension (JCE)
 
@@ -168,6 +173,10 @@ Similarly:
 The following samples are from a slightly older Eclipse 4.3 Kepler on macOS. Other platforms may behave slightly different, but the idea is the same.
 
 **Warning:** Be sure your Eclipse is 4.6 Neon.3 or later, otherwise the plug-ins will refuse to install, claiming **Missing requirements** and **Cannot satisfy dependency**.
+
+> Java 11 notice: Starting with 2020, Eclipse requires Java 11; trying to
+update the plug-ins while using Java 8 is unsuccessful, sometimes
+without any message or warning.
 
 ### The Eclipse Marketplace way
 
