@@ -8,9 +8,9 @@ date: 2015-09-11 22:43:00 +0300
 
 ---
 
-Note: This page was superseded by the new [Create a Blinky ARM test project][1] page.
+Note: This page was superseded by the new [Create a Blinky Arm test project][1] page.
 
-If you are new to ARM development, it is recommended to follow this short tutorial and learn how to build a simple test executable program.
+If you are new to Arm development, it is recommended to follow this short tutorial and learn how to build a simple test executable program.
 
 Note: this tutorial was created with the **GNU Tools for ARM Embedded Processors** toolchain in mind. Only when using this toolchain the build is guaranteed to succeed. Using other toolchains might be possible, but small changes might be necessary in the source code and in the linker options.
 
@@ -125,7 +125,7 @@ The usual sources for build failures are:
 
 If something went wrong and you cannot build the project, please check the [How to use]({{ site.baseurl }}/plugins/mbs/), the [FAQ]({{ site.baseurl }}/support/faq/) and the [Known issues]({{ site.baseurl }}/support/known-issues/) pages. If you do not find the answer to your question, please read the [Support]({{ site.baseurl }}/support/) page on how to record a support request in the Support tracker. Do not post comments on this page unless they are related to the text (the phrasing is not correct, you discovered typos, etc).
 
- [1]: {{ site.baseurl }}/tutorials/blinky-arm/ "Tutorial: Create a Blinky ARM test project"
+ [1]: {{ site.baseurl }}/tutorials/blinky-arm/ "Tutorial: Create a Blinky Arm test project"
  [2]: {{ site.baseurl }}/eclipse/workspace/preferences/ "Workspace preferences"
  [3]: {{ site.baseurl }}/debug/qemu/ "The QEMU debugging Eclipse plug-in"
  [4]: {{ site.baseurl }}/templates/stm32f/ "STM32Fxx templates"

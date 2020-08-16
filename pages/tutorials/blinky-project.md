@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /tutorials/blinky-arm/
-title: 'Tutorial: Create a Blinky ARM test project'
+title: 'Tutorial: Create a Blinky Arm test project'
 author: Liviu Ionescu
 
 date: 2015-09-11 19:25:00 +0300
@@ -10,7 +10,7 @@ date: 2015-09-11 19:25:00 +0300
 
 If you are new to ARM development, it is recommended to follow this short tutorial and learn how to build a simple test executable program that will blink a LED.
 
-Note: this tutorial was created with the **GNU Tools for ARM Embedded Processors** toolchain in mind. Only when using this toolchain the build is guaranteed to succeed. Using other toolchains might be possible, but small changes might be necessary in the source code and in the linker options.
+Note: this tutorial was created with the **GNU Tools for Arm Embedded Processors** toolchain in mind. Only when using this toolchain the build is guaranteed to succeed. Using other toolchains might be possible, but small changes might be necessary in the source code and in the linker options.
 
 Note2: this tutorial requires a recent version of the STM32F4 template, not older than 20150807.
 

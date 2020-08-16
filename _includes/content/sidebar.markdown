@@ -14,7 +14,7 @@
 #### [Install]({{ site.baseurl }}/install/)
 
 * [Overview]({{ site.baseurl }}/install/)
-* [ARM Toolchain(s) install]({{ site.baseurl }}/toolchain/arm/install/)
+* [Arm Toolchain(s) install]({{ site.baseurl }}/toolchain/arm/install/)
 * [RISC-V Toolchain(s) install]({{ site.baseurl }}/toolchain/riscv/install/)
 * [Windows build tools (make & rm) install]({{ site.baseurl }}/windows-build-tools/install/)
 * [Debugging binaries]({{ site.baseurl }}/debug/install/)
@@ -33,8 +33,8 @@
 
 #### Tutorials
 
-* [Create a Blinky ARM test project]({{ site.baseurl }}/tutorials/blinky-arm/)
-* [Create a Hello ARM test project]({{ site.baseurl }}/tutorials/hello-arm/)
+* [Create a Blinky Arm test project]({{ site.baseurl }}/tutorials/blinky-arm/)
+* [Create a Hello Arm test project]({{ site.baseurl }}/tutorials/hello-arm/)
 
 #### How to use
 
