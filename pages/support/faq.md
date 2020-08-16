@@ -320,6 +320,6 @@ Fixed in 1.1.5.
 
 -/-
 
- [1]: {{ site.baseurl }}/windows-build-tools/ "Build tools (make & rm) on Windows"
+ [1]: https://xpack.github.io/windows-build-tools/ "Build tools (make & rm) on Windows"
  [2]: {{ site.baseurl }}/support/known-issues/ "Known problems"
  [3]: https://sourceforge.net/projects/gnuarmeclipse/
