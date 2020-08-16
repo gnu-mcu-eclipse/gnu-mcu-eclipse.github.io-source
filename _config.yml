@@ -3,7 +3,7 @@
 # Without a clear rule enforced, both title and name are used.
 title: Eclipse Embedded CDT
 name: Eclipse Embedded CDT
-description: A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development
+description: A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development
 
 email: il@livius.net
 
@@ -64,7 +64,7 @@ latest-news-pages: 5
 github-username:  ilg-ul
 
 github-project-name: gnu-mcu-eclipse
-github-project-url: http://github.com/gnu-mcu-eclipse
+github-project-url: http://github.com/eclipse-embed-cdt
 sourceforge-project-url: http://sourceforge.net/projects/gnuarmeclipse
 
 # facebook-page: https://facebook.com/gnu-mcu-eclipse/
