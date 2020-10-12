@@ -5,6 +5,8 @@ permalink: /toolchain/riscv/build-procedure/
 
 date: 2017-07-06 20:55:00 +0300
 
+redirect-url: https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/blob/xpack/README-BUILD.md
+
 ---
 
 ## Deprecation notice

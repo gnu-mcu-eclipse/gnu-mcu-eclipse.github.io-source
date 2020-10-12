@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2015-09-11 21:41:00 +0300
 
+redirect-url: https://eclipse-embed-cdt.github.io/debug/openocd/
+
 ---
 
 ## Why a new plug-in?

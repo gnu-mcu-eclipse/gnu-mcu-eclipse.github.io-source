@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2017-07-06 22:47:00 +0300
 
+redirect-url: https://xpack.github.io/arm-none-eabi-gcc/support/
+
 ---
 
 ## Deprecation notice

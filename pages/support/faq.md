@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2015-09-11 20:28:00 +0300
 
+redirect-url: https://eclipse-embed-cdt.github.io/support/faq/
+
 ---
 
 <div style="clear: both;"></div>

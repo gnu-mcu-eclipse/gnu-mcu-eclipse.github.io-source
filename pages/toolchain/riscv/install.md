@@ -9,6 +9,8 @@ date: 2015-09-11 22:49:00 +0300
 version-id: 7.2.0-2
 version-date: 20180111-2230
 
+redirect-url: https://xpack.github.io/riscv-none-embed-gcc/install/
+
 ---
 
 ## Deprecation notice

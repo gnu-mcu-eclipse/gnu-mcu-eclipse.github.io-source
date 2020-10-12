@@ -7,6 +7,8 @@ layout: page
 
 date: 2015-09-11 21:55:00 +0300
 
+redirect-url: https://eclipse-embed-cdt.github.io/plugins/packs-manager/
+
 ---
 
 ## Overview

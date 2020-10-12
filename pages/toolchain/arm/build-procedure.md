@@ -5,6 +5,8 @@ permalink: /toolchain/arm/build-procedure/
 
 date: 2018-02-16 13:35:00 +0300
 
+redirect-url: https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/blob/xpack/README-BUILD.md
+
 ---
 
 ## Deprecation notice

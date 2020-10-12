@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2015-09-11 23:16:00 +0300
 
+redirect-url: https://eclipse-embed-cdt.github.io/eclipse/workspace/preferences/
+
 ---
 
 Eclipse has some unusual defaults, and this is one of the reasons sometimes Eclipse fails to meet beginner expectations. Fortunately this can be easily fixed, each time after creating a new workspace it is recommended to check and maybe change the settings below.

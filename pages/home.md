@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2015-09-07 18:31:00 +0300
 
+redirect-url: https://eclipse-embed-cdt.github.io
+
 ---
 
 > In 2020, the GNU MCU/ARM Eclipse project was migrated to the Eclipse Foundation as

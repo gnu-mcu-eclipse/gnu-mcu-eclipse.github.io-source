@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2015-09-11 22:00:00 +0300
 
+redirect-url: https://eclipse-embed-cdt.github.io/debug/peripheral-registers/
+
 ---
 
 After the success of the [J-Link plug-in][1], which significantly reduced the configuration effort to start a debug session, the most requested feature was a way of examining/modifying the peripheral registers.

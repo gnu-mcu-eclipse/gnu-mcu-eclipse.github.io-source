@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2015-09-11 22:06:00 +0300
 
+redirect-url: https://eclipse-embed-cdt.github.io/plugins/install/
+
 ---
 
 

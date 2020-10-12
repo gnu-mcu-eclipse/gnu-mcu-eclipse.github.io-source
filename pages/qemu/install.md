@@ -5,6 +5,8 @@ permalink: /qemu/install/
 
 date: 2015-09-04 17:03:00 +0300
 
+redirect-url: https://xpack.github.io/qemu-arm/install/
+
 ---
 
 ## Deprecation notice

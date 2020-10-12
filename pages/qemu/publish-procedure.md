@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2016-07-28 02:58:00 +0300
 
+redirect-url: https://github.com/xpack-dev-tools/qemu-arm-xpack/blob/xpack/README-PUBLISH.md
+
 ---
 
 ## Deprecation notice

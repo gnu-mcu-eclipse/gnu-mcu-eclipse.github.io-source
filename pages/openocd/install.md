@@ -5,6 +5,8 @@ permalink: /openocd/install/
 
 date: 2015-09-09 19:43:00 +0300
 
+redirect-url: https://xpack.github.io/openocd/install/
+
 ---
 
 ## Deprecation notice

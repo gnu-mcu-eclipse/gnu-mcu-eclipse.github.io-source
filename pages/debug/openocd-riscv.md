@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2017-10-31 21:11:00 +0300
 
+redirect-url: https://eclipse-embed-cdt.github.io/debug/openocd/riscv/
+
 ---
 
 ## RISC-V specific configuration details

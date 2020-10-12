@@ -5,6 +5,8 @@ permalink: /toolchain/riscv/publish-procedure/
 
 date: 2017-07-07 10:09:00 +0300
 
+redirect-url: https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/blob/xpack/README-PUBLISH.md
+
 ---
 
 ## Deprecation notice

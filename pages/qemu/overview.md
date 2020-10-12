@@ -5,6 +5,8 @@ permalink: /qemu/
 
 date: 2015-09-07 21:31:00 +0300
 
+redirect-url: https://xpack.github.io/qemu-arm/
+
 ---
 
 ## Deprecation notice

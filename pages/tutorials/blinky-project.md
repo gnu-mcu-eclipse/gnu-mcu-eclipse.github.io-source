@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2015-09-11 19:25:00 +0300
 
+redirect-url: https://eclipse-embed-cdt.github.io/tutorials/blinky-arm/
+
 ---
 
 If you are new to ARM development, it is recommended to follow this short tutorial and learn how to build a simple test executable program that will blink a LED.

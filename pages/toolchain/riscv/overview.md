@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2017-07-06 22:58:00 +0300
 
+redirect-url: https://xpack.github.io/riscv-none-embed-gcc/
+
 ---
 
 ## Deprecation notice

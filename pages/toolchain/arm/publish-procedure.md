@@ -5,6 +5,8 @@ permalink: /toolchain/arm/publish-procedure/
 
 date: 2017-07-07 10:09:00 +0300
 
+redirect-url: https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack/blob/xpack/README-PUBLISH.md
+
 ---
 
 ## Deprecation notice

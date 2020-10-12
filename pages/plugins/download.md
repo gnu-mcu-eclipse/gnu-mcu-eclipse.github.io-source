@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2015-09-11 20:07:00 +0300
 
+redirect-url: https://eclipse-embed-cdt.github.io/plugins/install/
+
 ---
 
 ## The Eclipse package way

@@ -7,6 +7,8 @@ author: Liviu Ionescu
 
 date: 2016-10-28 12:28:00 +0300
 
+redirect-url: https://github.com/xpack-dev-tools/windows-build-tools-xpack/blob/xpack/README-PUBLISH.md
+
 ---
 
 The Windows Build Tools binaries are published on GitHub 

@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2015-09-11 19:44:00 +0300
 
+redirect-url: https://eclipse-embed-cdt.github.io/templates/cortexm/
+
 ---
 
 ## Overview

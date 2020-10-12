@@ -7,6 +7,8 @@ author: Liviu Ionescu
 
 date: 2015-09-16 20:02:00 +0300
 
+redirect-url: https://xpack.github.io/windows-build-tools/install/
+
 ---
 
 ## GitHub Releases

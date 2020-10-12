@@ -5,6 +5,8 @@ permalink: /qemu/options/
 
 date: 2015-11-10 19:27:00 +0300
 
+redirect-url: https://xpack.github.io/qemu-arm/options/
+
 ---
 
 ## Deprecation notice

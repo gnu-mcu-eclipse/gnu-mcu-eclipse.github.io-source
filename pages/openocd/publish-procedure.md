@@ -7,6 +7,8 @@ author: Liviu Ionescu
 
 date: 2016-10-28 18:09:00 +0300
 
+redirect-url: https://github.com/xpack-dev-tools/openocd-xpack/blob/xpack/README-PUBLISH.md
+
 ---
 
 ## Deprecation notice

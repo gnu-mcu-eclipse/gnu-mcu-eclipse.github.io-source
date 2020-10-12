@@ -11,6 +11,8 @@ arm-version-id: 8-2018-q4-major
 gme-version-id: 7.2.1-1.1
 gme-version-date: 20180401-0515
 
+redirect-url: https://xpack.github.io/arm-none-eabi-gcc/install/
+
 ---
 
 ## Deprecation notice

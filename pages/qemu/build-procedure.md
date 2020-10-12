@@ -5,6 +5,8 @@ permalink: /qemu/build-procedure/
 
 date: 2015-09-04 17:02:00 +0300
 
+redirect-url: https://github.com/xpack-dev-tools/qemu-arm-xpack/blob/xpack/README-BUILD.md
+
 ---
 
 ## Deprecation notice

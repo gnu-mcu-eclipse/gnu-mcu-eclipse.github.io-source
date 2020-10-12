@@ -6,6 +6,8 @@ author: Liviu Ionescu
 
 date: 2015-09-11 21:15:00 +0300
 
+redirect-url: https://eclipse-embed-cdt.github.io/debug/jlink/
+
 ---
 
 ## Quicklinks
