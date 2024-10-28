@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # https://pages.github.com/versions/
-gem 'jekyll', '=3.8.5', :platforms => [:ruby, :x64_mingw, :mswin]
+gem 'jekyll', '~> 4.3', :platforms => [:ruby, :x64_mingw, :mswin]
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 group :jekyll_plugins do
@@ -13,7 +13,7 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from', '>=0.11.0',  :platforms => [:ruby, :x64_mingw, :mswin]
   gem 'jekyll-sitemap', '>=0.11.0',  :platforms => [:ruby, :x64_mingw, :mswin]
   # gem 'jekyll-multiple-languages'
-  
+
   gem 'html-proofer'
   gem 'nokogiri', '>=1.8.2'
 end
