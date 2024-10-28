@@ -106,3 +106,10 @@ As per `_config.yml`, the default timezone is UTC. For other timezones, set it e
 Contributions are welcomed!
 
 Please review the [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+## Update
+
+[2024-10-28]
+
+The Travis job is no longer available. Build manually and publish the
+resulting `gnu-mcu-eclipse.github.io.git` project.
