@@ -71,7 +71,7 @@
 * [How to build]({{ site.baseurl }}/windows-build-tools/build-procedure/)
 * [How to publish]({{ site.baseurl }}/windows-build-tools/publish-procedure/)
 * [Releases]({{ site.baseurl }}/windows-build-tools/releases/)
-* [Support](https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/) (report issue)
+* [Support](https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions) (discuss)
 
 #### [The RISC-V corner]({{ site.baseurl }}/arch/riscv/)
 
